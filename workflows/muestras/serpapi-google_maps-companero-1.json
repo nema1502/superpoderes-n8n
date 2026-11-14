@@ -1,0 +1,60 @@
+{
+  "search_parameters": {
+    "engine": "google_maps",
+    "q": "café centro Santa Cruz de la Sierra",
+    "type": "search",
+    "ll": "@-17.7833,-63.1821,14z",
+    "hl": "es",
+    "json_restrictor": "local_results[0:6].{title,rating,reviews,type,open_state,address}"
+  },
+  "local_results": [
+    {
+      "title": "L'arôme Café - Centro",
+      "rating": 4.5,
+      "reviews": 297,
+      "type": "Cafetería",
+      "open_state": "Cerrado · Abre a las 7:30 a.m.",
+      "address": "Calle Chuquisaca, Ñuflo de Chávez y, Santa Cruz de la Sierra, Bolivia"
+    },
+    {
+      "title": "Cafetería La merced",
+      "rating": 4.5,
+      "reviews": 57,
+      "type": "Cafetería",
+      "open_state": "Cerrado · Abre a las 8 a.m.",
+      "address": "Junín 393, Santa Cruz de la Sierra, Bolivia"
+    },
+    {
+      "title": "Café 4 Llamas - Santa Cruz",
+      "rating": 4.6,
+      "reviews": 221,
+      "type": "Cafetería",
+      "open_state": "Cerrado · Abre a las 7:30 a.m.",
+      "address": "Av. Salvador esq, C. H, Santa Cruz de la Sierra, Bolivia"
+    },
+    {
+      "title": "Cofi Centro",
+      "rating": 4.7,
+      "reviews": 153,
+      "type": "Cafetería",
+      "open_state": "Cerrado · Abre a las 7 a.m.",
+      "address": "Libertad esquina, Santa Cruz de la Sierra, Bolivia"
+    },
+    {
+      "title": "Citronnelle",
+      "rating": 4.5,
+      "reviews": 388,
+      "type": "Cafetería",
+      "open_state": "Cerrado · Abre a las 8 a.m.",
+      "address": "Sucre 110, Santa Cruz de la Sierra, Bolivia"
+    },
+    {
+      "title": "COLORS COFFEE",
+      "rating": 4.6,
+      "reviews": 81,
+      "type": "Cafetería",
+      "open_state": "Cerrado · Abre a las 10 a.m.",
+      "address": "Ballivián 66, Santa Cruz de la Sierra, Bolivia"
+    }
+  ]
+}

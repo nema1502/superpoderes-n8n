@@ -1,0 +1,664 @@
+{
+  "search_metadata": {
+    "id": "6af7d59ce5104c94ab209476",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/67n7KSgX09zOppc8njB6Ctpez9K16fwA_qAJL47PcGI/6af7d59ce5104c94ab209476.json",
+    "markdown_endpoint": "https://serpapi.com/searches/67n7KSgX09zOppc8njB6Ctpez9K16fwA_qAJL47PcGI/6af7d59ce5104c94ab209476.md",
+    "created_at": "2026-11-14 03:29:32 UTC",
+    "processed_at": "2026-11-14 03:29:32 UTC",
+    "google_trends_url": "https://trends.google.com/trends/embed/explore/TIMESERIES?hl=es&tz=420&req=%7B%22comparisonItem%22%3A%5B%7B%22keyword%22%3A%22inteligencia+artificial%22%2C%22geo%22%3A%22BO%22%2C%22time%22%3A%22today+12-m%22%7D%5D%2C%22category%22%3A0%2C%22property%22%3A%22%22%7D",
+    "raw_html_file": "https://serpapi.com/searches/67n7KSgX09zOppc8njB6Ctpez9K16fwA_qAJL47PcGI/6af7d59ce5104c94ab209476.html",
+    "prettify_html_file": "https://serpapi.com/searches/67n7KSgX09zOppc8njB6Ctpez9K16fwA_qAJL47PcGI/6af7d59ce5104c94ab209476.prettify",
+    "total_time_taken": 1.86
+  },
+  "search_parameters": {
+    "engine": "google_trends",
+    "q": "inteligencia artificial",
+    "hl": "es",
+    "geo": "BO",
+    "date": "today 12-m",
+    "tz": "420",
+    "data_type": "TIMESERIES"
+  },
+  "interest_over_time": {
+    "timeline_data": [
+      {
+        "date": "9–15 nov 2025",
+        "timestamp": "1762646400",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "96",
+            "extracted_value": 96
+          }
+        ]
+      },
+      {
+        "date": "16–22 nov 2025",
+        "timestamp": "1763251200",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "96",
+            "extracted_value": 96
+          }
+        ]
+      },
+      {
+        "date": "23–29 nov 2025",
+        "timestamp": "1763856000",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "100",
+            "extracted_value": 100
+          }
+        ]
+      },
+      {
+        "date": "30 nov – 6 dic 2025",
+        "timestamp": "1764460800",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "89",
+            "extracted_value": 89
+          }
+        ]
+      },
+      {
+        "date": "7–13 dic 2025",
+        "timestamp": "1765065600",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "72",
+            "extracted_value": 72
+          }
+        ]
+      },
+      {
+        "date": "14–20 dic 2025",
+        "timestamp": "1765670400",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "56",
+            "extracted_value": 56
+          }
+        ]
+      },
+      {
+        "date": "21–27 dic 2025",
+        "timestamp": "1766275200",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "54",
+            "extracted_value": 54
+          }
+        ]
+      },
+      {
+        "date": "28 dic 2025 – 3 ene 2026",
+        "timestamp": "1766880000",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "57",
+            "extracted_value": 57
+          }
+        ]
+      },
+      {
+        "date": "4–10 ene 2026",
+        "timestamp": "1767484800",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "59",
+            "extracted_value": 59
+          }
+        ]
+      },
+      {
+        "date": "11–17 ene 2026",
+        "timestamp": "1768089600",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "63",
+            "extracted_value": 63
+          }
+        ]
+      },
+      {
+        "date": "18–24 ene 2026",
+        "timestamp": "1768694400",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "71",
+            "extracted_value": 71
+          }
+        ]
+      },
+      {
+        "date": "25–31 ene 2026",
+        "timestamp": "1769299200",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "83",
+            "extracted_value": 83
+          }
+        ]
+      },
+      {
+        "date": "1–7 feb 2026",
+        "timestamp": "1769904000",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "68",
+            "extracted_value": 68
+          }
+        ]
+      },
+      {
+        "date": "8–14 feb 2026",
+        "timestamp": "1770508800",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "75",
+            "extracted_value": 75
+          }
+        ]
+      },
+      {
+        "date": "15–21 feb 2026",
+        "timestamp": "1771113600",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "78",
+            "extracted_value": 78
+          }
+        ]
+      },
+      {
+        "date": "22–28 feb 2026",
+        "timestamp": "1771718400",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "66",
+            "extracted_value": 66
+          }
+        ]
+      },
+      {
+        "date": "1–7 mar 2026",
+        "timestamp": "1772323200",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "83",
+            "extracted_value": 83
+          }
+        ]
+      },
+      {
+        "date": "8–14 mar 2026",
+        "timestamp": "1772928000",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "90",
+            "extracted_value": 90
+          }
+        ]
+      },
+      {
+        "date": "15–21 mar 2026",
+        "timestamp": "1773532800",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "72",
+            "extracted_value": 72
+          }
+        ]
+      },
+      {
+        "date": "22–28 mar 2026",
+        "timestamp": "1774137600",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "89",
+            "extracted_value": 89
+          }
+        ]
+      },
+      {
+        "date": "29 mar – 4 abr 2026",
+        "timestamp": "1774742400",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "85",
+            "extracted_value": 85
+          }
+        ]
+      },
+      {
+        "date": "5–11 abr 2026",
+        "timestamp": "1775347200",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "72",
+            "extracted_value": 72
+          }
+        ]
+      },
+      {
+        "date": "12–18 abr 2026",
+        "timestamp": "1775952000",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "91",
+            "extracted_value": 91
+          }
+        ]
+      },
+      {
+        "date": "19–25 abr 2026",
+        "timestamp": "1776556800",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "77",
+            "extracted_value": 77
+          }
+        ]
+      },
+      {
+        "date": "26 abr – 2 may 2026",
+        "timestamp": "1777161600",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "86",
+            "extracted_value": 86
+          }
+        ]
+      },
+      {
+        "date": "3–9 may 2026",
+        "timestamp": "1777766400",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "97",
+            "extracted_value": 97
+          }
+        ]
+      },
+      {
+        "date": "10–16 may 2026",
+        "timestamp": "1778371200",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "81",
+            "extracted_value": 81
+          }
+        ]
+      },
+      {
+        "date": "17–23 may 2026",
+        "timestamp": "1778976000",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "80",
+            "extracted_value": 80
+          }
+        ]
+      },
+      {
+        "date": "24–30 may 2026",
+        "timestamp": "1779580800",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "87",
+            "extracted_value": 87
+          }
+        ]
+      },
+      {
+        "date": "31 may – 6 jun 2026",
+        "timestamp": "1780185600",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "81",
+            "extracted_value": 81
+          }
+        ]
+      },
+      {
+        "date": "7–13 jun 2026",
+        "timestamp": "1780790400",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "81",
+            "extracted_value": 81
+          }
+        ]
+      },
+      {
+        "date": "14–20 jun 2026",
+        "timestamp": "1781395200",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "72",
+            "extracted_value": 72
+          }
+        ]
+      },
+      {
+        "date": "21–27 jun 2026",
+        "timestamp": "1782000000",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "74",
+            "extracted_value": 74
+          }
+        ]
+      },
+      {
+        "date": "28 jun – 4 jul 2026",
+        "timestamp": "1782604800",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "64",
+            "extracted_value": 64
+          }
+        ]
+      },
+      {
+        "date": "5–11 jul 2026",
+        "timestamp": "1783209600",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "65",
+            "extracted_value": 65
+          }
+        ]
+      },
+      {
+        "date": "12–18 jul 2026",
+        "timestamp": "1783814400",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "65",
+            "extracted_value": 65
+          }
+        ]
+      },
+      {
+        "date": "19–25 jul 2026",
+        "timestamp": "1784419200",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "77",
+            "extracted_value": 77
+          }
+        ]
+      },
+      {
+        "date": "26 jul – 1 ago 2026",
+        "timestamp": "1785024000",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "67",
+            "extracted_value": 67
+          }
+        ]
+      },
+      {
+        "date": "2–8 ago 2026",
+        "timestamp": "1785628800",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "70",
+            "extracted_value": 70
+          }
+        ]
+      },
+      {
+        "date": "9–15 ago 2026",
+        "timestamp": "1786233600",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "75",
+            "extracted_value": 75
+          }
+        ]
+      },
+      {
+        "date": "16–22 ago 2026",
+        "timestamp": "1786838400",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "68",
+            "extracted_value": 68
+          }
+        ]
+      },
+      {
+        "date": "23–29 ago 2026",
+        "timestamp": "1787443200",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "60",
+            "extracted_value": 60
+          }
+        ]
+      },
+      {
+        "date": "30 ago – 5 sept 2026",
+        "timestamp": "1788048000",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "75",
+            "extracted_value": 75
+          }
+        ]
+      },
+      {
+        "date": "6–12 sept 2026",
+        "timestamp": "1788652800",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "84",
+            "extracted_value": 84
+          }
+        ]
+      },
+      {
+        "date": "13–19 sept 2026",
+        "timestamp": "1789257600",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "94",
+            "extracted_value": 94
+          }
+        ]
+      },
+      {
+        "date": "20–26 sept 2026",
+        "timestamp": "1789862400",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "80",
+            "extracted_value": 80
+          }
+        ]
+      },
+      {
+        "date": "27 sept – 3 oct 2026",
+        "timestamp": "1790467200",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "73",
+            "extracted_value": 73
+          }
+        ]
+      },
+      {
+        "date": "4–10 oct 2026",
+        "timestamp": "1791072000",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "68",
+            "extracted_value": 68
+          }
+        ]
+      },
+      {
+        "date": "11–17 oct 2026",
+        "timestamp": "1791676800",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "78",
+            "extracted_value": 78
+          }
+        ]
+      },
+      {
+        "date": "18–24 oct 2026",
+        "timestamp": "1792281600",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "90",
+            "extracted_value": 90
+          }
+        ]
+      },
+      {
+        "date": "25–31 oct 2026",
+        "timestamp": "1792886400",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "83",
+            "extracted_value": 83
+          }
+        ]
+      },
+      {
+        "date": "1–7 nov 2026",
+        "timestamp": "1793491200",
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "69",
+            "extracted_value": 69
+          }
+        ]
+      },
+      {
+        "date": "8–14 nov 2026",
+        "timestamp": "1794096000",
+        "partial_data": true,
+        "values": [
+          {
+            "query": "inteligencia artificial",
+            "query_index": 0,
+            "value": "74",
+            "extracted_value": 74
+          }
+        ]
+      }
+    ]
+  }
+}

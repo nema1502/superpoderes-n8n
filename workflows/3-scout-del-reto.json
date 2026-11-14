@@ -1,0 +1,385 @@
+{
+  "name": "3. El scout del reto",
+  "nodes": [
+    {
+      "id": "c4a70003-0000-4385-8000-000000000f3d",
+      "name": "Nota 1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        -300
+      ],
+      "parameters": {
+        "content": "# El scout del reto\n\n## Pegás tu reto y en un minuto tenés con qué arrancar.\n\n**Qué aprendés:** un agente que hace varias búsquedas seguidas y entrega una respuesta con forma fija. La IA piensa y n8n le da forma.\n\n**Credenciales:** SerpApi API en Google, Artículos y Videos. En Modelo, Use Gateway credits (n8n Cloud) o una cuenta de OpenAI o de un servicio compatible.\n\n**Para probarlo:** tocá Execute, abajo, pegá un reto y elegí qué sabe hacer tu equipo. Tarda cerca de un minuto.",
+        "height": 260,
+        "width": 1620,
+        "color": 7
+      }
+    },
+    {
+      "id": "c4a70003-0000-4386-8000-000000000f3e",
+      "name": "Nota 2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        0
+      ],
+      "parameters": {
+        "content": "## 1. Tu reto\n### Pegás el reto y elegís qué sabe hacer tu equipo.",
+        "height": 400,
+        "width": 300,
+        "color": 5
+      }
+    },
+    {
+      "id": "c4a70003-0000-4387-8000-000000000f3f",
+      "name": "Nota 3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        240,
+        0
+      ],
+      "parameters": {
+        "content": "## 2. Scout\n### Busca, lee y propone tres ideas.\nHace varias búsquedas seguidas y después piensa ideas para el fin de semana.",
+        "height": 400,
+        "width": 820,
+        "color": 6
+      }
+    },
+    {
+      "id": "c4a70003-0000-4388-8000-000000000f40",
+      "name": "Nota 4",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        440
+      ],
+      "parameters": {
+        "content": "## Herramientas y forma\n### Google, Scholar y YouTube, con forma fija.\nForma de la respuesta obliga al agente a contestar siempre con los mismos campos.",
+        "height": 340,
+        "width": 540,
+        "color": 4
+      }
+    },
+    {
+      "id": "c4a70003-0000-4389-8000-000000000f41",
+      "name": "Nota 5",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1080,
+        0
+      ],
+      "parameters": {
+        "content": "## 3. Página\n### n8n convierte la respuesta en una página.\nComo la forma es fija, Armar la página sabe dónde está cada cosa. En n8n Cloud una ejecución dura 180 segundos como mucho.",
+        "height": 400,
+        "width": 440,
+        "color": 2
+      }
+    },
+    {
+      "id": "c4a70003-0000-4001-8000-000000000bb9",
+      "name": "Tu reto",
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.6,
+      "position": [
+        0,
+        240
+      ],
+      "webhookId": "c4a70003-0001-4001-8000-000000000bb9",
+      "parameters": {
+        "formTitle": "El scout del reto",
+        "formDescription": "Pegá el reto que eligieron. En un minuto te devuelvo qué existe, qué leer, qué ver y tres ideas para el fin de semana.",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Tu reto",
+              "fieldName": "reto",
+              "fieldType": "textarea",
+              "placeholder": "Pegá acá el reto o contalo con tus palabras",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "¿Qué sabe hacer tu equipo?",
+              "fieldName": "equipo",
+              "fieldType": "dropdown",
+              "requiredField": true,
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Web"
+                  },
+                  {
+                    "option": "Apps"
+                  },
+                  {
+                    "option": "Datos"
+                  },
+                  {
+                    "option": "Hardware"
+                  },
+                  {
+                    "option": "Diseño"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "responseMode": "lastNode",
+        "options": {
+          "path": "scout-del-reto",
+          "buttonLabel": "Investigar",
+          "appendAttribution": false,
+          "customCss": ":root{--font-family:\"Segoe UI\", system-ui, sans-serif}\n:root{--font-weight-normal:600}\n:root{--font-weight-bold:700}\n:root{--font-size-header:34px}\n:root{--font-size-subheader:19px}\n:root{--font-size-label:19px}\n:root{--font-size-input:19px}\n:root{--font-size-paragraph:19px}\n:root{--font-size-body:16px}\n:root{--font-size-link:14px}\n:root{--font-size-error:16px}\n:root{--color-background:#070A0F}\n:root{--color-card-bg:#0B1838}\n:root{--color-card-border:#4DA3FF}\n:root{--color-card-shadow:rgba(0, 0, 0, 0)}\n:root{--color-header:#F5F7FF}\n:root{--color-header-subtext:#9AA3B8}\n:root{--color-label:#F5F7FF}\n:root{--color-input-bg:#070A0F}\n:root{--color-input-border:#4DA3FF}\n:root{--color-input-text:#F5F7FF}\n:root{--color-focus-border:#FFB547}\n:root{--color-submit-btn-bg:#FFB547}\n:root{--color-submit-btn-text:#070A0F}\n:root{--color-required:#FFB547}\n:root{--color-link:#9AA3B8}\n:root{--color-error:#FF7A7A}\n:root{--color-html-text:#F5F7FF}\n:root{--color-html-link:#4DA3FF}\n:root{--color-test-notice-text:#FFB547}\n:root{--color-test-notice-bg:#0B1838}\n:root{--color-test-notice-border:#FFB547}\n:root{--container-width:560px}\n:root{--border-radius-card:16px}\n:root{--card-border-radius:16px}\n:root{--submit-btn-height:56px}"
+        }
+      }
+    },
+    {
+      "id": "c4a70003-0000-4002-8000-000000000bba",
+      "name": "Scout",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        360,
+        240
+      ],
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ 'Reto: ' + $json.reto + '\\nNuestro equipo sabe de: ' + $json.equipo }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "Sos el scout de un equipo del hackathon NASA Space Apps en Santa Cruz de la Sierra, Bolivia. Te pasan el reto que eligieron y lo que sabe hacer el equipo.\nInvestigá con tus herramientas, como mucho una búsqueda con cada una: Google para ver qué ya existe, Artículos para encontrar qué leer y Videos para encontrar un tutorial que les sirva.\nDespués proponé tres ideas que un equipo de cuatro personas pueda armar en un fin de semana con lo que sabe hacer. Cada idea con un primer paso concreto para esta noche.\nRespondé en español, con frases cortas: una sola frase por campo, sin rayas largas ni punto y coma. Como mucho tres elementos en cada lista. El primer paso de cada idea empieza con un verbo.\nUsá solo enlaces que vinieron en los resultados de las herramientas, nunca inventes uno. Si una herramienta no trajo nada útil, dejá esa lista vacía.",
+          "maxIterations": 8
+        }
+      }
+    },
+    {
+      "id": "c4a70003-0000-4003-8000-000000000bbb",
+      "name": "Modelo",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        280,
+        580
+      ],
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-5-mini"
+        },
+        "responsesApiEnabled": false,
+        "options": {
+          "reasoningEffort": "low",
+          "timeout": 120000
+        }
+      }
+    },
+    {
+      "id": "c4a70003-0000-4004-8000-000000000bbc",
+      "name": "Google",
+      "type": "n8n-nodes-serpapi.serpApiTool",
+      "typeVersion": 1,
+      "position": [
+        420,
+        580
+      ],
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Busca en Google proyectos, apps, datos abiertos y páginas que ya existan sobre el tema. Se puede escribir en español o en inglés.",
+        "operation": "google",
+        "q": "={{ $fromAI('q', 'Qué buscar en Google para ver proyectos, apps o datos abiertos que ya existan sobre el reto', 'string') }}",
+        "additionalFields": {
+          "hl": "es",
+          "json_restrictor": "organic_results[0:5].{title,link,snippet,source}"
+        }
+      }
+    },
+    {
+      "id": "c4a70003-0000-4005-8000-000000000bbd",
+      "name": "Artículos",
+      "type": "n8n-nodes-serpapi.serpApiTool",
+      "typeVersion": 1,
+      "position": [
+        560,
+        580
+      ],
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Busca artículos académicos en Google Scholar. Escribí la búsqueda en inglés.",
+        "operation": "google_scholar",
+        "q": "={{ $fromAI('q', 'Búsqueda en inglés, con palabras técnicas del tema', 'string') }}",
+        "additionalFields": {
+          "json_restrictor": "organic_results[0:5].{title,link,snippet,publication_info}"
+        }
+      }
+    },
+    {
+      "id": "c4a70003-0000-4006-8000-000000000bbe",
+      "name": "Videos",
+      "type": "n8n-nodes-serpapi.serpApiTool",
+      "typeVersion": 1,
+      "position": [
+        700,
+        580
+      ],
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Busca tutoriales en YouTube en español para aprender la tecnología que necesita el equipo.",
+        "operation": "youtube",
+        "search_query": "={{ $fromAI('busqueda', 'Qué buscar en YouTube, en español', 'string') }}",
+        "additionalFields": {
+          "gl": "bo",
+          "hl": "es",
+          "json_restrictor": "video_results[0:5].{title,link,channel,length,views}"
+        }
+      }
+    },
+    {
+      "id": "c4a70003-0000-4007-8000-000000000bbf",
+      "name": "Forma de la respuesta",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        860,
+        580
+      ],
+      "parameters": {
+        "schemaType": "fromJson",
+        "jsonSchemaExample": "{\n  \"reto_en_una_frase\": \"Avisar a tiempo cuando hay riesgo de incendio cerca de una comunidad\",\n  \"ya_existe\": [\n    {\n      \"nombre\": \"Nombre del proyecto\",\n      \"que_es\": \"Qué hace, en una frase\",\n      \"enlace\": \"https://...\"\n    }\n  ],\n  \"para_leer\": [\n    {\n      \"titulo\": \"Título del artículo\",\n      \"enlace\": \"https://...\"\n    }\n  ],\n  \"para_ver\": [\n    {\n      \"titulo\": \"Título del video\",\n      \"canal\": \"Canal\",\n      \"enlace\": \"https://...\"\n    }\n  ],\n  \"ideas\": [\n    {\n      \"nombre\": \"Nombre corto\",\n      \"que_hace\": \"Qué hace, en una frase\",\n      \"primer_paso\": \"Qué hacer esta noche\"\n    }\n  ]\n}"
+      }
+    },
+    {
+      "id": "c4a70003-0000-4008-8000-000000000bc0",
+      "name": "Armar la página",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1160,
+        240
+      ],
+      "parameters": {
+        "jsCode": "// Convierte la respuesta con forma fija del scout en una página.\n\n// Todo texto que viene de afuera pasa por acá antes de entrar al HTML.\nfunction esc(s) {\n  return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\"/g, '&quot;')\n}\n// Solo enlaces web de verdad.\nfunction enlaceSeguro(url) {\n  return /^https?:\\/\\//i.test(String(url || '')) ? String(url) : ''\n}\nfunction enlace(url, texto) {\n  const u = enlaceSeguro(url)\n  return u ? '<a href=\"' + esc(u) + '\" target=\"_blank\" rel=\"noopener\">' + esc(texto) + '</a>' : esc(texto)\n}\nfunction lista(x) {\n  return Array.isArray(x) ? x.filter(function (e) { return e && typeof e === 'object' }) : []\n}\n// Estilos de la charla. Cada propiedad va en su propia regla.\nfunction css(reglas) {\n  return Object.keys(reglas).map(function (sel) {\n    return Object.keys(reglas[sel]).map(function (prop) {\n      return sel + '{' + prop + ':' + reglas[sel][prop] + '}'\n    }).join('')\n  }).join('')\n}\nconst estilo = css({\n  'html, body': { 'background': '#070A0F', 'margin': '0' },\n  'body': { 'color': '#F5F7FF', 'font-family': '\"Segoe UI\", system-ui, sans-serif', 'font-weight': '700', 'font-size': '22px', 'line-height': '1.4', 'display': 'block' },\n  '.hoja': { 'max-width': '720px', 'margin': '0 auto', 'padding': '48px 24px' },\n  '.hoja p': { 'margin': '0 0 12px 0', 'font-size': '22px' },\n  '.hoja .rotulo': { 'color': '#9AA3B8', 'margin': '0 0 8px 0' },\n  '.hoja h1': { 'font-size': '44px', 'line-height': '1.15', 'margin': '0 0 8px 0' },\n  '.hoja h2': { 'font-size': '30px', 'color': '#FFB547', 'margin': '40px 0 12px 0' },\n  '.hoja ul': { 'margin': '0', 'padding': '0 0 0 28px' },\n  '.hoja li': { 'margin': '0 0 14px 0' },\n  '.hoja .apoyo': { 'color': '#9AA3B8', 'font-size': '22px' },\n  '.hoja a': { 'color': '#4DA3FF' },\n  '.idea': { 'border': '3px solid #4DA3FF', 'border-radius': '16px', 'padding': '20px 24px', 'margin': '0 0 16px 0' },\n  '.idea .numero': { 'color': '#FFB547', 'font-size': '28px', 'margin': '0 0 4px 0' },\n  '.idea .paso': { 'color': '#FFB547' }\n})\n\nconst r = $input.first().json.output || {}\nconst yaExiste = lista(r.ya_existe).slice(0, 5)\nconst paraLeer = lista(r.para_leer).slice(0, 5)\nconst paraVer = lista(r.para_ver).slice(0, 5)\nconst ideas = lista(r.ideas).slice(0, 3)\n\nlet html = '<style>' + estilo + '</style><main class=\"hoja\">'\nhtml += '<p class=\"rotulo\">El scout del reto</p>'\nhtml += '<h1>' + esc(r.reto_en_una_frase) + '</h1>'\nif (yaExiste.length) {\n  html += '<h2>Ya existe</h2><ul>' + yaExiste.map(function (e) {\n    return '<li>' + enlace(e.enlace, e.nombre) + (e.que_es ? '<br><span class=\"apoyo\">' + esc(e.que_es) + '</span>' : '') + '</li>'\n  }).join('') + '</ul>'\n}\nif (paraLeer.length) {\n  html += '<h2>Para leer</h2><ul>' + paraLeer.map(function (e) {\n    return '<li>' + enlace(e.enlace, e.titulo) + '</li>'\n  }).join('') + '</ul>'\n}\nif (paraVer.length) {\n  html += '<h2>Para ver</h2><ul>' + paraVer.map(function (e) {\n    return '<li>' + enlace(e.enlace, e.titulo) + (e.canal ? '<br><span class=\"apoyo\">' + esc(e.canal) + '</span>' : '') + '</li>'\n  }).join('') + '</ul>'\n}\nif (ideas.length) {\n  html += '<h2>Tres ideas para el fin de semana</h2>' + ideas.map(function (e, i) {\n    return '<div class=\"idea\"><p class=\"numero\">' + (i + 1) + '. ' + esc(e.nombre) + '</p>' +\n      '<p>' + esc(e.que_hace) + '</p>' +\n      '<p><span class=\"paso\">Esta noche:</span> ' + esc(e.primer_paso) + '</p></div>'\n  }).join('')\n}\nhtml += '</main>'\nreturn [{ json: { html: html, ya_existe: yaExiste.length, para_leer: paraLeer.length, para_ver: paraVer.length, ideas: ideas.length } }]"
+      }
+    },
+    {
+      "id": "c4a70003-0000-4009-8000-000000000bc1",
+      "name": "Página",
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.5,
+      "position": [
+        1380,
+        240
+      ],
+      "webhookId": "c4a70003-0001-4009-8000-000000000bc1",
+      "parameters": {
+        "operation": "completion",
+        "respondWith": "showText",
+        "responseText": "={{ $json.html }}"
+      }
+    }
+  ],
+  "connections": {
+    "Tu reto": {
+      "main": [
+        [
+          {
+            "node": "Scout",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Scout": {
+      "main": [
+        [
+          {
+            "node": "Armar la página",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Armar la página": {
+      "main": [
+        [
+          {
+            "node": "Página",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Modelo": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Scout",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google": {
+      "ai_tool": [
+        [
+          {
+            "node": "Scout",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Artículos": {
+      "ai_tool": [
+        [
+          {
+            "node": "Scout",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Videos": {
+      "ai_tool": [
+        [
+          {
+            "node": "Scout",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Forma de la respuesta": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Scout",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": false
+  }
+}

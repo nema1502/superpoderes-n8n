@@ -1,0 +1,128 @@
+{
+  "search_parameters": {
+    "engine": "google_scholar",
+    "q": "VIIRS MODIS active fire detection algorithm review satellite fire alerts Bolivia wildfire remote sensing",
+    "json_restrictor": "organic_results[0:5].{title,link,snippet,publication_info}"
+  },
+  "organic_results": [
+    {
+      "title": "A review on forest fire detection techniques: Past, present, and sustainable future",
+      "link": "https://www.mdpi.com/1424-8220/26/5/1609",
+      "snippet": "… sophisticated remote sensing technologies, including recent Internet … Nations such as Bolivia and Venezuela recorded their … operational satellite products such as MODIS and VIIRS [89]. …",
+      "publication_info": {
+        "summary": "AH Khan, AN Bahar, K Wahid - Sensors, 2026 - mdpi.com",
+        "authors": [
+          {
+            "name": "AH Khan",
+            "link": "https://scholar.google.com/citations?user=rS4eA50AAAAJ&hl=en&oi=sra",
+            "author_id": "rS4eA50AAAAJ",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=rS4eA50AAAAJ&engine=google_scholar_author&hl=en"
+          },
+          {
+            "name": "AN Bahar",
+            "link": "https://scholar.google.com/citations?user=R1wjRqAAAAAJ&hl=en&oi=sra",
+            "author_id": "R1wjRqAAAAAJ",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=R1wjRqAAAAAJ&engine=google_scholar_author&hl=en"
+          },
+          {
+            "name": "K Wahid",
+            "link": "https://scholar.google.com/citations?user=6o9Ne9gAAAAJ&hl=en&oi=sra",
+            "author_id": "6o9Ne9gAAAAJ",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=6o9Ne9gAAAAJ&engine=google_scholar_author&hl=en"
+          }
+        ]
+      }
+    },
+    {
+      "title": "Predicting next-week VIIRS fire detections in Bolivia: a reproducible benchmark with temporal and geographic evaluation",
+      "link": "https://arxiv.org/abs/2611.08539",
+      "snippet": "… The reviewed sources do not establish equivalent validation … of forest fires in the department of Santa Cruz, Bolivia. Forests… Remote Sensing of Environment, 143:85–96, 2014. https://doi…",
+      "publication_info": {
+        "summary": "VHC Flores - arXiv preprint arXiv:2611.08539, 2026 - arxiv.org",
+        "authors": [
+          {
+            "name": "VHC Flores"
+          }
+        ]
+      }
+    },
+    {
+      "title": "Remote sensing for wildfire mapping: A comprehensive review of advances, platforms, and algorithms",
+      "link": "https://www.mdpi.com/2571-6255/8/8/316",
+      "snippet": "… ) and Visible Infrared Imaging Radiometer Suite (VIIRS) as … of burned area using MODIS active fire observations” [48], with … analyses focused on remote sensing and wildfires [72] as well …",
+      "publication_info": {
+        "summary": "RE Guiop-Servan, A Cotrina-Sanchez, J Puerta-Culqui… - Fire, 2025 - mdpi.com",
+        "authors": [
+          {
+            "name": "RE Guiop-Servan"
+          },
+          {
+            "name": "A Cotrina-Sanchez",
+            "link": "https://scholar.google.com/citations?user=V_e93l8AAAAJ&hl=en&oi=sra",
+            "author_id": "V_e93l8AAAAJ",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=V_e93l8AAAAJ&engine=google_scholar_author&hl=en"
+          },
+          {
+            "name": "J Puerta-Culqui"
+          }
+        ]
+      }
+    },
+    {
+      "title": "Satellite remote sensing contributions to wildland fire science and management",
+      "link": "https://link.springer.com/article/10.1007/s40725-020-00116-5",
+      "snippet": "… , active fire detection, and fire effect monitoring are reviewed … fuels) associated with the occurrence of wildfires [9–11], and … operational active fire product derived from the 375 m VIIRS …",
+      "publication_info": {
+        "summary": "E Chuvieco, I Aguado, J Salas, M García… - Current Forestry …, 2020 - Springer",
+        "authors": [
+          {
+            "name": "E Chuvieco",
+            "link": "https://scholar.google.com/citations?user=6pJqJh4AAAAJ&hl=en&oi=sra",
+            "author_id": "6pJqJh4AAAAJ",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=6pJqJh4AAAAJ&engine=google_scholar_author&hl=en"
+          },
+          {
+            "name": "I Aguado",
+            "link": "https://scholar.google.com/citations?user=weaswGkAAAAJ&hl=en&oi=sra",
+            "author_id": "weaswGkAAAAJ",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=weaswGkAAAAJ&engine=google_scholar_author&hl=en"
+          },
+          {
+            "name": "J Salas",
+            "link": "https://scholar.google.com/citations?user=k9KeCPkAAAAJ&hl=en&oi=sra",
+            "author_id": "k9KeCPkAAAAJ",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=k9KeCPkAAAAJ&engine=google_scholar_author&hl=en"
+          },
+          {
+            "name": "M García",
+            "link": "https://scholar.google.com/citations?user=LISWEI4AAAAJ&hl=en&oi=sra",
+            "author_id": "LISWEI4AAAAJ",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=LISWEI4AAAAJ&engine=google_scholar_author&hl=en"
+          }
+        ]
+      }
+    },
+    {
+      "title": "Deep learning approaches for wildland fires using satellite remote sensing data: Detection, mapping, and prediction",
+      "link": "https://www.mdpi.com/2571-6255/6/5/192",
+      "snippet": "… Next, we review the deep learning methods employed for … ) for wildfires, highlighting wildland fire datasets, fire detection, … for wildfire propagation tasks collected from the VIIRS thermal …",
+      "publication_info": {
+        "summary": "R Ghali, MA Akhloufi - Fire, 2023 - mdpi.com",
+        "authors": [
+          {
+            "name": "R Ghali",
+            "link": "https://scholar.google.com/citations?user=8udc6joAAAAJ&hl=en&oi=sra",
+            "author_id": "8udc6joAAAAJ",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=8udc6joAAAAJ&engine=google_scholar_author&hl=en"
+          },
+          {
+            "name": "MA Akhloufi",
+            "link": "https://scholar.google.com/citations?user=BKWoCcgAAAAJ&hl=en&oi=sra",
+            "author_id": "BKWoCcgAAAAJ",
+            "serpapi_scholar_link": "https://serpapi.com/search.json?author_id=BKWoCcgAAAAJ&engine=google_scholar_author&hl=en"
+          }
+        ]
+      }
+    }
+  ]
+}

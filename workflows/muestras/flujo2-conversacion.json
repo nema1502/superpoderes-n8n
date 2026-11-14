@@ -1,0 +1,76 @@
+{
+  "flujo": "2. El compañero de la madrugada",
+  "fecha": "2026-11-14T06:21:26.986Z",
+  "entorno": {
+    "n8n": "2.47.7 en una compu (Windows 11)",
+    "serpapi": "SerpApi Official 0.1.10",
+    "modelo": "gpt-5-mini por OpenRouter, con OpenAI Chat Model y Base URL https://openrouter.ai/api/v1, Reasoning Effort en Low"
+  },
+  "sesion": "una sola sesión de chat, las cuatro preguntas seguidas",
+  "nota": "Ensayo de las 2:21 de la madrugada en Bolivia: por eso los cafés figuran cerrados. Google News da la fecha como mes/día/año.",
+  "turnos": [
+    {
+      "pregunta": "Somos cuatro y necesitamos un café abierto cerca del centro. ¿Dónde vamos?",
+      "respuesta": "No hay cafés abiertos ahora en el centro.  \nSi esperan hasta la mañana: Cofi Centro (Google Maps) — 4.7, 153 reseñas; abre 7:00; Libertad esquina.  \nL'arôme Café — 4.5, 297 reseñas; abre 7:30; Calle Chuquisaca.  \nCafé 4 Llamas — 4.6, 221 reseñas; abre 7:30; Av. Salvador esq. C. H.  \nFuente: Google Maps. ¿Querés que busque opciones 24/7 o delivery cerca?",
+      "herramientas": [
+        {
+          "herramienta": "Mapas",
+          "busqueda": "café centro Santa Cruz de la Sierra",
+          "ms": 806,
+          "archivo": "serpapi-google_maps-companero-1.json"
+        }
+      ],
+      "llamadas_al_modelo": 2,
+      "segundos": 21.5
+    },
+    {
+      "pregunta": "¿Qué noticias hay de la NASA esta semana? Decime la fecha de cada una.",
+      "respuesta": "10 de noviembre — La NASA busca a la próxima generación de astronautas. Fuente: NASA. https://www.nasa.gov/news-release/la-nasa-busca-a-la-proxima-generacion-de-astronautas/  \n10 de noviembre — La NASA destina un millón de dólares al reto estudiantil Base Lunar. Fuente: NASA. https://www.nasa.gov/news-release/la-nasa-destina-un-millon-de-dolares-al-reto-estudiantil-base-lunar/  \n13 de noviembre — La NASA pidió ideas para evitar que el telescopio Hubble caiga a la Tierra en 2033. Fuente: Infobae. https://www.infobae.com/tecno/2026/11/13/la-nasa-pidio-a-empresas-privadas-ideas-para-evitar-que-el-telescopio-hubble-caiga-a-la-tierra-en-2033/  \n13 de noviembre — La NASA busca evitar que un objeto caiga sin control a la Tierra; podría reingresar en 2033. Fuente: Revista Semana. https://www.semana.com/tecnologia/articulo/la-nasa-busca-evitar-que-un-objeto-caiga-sin-control-a-la-tierra-podria-reingresar-a-la-atmosfera-en-2033/202657/  \n13 de noviembre — El satélite TEMPO de la NASA permite mejor seguimiento de la mala calidad del aire. Fuente: gatoencerrado.news. https://gatoencerrado.news/2026/11/13/el-satelite-tempo-de-la-nasa-permite-un-mejor-seguimiento-de-los-dias-con-mala-calidad-del-aire/  \n14 de noviembre — El avión supersónico X-59 de la NASA despega de Alabama. Fuente: Yahoo. https://es-us.noticias.yahoo.com/silencioso-avi%C3%B3n-supers%C3%B3nico-x-59-010009091.html",
+      "herramientas": [
+        {
+          "herramienta": "Noticias",
+          "busqueda": "NASA",
+          "ms": 1510,
+          "archivo": "serpapi-google_news-companero-2.json"
+        }
+      ],
+      "llamadas_al_modelo": 2,
+      "segundos": 29.8
+    },
+    {
+      "pregunta": "Pasame un video corto en español para aprender n8n.",
+      "respuesta": "Te paso uno corto para empezar con n8n.  \nQué es N8n y cómo crear tu primer agente, Alan Daitch, 0:52, en español.  \nLink: https://www.youtube.com/watch?v=k3YUGsfPRPg",
+      "herramientas": [
+        {
+          "herramienta": "Videos",
+          "busqueda": "n8n tutorial español corto",
+          "ms": 1529,
+          "archivo": "serpapi-youtube-companero-3.json"
+        }
+      ],
+      "llamadas_al_modelo": 2,
+      "segundos": 20
+    },
+    {
+      "pregunta": "De esos cafés, ¿cuál tiene mejor puntaje?",
+      "respuesta": "Cofi Centro — 4.7, 153 reseñas.  \nEs el mejor puntuado de la lista.  \nFuente: Google Maps.",
+      "herramientas": [],
+      "llamadas_al_modelo": 1,
+      "segundos": 8.2
+    }
+  ],
+  "aparte": {
+    "pregunta": "¿Qué pasó hoy con la NASA? Contámelo en dos frases.",
+    "respuesta": "Hoy, 14 de noviembre, despegó el avión supersónico silencioso X-59 de la NASA desde Alabama.  \nFuente: Yahoo, enlace: https://es-us.noticias.yahoo.com/silencioso-avi%C3%B3n-supers%C3%B3nico-x-59-010009091.html",
+    "herramientas": [
+      {
+        "herramienta": "Noticias",
+        "busqueda": "NASA",
+        "ms": 94
+      }
+    ],
+    "llamadas_al_modelo": 2,
+    "segundos": 26.6,
+    "nota": "En otra sesión, la pregunta con hoy. La búsqueda fue NASA, igual a la de la segunda pregunta, y salió de la caché de SerpApi. La noticia que cita tiene fecha 11/14/2026, 01:00 AM UTC, que en Bolivia es el 13 a las 21:00."
+  }
+}

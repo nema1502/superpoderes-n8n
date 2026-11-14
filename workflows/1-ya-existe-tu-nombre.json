@@ -1,0 +1,299 @@
+{
+  "name": "1. ¿Ya existe tu nombre?",
+  "nodes": [
+    {
+      "id": "c4a70001-0000-4385-8000-00000000076d",
+      "name": "Nota 1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        -300
+      ],
+      "parameters": {
+        "content": "# ¿Ya existe tu nombre?\n\n## Decí el nombre de tu proyecto y en segundos sabés si ya existe.\n\n**Qué aprendés:** un flujo en línea recta. Primero ve, después piensa. El orden lo decidimos nosotros.\n\n**Credenciales:** SerpApi API en Buscar en Google. En Modelo, Use Gateway credits (n8n Cloud) o una cuenta de OpenAI o de un servicio compatible.\n\n**Para probarlo:** tocá Execute, abajo, y llená el formulario que se abre. Para usarlo desde el celular, Publish y la dirección de producción del Formulario.",
+        "height": 260,
+        "width": 1640,
+        "color": 7
+      }
+    },
+    {
+      "id": "c4a70001-0000-4386-8000-00000000076e",
+      "name": "Nota 2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        0
+      ],
+      "parameters": {
+        "content": "## 1. Entra\n### El formulario pide el nombre del proyecto.\nY, si querés, de qué se trata.",
+        "height": 400,
+        "width": 300,
+        "color": 5
+      }
+    },
+    {
+      "id": "c4a70001-0000-4387-8000-00000000076f",
+      "name": "Nota 3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        240,
+        0
+      ],
+      "parameters": {
+        "content": "## 2. Ve\n### SerpApi busca ese nombre exacto en Google.\nEn Search Query, `$json.nombre` trae lo que escribiste. Resumir resultados junta los seis primeros en un texto corto.",
+        "height": 400,
+        "width": 520,
+        "color": 4
+      }
+    },
+    {
+      "id": "c4a70001-0000-4388-8000-000000000770",
+      "name": "Nota 4",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        780,
+        0
+      ],
+      "parameters": {
+        "content": "## 3. Piensa\n### El modelo lee y da un veredicto.\nLIBRE, OCUPADO o DUDOSO. No busca nada, solo lee lo que trajo Google.",
+        "height": 720,
+        "width": 360,
+        "color": 6
+      }
+    },
+    {
+      "id": "c4a70001-0000-4389-8000-000000000771",
+      "name": "Nota 5",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1160,
+        0
+      ],
+      "parameters": {
+        "content": "## 4. Responde\n### n8n arma la página con el veredicto.\nArmar la página escribe el HTML con los colores de la charla y Página lo muestra.",
+        "height": 400,
+        "width": 400,
+        "color": 2
+      }
+    },
+    {
+      "id": "c4a70001-0000-4001-8000-0000000003e9",
+      "name": "Formulario",
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.6,
+      "position": [
+        0,
+        240
+      ],
+      "webhookId": "c4a70001-0001-4001-8000-0000000003e9",
+      "parameters": {
+        "formTitle": "¿Ya existe tu nombre?",
+        "formDescription": "Escribí el nombre de tu proyecto. Lo buscamos en Google y te decimos si está libre.",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Nombre del proyecto",
+              "fieldName": "nombre",
+              "placeholder": "Por ejemplo, Chakana",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "¿De qué se trata? (opcional)",
+              "fieldName": "idea",
+              "placeholder": "Una app que avisa cuando..."
+            }
+          ]
+        },
+        "responseMode": "lastNode",
+        "options": {
+          "path": "ya-existe",
+          "buttonLabel": "Buscar",
+          "appendAttribution": false,
+          "customCss": ":root{--font-family:\"Segoe UI\", system-ui, sans-serif}\n:root{--font-weight-normal:600}\n:root{--font-weight-bold:700}\n:root{--font-size-header:34px}\n:root{--font-size-subheader:19px}\n:root{--font-size-label:19px}\n:root{--font-size-input:19px}\n:root{--font-size-paragraph:19px}\n:root{--font-size-body:16px}\n:root{--font-size-link:14px}\n:root{--font-size-error:16px}\n:root{--color-background:#070A0F}\n:root{--color-card-bg:#0B1838}\n:root{--color-card-border:#4DA3FF}\n:root{--color-card-shadow:rgba(0, 0, 0, 0)}\n:root{--color-header:#F5F7FF}\n:root{--color-header-subtext:#9AA3B8}\n:root{--color-label:#F5F7FF}\n:root{--color-input-bg:#070A0F}\n:root{--color-input-border:#4DA3FF}\n:root{--color-input-text:#F5F7FF}\n:root{--color-focus-border:#FFB547}\n:root{--color-submit-btn-bg:#FFB547}\n:root{--color-submit-btn-text:#070A0F}\n:root{--color-required:#FFB547}\n:root{--color-link:#9AA3B8}\n:root{--color-error:#FF7A7A}\n:root{--color-html-text:#F5F7FF}\n:root{--color-html-link:#4DA3FF}\n:root{--color-test-notice-text:#FFB547}\n:root{--color-test-notice-bg:#0B1838}\n:root{--color-test-notice-border:#FFB547}\n:root{--container-width:560px}\n:root{--border-radius-card:16px}\n:root{--card-border-radius:16px}\n:root{--submit-btn-height:56px}"
+        }
+      }
+    },
+    {
+      "id": "c4a70001-0000-4002-8000-0000000003ea",
+      "name": "Buscar en Google",
+      "type": "n8n-nodes-serpapi.serpApi",
+      "typeVersion": 1,
+      "position": [
+        300,
+        240
+      ],
+      "parameters": {
+        "operation": "google",
+        "q": "={{ '\"' + $json.nombre.trim() + '\"' }}",
+        "additionalFields": {
+          "hl": "es",
+          "json_restrictor": "organic_results[0:6].{title,link,snippet,source}"
+        }
+      }
+    },
+    {
+      "id": "c4a70001-0000-4003-8000-0000000003eb",
+      "name": "Resumir resultados",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        520,
+        240
+      ],
+      "parameters": {
+        "jsCode": "// Junta lo que trajo Google en un texto corto para el modelo\n// y guarda los tres primeros enlaces para la página.\nconst r = $input.first().json\nconst form = $('Formulario').first().json\nconst lista = (r.organic_results || []).slice(0, 6)\nconst renglones = lista.map(function (x, i) {\n  return (i + 1) + '. ' + x.title + ' (' + (x.source || x.link) + '): ' + (x.snippet || '')\n})\nreturn [{\n  json: {\n    nombre: form.nombre.trim(),\n    idea: (form.idea || '').trim(),\n    cantidad: lista.length,\n    resultados: renglones.length ? renglones.join('\\n') : 'Google no encontró nada con ese nombre exacto.',\n    enlaces: lista.slice(0, 3).map(function (x) { return { titulo: x.title, enlace: x.link } })\n  }\n}]"
+      }
+    },
+    {
+      "id": "c4a70001-0000-4004-8000-0000000003ec",
+      "name": "Pensar",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.9,
+      "position": [
+        820,
+        240
+      ],
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ 'Nombre: ' + $json.nombre + '\\nDe qué se trata: ' + ($json.idea || 'no lo dijo') + '\\nLo que encontró Google:\\n' + $json.resultados }}",
+        "messages": {
+          "messageValues": [
+            {
+              "type": "SystemMessagePromptTemplate",
+              "message": "Sos el juez de nombres de un hackathon. Te paso el nombre de un proyecto, de qué se trata y lo que encontró Google al buscar ese nombre exacto.\nRespondé en español, con estas tres líneas y nada más:\nVEREDICTO: LIBRE, OCUPADO o DUDOSO\nPOR QUÉ: una sola frase que diga qué encontraste y dónde, o que no apareció nada parecido.\nOTROS NOMBRES: tres nombres cortos y fáciles de decir en español, separados por comas.\nOCUPADO quiere decir que hay una app, una empresa o un producto con ese nombre exacto. DUDOSO, que el nombre aparece pero para otra cosa. LIBRE, que no aparece.\nNo inventes nada que no esté en lo que encontró Google.\nEscribí sin rayas largas ni punto y coma."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "c4a70001-0000-4005-8000-0000000003ed",
+      "name": "Modelo",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        860,
+        520
+      ],
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-5-mini"
+        },
+        "responsesApiEnabled": false,
+        "options": {}
+      }
+    },
+    {
+      "id": "c4a70001-0000-4006-8000-0000000003ee",
+      "name": "Armar la página",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1180,
+        240
+      ],
+      "parameters": {
+        "jsCode": "// Arma la página del veredicto con lo que dijo el modelo y los enlaces de Google.\n\n// Todo texto que viene de afuera pasa por acá antes de entrar al HTML.\nfunction esc(s) {\n  return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/\"/g, '&quot;')\n}\n// Solo enlaces web de verdad.\nfunction enlaceSeguro(url) {\n  return /^https?:\\/\\//i.test(String(url || '')) ? String(url) : ''\n}\n// Busca una línea del estilo CLAVE: valor en la respuesta del modelo.\nfunction linea(texto, clave) {\n  const m = texto.match(new RegExp(clave + '\\\\s*:\\\\s*(.+)', 'i'))\n  return m ? m[1].trim() : ''\n}\n// Estilos de la charla. Una regla por propiedad, así no hace falta separarlas.\nfunction css(reglas) {\n  return Object.keys(reglas).map(function (sel) {\n    return Object.keys(reglas[sel]).map(function (prop) {\n      return sel + '{' + prop + ':' + reglas[sel][prop] + '}'\n    }).join('')\n  }).join('')\n}\nconst estilo = css({\n  'html, body': { 'background': '#070A0F', 'margin': '0' },\n  'body': { 'color': '#F5F7FF', 'font-family': '\"Segoe UI\", system-ui, sans-serif', 'font-weight': '700', 'font-size': '22px', 'line-height': '1.4', 'display': 'block' },\n  '.tarjeta': { 'max-width': '720px', 'margin': '0 auto', 'padding': '48px 24px' },\n  '.tarjeta p': { 'margin': '0 0 16px 0', 'font-size': '22px' },\n  '.tarjeta .rotulo': { 'color': '#9AA3B8', 'margin': '32px 0 8px 0' },\n  '.tarjeta h1': { 'font-size': '56px', 'line-height': '1.1', 'margin': '8px 0 0 0', 'overflow-wrap': 'anywhere' },\n  '.tarjeta .veredicto': { 'font-size': '64px', 'letter-spacing': '2px', 'margin': '16px 0' },\n  '.tarjeta .libre': { 'color': '#FFB547' },\n  '.tarjeta .ocupado': { 'color': '#FF7A7A' },\n  '.tarjeta .dudoso': { 'color': '#9AA3B8' },\n  '.tarjeta .otros': { 'color': '#FFB547', 'font-size': '28px' },\n  '.tarjeta ul': { 'margin': '0', 'padding': '0 0 0 28px' },\n  '.tarjeta li': { 'margin': '0 0 12px 0' },\n  '.tarjeta a': { 'color': '#4DA3FF' }\n})\n\nconst datos = $('Resumir resultados').first().json\nconst texto = String($input.first().json.text || '').replace(/\\*/g, '')\nlet veredicto = linea(texto, 'VEREDICTO').toUpperCase().replace(/[^A-ZÁÉÍÓÚ]/g, '')\nif (['LIBRE', 'OCUPADO', 'DUDOSO'].indexOf(veredicto) === -1) veredicto = 'DUDOSO'\nconst porque = linea(texto, 'POR QU[ÉE]')\nconst otros = linea(texto, 'OTROS NOMBRES').split(',').map(function (x) { return x.trim().replace(/\\.$/, '') }).filter(Boolean).slice(0, 3)\nconst enlaces = datos.enlaces.filter(function (e) { return enlaceSeguro(e.enlace) }).map(function (e) {\n  return '<li><a href=\"' + esc(enlaceSeguro(e.enlace)) + '\" target=\"_blank\" rel=\"noopener\">' + esc(e.titulo) + '</a></li>'\n}).join('')\nconst html = '<style>' + estilo + '</style>' +\n  '<main class=\"tarjeta\">' +\n  '<p class=\"rotulo\">¿Ya existe tu nombre?</p>' +\n  '<h1>' + esc(datos.nombre) + '</h1>' +\n  '<p class=\"veredicto ' + esc(veredicto.toLowerCase()) + '\">' + esc(veredicto) + '</p>' +\n  '<p>' + esc(porque) + '</p>' +\n  (otros.length ? '<p class=\"rotulo\">Otros nombres</p><p class=\"otros\">' + otros.map(esc).join(' / ') + '</p>' : '') +\n  (enlaces ? '<p class=\"rotulo\">Lo que encontró Google</p><ul>' + enlaces + '</ul>' : '') +\n  '</main>'\nreturn [{ json: { html: html, veredicto: veredicto, por_que: porque, otros_nombres: otros } }]"
+      }
+    },
+    {
+      "id": "c4a70001-0000-4007-8000-0000000003ef",
+      "name": "Página",
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.5,
+      "position": [
+        1400,
+        240
+      ],
+      "webhookId": "c4a70001-0001-4007-8000-0000000003ef",
+      "parameters": {
+        "operation": "completion",
+        "respondWith": "showText",
+        "responseText": "={{ $json.html }}"
+      }
+    }
+  ],
+  "connections": {
+    "Formulario": {
+      "main": [
+        [
+          {
+            "node": "Buscar en Google",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Buscar en Google": {
+      "main": [
+        [
+          {
+            "node": "Resumir resultados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Resumir resultados": {
+      "main": [
+        [
+          {
+            "node": "Pensar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pensar": {
+      "main": [
+        [
+          {
+            "node": "Armar la página",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Armar la página": {
+      "main": [
+        [
+          {
+            "node": "Página",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Modelo": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Pensar",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": false
+  }
+}

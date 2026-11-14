@@ -1,0 +1,40 @@
+{
+  "search_parameters": {
+    "engine": "google",
+    "q": "proyecto alarmas incendios satélite NASA Bolivia Santa Cruz app FIRMS MODIS VIIRS proyecto 'Santa Cruz' 'Bolivia' 'incendios'",
+    "hl": "es",
+    "json_restrictor": "organic_results[0:5].{title,link,snippet,source}"
+  },
+  "organic_results": [
+    {
+      "title": "Gobierno activa plan de prevención de incendios con el ...",
+      "link": "https://www.google.com/goto?url=CAES6QEBxCJF12zzWFq_K1iHwgTN_-arbE5kV51yBb0NxIxZ8TSOjIKRwc7livzT6QxR5Lkum8who8ISBw-fYytBUubdPYKdONG6pYzQh5px_ob_xTOOKvbcK_-0vwkz_NZoeq3PdEZe9VGtc6FA2tck2OJ6-NLuBkkWyl8b_TZt5cd1DJ9ejzNxsLKjjYfhtpfTlgz6y64tW6DDPCYlCFeXsQUBxrWFVlaK-wDYYOljL7NYiYu-3as8u10EqF-Iwks2Im78GCoDSbbd2Qq2wxaHrixgbySMSqV3LJlwa8d-6aBJvuSCqkY8dlETsQ",
+      "snippet": "En esta jornada, el SIMB reportó 123 focos de calor, la mayoría en los departamentos de Santa Cruz, Beni y Pando: 56 focos de calor en San ...",
+      "source": "ABI - Agencia Boliviana de Información"
+    },
+    {
+      "title": "#Tarija AGENCIA BOLIVIANA ESPACIAL HABILITA ...",
+      "link": "https://www.google.com/goto?url=CAES0AEBxCJF15D08meQW4W8yePB9C4MPouo_hxTN9UsUNvqTriCZSquSQMa9t3DGfFoYBIS_VdJmF71Vu6mdKst6Itk11xkQy8mw58RveS77Nv7jFTldJVd7dVL8Sn525xndNvQBr-gmAvMfQEjPm6ft7Tt-CtH9TmAnfwJPVKpiVCG_BToONkf5a7v2r4sD2KoKZfNPm9gJEUqP9hKBU7XT2um4PxykBdknmGb-8FWEMKH0sq7hLDwByAc3nigWXHrhb6aytQ0XT6GW3tZ_WjmVAsO&gsessionid=2Yzlq-4VTHNRDFrBUW_xiCyEM3bri75w8OCVZgBUOHRuhP7jwVR8gw",
+      "snippet": "#Bolivia Tarija, Santa Cruz y Cochaba... Jul 20, 2026 · 8.1K views ... #incendios INCENDIOS FORESTALES GOLPEAN AL ESTE Y SUR DE BOLIVIA ANTE LA ...",
+      "source": "Facebook · UTEC Verde"
+    },
+    {
+      "title": "Nuevo sistema satelital monitoreará incendios",
+      "link": "https://www.google.com/goto?url=CAESrQEBxCJF12tkxKF3NuQmOZ1Te3QYxK8WBrMRD5pLbhuiYbA8eyNm7YRc4dyTWRiBjZgGsiYlJ_DHwMGvAXB59fZf77bNJwc0UFnNCGXGYuClxSqDeNWfPH62pV8UPGRSzTDAV3bUH7C26ZTD8VUXUwpuZxqtnrpi2QOTj9O5PxoWDEbd2bGu9a8Toss8JR-s4LetsGyqi1SFhbOJk7-99OFq-6SunPE5ZmuwgqEAUA",
+      "snippet": "La ESA desarrolla un sistema satelital para monitorear incendios forestales en tiempo real y mejorar la respuesta de emergencia.",
+      "source": "Periodico Panorama"
+    },
+    {
+      "title": "Obsambuagrm Fca",
+      "link": "https://www.google.com/goto?url=CAESfQHEIkXX8FEUbNQZHoFh7qN3ZqmckrTY_KTkLnCJKYa9jJ2BzVB6I_nWcrvdFUQQGTm78fYzQ98kOfT9166CHYKBRC2UxTScCCEEJxJS7LP9qLTWDTp8DlOjaCgziM2H8hnMsWxmtoz6UW6qYlRtwrz-N-UyWmvmKMWf4sUP",
+      "snippet": "Prevención y Alerta Temprana de Incendios: anticiparnos para proteger lo que importa. Desde Pacto Global Red Bolivia, te invitamos a nuestro ...",
+      "source": "Facebook · Space Uruguay"
+    },
+    {
+      "title": "BOLIVIA: APLICACIÓN SATELITAL PARA LA DETECCIÓN ...",
+      "link": "https://www.google.com/goto?url=CAESnwEBxCJF1xZTquuRzm1WXMsaWKDMM6w1pYJe3VvSrxu1xaiQNTyrDAsur7Ft3hEAbhl4-nFyogpaTKGnrg1HPb_fmWpYANirQMqBTlKmSAmC7qaM1lOyQ-uQ68VNFw4HLgHTwMZb1GdOXKT6nsFn8uiJbtHFZZf7dtFuXPwEicqSsFX4Da0GxfR2dWPOMA8IsIEP2-diggGE_zVh7H1-8CY",
+      "snippet": "Uno de ellos es el visualizador geográfico interactivo de información sobre fuegos a partir de datos de satélite del sensor MODIS denominado \"Web FireMapper .",
+      "source": "Revistas Bolivianas"
+    }
+  ]
+}

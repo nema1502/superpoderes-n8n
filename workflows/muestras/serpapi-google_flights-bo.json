@@ -1,0 +1,638 @@
+{
+  "search_metadata": {
+    "id": "6af7d5ace140f0f21615c59e",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/X97FyXv5QpQFgf63y7VfWSdVzPb2gh0n5n7h1rWxGaU/6af7d5ace140f0f21615c59e.json",
+    "markdown_endpoint": "https://serpapi.com/searches/X97FyXv5QpQFgf63y7VfWSdVzPb2gh0n5n7h1rWxGaU/6af7d5ace140f0f21615c59e.md",
+    "created_at": "2026-11-14 03:29:48 UTC",
+    "processed_at": "2026-11-14 03:29:48 UTC",
+    "google_flights_url": "https://www.google.com/travel/flights?hl=es&gl=bo&curr=USD&tfs=CBwQAhoeEgoyMDI2LTEyLTE1agcIARIDVlZJcgcIARIDTFBCQAFIAXABmAEC&tfu=EgIIAQ",
+    "raw_html_file": "https://serpapi.com/searches/X97FyXv5QpQFgf63y7VfWSdVzPb2gh0n5n7h1rWxGaU/6af7d5ace140f0f21615c59e.html",
+    "prettify_html_file": "https://serpapi.com/searches/X97FyXv5QpQFgf63y7VfWSdVzPb2gh0n5n7h1rWxGaU/6af7d5ace140f0f21615c59e.prettify",
+    "total_time_taken": 1.6
+  },
+  "search_parameters": {
+    "engine": "google_flights",
+    "hl": "es",
+    "gl": "bo",
+    "type": "2",
+    "departure_id": "VVI",
+    "arrival_id": "LPB",
+    "outbound_date": "2026-12-15",
+    "currency": "USD"
+  },
+  "best_flights": [
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "Aeropuerto Internacional Viru Viru (VVI)",
+            "id": "VVI",
+            "time": "2026-12-15 05:35"
+          },
+          "arrival_airport": {
+            "name": "Aeropuerto Internacional El Alto",
+            "id": "LPB",
+            "time": "2026-12-15 06:40"
+          },
+          "duration": 65,
+          "airplane": "Boeing 737",
+          "airline": "BoA",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/OB.png",
+          "travel_class": "Economy",
+          "flight_number": "OB 661",
+          "legroom": "81 cm",
+          "extensions": [
+            "Above average legroom (81 cm)",
+            "Carbon emissions estimate: 72 kg"
+          ]
+        }
+      ],
+      "total_duration": 65,
+      "carbon_emissions": {
+        "this_flight": 73000,
+        "typical_for_this_route": 135000,
+        "difference_percent": -46
+      },
+      "price": 75,
+      "type": "One way",
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/OB.png",
+      "booking_token": "WyJDalJJVVdVNFJFMVdjMmd3WmsxQlNqRjBZVkZDUnkwdExTMHRMUzF2YTJweU55MXVNVUZCUVVGQlIzSXpNV0V3UTFWdmQyRkJFZ1ZQUWpZMk1Sb0tDTUk2RUFJYUExVlRSRGdjY01JNiIsW1siVlZJIiwiMjAyNi0xMi0xNSIsIkxQQiIsbnVsbCwiT0IiLCI2NjEiXV1d"
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "Aeropuerto Internacional Viru Viru (VVI)",
+            "id": "VVI",
+            "time": "2026-12-15 05:55"
+          },
+          "arrival_airport": {
+            "name": "Aeropuerto Internacional El Alto",
+            "id": "LPB",
+            "time": "2026-12-15 07:00"
+          },
+          "duration": 65,
+          "airplane": "Boeing 737",
+          "airline": "BoA",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/OB.png",
+          "travel_class": "Economy",
+          "flight_number": "OB 963",
+          "legroom": "81 cm",
+          "extensions": [
+            "Above average legroom (81 cm)",
+            "Carbon emissions estimate: 89 kg"
+          ]
+        }
+      ],
+      "total_duration": 65,
+      "carbon_emissions": {
+        "this_flight": 90000,
+        "typical_for_this_route": 135000,
+        "difference_percent": -33
+      },
+      "price": 75,
+      "type": "One way",
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/OB.png",
+      "booking_token": "WyJDalJJVVdVNFJFMVdjMmd3WmsxQlNqRjBZVkZDUnkwdExTMHRMUzF2YTJweU55MXVNVUZCUVVGQlIzSXpNV0V3UTFWdmQyRkJFZ1ZQUWprMk14b0tDTUk2RUFJYUExVlRSRGdjY01JNiIsW1siVlZJIiwiMjAyNi0xMi0xNSIsIkxQQiIsbnVsbCwiT0IiLCI5NjMiXV1d"
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "Aeropuerto Internacional Viru Viru (VVI)",
+            "id": "VVI",
+            "time": "2026-12-15 06:30"
+          },
+          "arrival_airport": {
+            "name": "Aeropuerto Internacional El Alto",
+            "id": "LPB",
+            "time": "2026-12-15 07:35"
+          },
+          "duration": 65,
+          "airplane": "Boeing 737",
+          "airline": "BoA",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/OB.png",
+          "travel_class": "Economy",
+          "flight_number": "OB 663",
+          "legroom": "81 cm",
+          "extensions": [
+            "Above average legroom (81 cm)",
+            "Carbon emissions estimate: 72 kg"
+          ]
+        }
+      ],
+      "total_duration": 65,
+      "carbon_emissions": {
+        "this_flight": 73000,
+        "typical_for_this_route": 135000,
+        "difference_percent": -46
+      },
+      "price": 83,
+      "type": "One way",
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/OB.png",
+      "booking_token": "WyJDalJJVVdVNFJFMVdjMmd3WmsxQlNqRjBZVkZDUnkwdExTMHRMUzF2YTJweU55MXVNVUZCUVVGQlIzSXpNV0V3UTFWdmQyRkJFZ1ZQUWpZMk14b0tDT3hBRUFJYUExVlRSRGdjY094QSIsW1siVlZJIiwiMjAyNi0xMi0xNSIsIkxQQiIsbnVsbCwiT0IiLCI2NjMiXV1d"
+    }
+  ],
+  "other_flights": [
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "Aeropuerto Internacional Viru Viru (VVI)",
+            "id": "VVI",
+            "time": "2026-12-15 21:10"
+          },
+          "arrival_airport": {
+            "name": "Aeropuerto Internacional El Alto",
+            "id": "LPB",
+            "time": "2026-12-15 22:15"
+          },
+          "duration": 65,
+          "airplane": "Boeing 737",
+          "airline": "BoA",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/OB.png",
+          "travel_class": "Economy",
+          "flight_number": "OB 983",
+          "legroom": "81 cm",
+          "extensions": [
+            "Above average legroom (81 cm)",
+            "Carbon emissions estimate: 72 kg"
+          ]
+        }
+      ],
+      "total_duration": 65,
+      "carbon_emissions": {
+        "this_flight": 73000,
+        "typical_for_this_route": 135000,
+        "difference_percent": -46
+      },
+      "price": 83,
+      "type": "One way",
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/OB.png",
+      "booking_token": "WyJDalJJVVdVNFJFMVdjMmd3WmsxQlNqRjBZVkZDUnkwdExTMHRMUzF2YTJweU55MXVNVUZCUVVGQlIzSXpNV0V3UTFWdmQyRkJFZ1ZQUWprNE14b0tDT3hBRUFJYUExVlRSRGdjY094QSIsW1siVlZJIiwiMjAyNi0xMi0xNSIsIkxQQiIsbnVsbCwiT0IiLCI5ODMiXV1d"
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "Aeropuerto Internacional Viru Viru (VVI)",
+            "id": "VVI",
+            "time": "2026-12-15 13:45"
+          },
+          "arrival_airport": {
+            "name": "Aeropuerto Internacional El Alto",
+            "id": "LPB",
+            "time": "2026-12-15 14:50"
+          },
+          "duration": 65,
+          "airplane": "Boeing 737",
+          "airline": "BoA",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/OB.png",
+          "travel_class": "Economy",
+          "flight_number": "OB 673",
+          "legroom": "81 cm",
+          "extensions": [
+            "Above average legroom (81 cm)",
+            "Carbon emissions estimate: 72 kg"
+          ]
+        }
+      ],
+      "total_duration": 65,
+      "carbon_emissions": {
+        "this_flight": 73000,
+        "typical_for_this_route": 135000,
+        "difference_percent": -46
+      },
+      "price": 91,
+      "type": "One way",
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/OB.png",
+      "booking_token": "WyJDalJJVVdVNFJFMVdjMmd3WmsxQlNqRjBZVkZDUnkwdExTMHRMUzF2YTJweU55MXVNVUZCUVVGQlIzSXpNV0V3UTFWdmQyRkJFZ1ZQUWpZM014b0tDSXhIRUFJYUExVlRSRGdjY0l4SCIsW1siVlZJIiwiMjAyNi0xMi0xNSIsIkxQQiIsbnVsbCwiT0IiLCI2NzMiXV1d"
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "Aeropuerto Internacional Viru Viru (VVI)",
+            "id": "VVI",
+            "time": "2026-12-15 15:00"
+          },
+          "arrival_airport": {
+            "name": "Aeropuerto Internacional Jorge Wilstermann",
+            "id": "CBB",
+            "time": "2026-12-15 15:45"
+          },
+          "duration": 45,
+          "airplane": "Boeing 737",
+          "airline": "BoA",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/OB.png",
+          "travel_class": "Economy",
+          "flight_number": "OB 647",
+          "legroom": "81 cm",
+          "extensions": [
+            "Above average legroom (81 cm)",
+            "Carbon emissions estimate: 64 kg"
+          ]
+        },
+        {
+          "departure_airport": {
+            "name": "Aeropuerto Internacional Jorge Wilstermann",
+            "id": "CBB",
+            "time": "2026-12-15 16:25"
+          },
+          "arrival_airport": {
+            "name": "Aeropuerto Internacional El Alto",
+            "id": "LPB",
+            "time": "2026-12-15 17:10"
+          },
+          "duration": 45,
+          "airplane": "Boeing 737",
+          "airline": "BoA",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/OB.png",
+          "travel_class": "Economy",
+          "flight_number": "OB 618",
+          "legroom": "81 cm",
+          "extensions": [
+            "Above average legroom (81 cm)",
+            "Carbon emissions estimate: 59 kg"
+          ]
+        }
+      ],
+      "layovers": [
+        {
+          "duration": 40,
+          "name": "Aeropuerto Internacional Jorge Wilstermann",
+          "id": "CBB"
+        }
+      ],
+      "total_duration": 130,
+      "carbon_emissions": {
+        "this_flight": 123000,
+        "typical_for_this_route": 135000,
+        "difference_percent": -9
+      },
+      "price": 91,
+      "type": "One way",
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/OB.png",
+      "booking_token": "WyJDalJJVVdVNFJFMVdjMmd3WmsxQlNqRjBZVkZDUnkwdExTMHRMUzF2YTJweU55MXVNVUZCUVVGQlIzSXpNV0V3UTFWdmQyRkJFZ3RQUWpZME4zeFBRall4T0JvS0NJeEhFQUlhQTFWVFJEZ2NjSXhIIixbWyJWVkkiLCIyMDI2LTEyLTE1IiwiQ0JCIixudWxsLCJPQiIsIjY0NyJdLFsiQ0JCIiwiMjAyNi0xMi0xNSIsIkxQQiIsbnVsbCwiT0IiLCI2MTgiXV1d"
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "Aeropuerto Internacional Viru Viru (VVI)",
+            "id": "VVI",
+            "time": "2026-12-15 17:25"
+          },
+          "arrival_airport": {
+            "name": "Aeropuerto Internacional El Alto",
+            "id": "LPB",
+            "time": "2026-12-15 18:30"
+          },
+          "duration": 65,
+          "airplane": "Boeing 737",
+          "airline": "BoA",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/OB.png",
+          "travel_class": "Economy",
+          "flight_number": "OB 677",
+          "legroom": "81 cm",
+          "extensions": [
+            "Above average legroom (81 cm)",
+            "Carbon emissions estimate: 72 kg"
+          ]
+        }
+      ],
+      "total_duration": 65,
+      "carbon_emissions": {
+        "this_flight": 73000,
+        "typical_for_this_route": 135000,
+        "difference_percent": -46
+      },
+      "price": 91,
+      "type": "One way",
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/OB.png",
+      "booking_token": "WyJDalJJVVdVNFJFMVdjMmd3WmsxQlNqRjBZVkZDUnkwdExTMHRMUzF2YTJweU55MXVNVUZCUVVGQlIzSXpNV0V3UTFWdmQyRkJFZ1ZQUWpZM054b0tDSXhIRUFJYUExVlRSRGdjY0l4SCIsW1siVlZJIiwiMjAyNi0xMi0xNSIsIkxQQiIsbnVsbCwiT0IiLCI2NzciXV1d"
+    },
+    {
+      "flights": [
+        {
+          "departure_airport": {
+            "name": "Aeropuerto Internacional Viru Viru (VVI)",
+            "id": "VVI",
+            "time": "2026-12-15 20:55"
+          },
+          "arrival_airport": {
+            "name": "Aeropuerto Internacional El Alto",
+            "id": "LPB",
+            "time": "2026-12-15 22:00"
+          },
+          "duration": 65,
+          "airplane": "Boeing 737",
+          "airline": "BoA",
+          "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/OB.png",
+          "travel_class": "Economy",
+          "flight_number": "OB 981",
+          "legroom": "81 cm",
+          "extensions": [
+            "Above average legroom (81 cm)",
+            "Carbon emissions estimate: 72 kg"
+          ]
+        }
+      ],
+      "total_duration": 65,
+      "carbon_emissions": {
+        "this_flight": 73000,
+        "typical_for_this_route": 135000,
+        "difference_percent": -46
+      },
+      "price": 91,
+      "type": "One way",
+      "airline_logo": "https://www.gstatic.com/flights/airline_logos/70px/OB.png",
+      "booking_token": "WyJDalJJVVdVNFJFMVdjMmd3WmsxQlNqRjBZVkZDUnkwdExTMHRMUzF2YTJweU55MXVNVUZCUVVGQlIzSXpNV0V3UTFWdmQyRkJFZ1ZQUWprNE1Sb0tDSXhIRUFJYUExVlRSRGdjY0l4SCIsW1siVlZJIiwiMjAyNi0xMi0xNSIsIkxQQiIsbnVsbCwiT0IiLCI5ODEiXV1d"
+    }
+  ],
+  "price_insights": {
+    "lowest_price": 75,
+    "price_level": "typical",
+    "typical_price_range": [
+      55,
+      75
+    ],
+    "price_history": [
+      [
+        1789358400,
+        49
+      ],
+      [
+        1789444800,
+        51
+      ],
+      [
+        1789531200,
+        53
+      ],
+      [
+        1789617600,
+        54
+      ],
+      [
+        1789704000,
+        55
+      ],
+      [
+        1789790400,
+        57
+      ],
+      [
+        1789876800,
+        57
+      ],
+      [
+        1789963200,
+        53
+      ],
+      [
+        1790049600,
+        48
+      ],
+      [
+        1790136000,
+        56
+      ],
+      [
+        1790222400,
+        55
+      ],
+      [
+        1790308800,
+        55
+      ],
+      [
+        1790395200,
+        55
+      ],
+      [
+        1790481600,
+        55
+      ],
+      [
+        1790568000,
+        55
+      ],
+      [
+        1790654400,
+        55
+      ],
+      [
+        1790740800,
+        56
+      ],
+      [
+        1790827200,
+        56
+      ],
+      [
+        1790913600,
+        56
+      ],
+      [
+        1791000000,
+        56
+      ],
+      [
+        1791086400,
+        56
+      ],
+      [
+        1791172800,
+        56
+      ],
+      [
+        1791259200,
+        56
+      ],
+      [
+        1791345600,
+        56
+      ],
+      [
+        1791432000,
+        56
+      ],
+      [
+        1791518400,
+        56
+      ],
+      [
+        1791604800,
+        56
+      ],
+      [
+        1791691200,
+        56
+      ],
+      [
+        1791777600,
+        56
+      ],
+      [
+        1791864000,
+        57
+      ],
+      [
+        1791950400,
+        57
+      ],
+      [
+        1792036800,
+        57
+      ],
+      [
+        1792123200,
+        42
+      ],
+      [
+        1792209600,
+        42
+      ],
+      [
+        1792296000,
+        42
+      ],
+      [
+        1792382400,
+        50
+      ],
+      [
+        1792468800,
+        50
+      ],
+      [
+        1792555200,
+        65
+      ],
+      [
+        1792641600,
+        73
+      ],
+      [
+        1792728000,
+        64
+      ],
+      [
+        1792814400,
+        66
+      ],
+      [
+        1792900800,
+        66
+      ],
+      [
+        1792987200,
+        64
+      ],
+      [
+        1793073600,
+        64
+      ],
+      [
+        1793160000,
+        64
+      ],
+      [
+        1793246400,
+        63
+      ],
+      [
+        1793332800,
+        63
+      ],
+      [
+        1793419200,
+        63
+      ],
+      [
+        1793505600,
+        63
+      ],
+      [
+        1793592000,
+        65
+      ],
+      [
+        1793678400,
+        63
+      ],
+      [
+        1793764800,
+        70
+      ],
+      [
+        1793851200,
+        71
+      ],
+      [
+        1793937600,
+        71
+      ],
+      [
+        1794024000,
+        74
+      ],
+      [
+        1794110400,
+        74
+      ],
+      [
+        1794196800,
+        66
+      ],
+      [
+        1794283200,
+        67
+      ],
+      [
+        1794369600,
+        67
+      ],
+      [
+        1794456000,
+        74
+      ],
+      [
+        1794542400,
+        75
+      ]
+    ]
+  },
+  "airports": [
+    {
+      "departure": [
+        {
+          "airport": {
+            "id": "VVI",
+            "name": "Aeropuerto Internacional Viru Viru (VVI)"
+          },
+          "city": "Santa Cruz de la Sierra",
+          "country": "Bolivia",
+          "country_code": "BO",
+          "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSD68g0Xbcl1_PuzFCAaF8Z6ieizmXk46acbms7znkZYdn89wfwWuXwlx96HEJnpYqx25NpGy55PsUz6A",
+          "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQlm9ekVwixUmGB6a2WpuExyucqorEzWi7UVFmXnJ5dsNLLdV4MoJHOA6LZsNNnFMmqhKkXNeRUbvV-ayC-1bz3EGJdvmJelYV4_ouP3RY"
+        }
+      ],
+      "arrival": [
+        {
+          "airport": {
+            "id": "LPB",
+            "name": "Aeropuerto Internacional El Alto"
+          },
+          "city": "La Paz",
+          "country": "Bolivia",
+          "country_code": "BO",
+          "image": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTELoeAyeKRArg1LGxsLf9qnMQaCYvuhx2ArArJx5hlbRuHHFD2_VcC7Ezv_22XT2APdmsj6mL5q5gUsw",
+          "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSYbb37lqqyGQw5aPXXHvrws86X7cxsiD-5Uy1spZQVPgNgE1ABbuQ2peVHjQ2AWQKGDNVgvWX_rnHnX83t1pikekKWs-i--pMqEHfIzWk"
+        }
+      ]
+    }
+  ]
+}

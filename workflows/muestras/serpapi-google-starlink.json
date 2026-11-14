@@ -1,0 +1,46 @@
+{
+  "search_parameters": {
+    "engine": "google",
+    "q": "\"Starlink\"",
+    "hl": "es",
+    "json_restrictor": "organic_results[0:6].{title,link,snippet,source}"
+  },
+  "organic_results": [
+    {
+      "title": "How Starlink Actually Works (From Your Roof to Lasers in Space)",
+      "link": "https://www.google.com/goto?url=CAESaAHEIkXXgikvGyjQKO6jrINt1utfamLezgFu48ZqjwezE8EAkJKos0JRPUKpQnJ0LjJclRAKl414WyqA3dfz8TXkkP6UkGja5toUb0H6CYuOnWe8XHPewN3mCWloThLF7T6CX_4f2Vmm&gsessionid=5TOHcDk6cJ2GljaC1QicRkXMTu93bHAlzr6mXfCVa9gKqZBUls5mWw",
+      "snippet": "... Starlink. 0:00 Intro 0:36 The old way (GEO) 1:33 Low Earth orbit 2:36 Shells 3:27 The dish 4:36 Gateways 5:15 Lasers in space 6:06 Handoffs ...",
+      "source": "YouTube · Matt Scott"
+    },
+    {
+      "title": "Inside SpaceX's Revolutionary Internet From Space Technology",
+      "link": "https://www.google.com/goto?url=CAESaAHEIkXXXTIPqQ1UUAnnDONSf4R6AMCJzAGzgKIoB6w69UPlk7YgSg4Z3_7yw5BKx_xHJXhMTYQeJrFPTd93Aho9jC63prHrR28GeEnpNFMzdY3trUE37OQ0ETVrVG-cxtKBCBo3VrxS&gsessionid=5TOHcDk6cJ2GljaC1QicRkXMTu93bHAlzr6mXfCVa9gKqZBUls5mWw",
+      "snippet": "... Starlink actually works and the incredible technology behind SpaceX's satellite internet network. Discover how thousands of satellites orbit ...",
+      "source": "YouTube · Uncovered World"
+    },
+    {
+      "title": "Starlink's new feature makes the service portable - for a price",
+      "link": "https://www.google.com/goto?url=CAESmAEBxCJF17qMTUw0yJeSP3TN809zFSZ2ZWb6NicFV1gH3l1rxWQ-Ng4sWwiRktAzWvVAIqTvL1p0oYlJJvQUXXq-wSwrSC12Hw6bH6h6EZ-OgW8V-zBUF-wnwfnbGIb9rNQp3JGAJXAyS0z0LL653owhNTnDXktVcQfnnTDWbtlYVU43V7SO9l3W_jbqgSA-4dK03hN_l8HwuQ",
+      "snippet": "A select number of Starlink customers now have the opportunity to access a new “Portability” feature and take the satellite internet with ...",
+      "source": "TechRadar"
+    },
+    {
+      "title": "SpaceX expands Starlink internet service. Here's how to ...",
+      "link": "https://www.google.com/goto?url=CAESmgEBxCJF1wYfrow_LrL1KGeNdPCHWZ-w4r9vWcPhbXl294zvy3LOYUyRFsxjSQrAkBkwFFtPir2K9lQnf0P7ZHp4kJM3Jr8m2KguvgQp1XHASE7MWgoCOJkimAYLatiDuwI1U5EFHrBmH0IVv39GJ8YtXByWbJNCYYx0r-wEtZjmx_vz5YgJ6MK3HwQdgWEAcoE00RP79iPrq8SE",
+      "snippet": "If Starlink is incoming, you can pre-order the service with a payment of $99. The total cost, payable later, comes to $549 ($499 for the ...",
+      "source": "Digital Trends"
+    },
+    {
+      "title": "How Does Starlink Work? The Amazing Technology Behind ...",
+      "link": "https://www.google.com/goto?url=CAESaAHEIkXXQd_hQGia1bL-nckhn8FRu5nWFE-PxBfkDqq74FsrlbTP4_gDBxwXyl4M4d3iOyXPaGy5CPQGd8zbDDvxImZ9FoSl9LCAe1iv122PSBhiHcZO_fcra3Uthr4bYTzI1uJVsXA5&gsessionid=5TOHcDk6cJ2GljaC1QicRkXMTu93bHAlzr6mXfCVa9gKqZBUls5mWw",
+      "snippet": "How does Starlink deliver high-speed internet from space? In this video, we break down the technology behind Starlink in a simple and ...",
+      "source": "YouTube · Precision Hardware DIY"
+    },
+    {
+      "title": "5 Things to Know About Starlink Satellite Internet",
+      "link": "https://www.google.com/goto?url=CAESigEBxCJF19Fg-ER7g_v4gUYBTNWttT0z2HtIfCGB5ikslOiDBIBAAzdtJEeiIAaqlxX5SAWEinCzaVDqLL-Mk0mbNwWeZ0eFR1juWiQOwG1OqeHpb6ZbsoP8yZiQYjDnS_hUmIJeBom7J5VQo3XkX3NoE9Qr6dpwjMQRyMbR3UfeAR8ZEtPsmH3PMiU",
+      "snippet": "5 Things to Know About Starlink Satellite Internet. PC Mag. Updated Wed, November 13 ...",
+      "source": "Yahoo Tech"
+    }
+  ]
+}

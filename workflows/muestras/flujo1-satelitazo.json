@@ -1,0 +1,48 @@
+{
+  "flujo": "1. ¿Ya existe tu nombre?",
+  "fecha": "2026-11-14T04:56:19.688Z",
+  "segundos": 11.4,
+  "entorno": {
+    "n8n": "2.47.7 en una compu (Windows 11)",
+    "serpapi": "SerpApi Official 0.1.10",
+    "modelo": "gpt-5-mini por OpenRouter, con OpenAI Chat Model y Base URL https://openrouter.ai/api/v1"
+  },
+  "entrada": {
+    "nombre": "Satelitazo",
+    "idea": "Una app que avisa cuando pasa un satélite sobre tu ciudad"
+  },
+  "lo_que_encontro_google": "1. Satélite - Servnet (servnet.mx): Un satélite es un objeto artificial que se encuentra en órbita alrededor de un cuerpo celeste, como la Tierra, y su tecnología es fundamental para las ...\n2. EE.UU. lanza satélite para pronosticar clima espacial (Diario Extra): EE.UU. (AFP) – Estados Unidos lanzó un nuevo satélite que se espera mejore significativamente los pronósticos de erupciones solares y eyecciones ...\n3. Lanzan desde Florida un satélite que rastreará fenómenos ... (2001 Online): \"Las observaciones más detalladas del nuevo satélite mejorarán los pronósticos marinos y de aviación y rastrearán los sistemas de tormentas, ...\n4. 1118 results for satelites in all (Adobe Stock): satelite satelites earth communications plante outer space - ai generated. AI. Aerial View Of Tropical Island. Log In or Create an Account to download, save to ...\n5. diccionario (Recursos Loreto): Satelite: Objeto celeste que orbita alrededor de otro cuerpo que no es una estrella. Se habla de satélite natural en el caso de la Luna y de los satélites ...\n6. Lanzan satélite estadounidense de cartografía celeste (El Comercio): La Nasa lanzó el lunes su satélite de cartografía celeste Wide-field Infrared Survey Explorer (WISE) que orbitará la Tierra y escaneará el cielo ...",
+  "respuesta_del_modelo": "VEREDICTO: LIBRE\nPOR QUÉ: No apareció ningún resultado con el nombre \"Satelitazo\", los resultados muestran artículos y definiciones generales sobre satélites en sitios como Servnet, Diario Extra, 2001 Online, Adobe Stock y El Comercio\nOTROS NOMBRES: PasaSat, SatAviso, OrbitaYa",
+  "salida": {
+    "veredicto": "LIBRE",
+    "por_que": "No apareció ningún resultado con el nombre \"Satelitazo\", los resultados muestran artículos y definiciones generales sobre satélites en sitios como Servnet, Diario Extra, 2001 Online, Adobe Stock y El Comercio",
+    "otros_nombres": [
+      "PasaSat",
+      "SatAviso",
+      "OrbitaYa"
+    ],
+    "enlaces": [
+      {
+        "titulo": "Satélite - Servnet",
+        "enlace": "https://www.google.com/goto?url=CAESZQHEIkXX_FIgsNhTiYcXGgaHRzZIT_p4isty8kk0QmuJy5oBJDHjR798gxqAeVV3comob9JUrwuA8rYNw31ZQlhe52cB5ZodPvbuedvYinDHiCd9NBvOGlWoZ0lEfcI5pBjhGPJg"
+      },
+      {
+        "titulo": "EE.UU. lanza satélite para pronosticar clima espacial",
+        "enlace": "https://www.google.com/goto?url=CAESlgEBxCJF137hAYf7ui0xiHM2MdJ6a2WL73IzvNn3tbwcQ3490Fs6Yxza9wK3aZT6Jg1F4FYAt8HnVC-OOpFSIVRVxkP0gFmopyiwwPEepadla-cDvG6nvred1wE64JOHdviSFFOM-a57Fu5ZFH5PKvMjLo5GSQojpoaH9DejxJ5FpAEXD_n7n9pwv_X4i7tPUwBK3XscfEQ"
+      },
+      {
+        "titulo": "Lanzan desde Florida un satélite que rastreará fenómenos ...",
+        "enlace": "https://www.google.com/goto?url=CAESqgEBxCJF17x-NQreGggFNqvLckOoGmAREyrf6n0BRTIyL3l1M7iFjrp4yNd_ZXjoIFAME2vXpI6dcXS7DxhhAVO2ZnvGG2_5JsWo0KKEX90ubB1t2hgaLQnvFQ51wOh7sVkfWA_E0e07PgNXVC_W_COMnlAFUpdEI1AJwRZQ7Ke1VwfCTOs4KSkSCW6Wgq7FfBfXYOE9qKZQY6x8lshfwchxdj5hn8qsWjchSw"
+      }
+    ]
+  },
+  "tiempos_ms": {
+    "Formulario": 0,
+    "Buscar en Google": 93,
+    "Resumir resultados": 6,
+    "Modelo": 10100,
+    "Pensar": 10557,
+    "Armar la página": 6,
+    "Página": 0
+  }
+}

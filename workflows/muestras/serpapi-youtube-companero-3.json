@@ -1,0 +1,71 @@
+{
+  "search_parameters": {
+    "engine": "youtube",
+    "search_query": "n8n tutorial español corto",
+    "gl": "bo",
+    "hl": "es",
+    "json_restrictor": "video_results[0:5].{title,link,channel,length,views}"
+  },
+  "video_results": [
+    {
+      "title": "Tutorial de n8n para Principiantes 2026: Crea Agentes de IA Paso a Paso",
+      "link": "https://www.youtube.com/watch?v=AJfd-eVf5eU",
+      "channel": {
+        "name": "Metics Media | Español",
+        "channel_id": "UCpTMvk2IXn5juo_uKd2zfdw",
+        "link": "https://www.youtube.com/@MeticsMediaEspanol",
+        "thumbnail": "https://yt3.ggpht.com/cWJIHOG4-KZbN7pGqHb4JtJlZ2MXakU7v7zWrCrye2aePQSf8tApCTmFOIO7m6k2RCBOcMcddA=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "27:45",
+      "views": 262165
+    },
+    {
+      "title": "Qué es N8n y cómo crear tu primer agente",
+      "link": "https://www.youtube.com/watch?v=k3YUGsfPRPg",
+      "channel": {
+        "name": "Alan Daitch",
+        "channel_id": "UCzfyW6wo2Q123IqMKe7B_Qw",
+        "link": "https://www.youtube.com/@AlanDaitch",
+        "thumbnail": "https://yt3.ggpht.com/Uz9lThC-9KI34uVl2Mwpx8w46e9u8vXlB8Ryk04Eg58rFWKNS1kV6XbnI8BKgtn5Lvp_pQKSZpU=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "0:52",
+      "views": 69040
+    },
+    {
+      "title": "🤔 ¿Qué es N8N y para qué sirve? | Curso de N8N desde Cero para Principiantes | Capítulo 2",
+      "link": "https://www.youtube.com/watch?v=TixlT7lTWMQ",
+      "channel": {
+        "name": "Aprende a Programar",
+        "channel_id": "UC-aSfQ1bPJNZGQSRsA1xGMA",
+        "link": "https://www.youtube.com/@aprendeaprogramar6670",
+        "thumbnail": "https://yt3.ggpht.com/0wKflpV0DaoxzPpYO7qqmu8adavadBHZDpoIRElzwUdsswAmJ0Zk-jI0IrEzisA_48L0PlrGDQ=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "3:23",
+      "views": 53556
+    },
+    {
+      "title": "n8n explicado super básico || Introducción a n8n \"for dummies\"",
+      "link": "https://www.youtube.com/watch?v=Rl1LOUXu7EU",
+      "channel": {
+        "name": "ResuMate Club",
+        "channel_id": "UCTb2jfffHb3dPDH4f5W8S9w",
+        "link": "https://www.youtube.com/@resumateclub",
+        "thumbnail": "https://yt3.ggpht.com/RgkXttuntG5b2hMPl0a95GZ1kZdP9u-yVMq-ioEgX5e7NecC4mYUSiQSgrISq87gvSioyCsnw9M=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "3:33",
+      "views": 4997
+    },
+    {
+      "title": "Tutorial de n8n para Principiantes (2026) – Guía Completa",
+      "link": "https://www.youtube.com/watch?v=oHgtwr3Txig",
+      "channel": {
+        "name": "Metics Media | Español",
+        "channel_id": "UCpTMvk2IXn5juo_uKd2zfdw",
+        "link": "https://www.youtube.com/@MeticsMediaEspanol",
+        "thumbnail": "https://yt3.ggpht.com/cWJIHOG4-KZbN7pGqHb4JtJlZ2MXakU7v7zWrCrye2aePQSf8tApCTmFOIO7m6k2RCBOcMcddA=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "length": "16:19",
+      "views": 3319
+    }
+  ]
+}

@@ -1,0 +1,1432 @@
+{
+  "search_metadata": {
+    "id": "6af7d597f89c977e05f8615a",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/dq9Lcth-BIK0G2SSbK7UB49X_Pu8bg-8CEJOVptj9DM/6af7d597f89c977e05f8615a.json",
+    "markdown_endpoint": "https://serpapi.com/searches/dq9Lcth-BIK0G2SSbK7UB49X_Pu8bg-8CEJOVptj9DM/6af7d597f89c977e05f8615a.md",
+    "created_at": "2026-11-14 03:29:27 UTC",
+    "processed_at": "2026-11-14 03:29:27 UTC",
+    "google_news_url": "https://news.google.com/search?q=Santa+Cruz+de+la+Sierra&hl=es&gl=BO",
+    "raw_html_file": "https://serpapi.com/searches/dq9Lcth-BIK0G2SSbK7UB49X_Pu8bg-8CEJOVptj9DM/6af7d597f89c977e05f8615a.html",
+    "total_time_taken": 2.39
+  },
+  "search_parameters": {
+    "engine": "google_news",
+    "gl": "bo",
+    "hl": "es",
+    "q": "Santa Cruz de la Sierra"
+  },
+  "news_results": [
+    {
+      "position": 1,
+      "title": "Noticias principales",
+      "stories": [
+        {
+          "position": 1,
+          "title": "Clima hoy en Santa Cruz de la Sierra, Bolivia: el pronóstico del tiempo para este sábado 14 noviembre de 2026",
+          "source": {
+            "name": "Clarín",
+            "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.clarin.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+          },
+          "link": "https://www.clarin.com/informacion-general/clima-hoy-santa-cruz-sierra-bolivia-pronostico-tiempo-sabado-14-noviembre-2026_0_T28DFNeEnY.html",
+          "thumbnail": "https://www.clarin.com/img/2025/04/30/rO0rSQA0W_1200x630__1.jpg",
+          "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNVNUblJMWmxFeFdGSXliRVp0VFJDUkF4ajhCU2dLTWdNQlFBdw",
+          "date": "11/14/2026, 03:07 AM, +0000 UTC",
+          "iso_date": "2026-11-14T03:07:07Z"
+        },
+        {
+          "position": 2,
+          "title": "Carta abierta al alcalde de Santa Cruz de la Sierra",
+          "source": {
+            "name": "El Deber",
+            "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+            "authors": [
+              "Lucho Fernandez de Cordova"
+            ]
+          },
+          "link": "https://eldeber.com.bo/opinion/carta-abierta-alcalde-santa-cruz-sierra_1794603547",
+          "thumbnail": "https://pxcdn.eldeber.com.bo/eldeber/072026/1783180042566.webp?cw=350&ch=197&extw=jpeg",
+          "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNW5kamhaUzBNeFNHWXpYMG8zVFJERkFSamVBaWdLTWdZQldaTENyZ2M",
+          "date": "11/13/2026, 09:00 PM, +0000 UTC",
+          "iso_date": "2026-11-13T21:00:26Z"
+        }
+      ]
+    },
+    {
+      "position": 2,
+      "title": "Publicaciones en X",
+      "stories": [
+        {
+          "position": 1,
+          "snippet": "El comandante departamental de la Policía en Santa Cruz, coronel Edson Fernández, señaló que la orden de aprehensión fue emitida debido a que la exfuncionaria del Ministerio Público no se presentó a prestar su declaración informativa\n➡️ eldeber.com.bo/s/n_1794517298\n\n#ELDEBER #Bolivia pic.x.com/Khw7GGaMYL",
+          "author": {
+            "thumbnail": "https://pbs.twimg.com/profile_images/1742990723694149632/M6mHsf8Q_normal.jpg",
+            "name": "EL DEBER",
+            "handle": "grupoeldeber"
+          },
+          "link": "https://x.com/grupoeldeber/status/2120996405758308400",
+          "date": "11/12/2026, 09:45 PM, +0000 UTC",
+          "iso_date": "2026-11-12T21:45:23Z"
+        },
+        {
+          "position": 2,
+          "snippet": "🔵#GrupoFides | #ANF Jimmy López, fiscal de Santa Cruz, informó que las citaciones continuarán conforme avancen las investigaciones del denominado caso maletas, incluyendo la convocatoria al juez Primo Flores. pic.x.com/9O0jKBw0sx",
+          "author": {
+            "thumbnail": "https://pbs.twimg.com/profile_images/2014363703894777856/zEbbTn0F_normal.jpg",
+            "name": "Agencia de Noticias Fides",
+            "handle": "noticiasfides"
+          },
+          "link": "https://x.com/noticiasfides/status/2121231188991873314",
+          "date": "11/13/2026, 01:18 PM, +0000 UTC",
+          "iso_date": "2026-11-13T13:18:20Z"
+        },
+        {
+          "position": 3,
+          "snippet": "⚖️Caso maletas: sentencian al expresidente del Tribunal Departamental de Justicia de Santa Cruz a tres años de cárcel\n\n🔎 Lee la nota aquí ⤵️\nabi.bo/caso-maletas-sentencian-al-expresidente-del-tribunal-departamental-de-justicia-de-santa-cruz-a-tres-anos-de-carcel/\n.\n#NoticiasABI #NoticiasBolivia #Seguridad pic.x.com/jeaTw7ulrj",
+          "author": {
+            "thumbnail": "https://pbs.twimg.com/profile_images/2024592698909306881/L9cSH1of_normal.jpg",
+            "name": "Agencia Boliviana de Información - ABI",
+            "handle": "abi_bolivia"
+          },
+          "link": "https://x.com/abi_bolivia/status/2121321281790615796",
+          "date": "11/13/2026, 07:16 PM, +0000 UTC",
+          "iso_date": "2026-11-13T19:16:20Z"
+        },
+        {
+          "position": 4,
+          "snippet": "#Política | García Linera confirmó su situación en México mientras avanza en Bolivia una investigación por el operativo policial de 2009 en Santa Cruz, que dejó tres extranjeros muertos.\n\nwww.reduno.com.bo/nacional/exvicepresidente-garcia-linera-confirma-que-esta-en-mexico-con-asilo-politico-202611136119",
+          "author": {
+            "thumbnail": "https://pbs.twimg.com/profile_images/1753180785329233921/WMrMJGgP_normal.jpg",
+            "name": "Red Uno de Bolivia",
+            "handle": "RedUnoTv"
+          },
+          "link": "https://x.com/RedUnoTv/status/2121198060982178040",
+          "date": "11/13/2026, 11:06 AM, +0000 UTC",
+          "iso_date": "2026-11-13T11:06:42Z"
+        }
+      ],
+      "link": "https://x.com/search?q=santa+cruz+de+la+sierra"
+    },
+    {
+      "position": 3,
+      "title": "Alcaldía identifica más de 3.000 puestos abandonados en 26 mercados municipales de Santa Cruz",
+      "source": {
+        "name": "EL DÍA - Noticias de Bolivia para el mundo",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldia.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldia.com.bo/2026-11-13/santa-cruz/alcaldia-identifica-mas-de-3000-puestos-abandonados-en-26-mercados-municipales-de-santa-cruz.html",
+      "thumbnail": "https://eldia.com.bo/files/posts/2026-11-13/81c76fc2b56102576e5d4d96f248a3e7.jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTVRamxST0dGSlRHNXBRMng0VFJDbkF4alZCU2dLTWdZQklvb3VtUW8",
+      "date": "11/14/2026, 01:24 AM, +0000 UTC",
+      "iso_date": "2026-11-14T01:24:00Z"
+    },
+    {
+      "position": 4,
+      "title": "La Policía de Bolivia detuvo a un ex juez de Santa Cruz sancionado por EEUU por presuntos vínculos con el narcotráfico",
+      "source": {
+        "name": "Infobae",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.infobae.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.infobae.com/america/america-latina/2026/11/12/la-policia-de-bolivia-detuvo-a-un-ex-juez-de-santa-cruz-sancionado-por-eeuu-por-presuntos-vinculos-con-el-narcotrafico/",
+      "thumbnail": "https://www.infobae.com/resizer/v2/XYGFLHVBKFBJNKKLUUE3WHRJNU.jpg?auth=516cbb42167d179b13255a4895a135bd84ac2591ba3a141e4061532262b90124&smart=true&width=1200&height=675&quality=85",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWZhM1ZEVERKSFFTMWpabXhKVFJDZkF4ampCU2dLTWdhVlZZTE5xUWM",
+      "date": "11/12/2026, 12:31 AM, +0000 UTC",
+      "iso_date": "2026-11-12T00:31:00Z"
+    },
+    {
+      "position": 5,
+      "title": "Santa Cruz: Incendio de magnitud afecta más de 6.000 hectáreas en San José de Chiquitos",
+      "source": {
+        "name": "Oxígeno Digital",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://oxigeno.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://oxigeno.bo/santa-cruz-incendio-de-magnitud-afecta-mas-de-6-000-hectareas-en-san-jose-de-chiquitos/",
+      "thumbnail": "https://oxigeno.bo/wp-content/uploads/2026/11/incendio_chiquitos.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNTFNVmcyYjBSSFNqQjJUMnBxVFJDVkF4amJCU2dLTWdNaEFBNA",
+      "date": "11/14/2026, 01:38 AM, +0000 UTC",
+      "iso_date": "2026-11-14T01:38:56Z"
+    },
+    {
+      "position": 6,
+      "title": "Santa Cruz reporta seis incendios forestales activos",
+      "source": {
+        "name": "La Razón Digital Bolivia",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://larazon.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://larazon.bo/sociedad/2026/11/13/santa-cruz-reporta-seis-incendios-forestales-activos/",
+      "thumbnail": "https://larazon.bo/wp-content/uploads/2026/11/1794580226697.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNVFTRXg0YVZRd1ZrcHlURmhZVFJDZkF4ampCU2dLTWdPUlVnbw",
+      "date": "11/13/2026, 05:54 PM, +0000 UTC",
+      "iso_date": "2026-11-13T17:54:10Z"
+    },
+    {
+      "position": 7,
+      "title": "Once días sin sicariatos, pero con escándalos políticos y judiciales en Bolivia",
+      "source": {
+        "name": "Correo del Sur",
+        "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://correodelsur.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://correodelsur.com/seguridad/20261113/once-dias-sin-sicariatos-pero-con-escandalos-politicos-y-judiciales-en-bolivia.html",
+      "thumbnail": "https://cdn.correodelsur.com/img/contents/images_980/2026/11/13/b6922eb4-2763-49ad-92be-338db25a4bd5.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUJOR3hEUlZCS1FWZE9SSEZEVFJDUkF4ajlCU2dLTWdZTmtZekd3QVU",
+      "date": "11/13/2026, 02:46 PM, +0000 UTC",
+      "iso_date": "2026-11-13T14:46:00Z"
+    },
+    {
+      "position": 8,
+      "title": "La Arquidiócesis de Santa Cruz convoca al Encuentro Vocacional Diocesano en el Seminario Mayor San Lorenzo",
+      "source": {
+        "name": "ceb.bo",
+        "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://ceb.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://ceb.bo/2026/11/la-arquidiocesis-de-santa-cruz-convoca-al-encuentro-vocacional-diocesano-en-el-seminario-mayor-san-lorenzo/",
+      "thumbnail": "https://ceb.bo/wp-content/uploads/2026/11/Captura-de-pantalla-2026-11-13-064653.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNU1PRTB4VEZCaFJHVktSMVpmVFJDVkFoanlBeWdLTWdZVllvanByQVU",
+      "date": "11/13/2026, 10:47 AM, +0000 UTC",
+      "iso_date": "2026-11-13T10:47:55Z"
+    },
+    {
+      "position": 9,
+      "title": "Alcalde de Santa Cruz califica de histórica la reunión en La Paz y plantea aplicar el esquema 50-50 en 2027",
+      "source": {
+        "name": "ABI - Agencia Boliviana de Información",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://abi.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://abi.bo/alcalde-de-santa-cruz-califica-de-historica-la-reunion-en-la-paz-y-plantea-aplicar-el-esquema-50-50-en-2027/",
+      "thumbnail": "https://abi.bo/wp-content/uploads/2026/11/Mamen.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNTNiVUUwUlZKZk1UaExWVlZKVFJEX0FoaWdCaWdLTWdrQk1KRHNvYWpZeFFJ",
+      "date": "11/10/2026, 04:52 PM, +0000 UTC",
+      "iso_date": "2026-11-10T16:52:22Z"
+    },
+    {
+      "position": 10,
+      "title": "Santa Cruz de la Sierra: lanzan 'perdonazo' tributario del 50%",
+      "source": {
+        "name": "El Deber",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldeber.com.bo/santa-cruz/santa-cruz-sierra-lanzan-perdonazo-tributario-50_1794604975",
+      "thumbnail": "https://pxcdn.eldeber.com.bo/eldeber/112026/1794604342528.webp?cw=350&ch=197&extw=jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNU1jRFpsVEZoNGFYVmxNVEJRVFJERkFSamVBaWdLTWdtaFFveExJV2RNa2dF",
+      "date": "11/13/2026, 09:39 PM, +0000 UTC",
+      "iso_date": "2026-11-13T21:39:49Z"
+    },
+    {
+      "position": 11,
+      "title": "Clima hoy en Santa Cruz de la Sierra, Bolivia: el pronóstico del tiempo para este jueves 12 noviembre de 2026",
+      "source": {
+        "name": "Clarin.com",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.clarin.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.clarin.com/informacion-general/clima-hoy-santa-cruz-sierra-bolivia-pronostico-tiempo-jueves-12-noviembre-2026_0_D3c7KRAOjh.html",
+      "thumbnail": "https://www.clarin.com/img/2025/04/30/rO0rSQA0W_1200x630__1.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNVNUblJMWmxFeFdGSXliRVp0VFJDUkF4ajhCU2dLTWdNQlFBdw",
+      "date": "11/12/2026, 03:07 AM, +0000 UTC",
+      "iso_date": "2026-11-12T03:07:08Z"
+    },
+    {
+      "position": 12,
+      "title": "La carne certificada de Paraguay se expone en el III Seminario Internacional de Ganadería Sostenible en Santa Cruz",
+      "source": {
+        "name": "EL DÍA - Noticias de Bolivia para el mundo",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.eldia.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.eldia.com.bo/2026-11-13/economia/la-carne-certificada-de-paraguay-se-expone-en-el-iii-seminario-internacional-de-ganaderia-sostenible-en-santa-cruz.html",
+      "thumbnail": "https://www.eldia.com.bo/files/posts/2026-11-13/2a619d83f9bda6e4e6c32199a5c8c7e2.jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNVhWM1pxYTNWUFVqaHVkWEZGVFJDbkF4alZCU2dLTWdrQlVJeHVIYWlaandF",
+      "date": "11/14/2026, 01:29 AM, +0000 UTC",
+      "iso_date": "2026-11-14T01:29:01Z"
+    },
+    {
+      "position": 13,
+      "title": "Crisis judicial destapa un caso de presunta injerencia en las elecciones municipales de marzo en Bolivia",
+      "source": {
+        "name": "Infobae",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.infobae.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": [
+          "Maria Silvia Trigo"
+        ]
+      },
+      "link": "https://www.infobae.com/america/america-latina/2026/11/13/crisis-judicial-destapa-un-caso-de-presunta-injerencia-en-las-elecciones-municipales-de-marzo-en-bolivia/",
+      "thumbnail": "https://www.infobae.com/resizer/v2/7GVCUAMIOFEN7B57RXB3IN2PUY.jpg?auth=a38ee2beb72b8781d29ec0b7ab2539b06f00b654cc5ad2fd95f941affa766d0b&smart=true&width=1200&height=675&quality=85",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXJjRVpFTjBNM1JVVktablZNVFJDZkF4ampCU2dLTWdZQmtJcnJyUWM",
+      "date": "11/13/2026, 02:31 PM, +0000 UTC",
+      "iso_date": "2026-11-13T14:31:00Z"
+    },
+    {
+      "position": 14,
+      "title": "Santa Cruz: Gobernación digitaliza la autorización sanitaria",
+      "source": {
+        "name": "La Razón Digital Bolivia",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://larazon.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://larazon.bo/ciudades/2026/11/13/santa-cruz-gobernacion-digitaliza-la-autorizacion-sanitaria/",
+      "thumbnail": "https://larazon.bo/wp-content/uploads/2026/11/WhatsApp-Image-2026-11-13-at-17.53.02.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHpVVkZFZGt3d1dFTnpRbTlpVFJERUF4aW5CU2dLTWdhRlFKcG5wUWs",
+      "date": "11/13/2026, 10:04 PM, +0000 UTC",
+      "iso_date": "2026-11-13T22:04:38Z"
+    },
+    {
+      "position": 15,
+      "title": "Guarderías municipales de Santa Cruz de la Sierra atenderán durante los 12 meses del año desde 2027",
+      "source": {
+        "name": "El Deber",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldeber.com.bo/santa-cruz/guarderias-municipales-santa-cruz-sierra-atenderan-12-meses-ano-2027_1794583819",
+      "thumbnail": "https://pxcdn.eldeber.com.bo/eldeber/112026/1794583468958.webp?cw=350&ch=197&extw=jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNW9kVEF6Y0ZCbE1ISk1SSEpVVFJERkFSamVBaWdLTWdZQlVaRENzQVk",
+      "date": "11/13/2026, 03:34 PM, +0000 UTC",
+      "iso_date": "2026-11-13T15:34:42Z"
+    },
+    {
+      "position": 16,
+      "title": "Clima hoy en Santa Cruz de la Sierra, Bolivia: el pronóstico del tiempo para este viernes 13 noviembre de 2026",
+      "source": {
+        "name": "Clarin.com",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.clarin.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.clarin.com/informacion-general/clima-hoy-santa-cruz-sierra-bolivia-pronostico-tiempo-viernes-13-noviembre-2026_0_1r2Q9DR3I3.html",
+      "thumbnail": "https://www.clarin.com/img/2025/04/30/kdfX1azIe_1200x630__1.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNW5RbFpZWjNodlpIWXRNWHBhVFJDUkF4ajhCU2dLTWdNTklnRQ",
+      "date": "11/13/2026, 03:07 AM, +0000 UTC",
+      "iso_date": "2026-11-13T03:07:03Z"
+    },
+    {
+      "position": 17,
+      "title": "Aprehenden en Bolivia al titular del Tribunal de Justicia de Santa Cruz por “tráfico de sustancias controladas”",
+      "source": {
+        "name": "Infobae",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.infobae.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": [
+          "Maria Silvia Trigo"
+        ]
+      },
+      "link": "https://www.infobae.com/america/america-latina/2026/11/12/aprehenden-en-bolivia-al-titular-del-tribunal-de-justicia-de-santa-cruz-por-trafico-de-sustancias-controladas/",
+      "thumbnail": "https://www.infobae.com/resizer/v2/BYJ4CABHQRG4TEP6W7A2LTOBD4.jpg?auth=6c9d23babb0d1c0d8c9277edae922ee770833e948ca84620b795bb4e0ae9fbb5&smart=true&width=1200&height=675&quality=85",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNU1SSFprZDJveFVuVlRVakJxVFJDZkF4ampCU2dLTWdraElJb3FscXBjcndF",
+      "date": "11/12/2026, 03:03 PM, +0000 UTC",
+      "iso_date": "2026-11-12T15:03:00Z"
+    },
+    {
+      "position": 18,
+      "title": "Alcaldía aprueba histórico perdonazo con descuento del 50% en tributos de 1995 a 2020",
+      "source": {
+        "name": "EL DÍA - Noticias de Bolivia para el mundo",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldia.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldia.com.bo/2026-11-13/santa-cruz/alcaldia-aprueba-historico-perdonazo-con-descuento-del-50-en-tributos-de-1995-a-2020.html",
+      "thumbnail": "https://eldia.com.bo/files/posts/2026-11-13/781dc45ce0f390cc223561bf8000b0bf.jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iMkNnNTRWSG8zUnpFemNHUmZUVlpRVFJDbkF4alZCU2dLTWdzQkFJU213R00xQW11aWl3",
+      "date": "11/13/2026, 11:38 PM, +0000 UTC",
+      "iso_date": "2026-11-13T23:38:39Z"
+    },
+    {
+      "position": 19,
+      "title": "Uno de cada 10 adultos en Bolivia tiene diabetes: Santa Cruz está entre las regiones más afectadas",
+      "source": {
+        "name": "El Deber",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldeber.com.bo/santa-cruz/uno-cada-10-adultos-bolivia-tiene-diabetes-santa-cruz-esta-regiones-afectadas_1794586555",
+      "thumbnail": "https://pxcdn.eldeber.com.bo/eldeber/112026/1794585901179.webp?cw=350&ch=197&extw=jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNTRka3MxVVRKNlVqWktkall0VFJERkFSamVBaWdLTWdrQlU0WXlKV2lTa0FF",
+      "date": "11/13/2026, 04:24 PM, +0000 UTC",
+      "iso_date": "2026-11-13T16:24:42Z"
+    },
+    {
+      "position": 20,
+      "title": "Clima hoy en Santa Cruz de la Sierra, Bolivia: el pronóstico del tiempo para este miércoles 11 noviembre de 2026",
+      "source": {
+        "name": "Clarin.com",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.clarin.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.clarin.com/informacion-general/clima-hoy-santa-cruz-sierra-bolivia-pronostico-tiempo-miercoles-11-noviembre-2026_0_dAxCRZRRsW.html",
+      "thumbnail": "https://www.clarin.com/img/2025/04/30/AZmKDesrO_1200x630__1.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDJZVVYwVXpOSlVYQndNRkphVFJDUkF4ajhCU2dLTWdhQjQ0amkwZ0k",
+      "date": "11/11/2026, 03:07 AM, +0000 UTC",
+      "iso_date": "2026-11-11T03:07:06Z"
+    },
+    {
+      "position": 21,
+      "title": "Santa Cruz conmemorará el Día Mundial de la Diabetes con feria de salud y encendido celeste en el Cristo Redentor",
+      "source": {
+        "name": "EL DÍA - Noticias de Bolivia para el mundo",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldia.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldia.com.bo/2026-11-13/santa-cruz/santa-cruz-conmemorara-el-dia-mundial-de-la-diabetes-con-feria-de-salud-y-encendido-celeste-en-el-cristo-redentor.html",
+      "thumbnail": "https://eldia.com.bo/files/posts/2026-11-13/8ad0e1a14cc3c107a3a600f918b2b1ff.jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNXllRFJhY1ZoNU5HeFdTbVZZVFJDbkF4alZCU2dLTWdtQkVvNHlrV3FLQ2dJ",
+      "date": "11/13/2026, 05:11 PM, +0000 UTC",
+      "iso_date": "2026-11-13T17:11:58Z"
+    },
+    {
+      "position": 22,
+      "title": "Clima hoy en Santa Cruz de la Sierra, Bolivia: el pronóstico del tiempo para este martes 10 noviembre de 2026",
+      "source": {
+        "name": "Clarin.com",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.clarin.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.clarin.com/informacion-general/clima-hoy-santa-cruz-sierra-bolivia-pronostico-tiempo-martes-10-noviembre-2026_0_1sesld6rWm.html",
+      "thumbnail": "https://www.clarin.com/img/2025/04/30/ocaRtzj4M_1200x630__1.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNTJlVjh4Y21kRmVETnlObFZFVFJDUkF4ajhCU2dLTWdNVk1Bdw",
+      "date": "11/10/2026, 03:07 AM, +0000 UTC",
+      "iso_date": "2026-11-10T03:07:05Z"
+    },
+    {
+      "position": 23,
+      "title": "Santa Cruz acoge la 4ª edición de Mujeres Extremas",
+      "source": {
+        "name": "Economy Bolivia",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://economy.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://economy.com.bo/life/santa-cruz-fue-sede-de-la-4ta-version-de-mujeres-extremas",
+      "thumbnail": "https://economy.com.bo/_next/image?url=https%3A%2F%2Fminio.economy.com.bo%2Feconomy-media%2F61218ddd-b4b6-452b-9423-44220f8116da.jpg&w=3840&q=75",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNTBiV1J2ZDFnNGF5MXNNV0V6VFJDb0FSaXNBaWdCTWdrVlFvWVNzU2FMaUFJ",
+      "date": "11/12/2026, 11:03 PM, +0000 UTC",
+      "iso_date": "2026-11-12T23:03:19Z"
+    },
+    {
+      "position": 24,
+      "title": "La Orquesta Filarmónica de Santa Cruz presenta ‘La Flauta Mágica’",
+      "source": {
+        "name": "La Razón Digital Bolivia",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://larazon.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://larazon.bo/la-revista/2026/11/11/la-orquesta-filarmonica-de-santa-cruz-presenta-la-flauta-magica/",
+      "thumbnail": "https://larazon.bo/wp-content/uploads/2026/11/869729739_1663620211888427_1325902609507172035_n.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUVWVGwyVDNCM1dXSjBSMUoyVFJEckJCanZBeWdLTWdhSlFKNWxuZ2s",
+      "date": "11/11/2026, 04:26 PM, +0000 UTC",
+      "iso_date": "2026-11-11T16:26:04Z"
+    },
+    {
+      "position": 25,
+      "title": "Fallece Damián Vaca, impulsor de la formación musical y la cultura en Santa Cruz",
+      "source": {
+        "name": "unitel.bo",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://unitel.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://unitel.bo/noticias/sociedad/fallece-damian-vaca-impulsor-de-la-formacion-musical-y-la-cultura-en-santa-cruz-MG24778994",
+      "thumbnail": "https://estaticos.unitel.bo/binrepository/499x281/15c0/420d280/none/246276540/BLYQ/nota-1_101-18524712_20261113113041.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHlOSFpUWVUxb01tUldjVEY2VFJDWUFoaWtBeWdLTWdhcE5aak5JUWs",
+      "date": "11/13/2026, 11:09 AM, +0000 UTC",
+      "iso_date": "2026-11-13T11:09:54Z"
+    },
+    {
+      "position": 26,
+      "title": "Santa Cruz Innova cumple nueve años y se consolida como nexo de la innovación regional",
+      "source": {
+        "name": "La Razón Digital Bolivia",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://larazon.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://larazon.bo/economia-y-empresa/2026/11/11/santa-cruz-innova-cumple-nueve-anos-y-se-consolida-como-nexo-de-la-innovacion-regional/",
+      "thumbnail": "https://larazon.bo/wp-content/uploads/2026/11/innova.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNVNkVEZ4Vm5WUVN5MXRVVEJHVFJERUF4aW1CU2dLTWdrQmNZek5MS2FaandF",
+      "date": "11/11/2026, 05:22 PM, +0000 UTC",
+      "iso_date": "2026-11-11T17:22:08Z"
+    },
+    {
+      "position": 27,
+      "title": "Caso Maleta: Aprehenden al expresidente del Tribunal Departamental de Justicia de Santa Cruz",
+      "source": {
+        "name": "Opinión Bolivia",
+        "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.opinion.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.opinion.com.bo/pais/caso-maleta-aprehenden-expresidente-tribunal-departamental-justicia-santa-cruz/20261111155715998999.html",
+      "thumbnail": "https://www.opinion.com.bo/media/opinion/images/2026/11/11/2026111115544784579.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVlRVlprUmsxcFJTMW5NSGx0VFJDZkF4ampCU2dLTWdhVlZZTE5xUWM",
+      "date": "11/11/2026, 07:57 PM, +0000 UTC",
+      "iso_date": "2026-11-11T19:57:15Z"
+    },
+    {
+      "position": 28,
+      "title": "Identifican la tala de 200 árboles en el cordón ecológico y anuncian multas de casi Bs 2 millones",
+      "source": {
+        "name": "EL DÍA - Noticias de Bolivia para el mundo",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldia.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldia.com.bo/2026-11-11/santa-cruz/identifican-la-tala-de-200-arboles-en-el-cordon-ecologico-y-anuncian-multas-de-casi-bs-2-millones.html",
+      "thumbnail": "https://eldia.com.bo/files/posts/2026-11-11/0e9a3a15aed0200435fc14dbb1b1175b.jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNWFPVTFtVWxsS1VuTkdhRXh1VFJDbkF4alZCU2dLTWdNaEZSdw",
+      "date": "11/11/2026, 05:54 PM, +0000 UTC",
+      "iso_date": "2026-11-11T17:54:06Z"
+    },
+    {
+      "position": 29,
+      "title": "Municipio cruceño aprueba el “mega perdonazo” con el descuento impositivo del 50%",
+      "source": {
+        "name": "unitel.bo",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://unitel.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://unitel.bo/noticias/sociedad/municipio-cruceno-aprueba-el-mega-perdonazo-con-el-descuento-impositivo-del-50-MI24793942",
+      "thumbnail": "https://estaticos.unitel.bo/binrepository/561x281/93c0/420d280/none/246276540/XPYJ/quinta_101-18536691_20261114003516.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUlSRmcxV0VOUU4wSnhXRUpPVFJDM0FSaVRBaWdCTWdhQmdaREd1QWM",
+      "date": "11/14/2026, 12:42 AM, +0000 UTC",
+      "iso_date": "2026-11-14T00:42:59Z"
+    },
+    {
+      "position": 30,
+      "title": "Santa Cruz es la sede para la cuarta versión de Mujeres Extremas",
+      "source": {
+        "name": "El Deber",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldeber.com.bo/te-puede-interesar/santa-cruz-sede-cuarta-version-mujeres-extremas_1794494160",
+      "thumbnail": "https://pxcdn.eldeber.com.bo/eldeber/112026/1794494011845.webp?cw=350&ch=197&extw=jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDFRbVp6ZVRGaldsTjJVVlZOVFJERkFSamVBaWdLTWdZQlVJaUZQQVE",
+      "date": "11/12/2026, 02:37 PM, +0000 UTC",
+      "iso_date": "2026-11-12T14:37:37Z"
+    },
+    {
+      "position": 31,
+      "title": "Santa Cruz: Notifican para reversión puestos sin uso en La Ramada",
+      "source": {
+        "name": "La Razón Digital Bolivia",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://larazon.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://larazon.bo/ciudades/2026/11/13/santa-cruz-notifican-para-reversion-puestos-sin-uso-en-la-ramada/",
+      "thumbnail": "https://larazon.bo/wp-content/uploads/2026/11/907191015_1467976685430666_2968650274181911187_n.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNHhNMDQwTXpZek1YaDJja1p2VFJDeEF4akVCU2dLTWdB",
+      "date": "11/13/2026, 07:17 PM, +0000 UTC",
+      "iso_date": "2026-11-13T19:17:49Z"
+    },
+    {
+      "position": 32,
+      "title": "Santa Cruz: Despliegan efectivos del CEIP en juzgado de juez mencionado en el caso maletas",
+      "source": {
+        "name": "Correo del Sur",
+        "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://correodelsur.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://correodelsur.com/seguridad/20261112/santa-cruz-despliegan-efectivos-del-ceip-en-juzgado-de-juez-mencionado-en-el-caso-maletas.html",
+      "thumbnail": "https://cdn.correodelsur.com/img/contents/images_980/2026/11/12/22220d0f-ce0d-4c28-aaba-646a238c6e6b.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTNPR05YTjFGbE4zUm9lR3hxVFJDaUFSaTJBaWdCTWdZdGhZYXVNUVk",
+      "date": "11/12/2026, 07:59 PM, +0000 UTC",
+      "iso_date": "2026-11-12T19:59:00Z"
+    },
+    {
+      "position": 33,
+      "title": "Aprehenden a Aldo Quezada, expresidente del Tribunal Departamental de Justicia de Santa Cruz",
+      "source": {
+        "name": "Correo del Sur",
+        "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://correodelsur.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://correodelsur.com/seguridad/20261111/aprehenden-a-aldo-quezada-expresidente-del-tribunal-departamental-de-justicia-de-santa-cruz.html",
+      "thumbnail": "https://cdn.correodelsur.com/img/contents/images_980/2026/11/11/f59a41ea-72a6-4b45-a056-588b50a5d33b.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTZhMGhQVm1wbk9VWjZiM1ZGVFJDUkF4ajlCU2dLTWdhbE5ZRE9IUWs",
+      "date": "11/11/2026, 05:08 PM, +0000 UTC",
+      "iso_date": "2026-11-11T17:08:00Z"
+    },
+    {
+      "position": 34,
+      "title": "Villavicencio renuncia a la presidencia del TDJ de Santa Cruz",
+      "source": {
+        "name": "La Razón Digital Bolivia",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://larazon.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://larazon.bo/nacional/2026/11/12/villavicencio-renuncia-a-la-presidencia-del-tdj-de-santa-cruz/",
+      "thumbnail": "https://larazon.bo/wp-content/uploads/2026/10/image-2026-10-23T195320.894.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUVOVkZ4YWxkQk5VMXVlREpZVFJDZkF4ampCU2dLTWdZcEpwanRtUWs",
+      "date": "11/12/2026, 08:59 PM, +0000 UTC",
+      "iso_date": "2026-11-12T20:59:42Z"
+    },
+    {
+      "position": 35,
+      "title": "La expareja del asesor Fernando Cerimedo recibió asilo político del Gobierno de México",
+      "source": {
+        "name": "Diario Democracia",
+        "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.diariodemocracia.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.diariodemocracia.com/internacionales/347917-la-expareja-del-asesor-fernando-cerimedo-recibio-a/",
+      "thumbnail": "https://storage.googleapis.com/diariodemocracia/news/d-beller-nadia-6c582e.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDVNRGhSYlU5d1EyOTJaWFZaVFJDaEF4amdCU2dLTWdZVlY1cG9JZ2s",
+      "date": "11/12/2026, 01:34 PM, +0000 UTC",
+      "iso_date": "2026-11-12T13:34:53Z"
+    },
+    {
+      "position": 36,
+      "title": "Warnes: urbanización descarta autoría de desmonte en el Cordón Ecológico",
+      "source": {
+        "name": "El Deber",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldeber.com.bo/santa-cruz/warnes-urbanizacion-descarta-autoria-desmonte-cordon-ecologico_1794611194",
+      "thumbnail": "https://pxcdn.eldeber.com.bo/eldeber/112026/1794176970760.webp?cw=350&ch=197&extw=jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNDVOR1JZTmpRMVZEVlVja3RDVFJERkFSamVBaWdLTWdNQmNBUQ",
+      "date": "11/13/2026, 11:25 PM, +0000 UTC",
+      "iso_date": "2026-11-13T23:25:50Z"
+    },
+    {
+      "position": 37,
+      "title": "Uruguay busca captar carga boliviana y se posiciona como puerta de acceso al Atlántico.",
+      "source": {
+        "name": "Todo El Campo Uy",
+        "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://todoelcampo.com.uy&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://todoelcampo.com.uy/archives/51771",
+      "thumbnail": "https://todoelcampo.com.uy/wp-content/uploads/2026/11/Puerto-Nueva-Palmira-buque-barco-ANP.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDFObU5sV2toSE5FczNlV2w0VFJDdEF4akxCU2dLTWdhWk1vWUp0Z1E",
+      "date": "11/12/2026, 04:09 AM, +0000 UTC",
+      "iso_date": "2026-11-12T04:09:09Z"
+    },
+    {
+      "position": 38,
+      "title": "Clima hoy en Santa Cruz de la Sierra, Bolivia: el pronóstico del tiempo para este viernes 23 octubre de 2026",
+      "source": {
+        "name": "Clarin.com",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.clarin.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.clarin.com/informacion-general/clima-hoy-santa-cruz-sierra-bolivia-pronostico-tiempo-viernes-23-octubre-2026_0_DbGMrHoqsZ.html",
+      "thumbnail": "https://www.clarin.com/img/2025/04/30/QG2XDZuvU_1200x630__1.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWxXazlvVFMxV1puaG5SRFpmVFJDUkF4ajhCU2dLTWdhaEZJeXVwUVU",
+      "date": "10/23/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-10-23T07:00:00Z"
+    },
+    {
+      "position": 39,
+      "title": "La Alcaldía intensifica controles en el antiguo mercado La Ramada para recuperar los espacios públicos",
+      "source": {
+        "name": "EL DÍA - Noticias de Bolivia para el mundo",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldia.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldia.com.bo/2026-11-12/santa-cruz/la-alcaldia-intensifica-controles-en-el-antiguo-mercado-la-ramada-para-recuperar-los-espacios-publicos.html",
+      "thumbnail": "https://eldia.com.bo/files/posts/2026-11-12/60791599f0e445dde676a73fe1f2ff88.jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNDRaVmxrTlRaSVpUTTVhVlJDVFJDbkF4alZCU2dLTWdrUkVZWnRIYW1LN2dF",
+      "date": "11/12/2026, 07:24 PM, +0000 UTC",
+      "iso_date": "2026-11-12T19:24:56Z"
+    },
+    {
+      "position": 40,
+      "title": "Inspección Técnica Vehicular: Policía reporta baja afluencia de conductores en Santa Cruz",
+      "source": {
+        "name": "unitel.bo",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://unitel.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://unitel.bo/noticias/seguridad/inspeccion-tecnica-vehicular-policia-reporta-baja-afluencia-de-conductores-en-santa-cruz-GE24756303",
+      "thumbnail": "https://estaticos.unitel.bo/binrepository/725x280/0c0/420d280/none/246276540/FVPX/captura-de-pantalla-2026-11-12-09560_101-18508630_20261112135707.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNDJVa0p6UldaVmJGQlZTazFhVFJDM0FSaVRBaWdCTWdB",
+      "date": "11/12/2026, 02:33 PM, +0000 UTC",
+      "iso_date": "2026-11-12T14:33:38Z"
+    },
+    {
+      "position": 41,
+      "title": "Calidad del aire en Santa Cruz de la Sierra",
+      "source": {
+        "name": "IQAir",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.iqair.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.iqair.com/es/air-quality/bolivia/santa-cruz/santa-cruz-de-la-sierra",
+      "date": "06/22/2026, 09:32 PM, +0000 UTC",
+      "iso_date": "2026-06-22T21:32:52Z"
+    },
+    {
+      "position": 42,
+      "title": "Santa Cruz registra seis incendios activos que ya han afectado a 50.000 hectáreas",
+      "source": {
+        "name": "El Deber",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldeber.com.bo/santa-cruz/santa-cruz-registra-seis-incendios-activos-han-afectado-50-000-hectareas_1794580416",
+      "thumbnail": "https://pxcdn.eldeber.com.bo/eldeber/112026/1794580226697.webp?cw=350&ch=197&extw=jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNXdTVzh4WkZOaWRtSktOMkZxVFJERkFSamVBaWdLTWdPUlVnbw",
+      "date": "11/13/2026, 02:45 PM, +0000 UTC",
+      "iso_date": "2026-11-13T14:45:43Z"
+    },
+    {
+      "position": 43,
+      "title": "Plantean segunda etapa de restauración del Monumento a la Cumbre de las Américas en el Parque Urbano",
+      "source": {
+        "name": "unitel.bo",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://unitel.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://unitel.bo/noticias/sociedad/plantean-segunda-etapa-de-restauracion-del-monumento-a-la-cumbre-de-las-americas-en-el-parque-urbano-NJ24788063",
+      "thumbnail": "https://estaticos.unitel.bo/binrepository/420x280/0c0/0d0/none/246276540/HKHG/img-8393_101-18531064_20261113194446.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUZWRWh2ZVdkTFZVaGFVRzVmVFJDM0FSaVRBaWdCTWdhRlVZNXdKUWs",
+      "date": "11/13/2026, 07:49 PM, +0000 UTC",
+      "iso_date": "2026-11-13T19:49:38Z"
+    },
+    {
+      "position": 44,
+      "title": "Advierten que la deforestación del Cordón Ecológico pone en riesgo a Santa Cruz",
+      "source": {
+        "name": "El Deber",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldeber.com.bo/santa-cruz/advierten-deforestacion-cordon-ecologico-pone-riesgo-santa-cruz_1794535809",
+      "thumbnail": "https://pxcdn.eldeber.com.bo/eldeber/112026/1794534674022.webp?cw=350&ch=197&extw=jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNU9lRUU0TUhoa05XWkxSbWhIVFJERkFSamVBaWdLTWdhQlNvUWpId2s",
+      "date": "11/13/2026, 02:22 AM, +0000 UTC",
+      "iso_date": "2026-11-13T02:22:38Z"
+    },
+    {
+      "position": 45,
+      "title": "Detienen a hombre de 54 años acusado de incendiar la habitación de su madre",
+      "source": {
+        "name": "EL DÍA - Noticias de Bolivia para el mundo",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldia.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldia.com.bo/2026-11-12/santa-cruz/detienen-a-hombre-de-54-anos-acusado-de-incendiar-la-habitacion-de-su-madre.html",
+      "thumbnail": "https://eldia.com.bo/files/posts/2026-11-12/c33c74fd5b02a60ab6ceb889894b6b42.jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUtaMEZNWkVkRk4yRnFORzVqVFJDbkF4alZCU2dLTWdZRkVZcExNUVU",
+      "date": "11/12/2026, 06:24 PM, +0000 UTC",
+      "iso_date": "2026-11-12T18:24:40Z"
+    },
+    {
+      "position": 46,
+      "title": "Guarderías municipales atenderán durante los 12 meses del año desde 2027",
+      "source": {
+        "name": "EL DÍA - Noticias de Bolivia para el mundo",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldia.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldia.com.bo/2026-11-12/santa-cruz/guarderias-municipales-atenderan-durante-los-12-meses-del-ano-desde-2027.html",
+      "thumbnail": "https://eldia.com.bo/files/posts/2026-11-12/676b8b734f8733245a0bc8e9a8f1fbe9.jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHpZMUJJVDBSeGJVUTNkM1UwVFJDbkF4alZCU2dLTWdhSkVvNm1tZ2c",
+      "date": "11/12/2026, 09:20 PM, +0000 UTC",
+      "iso_date": "2026-11-12T21:20:19Z"
+    },
+    {
+      "position": 47,
+      "title": "Persiste la baja frecuencia de micros mientras la Alcaldía realiza control de arreglos",
+      "source": {
+        "name": "El Deber",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldeber.com.bo/santa-cruz/persiste-baja-frecuencia-micros-mientras-alcaldia-realiza-control-arreglos_1794480695",
+      "thumbnail": "https://pxcdn.eldeber.com.bo/eldeber/112026/1794480677333.webp?cw=350&ch=197&extw=jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNXVSSGxOTFRkUE5sTk1WSEY1VFJERkFSamVBaWdLTWdrQklJZzVSR1NhS3dJ",
+      "date": "11/12/2026, 10:54 AM, +0000 UTC",
+      "iso_date": "2026-11-12T10:54:50Z"
+    },
+    {
+      "position": 48,
+      "title": "\"Les voy a presentar al cruceño más viejo\": hallan fósiles de hasta 650 millones de años en Motacucito, Santa Cruz",
+      "source": {
+        "name": "El Deber",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldeber.com.bo/santa-cruz/les-voy-presentar-cruceno-antiguo-hallan-fosiles-650-millones-anos-motacucito-santa-cruz_1794596635",
+      "thumbnail": "https://pxcdn.eldeber.com.bo/eldeber/112026/1794593837669.webp?cw=350&ch=197&extw=jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNXphREpZTVVod2VYQmxiamRWVFJERkFSamVBaWdLTWdrQk1JcXFtZWtVS2dJ",
+      "date": "11/13/2026, 07:24 PM, +0000 UTC",
+      "iso_date": "2026-11-13T19:24:47Z"
+    },
+    {
+      "position": 49,
+      "title": "Todos Santos: los cementerios de Santa Cruz de la Sierra cerrarán este viernes y sábado por limpieza",
+      "source": {
+        "name": "El Deber",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldeber.com.bo/santa-cruz/todos-santos-cementerios-santa-cruz-sierra-cerraran-este-viernes-sabado-limpieza_1793383176",
+      "thumbnail": "https://pxcdn.eldeber.com.bo/eldeber/102026/1793383087552.webp?cw=350&ch=197&extw=jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXZUM1V6WDNSQmNucHhZMGx0VFJERkFSamVBaWdLTWdZVmNKTHBMQWM",
+      "date": "10/30/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-10-30T07:00:00Z"
+    },
+    {
+      "position": 50,
+      "title": "Pavimentación: intervienen la Doble Vía a La Guardia, entre 7mo y 8vo anillo",
+      "source": {
+        "name": "El Deber",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldeber.com.bo/santa-cruz/pavimentacion-intervienen-doble-via-guardia-7mo-8vo-anillo_1794432615",
+      "thumbnail": "https://pxcdn.eldeber.com.bo/eldeber/112026/1794432043779.webp?cw=350&ch=197&extw=jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTNkRzlNYTNKd2JVbDNSbEpNVFJERkFSamVBaWdLTWdZQk1JcUptQWc",
+      "date": "11/11/2026, 09:36 PM, +0000 UTC",
+      "iso_date": "2026-11-11T21:36:15Z"
+    },
+    {
+      "position": 51,
+      "title": "Santa Cruz: habilitan el paso en el tramo Angostura-Bermejo",
+      "source": {
+        "name": "La Razón Digital Bolivia",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://larazon.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://larazon.bo/ciudades/2026/11/12/santa-cruz-habilitan-el-paso-en-el-tramo-angostura-bermejo/",
+      "thumbnail": "https://larazon.bo/wp-content/uploads/2026/11/b48593cb-a0db-4c57-95e5-5acfa3d6048e.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDJaMVZXTlhaU00xa3pWbkEwVFJDY0F4am9CU2dLTWdZSlFwQ0ZRZ1U",
+      "date": "11/12/2026, 10:50 PM, +0000 UTC",
+      "iso_date": "2026-11-12T22:50:24Z"
+    },
+    {
+      "position": 52,
+      "title": "Santa Cruz: Alcaldía publica plazos oficiales para trámites y habilita línea de denuncia",
+      "source": {
+        "name": "La Razón Digital Bolivia",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://larazon.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://larazon.bo/ciudades/2026/11/11/santa-cruz-alcaldia-publica-plazos-oficiales-para-tramites-y-habilita-linea-de-denuncia/",
+      "thumbnail": "https://larazon.bo/wp-content/uploads/2026/11/59fb643f-ec45-442f-b41a-54199d1ff11a-e1794422900186.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVJRVWRxTVU5S01WZGFOVnBRVFJDY0F4anBCU2dLTWdZaFI0b0xvZ2c",
+      "date": "11/11/2026, 06:51 PM, +0000 UTC",
+      "iso_date": "2026-11-11T18:51:52Z"
+    },
+    {
+      "position": 53,
+      "title": "Yaxira González Chinea, candidata de Sedomir Rodríguez de la Sierra a Reina Infantil del Carnaval de Santa Cruz de Tenerife 2027",
+      "source": {
+        "name": "Grupo EnMascarada Carnaval",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://grupoenmascarada.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://grupoenmascarada.com/yaxira-gonzalez-chinea-candidata-de-sedomir-rodriguez-de-la-sierra-a-reina-infantil-del-carnaval-de-santa-cruz-de-tenerife-2027/",
+      "thumbnail": "https://grupoenmascarada.com/wp-content/uploads/2026/11/Retrato-infantil-con-lazo-rosa.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWxaMkpmU2xCWVRsSkpUVEZpVFJDZkF4amlCU2dLTWdhdFJaRE5vUWc",
+      "date": "11/11/2026, 01:51 AM, +0000 UTC",
+      "iso_date": "2026-11-11T01:51:03Z"
+    },
+    {
+      "position": 54,
+      "title": "Micros que circulan desde el 86, salarios de Bs 200 por día a los choferes y cuánto se paga para ser parte de una línea, sepa esto y más",
+      "source": {
+        "name": "El Deber",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldeber.com.bo/santa-cruz/micros-circulan-86-salarios-bs-200-dia-choferes-cuanto-paga-ser-parte-linea-sepa-esto_1794520818",
+      "thumbnail": "https://pxcdn.eldeber.com.bo/eldeber/112026/1794508196004.webp?cw=350&ch=197&extw=jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVdaR3REVlZodU9HYzJSM014VFJERkFSamVBaWdLTWdZOVFJWjNxQWM",
+      "date": "11/12/2026, 10:13 PM, +0000 UTC",
+      "iso_date": "2026-11-12T22:13:42Z"
+    },
+    {
+      "position": 55,
+      "title": "Clima hoy en Santa Cruz de la Sierra, Bolivia: el pronóstico del tiempo para este martes 8 septiembre de 2026",
+      "source": {
+        "name": "Clarin.com",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.clarin.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.clarin.com/informacion-general/clima-hoy-santa-cruz-sierra-bolivia-pronostico-tiempo-martes-8-septiembre-2026_0_c0bWGuqNpX.html",
+      "thumbnail": "https://www.clarin.com/img/2025/04/30/OKwzDy8-G_1200x630__1.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNVdXbGREZFMwM05IcFROekV0VFJDUkF4ajhCU2dLTWdPQjhnQQ",
+      "date": "09/08/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-08T07:00:00Z"
+    },
+    {
+      "position": 56,
+      "title": "Aprehenden al expresidente del TDJ de Santa Cruz",
+      "source": {
+        "name": "La Razón Digital Bolivia",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://larazon.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://larazon.bo/nacional/2026/11/11/aprehenden-al-expresidente-del-tdj-de-santa-cruz/",
+      "thumbnail": "https://larazon.bo/wp-content/uploads/2026/11/859396178-1442273437972214-367646168_101-18484546_20261111162503.webp",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNU9RVlV5YjBKME4yVTJTbXBtVFJDVEF4ajRCU2dLTWdhaEpvSU1tZ2s",
+      "date": "11/11/2026, 05:26 PM, +0000 UTC",
+      "iso_date": "2026-11-11T17:26:58Z"
+    },
+    {
+      "position": 57,
+      "title": "Alcaldía despeja las aceras de la Ramada Antigua y advierte con controles de hasta tres veces al día",
+      "source": {
+        "name": "El Deber",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldeber.com.bo/santa-cruz/alcaldia-despeja-aceras-ramada-antigua-advierte-controles-tres-veces-dia_1794515503",
+      "thumbnail": "https://pxcdn.eldeber.com.bo/eldeber/112026/1794515190478.webp?cw=350&ch=197&extw=jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNVdaVTh0V0hoSmVqSllTV2hmVFJERkFSamVBaWdLTWdrVkVZZ3BydWRyaHdJ",
+      "date": "11/12/2026, 08:35 PM, +0000 UTC",
+      "iso_date": "2026-11-12T20:35:10Z"
+    },
+    {
+      "position": 58,
+      "title": "Clima hoy en Santa Cruz de la Sierra, Bolivia: el pronóstico del tiempo para este lunes 5 octubre de 2026",
+      "source": {
+        "name": "Clarin.com",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.clarin.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.clarin.com/informacion-general/clima-hoy-santa-cruz-sierra-bolivia-pronostico-tiempo-lunes-5-octubre-2026_0_ykE8WTm8Sn.html",
+      "thumbnail": "https://www.clarin.com/img/2025/04/30/IwtFsKZTQ_1200x630__1.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNWpTbVpJVm5sWFl5MVdkSEZDVFJDUkF4ajhCU2dLTWdNTndSWQ",
+      "date": "10/05/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-10-05T07:00:00Z"
+    },
+    {
+      "position": 59,
+      "title": "Santa Cruz de la Sierra propone el “30-13-7” y busca cambiar el reparto de recursos desde 2027",
+      "source": {
+        "name": "El Deber",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldeber.com.bo/santa-cruz/santa-cruz-sierra-propone-30-13-7-busca-cambiar-reparto-recursos-2027_1790773830",
+      "thumbnail": "https://pxcdn.eldeber.com.bo/eldeber/092026/1790773324854.webp?cw=350&ch=197&extw=jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXZZbWRXUVc1emJ6VmZiM0JoVFJERkFSamVBaWdLTWdZeE1JNFNHUW8",
+      "date": "09/30/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-30T07:00:00Z"
+    },
+    {
+      "position": 60,
+      "title": "Santa Cruz: ¿Cómo estará el clima el resto de la semana?",
+      "source": {
+        "name": "El Deber",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldeber.com.bo/santa-cruz/santa-cruz-estara-clima-resto-semana_1794450272",
+      "thumbnail": "https://pxcdn.eldeber.com.bo/eldeber/112026/1794449762289.webp?cw=350&ch=197&extw=jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXRZbGgzYWpFeE5YcEtSRFV3VFJERkFSamVBaWdLTWdZVm9vZ05RUVU",
+      "date": "11/12/2026, 02:42 AM, +0000 UTC",
+      "iso_date": "2026-11-12T02:42:38Z"
+    },
+    {
+      "position": 61,
+      "title": "Por talas en el cordón, ‘Mamén’ anuncia multas por Bs 2 millones",
+      "source": {
+        "name": "El Deber",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldeber.com.bo/santa-cruz/talas-cordon-mamen-anuncia-multas-bs-2-millones_1794394899",
+      "thumbnail": "https://pxcdn.eldeber.com.bo/eldeber/112026/1794394880039.webp?cw=350&ch=197&extw=jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNDRkbEpyU1RsdFpqQmllV1k1VFJERkFSamVBaWdLTWdNTk1CQQ",
+      "date": "11/11/2026, 11:07 AM, +0000 UTC",
+      "iso_date": "2026-11-11T11:07:48Z"
+    },
+    {
+      "position": 62,
+      "title": "Fijan sala plena para designar a nuevo presidente del TDJ de Santa Cruz",
+      "source": {
+        "name": "El Deber",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldeber.com.bo/santa-cruz/fijan-sala-plena-designar-nuevo-presidente-tdj-santa-cruz_1794511767",
+      "thumbnail": "https://pxcdn.eldeber.com.bo/eldeber/112026/1794593614201.webp?cw=350&ch=197&extw=jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iMkNnNUVUVXR2VUdKM1UweDRTVEpmVFJERkFSamVBaWdLTWdzQjBJUk55S1BBbHZqWWV3",
+      "date": "11/12/2026, 07:35 PM, +0000 UTC",
+      "iso_date": "2026-11-12T19:35:09Z"
+    },
+    {
+      "position": 63,
+      "title": "Clima hoy en Santa Cruz de la Sierra, Bolivia: el pronóstico del tiempo para este lunes 3 agosto de 2026",
+      "source": {
+        "name": "Clarin.com",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.clarin.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.clarin.com/informacion-general/clima-hoy-santa-cruz-sierra-bolivia-pronostico-tiempo-lunes-3-agosto-2026_0_DjJ9pwag5r.html",
+      "thumbnail": "https://www.clarin.com/img/2025/04/30/acrMfVc6R_1200x630__1.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNXpiSEpTVVZWZk5YSjJUMFJGVFJDUkF4ajhCU2dLTWdOQjRBbw",
+      "date": "08/03/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-08-03T07:00:00Z"
+    },
+    {
+      "position": 64,
+      "title": "Sugieren que hay ex autoridades que figuran como propietarias del Cordón Ecológico",
+      "source": {
+        "name": "El Deber",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldeber.com.bo/santa-cruz/sugieren-hay-ex-autoridades-figuran-propietarias-cordon-ecologico_1794448355",
+      "thumbnail": "https://pxcdn.eldeber.com.bo/eldeber/112026/1794448293759.webp?cw=350&ch=197&extw=jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNUhaMmxSZDBOcWJERlRRakpFVFJERkFSamVBaWdLTWdtRllZcldIT25JN0FF",
+      "date": "11/12/2026, 02:19 AM, +0000 UTC",
+      "iso_date": "2026-11-12T02:19:48Z"
+    },
+    {
+      "position": 65,
+      "title": "La doble Santa Cruz de la Sierra: cinco siglos y 8.000 kilómetros de historia que llegan a las aulas",
+      "source": {
+        "name": "El Periódico Extremadura",
+        "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.elperiodicoextremadura.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.elperiodicoextremadura.com/caceres/2026/09/16/santa-cruz-sierra-historia-aulas-134316147.html",
+      "thumbnail": "https://estaticos-cdn.prensaiberica.es/clip/af589bfe-a385-435f-aa23-7d22d9e82398_16-9-discover-aspect-ratio_default_0_x848y382.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUxVa05EUkRkTVRXRmpPWGhJVFJDZkF4ampCU2dLTWdZQmdJaENNUVk",
+      "date": "09/16/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-09-16T07:00:00Z"
+    },
+    {
+      "position": 66,
+      "title": "Clima hoy en Santa Cruz de la Sierra, Bolivia: el pronóstico del tiempo para este miércoles 15 julio de 2026",
+      "source": {
+        "name": "Clarin.com",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.clarin.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.clarin.com/informacion-general/clima-hoy-santa-cruz-sierra-bolivia-pronostico-tiempo-miercoles-15-julio-2026_0_voUp5QL7Qn.html",
+      "thumbnail": "https://www.clarin.com/img/2025/04/30/AaUsuUFHd_1200x630__1.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDRPRU55VUY5V1NsSTVXSEpaVFJDUkF4ajhCU2dLTWdhNUE2aFJnUXc",
+      "date": "07/15/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-07-15T07:00:00Z"
+    },
+    {
+      "position": 67,
+      "title": "TED de Santa Cruz defiende cancelación de personerías de SOL y ASIP",
+      "source": {
+        "name": "Red PAT",
+        "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.redpat.tv&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.redpat.tv/detalle/ted-de-santa-cruz-defiende-cancelacion-de-personerias-de-sol-y-asip",
+      "thumbnail": "https://www.redpat.tv/static/small_dfg_fc5bebdfa2.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNTBOV3h5T1hKR2VURlNVelZEVFJDb0FSaXNBaWdCTWdhaE5wUU1uZ2c",
+      "date": "11/12/2026, 07:02 PM, +0000 UTC",
+      "iso_date": "2026-11-12T19:02:56Z"
+    },
+    {
+      "position": 68,
+      "title": "Irma Villavicencio renuncia a la presidencia del TDJ de Santa Cruz",
+      "source": {
+        "name": "Red PAT",
+        "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.redpat.tv&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.redpat.tv/detalle/irma-villavicencio-renuncia-a-la-presidencia-del-tdj-de-santa-cruz",
+      "thumbnail": "https://www.redpat.tv/static/small_ihbgreugv_66c64767b5.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNWxVazQxU0c5NllVVlJTMk14VFJDb0FSaXNBaWdCTWdhbGhvNE1NZ1k",
+      "date": "11/12/2026, 06:37 PM, +0000 UTC",
+      "iso_date": "2026-11-12T18:37:26Z"
+    },
+    {
+      "position": 69,
+      "title": "✈ Viaje de Santa Cruz de la Sierra a Houston",
+      "source": {
+        "name": "Google",
+        "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.google.com/travel/flights/flights-from-santa-cruz-de-la-sierra-to-houston.html?gl=US&hl=es",
+      "date": "04/09/2026, 03:47 PM, +0000 UTC",
+      "iso_date": "2026-04-09T15:47:18Z"
+    },
+    {
+      "position": 70,
+      "title": "Descubre este fin de semana la historia que une a un pueblo de Cáceres y una gran ciudad de Bolivia con el mismo nombre",
+      "source": {
+        "name": "El Periódico Extremadura",
+        "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.elperiodicoextremadura.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.elperiodicoextremadura.com/caceres/2026/06/10/ecocruz-santa-cruz-sierra-caceres-131145384.html",
+      "thumbnail": "https://estaticos-cdn.prensaiberica.es/clip/b6626f45-353c-4c8a-9c58-a9036bfb39a8_16-9-discover-aspect-ratio_default_1474245.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iMkNnNXVVVzE0ZEhCTWJtRkZVRmhIVFJDZkF4ampCU2dLTWdzQkFJSUFsU0l1Smhyb0hn",
+      "date": "06/10/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-06-10T07:00:00Z"
+    },
+    {
+      "position": 71,
+      "title": "✈ Viaje de Santa Cruz de la Sierra a Cuenca",
+      "source": {
+        "name": "Google",
+        "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.google.com/travel/flights/flights-from-santa-cruz-de-la-sierra-to-cuenca.html?gl=EC&hl=es",
+      "date": "05/14/2026, 09:30 AM, +0000 UTC",
+      "iso_date": "2026-05-14T09:30:07Z"
+    },
+    {
+      "position": 72,
+      "title": "Cómo Santa Cruz se convirtió en un centro logístico para el narco uruguayo Sebastián Marset y el crimen transnacional desde Bolivia",
+      "source": {
+        "name": "BBC",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.bbc.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": [
+          "Ayelen Oliva"
+        ]
+      },
+      "link": "https://www.bbc.com/mundo/articles/cn78lr877djo",
+      "thumbnail": "https://ichef.bbci.co.uk/news/1024/branded_mundo/ef2e/live/ddbbbdb0-23b4-11f1-92e7-e70d0571c9f1.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNU5abDl3U1ZGbVduazJPRlp4VFJDZkF4ampCU2dLTWdhQlFvSUtvZ2s",
+      "date": "03/31/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-03-31T07:00:00Z"
+    },
+    {
+      "position": 73,
+      "title": "Las dos Santa Cruz de la Sierra, extremeña y boliviana, unidas por la historia y la fraternidad en la Feria Ecocruz",
+      "source": {
+        "name": "El Periódico Extremadura",
+        "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.elperiodicoextremadura.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.elperiodicoextremadura.com/caceres/2026/05/20/santa-cruz-sierra-extremena-boliviana-130422991.html",
+      "thumbnail": "https://estaticos-cdn.prensaiberica.es/clip/b2bd1479-cd4f-41cd-b0c8-9155766490ef_16-9-discover-aspect-ratio_default_0_x943y283.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNU9SVFJzVW5KR2RtNUVXVGxWVFJDZkF4ampCU2dLTWdrQlFJZ0FxeVlVU0FJ",
+      "date": "05/20/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-05-20T07:00:00Z"
+    },
+    {
+      "position": 74,
+      "title": "✈ Viaje de Cusco a Santa Cruz de la Sierra",
+      "source": {
+        "name": "Google",
+        "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.google.com/travel/flights/flights-from-cusco-to-santa-cruz-de-la-sierra.html?gl=PE&hl=es",
+      "thumbnail": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSD68g0Xbcl1_PuzFCAaF8Z6ieizmXk46acbms7znkZYdn89wfwWuXwlx96HEJnpYqx25NpGy55PsUz6A",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNDFXVGx3YlRkUFdESlhURzQwVFJEZ0F4aUFCU2dLTWdZRllvaUdwZ1U",
+      "date": "12/23/2025, 02:25 PM, +0000 UTC",
+      "iso_date": "2025-12-23T14:25:42Z"
+    },
+    {
+      "position": 75,
+      "title": "✈ Viaje de Santa Cruz de la Sierra a Salta",
+      "source": {
+        "name": "Google",
+        "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.google.com/travel/flights/flights-from-santa-cruz-de-la-sierra-to-salta.html?gl=AR&hl=es-419",
+      "thumbnail": "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcT-kmJbNhdGTmFqRsk_xBFLeaCUG0FmEDOAgB2W0bwbnGh_4_JoPTnJTB5cudL302NTtCUneErNc46Brg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNWpkbE53TlhkTVdUWmZPSHBPVFJERUF4aW1CU2dLTWdNQnNBQQ",
+      "date": "05/22/2025, 01:59 AM, +0000 UTC",
+      "iso_date": "2025-05-22T01:59:51Z"
+    },
+    {
+      "position": 76,
+      "title": "✈ Viaje a Santa Cruz de la Sierra",
+      "source": {
+        "name": "Google",
+        "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.google.com/travel/flights/flights-to-santa-cruz-de-la-sierra.html?gl=CO&hl=es-419",
+      "date": "03/25/2024, 04:22 PM, +0000 UTC",
+      "iso_date": "2024-03-25T16:22:20Z"
+    },
+    {
+      "position": 77,
+      "title": "✈ Viaje de Buenos Aires a Santa Cruz de la Sierra",
+      "source": {
+        "name": "Google",
+        "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.google.com/travel/flights/flights-from-buenos-aires-to-santa-cruz-de-la-sierra.html?gl=AR&hl=es-419",
+      "date": "03/07/2025, 10:53 PM, +0000 UTC",
+      "iso_date": "2025-03-07T22:53:37Z"
+    },
+    {
+      "position": 78,
+      "title": "✈ Viaje a Santa Cruz de la Sierra",
+      "source": {
+        "name": "Google",
+        "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.google.com/travel/flights/flights-to-santa-cruz-de-la-sierra.html?gl=ES&hl=es",
+      "date": "03/25/2024, 04:35 PM, +0000 UTC",
+      "iso_date": "2024-03-25T16:35:56Z"
+    },
+    {
+      "position": 79,
+      "title": "✈ Viaje de Santa Cruz de la Sierra a Ciudad de México",
+      "source": {
+        "name": "Google",
+        "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.google.com/travel/flights/flights-from-santa-cruz-de-la-sierra-to-mexico-city.html?gl=MX&hl=es-419",
+      "date": "03/21/2025, 09:54 AM, +0000 UTC",
+      "iso_date": "2025-03-21T09:54:26Z"
+    },
+    {
+      "position": 80,
+      "title": "✈ Viaje de Santa Cruz de la Sierra a São Paulo",
+      "source": {
+        "name": "Google",
+        "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.google.com/travel/flights/flights-from-santa-cruz-de-la-sierra-to-sao-paulo.html?gl=AR&hl=es-419",
+      "date": "09/18/2024, 01:02 PM, +0000 UTC",
+      "iso_date": "2024-09-18T13:02:14Z"
+    },
+    {
+      "position": 81,
+      "title": "Clima hoy en Santa Cruz de la Sierra, Bolivia: el pronóstico del tiempo para este lunes 4 mayo de 2026",
+      "source": {
+        "name": "Clarin.com",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.clarin.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.clarin.com/informacion-general/clima-hoy-santa-cruz-sierra-bolivia-pronostico-tiempo-lunes-4-mayo-2026_0_Wdinw20Lkz.html",
+      "thumbnail": "https://www.clarin.com/img/2025/04/30/ocaRtzj4M_1200x630__1.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iJ0NnNTJlVjh4Y21kRmVETnlObFZFVFJDUkF4ajhCU2dLTWdNVk1Bdw",
+      "date": "05/04/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-05-04T07:00:00Z"
+    },
+    {
+      "position": 82,
+      "title": "✈ Viaje de Uyuni a Santa Cruz de la Sierra",
+      "source": {
+        "name": "Google",
+        "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.google.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.google.com/travel/flights/flights-from-uyuni-to-santa-cruz-de-la-sierra.html?gl=AR&hl=es-419",
+      "date": "09/21/2024, 11:05 PM, +0000 UTC",
+      "iso_date": "2024-09-21T23:05:07Z"
+    },
+    {
+      "position": 83,
+      "title": "Clima hoy en Santa Cruz de la Sierra, Bolivia: el pronóstico del tiempo para este miércoles 22 abril de 2026",
+      "source": {
+        "name": "Clarin.com",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.clarin.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.clarin.com/informacion-general/clima-hoy-santa-cruz-sierra-bolivia-pronostico-tiempo-miercoles-22-abril-2026_0_m0WxdN472z.html",
+      "thumbnail": "https://www.clarin.com/img/2025/04/30/7YvWN-kcf_1200x630__1.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNWZXbkpMZG5OMVluRmhPVlZGVFJDUkF4ajhCU2dLTWdrQkpaakptYW01aUFJ",
+      "date": "04/22/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-04-22T07:00:00Z"
+    },
+    {
+      "position": 84,
+      "title": "Santa Cruz de la Sierra cumple 465 años con dos sitios que sostienen su identidad y convivencia",
+      "source": {
+        "name": "El Deber",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldeber.com.bo/santa-cruz/santa-cruz-cumple-465-anos-dos-sitios-sostienen-identidad-convivencia_1772102162",
+      "thumbnail": "https://pxcdn.eldeber.com.bo/eldeber/022026/1772101925666.jpg?&cw=1200&ch=630",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXhOM0ZCY0UxRFlXdzVkRGxZVFJDUkF4ajhCU2dLTWdZVlVvYXROUVU",
+      "date": "02/26/2026, 08:00 AM, +0000 UTC",
+      "iso_date": "2026-02-26T08:00:00Z"
+    },
+    {
+      "position": 85,
+      "title": "Una Santa Cruz de la Sierra para vos",
+      "source": {
+        "name": "El Deber",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldeber.com.bo/opinion/santa-cruz-sierra-vos_1774487136",
+      "thumbnail": "https://pxcdn.eldeber.com.bo/eldeber/122025/1764930806565.webp?cw=720&ch=405&extw=jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVNXREUyWVdoYVdrbDNSVXhVVFJDb0FSaXNBaWdCTWdZQldaTENxZ2M",
+      "date": "03/26/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-03-26T07:00:00Z"
+    },
+    {
+      "position": 86,
+      "title": "Santa Cruz de la Sierra: el desafío de estar a la altura de sí misma",
+      "source": {
+        "name": "El Deber",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": [
+          "M. Sarah Mansilla"
+        ]
+      },
+      "link": "https://eldeber.com.bo/opinion/santa-cruz-sierra-desafio-estar-altura-si-misma_1776124948",
+      "date": "04/14/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-04-14T07:00:00Z"
+    },
+    {
+      "position": 87,
+      "title": "Primera reunión entre Gobierno y alcalde electo de Santa Cruz de la Sierra se centra en la financiación",
+      "source": {
+        "name": "El Deber",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldeber.com.bo/santa-cruz/primera-reunion-gobierno-alcalde-electo-santa-cruz-sierra-centra-financiacion_1776373916",
+      "thumbnail": "https://pxcdn.eldeber.com.bo/eldeber/042026/1776372608489.webp?cw=350&ch=197&extw=jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNXhUVFZxU0VoSloxUllTREZuVFJERkFSamVBaWdLTWdtVmNwSkpwdWhFQ3dJ",
+      "date": "04/16/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-04-16T07:00:00Z"
+    },
+    {
+      "position": 88,
+      "title": "¿Qué pasará con la Alcaldía de Santa Cruz de la Sierra durante la detención de Jhonny Fernández?",
+      "source": {
+        "name": "El Deber",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldeber.com.bo/santa-cruz/pasara-alcaldia-santa-cruz-sierra-detencion-jhonny-fernandez_1772162885",
+      "thumbnail": "https://pxcdn.eldeber.com.bo/eldeber/022026/1772162775202.webp?cw=350&ch=197&extw=jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUZNRTExUWpZd2NWOVBiSFJvVFJERkFSamVBaWdLTWdZQmtJTE1zUVk",
+      "date": "02/26/2026, 08:00 AM, +0000 UTC",
+      "iso_date": "2026-02-26T08:00:00Z"
+    },
+    {
+      "position": 89,
+      "title": "La Feria del Libro Santa Cruz de la Sierra llega con una diversidad de títulos nuevos y autores internacionales",
+      "source": {
+        "name": "El Deber",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://eldeber.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://eldeber.com.bo/cultura-y-entretenimiento/feria-libro-santa-cruz-sierra-llega-diversidad-titulos-nuevos-autores-internacionales_1778097697",
+      "thumbnail": "https://pxcdn.eldeber.com.bo/eldeber/052026/1778097586353.webp?cw=350&ch=197&extw=jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNUtSa1pJUkZWc2RqVllOMDlVVFJERkFSamVBaWdLTWdrQlVKQ1FJS2lBTFFJ",
+      "date": "05/06/2026, 07:00 AM, +0000 UTC",
+      "iso_date": "2026-05-06T07:00:00Z"
+    },
+    {
+      "position": 90,
+      "title": "Cuéllar anuncia plan de gobierno para el departamento de ‘Santa Cruz de la Sierra’",
+      "source": {
+        "name": "Erbol |",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://erbol.com.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://erbol.com.bo/nacional/cu%C3%A9llar-anuncia-plan-de-gobierno-para-el-departamento-de-%E2%80%98santa-cruz-de-la-sierra%E2%80%99",
+      "thumbnail": "https://erbol.com.bo/sites/default/files/santa-cruz-sierra.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iI0NnNU1USGR2YUVWM2FYVk5WSGd6VFJDY0F4anBCU2dLTWdB",
+      "date": "10/13/2025, 07:00 AM, +0000 UTC",
+      "iso_date": "2025-10-13T07:00:00Z"
+    },
+    {
+      "position": 91,
+      "title": "Paseando por Santa Cruz de la Sierra – Bolivia",
+      "source": {
+        "name": "Sir Chandler",
+        "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.sirchandler.com.ar&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": [
+          "Santiago Torre Walsh"
+        ]
+      },
+      "link": "https://www.sirchandler.com.ar/2024/09/paseando-por-santa-cruz-de-la-sierra-bolivia/",
+      "thumbnail": "https://www.sirchandler.com.ar/wp-content/uploads/2024/09/santa-cruz-sierra-bolivia-5482.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNXFVRE5KVmpRMFl6RmZXV05SVFJEZ0F4aUFCU2dLTWdrQmNvUUlNZVZqMWdB",
+      "date": "09/22/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-09-22T07:00:00Z"
+    },
+    {
+      "position": 92,
+      "title": "Recomendación ante viajes a Santa Cruz de La Sierra- Bolivia",
+      "source": {
+        "name": "Chile en el Exterior",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=http://www.chile.gob.cl&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "http://www.chile.gob.cl/la-paz/noticias/recomendacion-ante-viajes-a-santa-cruz-de-la-sierra-bolivia",
+      "thumbnail": "https://www.chile.gob.cl/la-paz/site/artic/20230127/imag/foto_0000000120230127111505/INFORMACIoN_COSULAR_1300x500.png",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNVlkRzVQWjBkdVNuUllPVTQzVFJEWEFoajlCaWdLTWdhaGxKS3NOUWM",
+      "date": "01/27/2023, 07:25 PM, +0000 UTC",
+      "iso_date": "2023-01-27T19:25:10Z"
+    },
+    {
+      "position": 93,
+      "title": "Manizales será modelo de ciudad universitaria en misión a Santa Cruz de la Sierra, Bolivia",
+      "source": {
+        "name": "Centro de Información – Alcaldía de Manizales",
+        "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://centrodeinformacion.manizales.gov.co&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://centrodeinformacion.manizales.gov.co/manizales-sera-modelo-de-ciudad-universitaria-en-mision-a-santa-cruz-de-la-sierra-bolivia/",
+      "thumbnail": "https://manizales.gov.co/wp-content/uploads/2024/11/WhatsApp-Image-2024-11-01-at-10.30.01-AM-1024x681-1.jpeg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNU1hbXgxYWw5aWFqSlNNWFZUVFJEREF4aW5CU2dLTWdZQmtJSXgwUU0",
+      "date": "11/01/2024, 07:00 AM, +0000 UTC",
+      "iso_date": "2024-11-01T07:00:00Z"
+    },
+    {
+      "position": 94,
+      "title": "Santa Cruz de la Sierra cumple 464 años",
+      "source": {
+        "name": "Los Tiempos",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.lostiempos.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.lostiempos.com/actualidad/pais/20250226/santa-cruz-sierra-cumple-464-anos",
+      "thumbnail": "https://www.lostiempos.com/sites/default/files/styles/noticia_detalle/public/media_imagen/2025/2/26/santa_cruz_aniversario_ed_listo.jpg?itok=EW3N2rKq",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNUhlSEJSWnpGdE1UWndkalYwVFJDZUF4amxCU2dLTWdhTk1Zd3VwUWM",
+      "date": "02/26/2025, 08:00 AM, +0000 UTC",
+      "iso_date": "2025-02-26T08:00:00Z"
+    },
+    {
+      "position": 95,
+      "title": "Los bolivianos ya tienen tres citas festivas en Santa Cruz de la Sierra",
+      "source": {
+        "name": "HOY Trujillo",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://trujillo.hoy.es&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://trujillo.hoy.es/bolivianos-tres-citas-festivas-santa-cruz-sierra-20240126075402-nt.html",
+      "thumbnail": "https://s1.ppllstatics.com/hoy/trujillo/multimedia/2024/01/26/bolivianos-ksEC-U2101348829421zUD-1200x840@Hoy.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNXhRamswUldScVMyUXpSaTEwVFJEUEF4aVdCU2dLTWdrRk1KaVNtR214YVFJ",
+      "date": "01/26/2024, 08:00 AM, +0000 UTC",
+      "iso_date": "2024-01-26T08:00:00Z"
+    },
+    {
+      "position": 96,
+      "title": "Promoción de Iquique como destino turístico en Santa Cruz de la Sierra",
+      "source": {
+        "name": "Chile en el Exterior",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.chile.gob.cl&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.chile.gob.cl/santa-cruz-de-la-sierra/noticias/promocion-de-iquique-como-destino-turistico-en-santa-cruz-de-la-sierra",
+      "thumbnail": "https://www.chile.gob.cl/santa-cruz-de-la-sierra/site/artic/20190520/imag/foto_0000001020190520110044.jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNHRRMmhUUjBsNVYwazFVVVZOVFJEdEF4anVCQ2dLTWdZQlFKcGpvQWs",
+      "date": "09/28/2022, 11:54 PM, +0000 UTC",
+      "iso_date": "2022-09-28T23:54:26Z"
+    },
+    {
+      "position": 97,
+      "title": "Santa Cruz de la Sierra, la ciudad fundada en 1560, un tesoro para descubrir en Bolivia",
+      "source": {
+        "name": "Diario Río Negro",
+        "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.rionegro.com.ar&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.rionegro.com.ar/voy-turismo/santa-cruz-de-la-sierra-la-ciudad-fundada-en-1560-un-tesoro-para-descubrir-en-bolivia-2951653/",
+      "thumbnail": "https://www.rionegro.com.ar/wp-content/uploads/2023/06/santa-cruz-de-la-sierra-04.jpg?w=1200&h=630&crop=1&resize=1200,630",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNXNibGQxVFVSblJtNU9jV1J0VFJDUkF4ajhCU2dLTWdZcDhZVFRUQU0",
+      "date": "06/12/2023, 07:00 AM, +0000 UTC",
+      "iso_date": "2023-06-12T07:00:00Z"
+    },
+    {
+      "position": 98,
+      "title": "Gobierno explica en Santa Cruz de la Sierra avances alcanzados para el próximo Censo",
+      "source": {
+        "name": "Ine.gob.bo",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.ine.gob.bo&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.ine.gob.bo/index.php/gobierno-explica-en-santa-cruz-de-la-sierra-avances-alcanzados-para-el-proximo-censo/",
+      "thumbnail": "https://www.ine.gob.bo/wp-content/uploads/2022/03/La-conferencia-de-prensa-se-desarrollo-en-el-auditorio-del-INE-en-Santa-Cruz-de-la-Sierra..jpg",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iL0NnNXBZbXhITUdNME1scDVNVzVqVFJEREFoakFCQ2dLTWdrQmdJaXlPR1c1TEFJ",
+      "date": "03/17/2022, 07:00 AM, +0000 UTC",
+      "iso_date": "2022-03-17T07:00:00Z"
+    },
+    {
+      "position": 99,
+      "title": "El Tiempo: Santa Cruz de la Sierra (Cáceres) - Predicción por horas - Gráfica - Agencia Estatal de Meteorología",
+      "source": {
+        "name": "Aemet",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.aemet.es&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.aemet.es/es/eltiempo/prediccion/municipios/horas/santa-cruz-de-la-sierra-id10166",
+      "date": "07/28/2020, 05:17 AM, +0000 UTC",
+      "iso_date": "2020-07-28T05:17:39Z"
+    },
+    {
+      "position": 100,
+      "title": "5 museos en Santa Cruz de la Sierra que no puedes dejar de visitar",
+      "source": {
+        "name": "Uber",
+        "icon": "https://encrypted-tbn1.gstatic.com/faviconV2?url=https://www.uber.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "link": "https://www.uber.com/bo/es/blog/museos-en-santa-cruz-de-la-sierra/",
+      "thumbnail": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=552/height=0/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy82ZjdmZTFmMS1jZWE5LTViMDAtYTUwZi1jOGExNDA5MmYzOTYuanBn",
+      "thumbnail_small": "https://news.google.com/api/attachments/CC8iK0NnNW5TR2RNVFdwUU1sQldiVVUxVFJDVUFoaW9CQ2dLTWdZQllJaUV0QVU",
+      "date": "10/11/2018, 07:00 AM, +0000 UTC",
+      "iso_date": "2018-10-11T07:00:00Z"
+    }
+  ],
+  "menu_links": [
+    {
+      "title": "EE.UU.",
+      "topic_token": "CAAqKAgKIiJDQkFTRXdvSkwyMHZNRGxqTjNjd0VnWmxjeTAwTVRrb0FBUAE",
+      "serpapi_link": "https://serpapi.com/search.json?engine=google_news&gl=bo&topic_token=CAAqKAgKIiJDQkFTRXdvSkwyMHZNRGxqTjNjd0VnWmxjeTAwTVRrb0FBUAE"
+    },
+    {
+      "title": "Internacional",
+      "topic_token": "CAAqLAgKIiZDQkFTRmdvSUwyMHZNRGx1YlY4U0JtVnpMVFF4T1JvQ1ZWTW9BQVAB",
+      "serpapi_link": "https://serpapi.com/search.json?engine=google_news&gl=bo&topic_token=CAAqLAgKIiZDQkFTRmdvSUwyMHZNRGx1YlY4U0JtVnpMVFF4T1JvQ1ZWTW9BQVAB"
+    },
+    {
+      "title": "Tus noticias locales",
+      "topic_token": "CAAqHAgKIhZDQklTQ2pvSWJHOWpZV3hmZGpJb0FBUAE",
+      "serpapi_link": "https://serpapi.com/search.json?engine=google_news&gl=bo&topic_token=CAAqHAgKIhZDQklTQ2pvSWJHOWpZV3hmZGpJb0FBUAE"
+    },
+    {
+      "title": "Negocios",
+      "topic_token": "CAAqLAgKIiZDQkFTRmdvSUwyMHZNRGx6TVdZU0JtVnpMVFF4T1JvQ1ZWTW9BQVAB",
+      "serpapi_link": "https://serpapi.com/search.json?engine=google_news&gl=bo&topic_token=CAAqLAgKIiZDQkFTRmdvSUwyMHZNRGx6TVdZU0JtVnpMVFF4T1JvQ1ZWTW9BQVAB"
+    },
+    {
+      "title": "Ciencia y tecnología",
+      "topic_token": "CAAqLQgKIidDQkFTRndvSkwyMHZNR1ptZHpWbUVnWmxjeTAwTVRrYUFsVlRLQUFQAQ",
+      "serpapi_link": "https://serpapi.com/search.json?engine=google_news&gl=bo&topic_token=CAAqLQgKIidDQkFTRndvSkwyMHZNR1ptZHpWbUVnWmxjeTAwTVRrYUFsVlRLQUFQAQ"
+    },
+    {
+      "title": "Entretenimiento",
+      "topic_token": "CAAqLAgKIiZDQkFTRmdvSUwyMHZNREpxYW5RU0JtVnpMVFF4T1JvQ1ZWTW9BQVAB",
+      "serpapi_link": "https://serpapi.com/search.json?engine=google_news&gl=bo&topic_token=CAAqLAgKIiZDQkFTRmdvSUwyMHZNREpxYW5RU0JtVnpMVFF4T1JvQ1ZWTW9BQVAB"
+    },
+    {
+      "title": "Deportes",
+      "topic_token": "CAAqLAgKIiZDQkFTRmdvSUwyMHZNRFp1ZEdvU0JtVnpMVFF4T1JvQ1ZWTW9BQVAB",
+      "serpapi_link": "https://serpapi.com/search.json?engine=google_news&gl=bo&topic_token=CAAqLAgKIiZDQkFTRmdvSUwyMHZNRFp1ZEdvU0JtVnpMVFF4T1JvQ1ZWTW9BQVAB"
+    },
+    {
+      "title": "Salud",
+      "topic_token": "CAAqJggKIiBDQkFTRWdvSUwyMHZNR3QwTlRFU0JtVnpMVFF4T1NnQVAB",
+      "serpapi_link": "https://serpapi.com/search.json?engine=google_news&gl=bo&topic_token=CAAqJggKIiBDQkFTRWdvSUwyMHZNR3QwTlRFU0JtVnpMVFF4T1NnQVAB"
+    }
+  ],
+  "related_topics": [
+    {
+      "topic_token": "CAAqKAgKIiJDQkFTRXdvSkwyMHZNRE14ZGpNMUVnWmxjeTAwTVRrb0FBUAE",
+      "serpapi_link": "https://serpapi.com/search.json?engine=google_news&gl=bo&topic_token=CAAqKAgKIiJDQkFTRXdvSkwyMHZNRE14ZGpNMUVnWmxjeTAwTVRrb0FBUAE",
+      "title": "Santa Cruz de la Sierra"
+    },
+    {
+      "topic_token": "CAAqKAgKIiJDQkFTRXdvSkwyMHZNRE0wZEdReEVnWmxjeTAwTVRrb0FBUAE",
+      "serpapi_link": "https://serpapi.com/search.json?engine=google_news&gl=bo&topic_token=CAAqKAgKIiJDQkFTRXdvSkwyMHZNRE0wZEdReEVnWmxjeTAwTVRrb0FBUAE",
+      "title": "Departamento de Santa Cruz"
+    }
+  ]
+}

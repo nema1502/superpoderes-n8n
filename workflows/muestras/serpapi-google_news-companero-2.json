@@ -1,0 +1,89 @@
+{
+  "search_parameters": {
+    "engine": "google_news",
+    "q": "NASA",
+    "gl": "bo",
+    "hl": "es",
+    "json_restrictor": "news_results[0:8].{title,source,date,link}"
+  },
+  "news_results": [
+    {
+      "title": "La NASA busca a la próxima generación de astronautas",
+      "source": {
+        "name": "NASA (.gov)",
+        "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.nasa.gov&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "date": "11/10/2026, 12:10 AM, +0000 UTC",
+      "link": "https://www.nasa.gov/news-release/la-nasa-busca-a-la-proxima-generacion-de-astronautas/"
+    },
+    {
+      "title": "El silencioso avión supersónico X-59 de la NASA despega de Alabama",
+      "source": {
+        "name": "Yahoo",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://es-us.noticias.yahoo.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "date": "11/14/2026, 01:00 AM, +0000 UTC",
+      "link": "https://es-us.noticias.yahoo.com/silencioso-avi%C3%B3n-supers%C3%B3nico-x-59-010009091.html"
+    },
+    {
+      "title": "La NASA destina un millón de dólares al reto estudiantil Base Lunar",
+      "source": {
+        "name": "NASA (.gov)",
+        "icon": "https://encrypted-tbn0.gstatic.com/faviconV2?url=https://www.nasa.gov&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "date": "11/10/2026, 01:24 AM, +0000 UTC",
+      "link": "https://www.nasa.gov/news-release/la-nasa-destina-un-millon-de-dolares-al-reto-estudiantil-base-lunar/"
+    },
+    {
+      "title": "De Carolina del Norte a la Luna: Christina Koch y su nueva etapa en la NASA",
+      "source": {
+        "name": "Qué Pasa Mi Gente - Charlotte",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://quepasamedia.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": [
+          "Marina Aleman"
+        ]
+      },
+      "date": "11/10/2026, 11:27 PM, +0000 UTC",
+      "link": "https://quepasamedia.com/carolina-del-norte/de-carolina-del-norte-a-la-luna-christina-koch-y-su-nueva-etapa-en-la-nasa/"
+    },
+    {
+      "title": "El satélite TEMPO de la NASA permite un mejor seguimiento de los días con mala calidad del aire",
+      "source": {
+        "name": "gatoencerrado.news",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://gatoencerrado.news&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL",
+        "authors": [
+          "Virginia Gewin"
+        ]
+      },
+      "date": "11/13/2026, 07:56 PM, +0000 UTC",
+      "link": "https://gatoencerrado.news/2026/11/13/el-satelite-tempo-de-la-nasa-permite-un-mejor-seguimiento-de-los-dias-con-mala-calidad-del-aire/"
+    },
+    {
+      "title": "¿Volar? exhiben Jet Suit en un evento de la NASA",
+      "source": {
+        "name": "Univision",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.univision.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "date": "11/10/2026, 05:16 PM, +0000 UTC",
+      "link": "https://www.univision.com/noticias/volar-exhiben-jet-suit-en-un-evento-de-la-nasa-video-vertical"
+    },
+    {
+      "title": "La NASA busca evitar que un objeto caiga sin control a la Tierra: podría reingresar a la atmósfera en 2033",
+      "source": {
+        "name": "Revista Semana",
+        "icon": "https://encrypted-tbn2.gstatic.com/faviconV2?url=https://www.semana.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "date": "11/13/2026, 10:48 PM, +0000 UTC",
+      "link": "https://www.semana.com/tecnologia/articulo/la-nasa-busca-evitar-que-un-objeto-caiga-sin-control-a-la-tierra-podria-reingresar-a-la-atmosfera-en-2033/202657/"
+    },
+    {
+      "title": "La NASA pidió a empresas privadas ideas para evitar que el telescopio Hubble caiga a la Tierra en 2033",
+      "source": {
+        "name": "Infobae",
+        "icon": "https://encrypted-tbn3.gstatic.com/faviconV2?url=https://www.infobae.com&client=NEWS_360&size=96&type=FAVICON&fallback_opts=TYPE,SIZE,URL"
+      },
+      "date": "11/13/2026, 03:22 PM, +0000 UTC",
+      "link": "https://www.infobae.com/tecno/2026/11/13/la-nasa-pidio-a-empresas-privadas-ideas-para-evitar-que-el-telescopio-hubble-caiga-a-la-tierra-en-2033/"
+    }
+  ]
+}

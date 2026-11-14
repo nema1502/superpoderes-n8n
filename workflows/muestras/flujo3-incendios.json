@@ -1,0 +1,104 @@
+{
+  "flujo": "3. El scout del reto",
+  "fecha": "2026-11-14T05:04:51.442Z",
+  "segundos": 46.4,
+  "entorno": {
+    "n8n": "2.47.7 en una compu (Windows 11)",
+    "serpapi": "SerpApi Official 0.1.10",
+    "modelo": "gpt-5-mini por OpenRouter, con OpenAI Chat Model y Base URL https://openrouter.ai/api/v1, Reasoning Effort en Low"
+  },
+  "entrada": {
+    "reto": "Queremos avisar a las comunidades rurales de Santa Cruz cuando hay riesgo de incendio cerca, usando datos de satélites de la NASA.",
+    "equipo": "Datos",
+    "nota": "Reto escrito para la demo, no es un reto oficial del hackathon."
+  },
+  "herramientas": [
+    {
+      "herramienta": "Google",
+      "busqueda": "proyecto alarmas incendios satélite NASA Bolivia Santa Cruz app FIRMS MODIS VIIRS proyecto 'Santa Cruz' 'Bolivia' 'incendios'",
+      "ms": 989,
+      "archivo": "serpapi-google-scout.json"
+    },
+    {
+      "herramienta": "Artículos",
+      "busqueda": "VIIRS MODIS active fire detection algorithm review satellite fire alerts Bolivia wildfire remote sensing",
+      "ms": 1828,
+      "archivo": "serpapi-google_scholar-scout.json"
+    },
+    {
+      "herramienta": "Videos",
+      "busqueda": "tutorial FIRMS NASA español descargar datos incendios VIIRS MODIS español",
+      "ms": 1973,
+      "archivo": "serpapi-youtube-scout.json"
+    }
+  ],
+  "llamadas_al_modelo": 2,
+  "salida": {
+    "reto_en_una_frase": "Avisar a comunidades rurales de Santa Cruz sobre riesgo de incendio usando datos satelitales de la NASA.",
+    "ya_existe": [
+      {
+        "nombre": "Cobertura informativa sobre focos de calor en Bolivia",
+        "que_es": "Noticia sobre activación de planes y reportes del SIMB con focos de calor en Santa Cruz",
+        "enlace": "https://www.google.com/goto?url=CAES6QEBxCJF12zzWFq_K1iHwgTN_-arbE5kV51yBb0NxIxZ8TSOjIKRwc7livzT6QxR5Lkum8who8ISBw-fYytBUubdPYKdONG6pYzQh5px_ob_xTOOKvbcK_-0vwkz_NZoeq3PdEZe9VGtc6FA2tck2OJ6-NLuBkkWyl8b_TZt5cd1DJ9ejzNxsLKjjYfhtpfTlgz6y64tW6DDPCYlCFeXsQUBxrWFVlaK-wDYYOljL7NYiYu-3as8u10EqF-Iwks2Im78GCoDSbbd2Qq2wxaHrixgbySMSqV3LJlwa8d-6aBJvuSCqkY8dlETsQ"
+      },
+      {
+        "nombre": "Nuevo sistema satelital para monitoreo de incendios",
+        "que_es": "Artículo sobre desarrollo de un sistema satelital para monitorizar incendios en tiempo real",
+        "enlace": "https://www.google.com/goto?url=CAESrQEBxCJF12tkxKF3NuQmOZ1Te3QYxK8WBrMRD5pLbhuiYbA8eyNm7YRc4dyTWRiBjZgGsiYlJ_DHwMGvAXB59fZf77bNJwc0UFnNCGXGYuClxSqDeNWfPH62pV8UPGRSzTDAV3bUH7C26ZTD8VUXUwpuZxqtnrpi2QOTj9O5PxoWDEbd2bGu9a8Toss8JR-s4LetsGyqi1SFhbOJk7-99OFq-6SunPE5ZmuwgqEAUA"
+      },
+      {
+        "nombre": "Aplicación satelital y visualizador Web FireMapper",
+        "que_es": "Nota sobre visualizadores geográficos que usan datos MODIS para detectar fuegos como Web FireMapper",
+        "enlace": "https://www.google.com/goto?url=CAESnwEBxCJF1xZTquuRzm1WXMsaWKDMM6w1pYJe3VvSrxu1xaiQNTyrDAsur7Ft3hEAbhl4-nFyogpaTKGnrg1HPb_fmWpYANirQMqBTlKmSAmC7qaM1lOyQ-uQ68VNFw4HLgHTwMZb1GdOXKT6nsFn8uiJbtHFZZf7dtFuXPwEicqSsFX4Da0GxfR2dWPOMA8IsIEP2-diggGE_zVh7H1-8CY"
+      }
+    ],
+    "para_leer": [
+      {
+        "titulo": "A review on forest fire detection techniques: Past, present, and sustainable future",
+        "enlace": "https://www.mdpi.com/1424-8220/26/5/1609"
+      },
+      {
+        "titulo": "Predicting next-week VIIRS fire detections in Bolivia: a reproducible benchmark with temporal and geographic evaluation",
+        "enlace": "https://arxiv.org/abs/2611.08539"
+      },
+      {
+        "titulo": "Remote sensing for wildfire mapping: A comprehensive review of advances, platforms, and algorithms",
+        "enlace": "https://www.mdpi.com/2571-6255/8/8/316"
+      }
+    ],
+    "para_ver": [
+      {
+        "titulo": "FIRMS/NASA - Obtener datos de incendios para trabajarlos en QGIS",
+        "canal": "M. Fernanda Valle Seijo",
+        "enlace": "https://www.youtube.com/watch?v=QJbHv_T7vV8"
+      },
+      {
+        "titulo": "Detección de Incendios con NASA FIRMS",
+        "canal": "Agriconsultas",
+        "enlace": "https://www.youtube.com/watch?v=aNnkRrEIxSg"
+      },
+      {
+        "titulo": "Procesando y mapeando información espacial de incendios en R - Tutorial SIG (NASA FIRMS)",
+        "canal": "Un geógrafo en YouTube",
+        "enlace": "https://www.youtube.com/watch?v=IVesVnIIDLk"
+      }
+    ],
+    "ideas": [
+      {
+        "nombre": "Alerta SMS con FIRMS y geocercas",
+        "que_hace": "Detecta focos recientes de VIIRS cerca de comunidades y envía SMS de aviso a contactos locales",
+        "primer_paso": "Descargar los datos de FIRMS para el área de Santa Cruz y cargar el CSV en una hoja de cálculo"
+      },
+      {
+        "nombre": "Mapa web de riesgo por proximidad",
+        "que_hace": "Muestra detecciones recientes y calcula áreas de peligro alrededor de cada foco para visualizar riesgos por comunidad",
+        "primer_paso": "Crear un mapa base en Leaflet y añadir una capa de ejemplo con detecciones de focos"
+      },
+      {
+        "nombre": "Dashboard de tendencia y score de riesgo",
+        "que_hace": "Calcula frecuencia histórica de detecciones por cuadrícula y genera un score de riesgo para cada comunidad",
+        "primer_paso": "Obtener series históricas VIIRS y MODIS del último año y generar una tabla de conteos por cuadrícula"
+      }
+    ]
+  }
+}

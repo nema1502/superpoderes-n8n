@@ -1,0 +1,48 @@
+{
+  "flujo": "1. ¿Ya existe tu nombre?",
+  "fecha": "2026-11-14T04:56:31.669Z",
+  "segundos": 10.6,
+  "entorno": {
+    "n8n": "2.47.7 en una compu (Windows 11)",
+    "serpapi": "SerpApi Official 0.1.10",
+    "modelo": "gpt-5-mini por OpenRouter, con OpenAI Chat Model y Base URL https://openrouter.ai/api/v1"
+  },
+  "entrada": {
+    "nombre": "Starlink",
+    "idea": "Internet por satélite para comunidades"
+  },
+  "lo_que_encontro_google": "1. How Starlink Actually Works (From Your Roof to Lasers in Space) (YouTube · Matt Scott): ... Starlink. 0:00 Intro 0:36 The old way (GEO) 1:33 Low Earth orbit 2:36 Shells 3:27 The dish 4:36 Gateways 5:15 Lasers in space 6:06 Handoffs ...\n2. Inside SpaceX's Revolutionary Internet From Space Technology (YouTube · Uncovered World): ... Starlink actually works and the incredible technology behind SpaceX's satellite internet network. Discover how thousands of satellites orbit ...\n3. Starlink's new feature makes the service portable - for a price (TechRadar): A select number of Starlink customers now have the opportunity to access a new “Portability” feature and take the satellite internet with ...\n4. SpaceX expands Starlink internet service. Here's how to ... (Digital Trends): If Starlink is incoming, you can pre-order the service with a payment of $99. The total cost, payable later, comes to $549 ($499 for the ...\n5. How Does Starlink Work? The Amazing Technology Behind ... (YouTube · Precision Hardware DIY): How does Starlink deliver high-speed internet from space? In this video, we break down the technology behind Starlink in a simple and ...\n6. 5 Things to Know About Starlink Satellite Internet (Yahoo Tech): 5 Things to Know About Starlink Satellite Internet. PC Mag. Updated Wed, November 13 ...",
+  "respuesta_del_modelo": "VEREDICTO: OCUPADO\nPOR QUÉ: Encontré el servicio de Internet satelital Starlink de SpaceX en artículos de TechRadar y Digital Trends y en múltiples videos de YouTube.\nOTROS NOMBRES: RedEstelar, ComuSat, CieloNet",
+  "salida": {
+    "veredicto": "OCUPADO",
+    "por_que": "Encontré el servicio de Internet satelital Starlink de SpaceX en artículos de TechRadar y Digital Trends y en múltiples videos de YouTube.",
+    "otros_nombres": [
+      "RedEstelar",
+      "ComuSat",
+      "CieloNet"
+    ],
+    "enlaces": [
+      {
+        "titulo": "How Starlink Actually Works (From Your Roof to Lasers in Space)",
+        "enlace": "https://www.google.com/goto?url=CAESaAHEIkXXgikvGyjQKO6jrINt1utfamLezgFu48ZqjwezE8EAkJKos0JRPUKpQnJ0LjJclRAKl414WyqA3dfz8TXkkP6UkGja5toUb0H6CYuOnWe8XHPewN3mCWloThLF7T6CX_4f2Vmm&gsessionid=5TOHcDk6cJ2GljaC1QicRkXMTu93bHAlzr6mXfCVa9gKqZBUls5mWw"
+      },
+      {
+        "titulo": "Inside SpaceX's Revolutionary Internet From Space Technology",
+        "enlace": "https://www.google.com/goto?url=CAESaAHEIkXXXTIPqQ1UUAnnDONSf4R6AMCJzAGzgKIoB6w69UPlk7YgSg4Z3_7yw5BKx_xHJXhMTYQeJrFPTd93Aho9jC63prHrR28GeEnpNFMzdY3trUE37OQ0ETVrVG-cxtKBCBo3VrxS&gsessionid=5TOHcDk6cJ2GljaC1QicRkXMTu93bHAlzr6mXfCVa9gKqZBUls5mWw"
+      },
+      {
+        "titulo": "Starlink's new feature makes the service portable - for a price",
+        "enlace": "https://www.google.com/goto?url=CAESmAEBxCJF17qMTUw0yJeSP3TN809zFSZ2ZWb6NicFV1gH3l1rxWQ-Ng4sWwiRktAzWvVAIqTvL1p0oYlJJvQUXXq-wSwrSC12Hw6bH6h6EZ-OgW8V-zBUF-wnwfnbGIb9rNQp3JGAJXAyS0z0LL653owhNTnDXktVcQfnnTDWbtlYVU43V7SO9l3W_jbqgSA-4dK03hN_l8HwuQ"
+      }
+    ]
+  },
+  "tiempos_ms": {
+    "Formulario": 0,
+    "Buscar en Google": 148,
+    "Resumir resultados": 4,
+    "Modelo": 10240,
+    "Pensar": 10246,
+    "Armar la página": 5,
+    "Página": 0
+  }
+}

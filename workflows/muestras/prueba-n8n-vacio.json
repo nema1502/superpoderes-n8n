@@ -1,0 +1,72 @@
+{
+  "prueba": "Los cuatro JSON de workflows/, importados en un n8n 2.47.7 vacío, el 14 de noviembre de 2026.",
+  "sin_serpapi_instalado": {
+    "que_se_hizo": "Importar el flujo 1 sin el nodo SerpApi Official instalado y publicarlo.",
+    "importar": "Successfully imported 1 workflow.",
+    "publicar": "Unrecognized node type: n8n-nodes-serpapi.serpApi"
+  },
+  "con_serpapi_instalado_sin_credenciales": {
+    "1. ¿Ya existe tu nombre?": {
+      "se_publico": false,
+      "mensaje": "Node \"Buscar en Google\": Missing required credential: serpApi\nNode \"Modelo\": Missing required credential: openAiApi"
+    },
+    "2. El compañero de la madrugada": {
+      "se_publico": false,
+      "mensaje": "Node \"Modelo\": Missing required credential: openAiApi\nNode \"Mapas\": Missing required credential: serpApi\nNode \"Noticias\": Missing required credential: serpApi\nNode \"Videos\": Missing required credential: serpApi"
+    },
+    "3. El scout del reto": {
+      "se_publico": false,
+      "mensaje": "Node \"Modelo\": Missing required credential: openAiApi\nNode \"Google\": Missing required credential: serpApi\nNode \"Artículos\": Missing required credential: serpApi\nNode \"Videos\": Missing required credential: serpApi"
+    },
+    "4. La lista del sorteo": {
+      "se_publico": true,
+      "mensaje": "publicado"
+    }
+  },
+  "despues_de_elegir_credenciales": {
+    "1-ya-existe-tu-nombre": {
+      "lo_que_se_cambio": [
+        "Buscar en Google: credencial",
+        "Modelo: credencial y modelo"
+      ],
+      "se_publico": true
+    },
+    "2-companero-de-la-madrugada": {
+      "lo_que_se_cambio": [
+        "Modelo: credencial y modelo",
+        "Mapas: credencial",
+        "Noticias: credencial",
+        "Videos: credencial"
+      ],
+      "se_publico": true
+    },
+    "3-scout-del-reto": {
+      "lo_que_se_cambio": [
+        "Modelo: credencial y modelo",
+        "Google: credencial",
+        "Artículos: credencial",
+        "Videos: credencial"
+      ],
+      "se_publico": true
+    }
+  },
+  "llamadas": {
+    "flujo4": {
+      "preparar_la_tabla": "success",
+      "anotaciones": [
+        "Listo, estás en la lista",
+        "Listo, estás en la lista",
+        "Esa no es la palabra"
+      ],
+      "lista": {
+        "tipo": "text/plain; charset=utf-8",
+        "cuerpo": "Nora\nBeto el del fondo"
+      }
+    },
+    "flujo1": {
+      "nombre": "Satelitazo",
+      "veredicto": "LIBRE",
+      "segundos": 11.5
+    }
+  }
+}

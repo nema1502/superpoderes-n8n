@@ -1,0 +1,292 @@
+{
+  "name": "2. El compañero de la madrugada",
+  "nodes": [
+    {
+      "id": "c4a70002-0000-4385-8000-000000000b55",
+      "name": "Nota 1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        -300
+      ],
+      "parameters": {
+        "content": "# El compañero de la madrugada\n\n## Le preguntás como a un amigo y él elige dónde buscar.\n\n**Qué aprendés:** qué es un agente. Un modelo con herramientas y memoria. Nadie le dice qué herramienta usar: lee la descripción de cada una y elige.\n\n**Credenciales:** SerpApi API en Mapas, Noticias y Videos. En Modelo, Use Gateway credits (n8n Cloud) o una cuenta de OpenAI o de un servicio compatible.\n\n**Para probarlo:** tocá Open chat, abajo, y preguntá. Después abrí Logs para ver qué herramienta usó en cada respuesta.",
+        "height": 260,
+        "width": 1500,
+        "color": 7
+      }
+    },
+    {
+      "id": "c4a70002-0000-4386-8000-000000000b56",
+      "name": "Nota 2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        0
+      ],
+      "parameters": {
+        "content": "## Chat\n### Cada mensaje dispara el flujo.\nDiez mensajes son diez ejecuciones.",
+        "height": 400,
+        "width": 300,
+        "color": 5
+      }
+    },
+    {
+      "id": "c4a70002-0000-4387-8000-000000000b57",
+      "name": "Nota 3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        240,
+        0
+      ],
+      "parameters": {
+        "content": "## Compañero\n### El agente decide qué herramienta usar.\nSu mensaje de sistema le dice quién es, dónde está y qué hora es en Santa Cruz.",
+        "height": 400,
+        "width": 1180,
+        "color": 6
+      }
+    },
+    {
+      "id": "c4a70002-0000-4388-8000-000000000b58",
+      "name": "Nota 4",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        440
+      ],
+      "parameters": {
+        "content": "## Cerebro y memoria\n### Modelo piensa. Memoria recuerda.\nGuarda los últimos seis intercambios: así entiende una pregunta de seguimiento.",
+        "height": 340,
+        "width": 340,
+        "color": 6
+      }
+    },
+    {
+      "id": "c4a70002-0000-4389-8000-000000000b59",
+      "name": "Nota 5",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1020,
+        440
+      ],
+      "parameters": {
+        "content": "## Herramientas\n### Mapas, Noticias y Videos.\nEl agente elige leyendo la descripción de cada una. Con `$fromAI`, el modelo escribe qué buscar.",
+        "height": 340,
+        "width": 400,
+        "color": 4
+      }
+    },
+    {
+      "id": "c4a70002-0000-4001-8000-0000000007d1",
+      "name": "Chat",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.5,
+      "position": [
+        0,
+        240
+      ],
+      "webhookId": "c4a70002-0001-4001-8000-0000000007d1",
+      "parameters": {
+        "public": false,
+        "options": {}
+      }
+    },
+    {
+      "id": "c4a70002-0000-4002-8000-0000000007d2",
+      "name": "Compañero",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        360,
+        240
+      ],
+      "parameters": {
+        "promptType": "auto",
+        "options": {
+          "systemMessage": "=Sos el compañero de un equipo en el hackathon NASA Space Apps, en Santa Cruz de la Sierra, Bolivia. Ahora es {{ $now.setZone('America/La_Paz').setLocale('es').toFormat(\"cccc d 'de' LLLL, HH:mm\") }}.\nRespondés en español de Bolivia, corto y claro, como un amigo que sabe.\nTenés tres herramientas: Mapas (lugares en Google Maps), Noticias (Google News) y Videos (YouTube). Usá la que haga falta, o varias.\nNunca inventes lugares, horarios, noticias ni videos. Si no está en lo que devolvió la herramienta, decí que no lo encontraste.\nCuando recomiendes algo, nombrá de dónde sale (el lugar, el medio o el canal) y poné el enlace si lo tenés.\nSi recomendás un lugar, decí su puntaje y cuántas reseñas tiene.\nCuando cuentes una noticia, decí su fecha con día y mes. Noticias da la fecha como mes/día/año. Si la fecha no es de hoy, no digas hoy, aunque el título lo diga.\nComo mucho seis renglones, con frases simples. Nunca uses punto y coma ni rayas largas.\nNo ofrezcas hacer cosas que tus herramientas no hacen.",
+          "maxIterations": 6
+        }
+      }
+    },
+    {
+      "id": "c4a70002-0000-4003-8000-0000000007d3",
+      "name": "Modelo",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        300,
+        580
+      ],
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-5-mini"
+        },
+        "responsesApiEnabled": false,
+        "options": {
+          "reasoningEffort": "low"
+        }
+      }
+    },
+    {
+      "id": "c4a70002-0000-4004-8000-0000000007d4",
+      "name": "Memoria",
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.4,
+      "position": [
+        440,
+        580
+      ],
+      "parameters": {
+        "sessionIdType": "fromInput",
+        "contextWindowLength": 6
+      }
+    },
+    {
+      "id": "c4a70002-0000-4005-8000-0000000007d5",
+      "name": "Mapas",
+      "type": "n8n-nodes-serpapi.serpApiTool",
+      "typeVersion": 1,
+      "position": [
+        620,
+        580
+      ],
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Busca lugares reales en Google Maps cerca del centro de Santa Cruz de la Sierra, Bolivia, por ejemplo cafés, comida, farmacias o fotocopias. Devuelve el nombre, el puntaje, cuántas reseñas tiene, si está abierto y la dirección. Usala para preguntas sobre lugares.",
+        "operation": "google_maps",
+        "q": "={{ $fromAI('q', 'Qué buscar en Google Maps, en español y con la zona, sin la palabra abierto (cada lugar ya dice si está abierto). Por ejemplo: café centro Santa Cruz de la Sierra', 'string') }}",
+        "type": "search",
+        "ll": "@-17.7833,-63.1821,14z",
+        "additionalFields": {
+          "hl": "es",
+          "json_restrictor": "local_results[0:6].{title,rating,reviews,type,open_state,address}"
+        }
+      }
+    },
+    {
+      "id": "c4a70002-0000-4006-8000-0000000007d6",
+      "name": "Noticias",
+      "type": "n8n-nodes-serpapi.serpApiTool",
+      "typeVersion": 1,
+      "position": [
+        760,
+        580
+      ],
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Busca noticias en Google News, en español y para Bolivia. Devuelve el título, el medio, la fecha (mes/día/año) y el enlace. No todas son de hoy: mirá la fecha de cada una. Usala para preguntas sobre noticias de hoy o de esta semana.",
+        "operation": "google_news",
+        "q": "={{ $fromAI('q', 'El tema de las noticias, en pocas palabras y en español, sin palabras como hoy o ahora', 'string') }}",
+        "additionalFields": {
+          "gl": "bo",
+          "hl": "es",
+          "json_restrictor": "news_results[0:8].{title,source,date,link}"
+        }
+      }
+    },
+    {
+      "id": "c4a70002-0000-4007-8000-0000000007d7",
+      "name": "Videos",
+      "type": "n8n-nodes-serpapi.serpApiTool",
+      "typeVersion": 1,
+      "position": [
+        900,
+        580
+      ],
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Busca videos en YouTube en español. Devuelve el título, el canal, la duración, las vistas y el enlace. Usala cuando pidan un video o un tutorial.",
+        "operation": "youtube",
+        "search_query": "={{ $fromAI('busqueda', 'Qué buscar en YouTube, en español', 'string') }}",
+        "additionalFields": {
+          "gl": "bo",
+          "hl": "es",
+          "json_restrictor": "video_results[0:5].{title,link,channel,length,views}"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Chat": {
+      "main": [
+        [
+          {
+            "node": "Compañero",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Modelo": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Compañero",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Memoria": {
+      "ai_memory": [
+        [
+          {
+            "node": "Compañero",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mapas": {
+      "ai_tool": [
+        [
+          {
+            "node": "Compañero",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Noticias": {
+      "ai_tool": [
+        [
+          {
+            "node": "Compañero",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Videos": {
+      "ai_tool": [
+        [
+          {
+            "node": "Compañero",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": false
+  }
+}

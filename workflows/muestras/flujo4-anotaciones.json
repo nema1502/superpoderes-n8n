@@ -1,0 +1,78 @@
+{
+  "flujo": "4. La lista del sorteo",
+  "entorno": {
+    "n8n": "2.47.7 en una compu (Windows 11)"
+  },
+  "anotaciones": [
+    {
+      "nombre": " Ana , ",
+      "palabra": "Llama",
+      "pagina": "Listo, estás en la lista"
+    },
+    {
+      "nombre": "ana",
+      "palabra": "llama ",
+      "pagina": "Listo, estás en la lista"
+    },
+    {
+      "nombre": "Beto",
+      "palabra": "LLAMA",
+      "pagina": "Listo, estás en la lista"
+    },
+    {
+      "nombre": "Béto",
+      "palabra": "llama",
+      "pagina": "Listo, estás en la lista"
+    },
+    {
+      "nombre": "Nora, la de Tarija",
+      "palabra": "llama",
+      "pagina": "Listo, estás en la lista"
+    },
+    {
+      "nombre": "X",
+      "palabra": "llama",
+      "pagina": "Listo, estás en la lista"
+    },
+    {
+      "nombre": "https://example.org",
+      "palabra": "llama",
+      "pagina": "Listo, estás en la lista"
+    },
+    {
+      "nombre": "nora@example.org",
+      "palabra": "llama",
+      "pagina": "Listo, estás en la lista"
+    },
+    {
+      "nombre": "Lu​cas",
+      "palabra": "llama",
+      "pagina": "Listo, estás en la lista"
+    },
+    {
+      "nombre": "   ",
+      "palabra": "llama",
+      "pagina": "Listo, estás en la lista"
+    },
+    {
+      "nombre": "Un nombre larguísimo que pasa de cuarenta letras seguro",
+      "palabra": "llama",
+      "pagina": "Listo, estás en la lista"
+    },
+    {
+      "nombre": "Ñandú",
+      "palabra": "llama",
+      "pagina": "Listo, estás en la lista"
+    },
+    {
+      "nombre": "Intruso",
+      "palabra": "vicuña",
+      "pagina": "Esa no es la palabra"
+    }
+  ],
+  "lista": {
+    "tipo": "text/plain; charset=utf-8",
+    "renglones": 6
+  },
+  "nota": "Doce anotaciones con la palabra bien escrita (con mayúsculas y espacios de más), entre ellas repetidos con mayúsculas y tildes, una coma, un nombre de una letra, un enlace, un correo, un carácter invisible, uno vacío y uno de más de 40 letras. Una más con la palabra mal. La lista sale con 6 nombres."
+}

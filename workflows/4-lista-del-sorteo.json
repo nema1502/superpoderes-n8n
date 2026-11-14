@@ -1,0 +1,470 @@
+{
+  "name": "4. La lista del sorteo",
+  "nodes": [
+    {
+      "id": "c4a70004-0000-4385-8000-000000001325",
+      "name": "Nota 1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        -300
+      ],
+      "parameters": {
+        "content": "# La lista del sorteo\n\n## Te anotás desde el celular y la lista sale lista para Tinkazo.\n\n**Qué aprendés:** que un flujo puede tener más de un disparador, que limpiar datos es un paso más y que n8n guarda datos sin ningún servicio de afuera (Data tables).\n\n**Credenciales:** ninguna. Antes de publicar, en la flecha del botón Execute elegí Preparar la tabla y tocalo una vez (o creá en Data tables la tabla sorteo_charla con una columna de texto nombre).",
+        "height": 260,
+        "width": 2140,
+        "color": 7
+      }
+    },
+    {
+      "id": "c4a70004-0000-4386-8000-000000001326",
+      "name": "Nota 2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        0
+      ],
+      "parameters": {
+        "content": "## A. Anotarse\n### Formulario, palabra de la charla, limpieza y tabla.\nSi la palabra es llama, Limpiar deja el nombre como lo entiende Tinkazo y Guardar lo suma a la tabla sorteo_charla.",
+        "height": 560,
+        "width": 1140,
+        "color": 5
+      }
+    },
+    {
+      "id": "c4a70004-0000-4387-8000-000000001327",
+      "name": "Nota 3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        0
+      ],
+      "parameters": {
+        "content": "## B. La lista para Tinkazo\n### Un nombre por línea, listo para pegar.\nAl abrir la dirección de Lista, n8n lee la tabla y saca repetidos, enlaces y correos. En tinkazo.app se toca Pegar lista.",
+        "height": 560,
+        "width": 960,
+        "color": 4
+      }
+    },
+    {
+      "id": "c4a70004-0000-4388-8000-000000001328",
+      "name": "Nota 4",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        600
+      ],
+      "parameters": {
+        "content": "## C. Preparar la tabla\n### Una sola vez, antes de publicar.\nCrea la tabla sorteo_charla si todavía no existe.",
+        "height": 320,
+        "width": 520,
+        "color": 6
+      }
+    },
+    {
+      "id": "c4a70004-0000-4389-8000-000000001329",
+      "name": "Nota 5",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        480,
+        600
+      ],
+      "parameters": {
+        "content": "## Ojo\n### El formulario es abierto.\nAlguien con el enlace puede anotarse dos veces con nombres distintos. Por eso la lista se muestra a la sala antes de sellarla. Tinkazo prueba que nadie tocó el resultado después de cerrar la lista, no que la lista esté bien armada. Después de la charla, vaciá la tabla.",
+        "height": 320,
+        "width": 1580,
+        "color": 3
+      }
+    },
+    {
+      "id": "c4a70004-0000-4001-8000-000000000fa1",
+      "name": "Anotate",
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.6,
+      "position": [
+        0,
+        260
+      ],
+      "webhookId": "c4a70004-0001-4001-8000-000000000fa1",
+      "parameters": {
+        "formTitle": "Sorteo de la charla",
+        "formDescription": "Poné tu nombre y apellido, o un apodo que nadie más use: va a salir en la pantalla y en el enlace para comprobar el sorteo. Participar es gratis.",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Tu nombre y apellido, o un apodo",
+              "fieldName": "nombre",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "La palabra de la charla",
+              "fieldName": "palabra",
+              "placeholder": "Está en la pantalla",
+              "requiredField": true
+            }
+          ]
+        },
+        "responseMode": "lastNode",
+        "options": {
+          "path": "sorteo-space-apps",
+          "buttonLabel": "Anotarme",
+          "appendAttribution": false,
+          "customCss": ":root{--font-family:\"Segoe UI\", system-ui, sans-serif}\n:root{--font-weight-normal:600}\n:root{--font-weight-bold:700}\n:root{--font-size-header:34px}\n:root{--font-size-subheader:19px}\n:root{--font-size-label:19px}\n:root{--font-size-input:19px}\n:root{--font-size-paragraph:19px}\n:root{--font-size-body:16px}\n:root{--font-size-link:14px}\n:root{--font-size-error:16px}\n:root{--color-background:#070A0F}\n:root{--color-card-bg:#0B1838}\n:root{--color-card-border:#4DA3FF}\n:root{--color-card-shadow:rgba(0, 0, 0, 0)}\n:root{--color-header:#F5F7FF}\n:root{--color-header-subtext:#9AA3B8}\n:root{--color-label:#F5F7FF}\n:root{--color-input-bg:#070A0F}\n:root{--color-input-border:#4DA3FF}\n:root{--color-input-text:#F5F7FF}\n:root{--color-focus-border:#FFB547}\n:root{--color-submit-btn-bg:#FFB547}\n:root{--color-submit-btn-text:#070A0F}\n:root{--color-required:#FFB547}\n:root{--color-link:#9AA3B8}\n:root{--color-error:#FF7A7A}\n:root{--color-html-text:#F5F7FF}\n:root{--color-html-link:#4DA3FF}\n:root{--color-test-notice-text:#FFB547}\n:root{--color-test-notice-bg:#0B1838}\n:root{--color-test-notice-border:#FFB547}\n:root{--container-width:560px}\n:root{--border-radius-card:16px}\n:root{--card-border-radius:16px}\n:root{--submit-btn-height:56px}"
+        }
+      }
+    },
+    {
+      "id": "c4a70004-0000-4002-8000-000000000fa2",
+      "name": "¿Dijo la palabra?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.4,
+      "position": [
+        220,
+        260
+      ],
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 4
+          },
+          "conditions": [
+            {
+              "id": "c4a70004-0002-4002-8000-000000000fa2",
+              "leftValue": "={{ String($json.palabra || '').trim().toLowerCase() }}",
+              "rightValue": "llama",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "c4a70004-0000-4003-8000-000000000fa3",
+      "name": "Limpiar",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        460,
+        180
+      ],
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "// Deja el nombre como lo entiende Tinkazo: sin caracteres invisibles,\n// sin comas, con un solo espacio entre palabras y 40 letras como mucho.\nfunction limpiar(texto) {\n  return String(texto || '')\n    .replace(/[​-‏⁠﻿]/g, '')\n    .replace(/,/g, ' ')\n    .replace(/\\s+/g, ' ')\n    .trim()\n    .slice(0, 40)\n}\nreturn { json: { nombre: limpiar($json.nombre) } }"
+      }
+    },
+    {
+      "id": "c4a70004-0000-4004-8000-000000000fa4",
+      "name": "Guardar",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        660,
+        180
+      ],
+      "parameters": {
+        "resource": "row",
+        "operation": "insert",
+        "dataTableId": {
+          "__rl": true,
+          "mode": "name",
+          "value": "sorteo_charla"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "nombre": "={{ $json.nombre }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "nombre",
+              "displayName": "nombre",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "c4a70004-0000-4005-8000-000000000fa5",
+      "name": "Listo",
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.5,
+      "position": [
+        860,
+        180
+      ],
+      "webhookId": "c4a70004-0001-4005-8000-000000000fa5",
+      "parameters": {
+        "operation": "completion",
+        "respondWith": "text",
+        "completionTitle": "Listo, estás en la lista",
+        "completionMessage": "Al final de la charla sorteamos con Tinkazo. Mirá la pantalla.",
+        "options": {
+          "customCss": ":root{--font-family:\"Segoe UI\", system-ui, sans-serif}\n:root{--font-weight-normal:600}\n:root{--font-weight-bold:700}\n:root{--font-size-header:34px}\n:root{--font-size-subheader:19px}\n:root{--font-size-label:19px}\n:root{--font-size-input:19px}\n:root{--font-size-paragraph:19px}\n:root{--font-size-body:16px}\n:root{--font-size-link:14px}\n:root{--font-size-error:16px}\n:root{--color-background:#070A0F}\n:root{--color-card-bg:#0B1838}\n:root{--color-card-border:#4DA3FF}\n:root{--color-card-shadow:rgba(0, 0, 0, 0)}\n:root{--color-header:#F5F7FF}\n:root{--color-header-subtext:#9AA3B8}\n:root{--color-label:#F5F7FF}\n:root{--color-input-bg:#070A0F}\n:root{--color-input-border:#4DA3FF}\n:root{--color-input-text:#F5F7FF}\n:root{--color-focus-border:#FFB547}\n:root{--color-submit-btn-bg:#FFB547}\n:root{--color-submit-btn-text:#070A0F}\n:root{--color-required:#FFB547}\n:root{--color-link:#9AA3B8}\n:root{--color-error:#FF7A7A}\n:root{--color-html-text:#F5F7FF}\n:root{--color-html-link:#4DA3FF}\n:root{--color-test-notice-text:#FFB547}\n:root{--color-test-notice-bg:#0B1838}\n:root{--color-test-notice-border:#FFB547}\n:root{--container-width:560px}\n:root{--border-radius-card:16px}\n:root{--card-border-radius:16px}\n:root{--submit-btn-height:56px}"
+        }
+      }
+    },
+    {
+      "id": "c4a70004-0000-4006-8000-000000000fa6",
+      "name": "Falta la palabra",
+      "type": "n8n-nodes-base.form",
+      "typeVersion": 2.5,
+      "position": [
+        460,
+        380
+      ],
+      "webhookId": "c4a70004-0001-4006-8000-000000000fa6",
+      "parameters": {
+        "operation": "completion",
+        "respondWith": "text",
+        "completionTitle": "Esa no es la palabra",
+        "completionMessage": "Está en la pantalla de la charla. Volvé a abrir el formulario e intentá de nuevo.",
+        "options": {
+          "customCss": ":root{--font-family:\"Segoe UI\", system-ui, sans-serif}\n:root{--font-weight-normal:600}\n:root{--font-weight-bold:700}\n:root{--font-size-header:34px}\n:root{--font-size-subheader:19px}\n:root{--font-size-label:19px}\n:root{--font-size-input:19px}\n:root{--font-size-paragraph:19px}\n:root{--font-size-body:16px}\n:root{--font-size-link:14px}\n:root{--font-size-error:16px}\n:root{--color-background:#070A0F}\n:root{--color-card-bg:#0B1838}\n:root{--color-card-border:#4DA3FF}\n:root{--color-card-shadow:rgba(0, 0, 0, 0)}\n:root{--color-header:#F5F7FF}\n:root{--color-header-subtext:#9AA3B8}\n:root{--color-label:#F5F7FF}\n:root{--color-input-bg:#070A0F}\n:root{--color-input-border:#4DA3FF}\n:root{--color-input-text:#F5F7FF}\n:root{--color-focus-border:#FFB547}\n:root{--color-submit-btn-bg:#FFB547}\n:root{--color-submit-btn-text:#070A0F}\n:root{--color-required:#FFB547}\n:root{--color-link:#9AA3B8}\n:root{--color-error:#FF7A7A}\n:root{--color-html-text:#F5F7FF}\n:root{--color-html-link:#4DA3FF}\n:root{--color-test-notice-text:#FFB547}\n:root{--color-test-notice-bg:#0B1838}\n:root{--color-test-notice-border:#FFB547}\n:root{--container-width:560px}\n:root{--border-radius-card:16px}\n:root{--card-border-radius:16px}\n:root{--submit-btn-height:56px}"
+        }
+      }
+    },
+    {
+      "id": "c4a70004-0000-4007-8000-000000000fa7",
+      "name": "Lista",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.2,
+      "position": [
+        1180,
+        260
+      ],
+      "webhookId": "c4a70004-0001-4007-8000-000000000fa7",
+      "parameters": {
+        "httpMethod": "GET",
+        "path": "lista-sorteo-space-apps",
+        "responseMode": "responseNode",
+        "options": {}
+      }
+    },
+    {
+      "id": "c4a70004-0000-4008-8000-000000000fa8",
+      "name": "Leer la tabla",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        1400,
+        260
+      ],
+      "alwaysOutputData": true,
+      "parameters": {
+        "resource": "row",
+        "operation": "get",
+        "dataTableId": {
+          "__rl": true,
+          "mode": "name",
+          "value": "sorteo_charla"
+        },
+        "returnAll": true,
+        "orderBy": true,
+        "orderByColumn": "createdAt",
+        "orderByDirection": "ASC"
+      }
+    },
+    {
+      "id": "c4a70004-0000-4009-8000-000000000fa9",
+      "name": "Lista limpia",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1620,
+        260
+      ],
+      "parameters": {
+        "jsCode": "// Arma la lista para Tinkazo: un nombre por línea, sin repetidos\n// (aunque cambien mayúsculas o tildes), sin enlaces ni correos.\nfunction limpiar(texto) {\n  return String(texto || '')\n    .replace(/[​-‏⁠﻿]/g, '')\n    .replace(/,/g, ' ')\n    .replace(/\\s+/g, ' ')\n    .trim()\n    .slice(0, 40)\n}\n\nfunction clave(texto) {\n  return texto.normalize('NFKD').replace(/\\p{M}/gu, '').toLowerCase()\n}\n\nconst vistos = {}\nconst nombres = []\n\nfor (const item of $input.all()) {\n  const nombre = limpiar(item.json.nombre)\n  if (nombre.length < 2) continue\n  if (/https?:|www\\.|@/i.test(nombre)) continue\n  const k = clave(nombre)\n  if (vistos[k]) continue\n  vistos[k] = true\n  nombres.push(nombre)\n}\n\nreturn [{ json: { cantidad: nombres.length, lista: nombres.join('\\n') } }]"
+      }
+    },
+    {
+      "id": "c4a70004-0000-400a-8000-000000000faa",
+      "name": "Responder",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        1840,
+        260
+      ],
+      "parameters": {
+        "respondWith": "text",
+        "responseBody": "={{ $json.lista }}",
+        "options": {
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Content-Type",
+                "value": "text/plain"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "c4a70004-0000-400b-8000-000000000fab",
+      "name": "Preparar la tabla",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        760
+      ],
+      "parameters": {}
+    },
+    {
+      "id": "c4a70004-0000-400c-8000-000000000fac",
+      "name": "Crear sorteo_charla",
+      "type": "n8n-nodes-base.dataTable",
+      "typeVersion": 1.1,
+      "position": [
+        240,
+        760
+      ],
+      "parameters": {
+        "resource": "table",
+        "operation": "create",
+        "tableName": "sorteo_charla",
+        "columns": {
+          "column": [
+            {
+              "name": "nombre",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {
+          "createIfNotExists": true
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Anotate": {
+      "main": [
+        [
+          {
+            "node": "¿Dijo la palabra?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "¿Dijo la palabra?": {
+      "main": [
+        [
+          {
+            "node": "Limpiar",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Falta la palabra",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limpiar": {
+      "main": [
+        [
+          {
+            "node": "Guardar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Guardar": {
+      "main": [
+        [
+          {
+            "node": "Listo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lista": {
+      "main": [
+        [
+          {
+            "node": "Leer la tabla",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Leer la tabla": {
+      "main": [
+        [
+          {
+            "node": "Lista limpia",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lista limpia": {
+      "main": [
+        [
+          {
+            "node": "Responder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Preparar la tabla": {
+      "main": [
+        [
+          {
+            "node": "Crear sorteo_charla",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": false
+  }
+}

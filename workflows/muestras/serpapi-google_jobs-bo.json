@@ -1,0 +1,437 @@
+{
+  "search_metadata": {
+    "id": "6af7d59953938190e6108648",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/pPirCN90jz5SERWX8cdIrb4k5fxbxYIhIlHpC4IQUtM/6af7d59953938190e6108648.json",
+    "markdown_endpoint": "https://serpapi.com/searches/pPirCN90jz5SERWX8cdIrb4k5fxbxYIhIlHpC4IQUtM/6af7d59953938190e6108648.md",
+    "created_at": "2026-11-14 03:29:29 UTC",
+    "processed_at": "2026-11-14 03:29:29 UTC",
+    "google_jobs_url": "https://www.google.com/search?q=programador+Santa+Cruz+Bolivia&hl=es&gl=bo&udm=8",
+    "raw_html_file": "https://serpapi.com/searches/pPirCN90jz5SERWX8cdIrb4k5fxbxYIhIlHpC4IQUtM/6af7d59953938190e6108648.html",
+    "total_time_taken": 1.86
+  },
+  "search_parameters": {
+    "q": "programador Santa Cruz Bolivia",
+    "engine": "google_jobs",
+    "google_domain": "google.com",
+    "hl": "es",
+    "gl": "bo"
+  },
+  "filters": [
+    {
+      "name": "Tipo de trabajo",
+      "options": [
+        {
+          "name": "Tiempo completo",
+          "parameters": {
+            "uds": "AE2AFgbf06ZzDvczg9XBG5Z3qflX4EOt27oozLQjE-myPMfrxYobxRF05qRsNVVRZKTSKW777ujH11D-CiHSTLt603w-_kySsWWL-xJDc814W34EXpDSvN9eAje9YADB-CxVr3qmCvJDPWEvIgQSRzCY2_ZThXsw0uzo5FS-eZmbgnPqQqmuVctdlsUAsFF1ygg1DLxfnF9seTcG34vxCeZ0D49B3wGWqmihfvkb3ydDdrG6nosZdFBIXID984rpxnt6-YNDitjjE3KGFkFmz6Pn5rDL2pfM8H1gApUCydu605-GJRBDHVwKhwbXe9ynzjmwMal6cUg333_XVdkZDwze0WSJOtDY3G2C3EHse44dQOCGVEHGrqdCKXmwixcufrThXzrw4PW7",
+            "q": "programador Santa Cruz Bolivia tiempo completo"
+          },
+          "link": "https://www.google.com/search?sca_esv=a5021ed95bba2b9c&hl=es&gl=bo&sxsrf=AKL5yDioQ-lso-_nKSM_JatIb_i4Ve4KtQ:1794626971183&q=programador+Santa+Cruz+Bolivia+tiempo+completo&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflX4EOt27oozLQjE-myPMfrxYobxRF05qRsNVVRZKTSKW777ujH11D-CiHSTLt603w-_kySsWWL-xJDc814W34EXpDSvN9eAje9YADB-CxVr3qmCvJDPWEvIgQSRzCY2_ZThXsw0uzo5FS-eZmbgnPqQqmuVctdlsUAsFF1ygg1DLxfnF9seTcG34vxCeZ0D49B3wGWqmihfvkb3ydDdrG6nosZdFBIXID984rpxnt6-YNDitjjE3KGFkFmz6Pn5rDL2pfM8H1gApUCydu605-GJRBDHVwKhwbXe9ynzjmwMal6cUg333_XVdkZDwze0WSJOtDY3G2C3EHse44dQOCGVEHGrqdCKXmwixcufrThXzrw4PW7&udm=8&sa=X&ved=2ahUKEwi59fu4woaYAxVDTDABHcCZNQQQkbEKegQIGRAC",
+          "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&gl=bo&google_domain=google.com&hl=es&q=programador+Santa+Cruz+Bolivia+tiempo+completo&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflX4EOt27oozLQjE-myPMfrxYobxRF05qRsNVVRZKTSKW777ujH11D-CiHSTLt603w-_kySsWWL-xJDc814W34EXpDSvN9eAje9YADB-CxVr3qmCvJDPWEvIgQSRzCY2_ZThXsw0uzo5FS-eZmbgnPqQqmuVctdlsUAsFF1ygg1DLxfnF9seTcG34vxCeZ0D49B3wGWqmihfvkb3ydDdrG6nosZdFBIXID984rpxnt6-YNDitjjE3KGFkFmz6Pn5rDL2pfM8H1gApUCydu605-GJRBDHVwKhwbXe9ynzjmwMal6cUg333_XVdkZDwze0WSJOtDY3G2C3EHse44dQOCGVEHGrqdCKXmwixcufrThXzrw4PW7"
+        },
+        {
+          "name": "Tiempo parcial",
+          "parameters": {
+            "uds": "AE2AFgbf06ZzDvczg9XBG5Z3qflXwKdge224WsP8nV5FEvFmeV2nMLAWCmxrThaBtiIpVrZ7A94bMGNxAOT3lnvOPR1u7iMGuktmbPRUdj5ZkPXj8HL3R0XDO0MqzToSwLmUc8yP1f7JR-LGCtJMOVqNvUh50lV_xC0IfkrDAA2qlDsamGuXAM8--1zDOT28HVNWzyxSng2zwlX_-rASPDJTp3t60d144NOBnwQfgpMmjRVX9-OlcGI0ZUu2fZeMApK8F3nGU_mEXyQMlfPd_8BG4-rwbbGnnbT6HISHrirwXEMKAF0-G14EZH3M3EHLfpqC7-RdaLTCCtp-GZB484NVfi3viDaAi0SSfr85CzG46G79y-6uwcAnoT-wJqVKKdaiBxTkrJJE",
+            "q": "programador Santa Cruz Bolivia tiempo parcial"
+          },
+          "link": "https://www.google.com/search?sca_esv=a5021ed95bba2b9c&hl=es&gl=bo&sxsrf=AKL5yDioQ-lso-_nKSM_JatIb_i4Ve4KtQ:1794626971183&q=programador+Santa+Cruz+Bolivia+tiempo+parcial&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXwKdge224WsP8nV5FEvFmeV2nMLAWCmxrThaBtiIpVrZ7A94bMGNxAOT3lnvOPR1u7iMGuktmbPRUdj5ZkPXj8HL3R0XDO0MqzToSwLmUc8yP1f7JR-LGCtJMOVqNvUh50lV_xC0IfkrDAA2qlDsamGuXAM8--1zDOT28HVNWzyxSng2zwlX_-rASPDJTp3t60d144NOBnwQfgpMmjRVX9-OlcGI0ZUu2fZeMApK8F3nGU_mEXyQMlfPd_8BG4-rwbbGnnbT6HISHrirwXEMKAF0-G14EZH3M3EHLfpqC7-RdaLTCCtp-GZB484NVfi3viDaAi0SSfr85CzG46G79y-6uwcAnoT-wJqVKKdaiBxTkrJJE&udm=8&sa=X&ved=2ahUKEwi59fu4woaYAxVDTDABHcCZNQQQkbEKegQIGRAD",
+          "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&gl=bo&google_domain=google.com&hl=es&q=programador+Santa+Cruz+Bolivia+tiempo+parcial&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXwKdge224WsP8nV5FEvFmeV2nMLAWCmxrThaBtiIpVrZ7A94bMGNxAOT3lnvOPR1u7iMGuktmbPRUdj5ZkPXj8HL3R0XDO0MqzToSwLmUc8yP1f7JR-LGCtJMOVqNvUh50lV_xC0IfkrDAA2qlDsamGuXAM8--1zDOT28HVNWzyxSng2zwlX_-rASPDJTp3t60d144NOBnwQfgpMmjRVX9-OlcGI0ZUu2fZeMApK8F3nGU_mEXyQMlfPd_8BG4-rwbbGnnbT6HISHrirwXEMKAF0-G14EZH3M3EHLfpqC7-RdaLTCCtp-GZB484NVfi3viDaAi0SSfr85CzG46G79y-6uwcAnoT-wJqVKKdaiBxTkrJJE"
+        },
+        {
+          "name": "Con contrato",
+          "parameters": {
+            "uds": "AE2AFgbf06ZzDvczg9XBG5Z3qflXiYPM-Wba0pwEZWzPGB9540KZe-TIrxl0kIEbTZhWvYYdkSy0-lB25qJQMGpELHBZ-G1c96MTdVcss_Bm7SKpYAVq59EamzFsUGlPQY_7pK3Dws9soiqn-jrwSUdoForsRXmYi6mr5h1BQr--_K4rh6QA5eMAMsTTEWNvTQsNHV7gS0Lu9W9X8ZXzJsmHK2qSG6RvB_cVfrutU9V1wEWRC-_GtedT_wTfnsOEzYbjNaic4gOfha5qvHjHnxTZ_nbGKeDxm6OH2RO0nxZSV-U_5y8HKUIbA-n3jNniWkBIriXzFd6GkVJZLQF2KpqGov93En_7Y2_HnVk4_WS5YrqEakTm7WfEfsDsdg13SAgoUM77HGbD",
+            "q": "programador Santa Cruz Bolivia con contrato"
+          },
+          "link": "https://www.google.com/search?sca_esv=a5021ed95bba2b9c&hl=es&gl=bo&sxsrf=AKL5yDioQ-lso-_nKSM_JatIb_i4Ve4KtQ:1794626971183&q=programador+Santa+Cruz+Bolivia+con+contrato&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXiYPM-Wba0pwEZWzPGB9540KZe-TIrxl0kIEbTZhWvYYdkSy0-lB25qJQMGpELHBZ-G1c96MTdVcss_Bm7SKpYAVq59EamzFsUGlPQY_7pK3Dws9soiqn-jrwSUdoForsRXmYi6mr5h1BQr--_K4rh6QA5eMAMsTTEWNvTQsNHV7gS0Lu9W9X8ZXzJsmHK2qSG6RvB_cVfrutU9V1wEWRC-_GtedT_wTfnsOEzYbjNaic4gOfha5qvHjHnxTZ_nbGKeDxm6OH2RO0nxZSV-U_5y8HKUIbA-n3jNniWkBIriXzFd6GkVJZLQF2KpqGov93En_7Y2_HnVk4_WS5YrqEakTm7WfEfsDsdg13SAgoUM77HGbD&udm=8&sa=X&ved=2ahUKEwi59fu4woaYAxVDTDABHcCZNQQQkbEKegQIGRAE",
+          "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&gl=bo&google_domain=google.com&hl=es&q=programador+Santa+Cruz+Bolivia+con+contrato&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXiYPM-Wba0pwEZWzPGB9540KZe-TIrxl0kIEbTZhWvYYdkSy0-lB25qJQMGpELHBZ-G1c96MTdVcss_Bm7SKpYAVq59EamzFsUGlPQY_7pK3Dws9soiqn-jrwSUdoForsRXmYi6mr5h1BQr--_K4rh6QA5eMAMsTTEWNvTQsNHV7gS0Lu9W9X8ZXzJsmHK2qSG6RvB_cVfrutU9V1wEWRC-_GtedT_wTfnsOEzYbjNaic4gOfha5qvHjHnxTZ_nbGKeDxm6OH2RO0nxZSV-U_5y8HKUIbA-n3jNniWkBIriXzFd6GkVJZLQF2KpqGov93En_7Y2_HnVk4_WS5YrqEakTm7WfEfsDsdg13SAgoUM77HGbD"
+        },
+        {
+          "name": "Prácticas",
+          "parameters": {
+            "uds": "AE2AFgbf06ZzDvczg9XBG5Z3qflXD05vf5GNZElrZtyb_w4Bk3nBBbjlYW2rzTCj3LdfvaOpxCUf9dytiiwjejBDKWY2NtOi4a2ktf6JLqtmyymafpJotGnzA_f7HtUXI-s3cD6q8AY1yc_tOPUBCMRW6WjF5LfiO1QOaS9hfbjtUt80cMyXZtsBekq3SGkJkfccki5XwH0CA9bvuX24-_8MEziRUy8royY9gLry7kF3HRKEv0Iv7AvsEzCwzHcveT0hewe6GDrR4k3Ha35RSoHM5-it7GCzX4c4Q4P7dqTXO2O8OtVwGgem6l07RzRXpO2rcFm7JHqvgijCdCtXdip95kwMiVpJ8qn4LSnjEmPIGEKOwy9RABHe17Q8zKMiYyqLInTV6o11",
+            "q": "programador Santa Cruz Bolivia prácticas"
+          },
+          "link": "https://www.google.com/search?sca_esv=a5021ed95bba2b9c&hl=es&gl=bo&sxsrf=AKL5yDioQ-lso-_nKSM_JatIb_i4Ve4KtQ:1794626971183&q=programador+Santa+Cruz+Bolivia+pr%C3%A1cticas&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXD05vf5GNZElrZtyb_w4Bk3nBBbjlYW2rzTCj3LdfvaOpxCUf9dytiiwjejBDKWY2NtOi4a2ktf6JLqtmyymafpJotGnzA_f7HtUXI-s3cD6q8AY1yc_tOPUBCMRW6WjF5LfiO1QOaS9hfbjtUt80cMyXZtsBekq3SGkJkfccki5XwH0CA9bvuX24-_8MEziRUy8royY9gLry7kF3HRKEv0Iv7AvsEzCwzHcveT0hewe6GDrR4k3Ha35RSoHM5-it7GCzX4c4Q4P7dqTXO2O8OtVwGgem6l07RzRXpO2rcFm7JHqvgijCdCtXdip95kwMiVpJ8qn4LSnjEmPIGEKOwy9RABHe17Q8zKMiYyqLInTV6o11&udm=8&sa=X&ved=2ahUKEwi59fu4woaYAxVDTDABHcCZNQQQkbEKegQIGRAF",
+          "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&gl=bo&google_domain=google.com&hl=es&q=programador+Santa+Cruz+Bolivia+pr%C3%A1cticas&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXD05vf5GNZElrZtyb_w4Bk3nBBbjlYW2rzTCj3LdfvaOpxCUf9dytiiwjejBDKWY2NtOi4a2ktf6JLqtmyymafpJotGnzA_f7HtUXI-s3cD6q8AY1yc_tOPUBCMRW6WjF5LfiO1QOaS9hfbjtUt80cMyXZtsBekq3SGkJkfccki5XwH0CA9bvuX24-_8MEziRUy8royY9gLry7kF3HRKEv0Iv7AvsEzCwzHcveT0hewe6GDrR4k3Ha35RSoHM5-it7GCzX4c4Q4P7dqTXO2O8OtVwGgem6l07RzRXpO2rcFm7JHqvgijCdCtXdip95kwMiVpJ8qn4LSnjEmPIGEKOwy9RABHe17Q8zKMiYyqLInTV6o11"
+        }
+      ]
+    },
+    {
+      "name": "Tipo de trabajo",
+      "options": [
+        {
+          "name": "Tiempo completo",
+          "parameters": {
+            "uds": "AE2AFgbf06ZzDvczg9XBG5Z3qflX4EOt27oozLQjE-myPMfrxYobxRF05qRsNVVRZKTSKW777ujH11D-CiHSTLt603w-_kySsWWL-xJDc814W34EXpDSvN9eAje9YADB-CxVr3qmCvJDPWEvIgQSRzCY2_ZThXsw0uzo5FS-eZmbgnPqQqmuVctdlsUAsFF1ygg1DLxfnF9seTcG34vxCeZ0D49B3wGWqmihfvkb3ydDdrG6nosZdFBIXID984rpxnt6-YNDitjjE3KGFkFmz6Pn5rDL2pfM8H1gApUCydu605-GJRBDHVwKhwbXe9ynzjmwMal6cUg333_XVdkZDwze0WSJOtDY3G2C3EHse44dQOCGVEHGrqdCKXmwixcufrThXzrw4PW7",
+            "q": "programador Santa Cruz Bolivia tiempo completo"
+          },
+          "link": "https://www.google.com/search?sca_esv=a5021ed95bba2b9c&hl=es&gl=bo&sxsrf=AKL5yDioQ-lso-_nKSM_JatIb_i4Ve4KtQ:1794626971183&q=programador+Santa+Cruz+Bolivia+tiempo+completo&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflX4EOt27oozLQjE-myPMfrxYobxRF05qRsNVVRZKTSKW777ujH11D-CiHSTLt603w-_kySsWWL-xJDc814W34EXpDSvN9eAje9YADB-CxVr3qmCvJDPWEvIgQSRzCY2_ZThXsw0uzo5FS-eZmbgnPqQqmuVctdlsUAsFF1ygg1DLxfnF9seTcG34vxCeZ0D49B3wGWqmihfvkb3ydDdrG6nosZdFBIXID984rpxnt6-YNDitjjE3KGFkFmz6Pn5rDL2pfM8H1gApUCydu605-GJRBDHVwKhwbXe9ynzjmwMal6cUg333_XVdkZDwze0WSJOtDY3G2C3EHse44dQOCGVEHGrqdCKXmwixcufrThXzrw4PW7&udm=8&sa=X&ved=2ahUKEwi59fu4woaYAxVDTDABHcCZNQQQkbEKegQIGRAC",
+          "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&gl=bo&google_domain=google.com&hl=es&q=programador+Santa+Cruz+Bolivia+tiempo+completo&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflX4EOt27oozLQjE-myPMfrxYobxRF05qRsNVVRZKTSKW777ujH11D-CiHSTLt603w-_kySsWWL-xJDc814W34EXpDSvN9eAje9YADB-CxVr3qmCvJDPWEvIgQSRzCY2_ZThXsw0uzo5FS-eZmbgnPqQqmuVctdlsUAsFF1ygg1DLxfnF9seTcG34vxCeZ0D49B3wGWqmihfvkb3ydDdrG6nosZdFBIXID984rpxnt6-YNDitjjE3KGFkFmz6Pn5rDL2pfM8H1gApUCydu605-GJRBDHVwKhwbXe9ynzjmwMal6cUg333_XVdkZDwze0WSJOtDY3G2C3EHse44dQOCGVEHGrqdCKXmwixcufrThXzrw4PW7"
+        },
+        {
+          "name": "Tiempo parcial",
+          "parameters": {
+            "uds": "AE2AFgbf06ZzDvczg9XBG5Z3qflXwKdge224WsP8nV5FEvFmeV2nMLAWCmxrThaBtiIpVrZ7A94bMGNxAOT3lnvOPR1u7iMGuktmbPRUdj5ZkPXj8HL3R0XDO0MqzToSwLmUc8yP1f7JR-LGCtJMOVqNvUh50lV_xC0IfkrDAA2qlDsamGuXAM8--1zDOT28HVNWzyxSng2zwlX_-rASPDJTp3t60d144NOBnwQfgpMmjRVX9-OlcGI0ZUu2fZeMApK8F3nGU_mEXyQMlfPd_8BG4-rwbbGnnbT6HISHrirwXEMKAF0-G14EZH3M3EHLfpqC7-RdaLTCCtp-GZB484NVfi3viDaAi0SSfr85CzG46G79y-6uwcAnoT-wJqVKKdaiBxTkrJJE",
+            "q": "programador Santa Cruz Bolivia tiempo parcial"
+          },
+          "link": "https://www.google.com/search?sca_esv=a5021ed95bba2b9c&hl=es&gl=bo&sxsrf=AKL5yDioQ-lso-_nKSM_JatIb_i4Ve4KtQ:1794626971183&q=programador+Santa+Cruz+Bolivia+tiempo+parcial&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXwKdge224WsP8nV5FEvFmeV2nMLAWCmxrThaBtiIpVrZ7A94bMGNxAOT3lnvOPR1u7iMGuktmbPRUdj5ZkPXj8HL3R0XDO0MqzToSwLmUc8yP1f7JR-LGCtJMOVqNvUh50lV_xC0IfkrDAA2qlDsamGuXAM8--1zDOT28HVNWzyxSng2zwlX_-rASPDJTp3t60d144NOBnwQfgpMmjRVX9-OlcGI0ZUu2fZeMApK8F3nGU_mEXyQMlfPd_8BG4-rwbbGnnbT6HISHrirwXEMKAF0-G14EZH3M3EHLfpqC7-RdaLTCCtp-GZB484NVfi3viDaAi0SSfr85CzG46G79y-6uwcAnoT-wJqVKKdaiBxTkrJJE&udm=8&sa=X&ved=2ahUKEwi59fu4woaYAxVDTDABHcCZNQQQkbEKegQIGRAD",
+          "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&gl=bo&google_domain=google.com&hl=es&q=programador+Santa+Cruz+Bolivia+tiempo+parcial&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXwKdge224WsP8nV5FEvFmeV2nMLAWCmxrThaBtiIpVrZ7A94bMGNxAOT3lnvOPR1u7iMGuktmbPRUdj5ZkPXj8HL3R0XDO0MqzToSwLmUc8yP1f7JR-LGCtJMOVqNvUh50lV_xC0IfkrDAA2qlDsamGuXAM8--1zDOT28HVNWzyxSng2zwlX_-rASPDJTp3t60d144NOBnwQfgpMmjRVX9-OlcGI0ZUu2fZeMApK8F3nGU_mEXyQMlfPd_8BG4-rwbbGnnbT6HISHrirwXEMKAF0-G14EZH3M3EHLfpqC7-RdaLTCCtp-GZB484NVfi3viDaAi0SSfr85CzG46G79y-6uwcAnoT-wJqVKKdaiBxTkrJJE"
+        },
+        {
+          "name": "Con contrato",
+          "parameters": {
+            "uds": "AE2AFgbf06ZzDvczg9XBG5Z3qflXiYPM-Wba0pwEZWzPGB9540KZe-TIrxl0kIEbTZhWvYYdkSy0-lB25qJQMGpELHBZ-G1c96MTdVcss_Bm7SKpYAVq59EamzFsUGlPQY_7pK3Dws9soiqn-jrwSUdoForsRXmYi6mr5h1BQr--_K4rh6QA5eMAMsTTEWNvTQsNHV7gS0Lu9W9X8ZXzJsmHK2qSG6RvB_cVfrutU9V1wEWRC-_GtedT_wTfnsOEzYbjNaic4gOfha5qvHjHnxTZ_nbGKeDxm6OH2RO0nxZSV-U_5y8HKUIbA-n3jNniWkBIriXzFd6GkVJZLQF2KpqGov93En_7Y2_HnVk4_WS5YrqEakTm7WfEfsDsdg13SAgoUM77HGbD",
+            "q": "programador Santa Cruz Bolivia con contrato"
+          },
+          "link": "https://www.google.com/search?sca_esv=a5021ed95bba2b9c&hl=es&gl=bo&sxsrf=AKL5yDioQ-lso-_nKSM_JatIb_i4Ve4KtQ:1794626971183&q=programador+Santa+Cruz+Bolivia+con+contrato&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXiYPM-Wba0pwEZWzPGB9540KZe-TIrxl0kIEbTZhWvYYdkSy0-lB25qJQMGpELHBZ-G1c96MTdVcss_Bm7SKpYAVq59EamzFsUGlPQY_7pK3Dws9soiqn-jrwSUdoForsRXmYi6mr5h1BQr--_K4rh6QA5eMAMsTTEWNvTQsNHV7gS0Lu9W9X8ZXzJsmHK2qSG6RvB_cVfrutU9V1wEWRC-_GtedT_wTfnsOEzYbjNaic4gOfha5qvHjHnxTZ_nbGKeDxm6OH2RO0nxZSV-U_5y8HKUIbA-n3jNniWkBIriXzFd6GkVJZLQF2KpqGov93En_7Y2_HnVk4_WS5YrqEakTm7WfEfsDsdg13SAgoUM77HGbD&udm=8&sa=X&ved=2ahUKEwi59fu4woaYAxVDTDABHcCZNQQQkbEKegQIGRAE",
+          "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&gl=bo&google_domain=google.com&hl=es&q=programador+Santa+Cruz+Bolivia+con+contrato&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXiYPM-Wba0pwEZWzPGB9540KZe-TIrxl0kIEbTZhWvYYdkSy0-lB25qJQMGpELHBZ-G1c96MTdVcss_Bm7SKpYAVq59EamzFsUGlPQY_7pK3Dws9soiqn-jrwSUdoForsRXmYi6mr5h1BQr--_K4rh6QA5eMAMsTTEWNvTQsNHV7gS0Lu9W9X8ZXzJsmHK2qSG6RvB_cVfrutU9V1wEWRC-_GtedT_wTfnsOEzYbjNaic4gOfha5qvHjHnxTZ_nbGKeDxm6OH2RO0nxZSV-U_5y8HKUIbA-n3jNniWkBIriXzFd6GkVJZLQF2KpqGov93En_7Y2_HnVk4_WS5YrqEakTm7WfEfsDsdg13SAgoUM77HGbD"
+        },
+        {
+          "name": "Prácticas",
+          "parameters": {
+            "uds": "AE2AFgbf06ZzDvczg9XBG5Z3qflXD05vf5GNZElrZtyb_w4Bk3nBBbjlYW2rzTCj3LdfvaOpxCUf9dytiiwjejBDKWY2NtOi4a2ktf6JLqtmyymafpJotGnzA_f7HtUXI-s3cD6q8AY1yc_tOPUBCMRW6WjF5LfiO1QOaS9hfbjtUt80cMyXZtsBekq3SGkJkfccki5XwH0CA9bvuX24-_8MEziRUy8royY9gLry7kF3HRKEv0Iv7AvsEzCwzHcveT0hewe6GDrR4k3Ha35RSoHM5-it7GCzX4c4Q4P7dqTXO2O8OtVwGgem6l07RzRXpO2rcFm7JHqvgijCdCtXdip95kwMiVpJ8qn4LSnjEmPIGEKOwy9RABHe17Q8zKMiYyqLInTV6o11",
+            "q": "programador Santa Cruz Bolivia prácticas"
+          },
+          "link": "https://www.google.com/search?sca_esv=a5021ed95bba2b9c&hl=es&gl=bo&sxsrf=AKL5yDioQ-lso-_nKSM_JatIb_i4Ve4KtQ:1794626971183&q=programador+Santa+Cruz+Bolivia+pr%C3%A1cticas&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXD05vf5GNZElrZtyb_w4Bk3nBBbjlYW2rzTCj3LdfvaOpxCUf9dytiiwjejBDKWY2NtOi4a2ktf6JLqtmyymafpJotGnzA_f7HtUXI-s3cD6q8AY1yc_tOPUBCMRW6WjF5LfiO1QOaS9hfbjtUt80cMyXZtsBekq3SGkJkfccki5XwH0CA9bvuX24-_8MEziRUy8royY9gLry7kF3HRKEv0Iv7AvsEzCwzHcveT0hewe6GDrR4k3Ha35RSoHM5-it7GCzX4c4Q4P7dqTXO2O8OtVwGgem6l07RzRXpO2rcFm7JHqvgijCdCtXdip95kwMiVpJ8qn4LSnjEmPIGEKOwy9RABHe17Q8zKMiYyqLInTV6o11&udm=8&sa=X&ved=2ahUKEwi59fu4woaYAxVDTDABHcCZNQQQkbEKegQIGRAF",
+          "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&gl=bo&google_domain=google.com&hl=es&q=programador+Santa+Cruz+Bolivia+pr%C3%A1cticas&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXD05vf5GNZElrZtyb_w4Bk3nBBbjlYW2rzTCj3LdfvaOpxCUf9dytiiwjejBDKWY2NtOi4a2ktf6JLqtmyymafpJotGnzA_f7HtUXI-s3cD6q8AY1yc_tOPUBCMRW6WjF5LfiO1QOaS9hfbjtUt80cMyXZtsBekq3SGkJkfccki5XwH0CA9bvuX24-_8MEziRUy8royY9gLry7kF3HRKEv0Iv7AvsEzCwzHcveT0hewe6GDrR4k3Ha35RSoHM5-it7GCzX4c4Q4P7dqTXO2O8OtVwGgem6l07RzRXpO2rcFm7JHqvgijCdCtXdip95kwMiVpJ8qn4LSnjEmPIGEKOwy9RABHe17Q8zKMiYyqLInTV6o11"
+        }
+      ]
+    },
+    {
+      "name": "Fecha de publicación",
+      "options": [
+        {
+          "name": "Ayer",
+          "parameters": {
+            "uds": "AE2AFgbf06ZzDvczg9XBG5Z3qflX2AsvY3qnu1VxtRAO8_Fk6tyJeQFr9GSqVNGdDt5MUiAvVpk-rLC7y81zM3jEREL-R0kWegS6a8R0a6U8kaPuyV855uFR2kINLiRXsrWY6towJrK1d1cSC06bPTvirh-iQ7jlejGg0BVdGtpT_0patOV2I-z7hx_4YJEnCbv1ymTichwlmXaIddYT6x_ZbPdVIuSzHnJsznHywuM-yfVi4S4_F7bnEUDwQCJdUo0CsuwGVYxAWeyhLUAA4hyWH3SpbG4bfOAuxgRHxiXja2teE5fYDKYaK84mehwnjWptH-35D848n5oheDECPzLOkyeDsFxZRZgYjkDh6EBHagaogqF8pa8ncpKz1eVNk7gTu9dRb50zlulEKwAsLVQEvaZK4behbg",
+            "q": "programador Santa Cruz Bolivia desde ayer"
+          },
+          "link": "https://www.google.com/search?sca_esv=a5021ed95bba2b9c&hl=es&gl=bo&sxsrf=AKL5yDioQ-lso-_nKSM_JatIb_i4Ve4KtQ:1794626971183&q=programador+Santa+Cruz+Bolivia+desde+ayer&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflX2AsvY3qnu1VxtRAO8_Fk6tyJeQFr9GSqVNGdDt5MUiAvVpk-rLC7y81zM3jEREL-R0kWegS6a8R0a6U8kaPuyV855uFR2kINLiRXsrWY6towJrK1d1cSC06bPTvirh-iQ7jlejGg0BVdGtpT_0patOV2I-z7hx_4YJEnCbv1ymTichwlmXaIddYT6x_ZbPdVIuSzHnJsznHywuM-yfVi4S4_F7bnEUDwQCJdUo0CsuwGVYxAWeyhLUAA4hyWH3SpbG4bfOAuxgRHxiXja2teE5fYDKYaK84mehwnjWptH-35D848n5oheDECPzLOkyeDsFxZRZgYjkDh6EBHagaogqF8pa8ncpKz1eVNk7gTu9dRb50zlulEKwAsLVQEvaZK4behbg&udm=8&sa=X&ved=2ahUKEwi59fu4woaYAxVDTDABHcCZNQQQkbEKegQIGhAC",
+          "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&gl=bo&google_domain=google.com&hl=es&q=programador+Santa+Cruz+Bolivia+desde+ayer&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflX2AsvY3qnu1VxtRAO8_Fk6tyJeQFr9GSqVNGdDt5MUiAvVpk-rLC7y81zM3jEREL-R0kWegS6a8R0a6U8kaPuyV855uFR2kINLiRXsrWY6towJrK1d1cSC06bPTvirh-iQ7jlejGg0BVdGtpT_0patOV2I-z7hx_4YJEnCbv1ymTichwlmXaIddYT6x_ZbPdVIuSzHnJsznHywuM-yfVi4S4_F7bnEUDwQCJdUo0CsuwGVYxAWeyhLUAA4hyWH3SpbG4bfOAuxgRHxiXja2teE5fYDKYaK84mehwnjWptH-35D848n5oheDECPzLOkyeDsFxZRZgYjkDh6EBHagaogqF8pa8ncpKz1eVNk7gTu9dRb50zlulEKwAsLVQEvaZK4behbg"
+        },
+        {
+          "name": "Últimos 3 días",
+          "parameters": {
+            "uds": "AE2AFgbf06ZzDvczg9XBG5Z3qflXszbSFmqyZ6qQraZ_s-FNvGNPRArz5WowFVIir1J-z9Ue-UzDRIhe2JJIjXDpX7FVGS27uOzcn4mrZ7nUnlzxOIJ1yUaObh97g-dAliKb4FYbrcNLlMJOSELJvUdrzrIhvYY0kZ-hbeo0qU0JXEdb5tuCWcSCqurMd1yPKqymzsF-4aUunt2Eq9LMFHX0967gVL_2ae1C4DfRry9XTDtkO9ZofhPwtjNeMnI1hbVfj6eShWyZ2NbdaIjCULogaAzGBmr0tbcc8As-LeprCv2gnB8NPjcgOJzs2zVpIxCNVYCkKhJUHkuq2IC7YWZuJQUPpuTxwkNOq6iDpGxYoZXUqtnodtbDwEmxM_4vK_OwFLQi8txGyUMETGVKvbs4JY9JEsOeGzrWIRJa80nPZfN2-zOCipc",
+            "q": "programador Santa Cruz Bolivia en los últimos 3 días"
+          },
+          "link": "https://www.google.com/search?sca_esv=a5021ed95bba2b9c&hl=es&gl=bo&sxsrf=AKL5yDioQ-lso-_nKSM_JatIb_i4Ve4KtQ:1794626971183&q=programador+Santa+Cruz+Bolivia+en+los+%C3%BAltimos+3+d%C3%ADas&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXszbSFmqyZ6qQraZ_s-FNvGNPRArz5WowFVIir1J-z9Ue-UzDRIhe2JJIjXDpX7FVGS27uOzcn4mrZ7nUnlzxOIJ1yUaObh97g-dAliKb4FYbrcNLlMJOSELJvUdrzrIhvYY0kZ-hbeo0qU0JXEdb5tuCWcSCqurMd1yPKqymzsF-4aUunt2Eq9LMFHX0967gVL_2ae1C4DfRry9XTDtkO9ZofhPwtjNeMnI1hbVfj6eShWyZ2NbdaIjCULogaAzGBmr0tbcc8As-LeprCv2gnB8NPjcgOJzs2zVpIxCNVYCkKhJUHkuq2IC7YWZuJQUPpuTxwkNOq6iDpGxYoZXUqtnodtbDwEmxM_4vK_OwFLQi8txGyUMETGVKvbs4JY9JEsOeGzrWIRJa80nPZfN2-zOCipc&udm=8&sa=X&ved=2ahUKEwi59fu4woaYAxVDTDABHcCZNQQQkbEKegQIGhAD",
+          "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&gl=bo&google_domain=google.com&hl=es&q=programador+Santa+Cruz+Bolivia+en+los+%C3%BAltimos+3+d%C3%ADas&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXszbSFmqyZ6qQraZ_s-FNvGNPRArz5WowFVIir1J-z9Ue-UzDRIhe2JJIjXDpX7FVGS27uOzcn4mrZ7nUnlzxOIJ1yUaObh97g-dAliKb4FYbrcNLlMJOSELJvUdrzrIhvYY0kZ-hbeo0qU0JXEdb5tuCWcSCqurMd1yPKqymzsF-4aUunt2Eq9LMFHX0967gVL_2ae1C4DfRry9XTDtkO9ZofhPwtjNeMnI1hbVfj6eShWyZ2NbdaIjCULogaAzGBmr0tbcc8As-LeprCv2gnB8NPjcgOJzs2zVpIxCNVYCkKhJUHkuq2IC7YWZuJQUPpuTxwkNOq6iDpGxYoZXUqtnodtbDwEmxM_4vK_OwFLQi8txGyUMETGVKvbs4JY9JEsOeGzrWIRJa80nPZfN2-zOCipc"
+        },
+        {
+          "name": "Última semana",
+          "parameters": {
+            "uds": "AE2AFgbf06ZzDvczg9XBG5Z3qflXFwAAMjhjGJOAVPmxoMbI5YWHe-jpc4Eq9-2QhIaYnoiIW0qmCc5Glyuy-XAkGPN3Ketkn8PEi208fQhMHzkaq_Ps71UCPNth6Kz0I2X99nt3FITTRnGdSaSYi4XIo7Ps1tfenwLXQMyMoajw0qbgdJI7nwPQ4gFJFLhv8rxjrMVwmLKQEQZ3uuMR5CDWzqZ2fDQIUkyojd8icus9k_4kVoO-0DsdaEBspqaJO6rSdn3CAmUiaPbSSisaaaqEUm09vTHHvm0P8NhpIufl9t0zfLGSJBFk5q-hJwaY03sqUfXwwu6nheOjT5bKvW2g57-rbw7BPbuLr6fP5aTVsu7Fn6C2xsQpjVnXiNp6-oiViBFsv9pd9Zkx4XK35IyYwBziF5_h1B1EMzKiKkDgJ9MME2MnF-Y",
+            "q": "programador Santa Cruz Bolivia en la última semana"
+          },
+          "link": "https://www.google.com/search?sca_esv=a5021ed95bba2b9c&hl=es&gl=bo&sxsrf=AKL5yDioQ-lso-_nKSM_JatIb_i4Ve4KtQ:1794626971183&q=programador+Santa+Cruz+Bolivia+en+la+%C3%BAltima+semana&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXFwAAMjhjGJOAVPmxoMbI5YWHe-jpc4Eq9-2QhIaYnoiIW0qmCc5Glyuy-XAkGPN3Ketkn8PEi208fQhMHzkaq_Ps71UCPNth6Kz0I2X99nt3FITTRnGdSaSYi4XIo7Ps1tfenwLXQMyMoajw0qbgdJI7nwPQ4gFJFLhv8rxjrMVwmLKQEQZ3uuMR5CDWzqZ2fDQIUkyojd8icus9k_4kVoO-0DsdaEBspqaJO6rSdn3CAmUiaPbSSisaaaqEUm09vTHHvm0P8NhpIufl9t0zfLGSJBFk5q-hJwaY03sqUfXwwu6nheOjT5bKvW2g57-rbw7BPbuLr6fP5aTVsu7Fn6C2xsQpjVnXiNp6-oiViBFsv9pd9Zkx4XK35IyYwBziF5_h1B1EMzKiKkDgJ9MME2MnF-Y&udm=8&sa=X&ved=2ahUKEwi59fu4woaYAxVDTDABHcCZNQQQkbEKegQIGhAE",
+          "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&gl=bo&google_domain=google.com&hl=es&q=programador+Santa+Cruz+Bolivia+en+la+%C3%BAltima+semana&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXFwAAMjhjGJOAVPmxoMbI5YWHe-jpc4Eq9-2QhIaYnoiIW0qmCc5Glyuy-XAkGPN3Ketkn8PEi208fQhMHzkaq_Ps71UCPNth6Kz0I2X99nt3FITTRnGdSaSYi4XIo7Ps1tfenwLXQMyMoajw0qbgdJI7nwPQ4gFJFLhv8rxjrMVwmLKQEQZ3uuMR5CDWzqZ2fDQIUkyojd8icus9k_4kVoO-0DsdaEBspqaJO6rSdn3CAmUiaPbSSisaaaqEUm09vTHHvm0P8NhpIufl9t0zfLGSJBFk5q-hJwaY03sqUfXwwu6nheOjT5bKvW2g57-rbw7BPbuLr6fP5aTVsu7Fn6C2xsQpjVnXiNp6-oiViBFsv9pd9Zkx4XK35IyYwBziF5_h1B1EMzKiKkDgJ9MME2MnF-Y"
+        },
+        {
+          "name": "Último mes",
+          "parameters": {
+            "uds": "AE2AFgbf06ZzDvczg9XBG5Z3qflXbs8gUBOut4zQa8MGIIeO4hS6nniTp0Z9EtTzC17NbgB2WmPRBdKBxlN-9Uq0qcBPswPlJ3QcdTkxYeMaobsLoDxjLJ_qxYjrapEMl5QYmZrYOJ4YI7kqKj2ImLaZ_frUdkwfs7s4elPcLAzniZYk8GWcZZ5yVdV-_Bqmfb9TH-OkFxagDkBRFD27VVcma2OnVtmKQbhVnvSPs7S0Db0O37_PCZWlSxnOyjSrw9vv0qEmZ7mqo3ifgZOiiNdBFtH38Dbg_e7pHm6nrPlg5_bX8wR59-s15wSnOZDreQAi2_0wsBlqj_JcDsxvHDE5_5T3XwIg9qvbFzb1WU26V-YMD7AWHHnKQDfEQJhuw73Xi94CvAjOTTalXv1K8SDt0WW_EpuiDnn61CfIQ1IIBO8OiToiW_4",
+            "q": "programador Santa Cruz Bolivia en el último mes"
+          },
+          "link": "https://www.google.com/search?sca_esv=a5021ed95bba2b9c&hl=es&gl=bo&sxsrf=AKL5yDioQ-lso-_nKSM_JatIb_i4Ve4KtQ:1794626971183&q=programador+Santa+Cruz+Bolivia+en+el+%C3%BAltimo+mes&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXbs8gUBOut4zQa8MGIIeO4hS6nniTp0Z9EtTzC17NbgB2WmPRBdKBxlN-9Uq0qcBPswPlJ3QcdTkxYeMaobsLoDxjLJ_qxYjrapEMl5QYmZrYOJ4YI7kqKj2ImLaZ_frUdkwfs7s4elPcLAzniZYk8GWcZZ5yVdV-_Bqmfb9TH-OkFxagDkBRFD27VVcma2OnVtmKQbhVnvSPs7S0Db0O37_PCZWlSxnOyjSrw9vv0qEmZ7mqo3ifgZOiiNdBFtH38Dbg_e7pHm6nrPlg5_bX8wR59-s15wSnOZDreQAi2_0wsBlqj_JcDsxvHDE5_5T3XwIg9qvbFzb1WU26V-YMD7AWHHnKQDfEQJhuw73Xi94CvAjOTTalXv1K8SDt0WW_EpuiDnn61CfIQ1IIBO8OiToiW_4&udm=8&sa=X&ved=2ahUKEwi59fu4woaYAxVDTDABHcCZNQQQkbEKegQIGhAF",
+          "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&gl=bo&google_domain=google.com&hl=es&q=programador+Santa+Cruz+Bolivia+en+el+%C3%BAltimo+mes&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXbs8gUBOut4zQa8MGIIeO4hS6nniTp0Z9EtTzC17NbgB2WmPRBdKBxlN-9Uq0qcBPswPlJ3QcdTkxYeMaobsLoDxjLJ_qxYjrapEMl5QYmZrYOJ4YI7kqKj2ImLaZ_frUdkwfs7s4elPcLAzniZYk8GWcZZ5yVdV-_Bqmfb9TH-OkFxagDkBRFD27VVcma2OnVtmKQbhVnvSPs7S0Db0O37_PCZWlSxnOyjSrw9vv0qEmZ7mqo3ifgZOiiNdBFtH38Dbg_e7pHm6nrPlg5_bX8wR59-s15wSnOZDreQAi2_0wsBlqj_JcDsxvHDE5_5T3XwIg9qvbFzb1WU26V-YMD7AWHHnKQDfEQJhuw73Xi94CvAjOTTalXv1K8SDt0WW_EpuiDnn61CfIQ1IIBO8OiToiW_4"
+        }
+      ]
+    },
+    {
+      "name": "Fecha de publicación",
+      "options": [
+        {
+          "name": "Ayer",
+          "parameters": {
+            "uds": "AE2AFgbf06ZzDvczg9XBG5Z3qflX2AsvY3qnu1VxtRAO8_Fk6tyJeQFr9GSqVNGdDt5MUiAvVpk-rLC7y81zM3jEREL-R0kWegS6a8R0a6U8kaPuyV855uFR2kINLiRXsrWY6towJrK1d1cSC06bPTvirh-iQ7jlejGg0BVdGtpT_0patOV2I-z7hx_4YJEnCbv1ymTichwlmXaIddYT6x_ZbPdVIuSzHnJsznHywuM-yfVi4S4_F7bnEUDwQCJdUo0CsuwGVYxAWeyhLUAA4hyWH3SpbG4bfOAuxgRHxiXja2teE5fYDKYaK84mehwnjWptH-35D848n5oheDECPzLOkyeDsFxZRZgYjkDh6EBHagaogqF8pa8ncpKz1eVNk7gTu9dRb50zlulEKwAsLVQEvaZK4behbg",
+            "q": "programador Santa Cruz Bolivia desde ayer"
+          },
+          "link": "https://www.google.com/search?sca_esv=a5021ed95bba2b9c&hl=es&gl=bo&sxsrf=AKL5yDioQ-lso-_nKSM_JatIb_i4Ve4KtQ:1794626971183&q=programador+Santa+Cruz+Bolivia+desde+ayer&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflX2AsvY3qnu1VxtRAO8_Fk6tyJeQFr9GSqVNGdDt5MUiAvVpk-rLC7y81zM3jEREL-R0kWegS6a8R0a6U8kaPuyV855uFR2kINLiRXsrWY6towJrK1d1cSC06bPTvirh-iQ7jlejGg0BVdGtpT_0patOV2I-z7hx_4YJEnCbv1ymTichwlmXaIddYT6x_ZbPdVIuSzHnJsznHywuM-yfVi4S4_F7bnEUDwQCJdUo0CsuwGVYxAWeyhLUAA4hyWH3SpbG4bfOAuxgRHxiXja2teE5fYDKYaK84mehwnjWptH-35D848n5oheDECPzLOkyeDsFxZRZgYjkDh6EBHagaogqF8pa8ncpKz1eVNk7gTu9dRb50zlulEKwAsLVQEvaZK4behbg&udm=8&sa=X&ved=2ahUKEwi59fu4woaYAxVDTDABHcCZNQQQkbEKegQIGhAC",
+          "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&gl=bo&google_domain=google.com&hl=es&q=programador+Santa+Cruz+Bolivia+desde+ayer&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflX2AsvY3qnu1VxtRAO8_Fk6tyJeQFr9GSqVNGdDt5MUiAvVpk-rLC7y81zM3jEREL-R0kWegS6a8R0a6U8kaPuyV855uFR2kINLiRXsrWY6towJrK1d1cSC06bPTvirh-iQ7jlejGg0BVdGtpT_0patOV2I-z7hx_4YJEnCbv1ymTichwlmXaIddYT6x_ZbPdVIuSzHnJsznHywuM-yfVi4S4_F7bnEUDwQCJdUo0CsuwGVYxAWeyhLUAA4hyWH3SpbG4bfOAuxgRHxiXja2teE5fYDKYaK84mehwnjWptH-35D848n5oheDECPzLOkyeDsFxZRZgYjkDh6EBHagaogqF8pa8ncpKz1eVNk7gTu9dRb50zlulEKwAsLVQEvaZK4behbg"
+        },
+        {
+          "name": "Últimos 3 días",
+          "parameters": {
+            "uds": "AE2AFgbf06ZzDvczg9XBG5Z3qflXszbSFmqyZ6qQraZ_s-FNvGNPRArz5WowFVIir1J-z9Ue-UzDRIhe2JJIjXDpX7FVGS27uOzcn4mrZ7nUnlzxOIJ1yUaObh97g-dAliKb4FYbrcNLlMJOSELJvUdrzrIhvYY0kZ-hbeo0qU0JXEdb5tuCWcSCqurMd1yPKqymzsF-4aUunt2Eq9LMFHX0967gVL_2ae1C4DfRry9XTDtkO9ZofhPwtjNeMnI1hbVfj6eShWyZ2NbdaIjCULogaAzGBmr0tbcc8As-LeprCv2gnB8NPjcgOJzs2zVpIxCNVYCkKhJUHkuq2IC7YWZuJQUPpuTxwkNOq6iDpGxYoZXUqtnodtbDwEmxM_4vK_OwFLQi8txGyUMETGVKvbs4JY9JEsOeGzrWIRJa80nPZfN2-zOCipc",
+            "q": "programador Santa Cruz Bolivia en los últimos 3 días"
+          },
+          "link": "https://www.google.com/search?sca_esv=a5021ed95bba2b9c&hl=es&gl=bo&sxsrf=AKL5yDioQ-lso-_nKSM_JatIb_i4Ve4KtQ:1794626971183&q=programador+Santa+Cruz+Bolivia+en+los+%C3%BAltimos+3+d%C3%ADas&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXszbSFmqyZ6qQraZ_s-FNvGNPRArz5WowFVIir1J-z9Ue-UzDRIhe2JJIjXDpX7FVGS27uOzcn4mrZ7nUnlzxOIJ1yUaObh97g-dAliKb4FYbrcNLlMJOSELJvUdrzrIhvYY0kZ-hbeo0qU0JXEdb5tuCWcSCqurMd1yPKqymzsF-4aUunt2Eq9LMFHX0967gVL_2ae1C4DfRry9XTDtkO9ZofhPwtjNeMnI1hbVfj6eShWyZ2NbdaIjCULogaAzGBmr0tbcc8As-LeprCv2gnB8NPjcgOJzs2zVpIxCNVYCkKhJUHkuq2IC7YWZuJQUPpuTxwkNOq6iDpGxYoZXUqtnodtbDwEmxM_4vK_OwFLQi8txGyUMETGVKvbs4JY9JEsOeGzrWIRJa80nPZfN2-zOCipc&udm=8&sa=X&ved=2ahUKEwi59fu4woaYAxVDTDABHcCZNQQQkbEKegQIGhAD",
+          "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&gl=bo&google_domain=google.com&hl=es&q=programador+Santa+Cruz+Bolivia+en+los+%C3%BAltimos+3+d%C3%ADas&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXszbSFmqyZ6qQraZ_s-FNvGNPRArz5WowFVIir1J-z9Ue-UzDRIhe2JJIjXDpX7FVGS27uOzcn4mrZ7nUnlzxOIJ1yUaObh97g-dAliKb4FYbrcNLlMJOSELJvUdrzrIhvYY0kZ-hbeo0qU0JXEdb5tuCWcSCqurMd1yPKqymzsF-4aUunt2Eq9LMFHX0967gVL_2ae1C4DfRry9XTDtkO9ZofhPwtjNeMnI1hbVfj6eShWyZ2NbdaIjCULogaAzGBmr0tbcc8As-LeprCv2gnB8NPjcgOJzs2zVpIxCNVYCkKhJUHkuq2IC7YWZuJQUPpuTxwkNOq6iDpGxYoZXUqtnodtbDwEmxM_4vK_OwFLQi8txGyUMETGVKvbs4JY9JEsOeGzrWIRJa80nPZfN2-zOCipc"
+        },
+        {
+          "name": "Última semana",
+          "parameters": {
+            "uds": "AE2AFgbf06ZzDvczg9XBG5Z3qflXFwAAMjhjGJOAVPmxoMbI5YWHe-jpc4Eq9-2QhIaYnoiIW0qmCc5Glyuy-XAkGPN3Ketkn8PEi208fQhMHzkaq_Ps71UCPNth6Kz0I2X99nt3FITTRnGdSaSYi4XIo7Ps1tfenwLXQMyMoajw0qbgdJI7nwPQ4gFJFLhv8rxjrMVwmLKQEQZ3uuMR5CDWzqZ2fDQIUkyojd8icus9k_4kVoO-0DsdaEBspqaJO6rSdn3CAmUiaPbSSisaaaqEUm09vTHHvm0P8NhpIufl9t0zfLGSJBFk5q-hJwaY03sqUfXwwu6nheOjT5bKvW2g57-rbw7BPbuLr6fP5aTVsu7Fn6C2xsQpjVnXiNp6-oiViBFsv9pd9Zkx4XK35IyYwBziF5_h1B1EMzKiKkDgJ9MME2MnF-Y",
+            "q": "programador Santa Cruz Bolivia en la última semana"
+          },
+          "link": "https://www.google.com/search?sca_esv=a5021ed95bba2b9c&hl=es&gl=bo&sxsrf=AKL5yDioQ-lso-_nKSM_JatIb_i4Ve4KtQ:1794626971183&q=programador+Santa+Cruz+Bolivia+en+la+%C3%BAltima+semana&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXFwAAMjhjGJOAVPmxoMbI5YWHe-jpc4Eq9-2QhIaYnoiIW0qmCc5Glyuy-XAkGPN3Ketkn8PEi208fQhMHzkaq_Ps71UCPNth6Kz0I2X99nt3FITTRnGdSaSYi4XIo7Ps1tfenwLXQMyMoajw0qbgdJI7nwPQ4gFJFLhv8rxjrMVwmLKQEQZ3uuMR5CDWzqZ2fDQIUkyojd8icus9k_4kVoO-0DsdaEBspqaJO6rSdn3CAmUiaPbSSisaaaqEUm09vTHHvm0P8NhpIufl9t0zfLGSJBFk5q-hJwaY03sqUfXwwu6nheOjT5bKvW2g57-rbw7BPbuLr6fP5aTVsu7Fn6C2xsQpjVnXiNp6-oiViBFsv9pd9Zkx4XK35IyYwBziF5_h1B1EMzKiKkDgJ9MME2MnF-Y&udm=8&sa=X&ved=2ahUKEwi59fu4woaYAxVDTDABHcCZNQQQkbEKegQIGhAE",
+          "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&gl=bo&google_domain=google.com&hl=es&q=programador+Santa+Cruz+Bolivia+en+la+%C3%BAltima+semana&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXFwAAMjhjGJOAVPmxoMbI5YWHe-jpc4Eq9-2QhIaYnoiIW0qmCc5Glyuy-XAkGPN3Ketkn8PEi208fQhMHzkaq_Ps71UCPNth6Kz0I2X99nt3FITTRnGdSaSYi4XIo7Ps1tfenwLXQMyMoajw0qbgdJI7nwPQ4gFJFLhv8rxjrMVwmLKQEQZ3uuMR5CDWzqZ2fDQIUkyojd8icus9k_4kVoO-0DsdaEBspqaJO6rSdn3CAmUiaPbSSisaaaqEUm09vTHHvm0P8NhpIufl9t0zfLGSJBFk5q-hJwaY03sqUfXwwu6nheOjT5bKvW2g57-rbw7BPbuLr6fP5aTVsu7Fn6C2xsQpjVnXiNp6-oiViBFsv9pd9Zkx4XK35IyYwBziF5_h1B1EMzKiKkDgJ9MME2MnF-Y"
+        },
+        {
+          "name": "Último mes",
+          "parameters": {
+            "uds": "AE2AFgbf06ZzDvczg9XBG5Z3qflXbs8gUBOut4zQa8MGIIeO4hS6nniTp0Z9EtTzC17NbgB2WmPRBdKBxlN-9Uq0qcBPswPlJ3QcdTkxYeMaobsLoDxjLJ_qxYjrapEMl5QYmZrYOJ4YI7kqKj2ImLaZ_frUdkwfs7s4elPcLAzniZYk8GWcZZ5yVdV-_Bqmfb9TH-OkFxagDkBRFD27VVcma2OnVtmKQbhVnvSPs7S0Db0O37_PCZWlSxnOyjSrw9vv0qEmZ7mqo3ifgZOiiNdBFtH38Dbg_e7pHm6nrPlg5_bX8wR59-s15wSnOZDreQAi2_0wsBlqj_JcDsxvHDE5_5T3XwIg9qvbFzb1WU26V-YMD7AWHHnKQDfEQJhuw73Xi94CvAjOTTalXv1K8SDt0WW_EpuiDnn61CfIQ1IIBO8OiToiW_4",
+            "q": "programador Santa Cruz Bolivia en el último mes"
+          },
+          "link": "https://www.google.com/search?sca_esv=a5021ed95bba2b9c&hl=es&gl=bo&sxsrf=AKL5yDioQ-lso-_nKSM_JatIb_i4Ve4KtQ:1794626971183&q=programador+Santa+Cruz+Bolivia+en+el+%C3%BAltimo+mes&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXbs8gUBOut4zQa8MGIIeO4hS6nniTp0Z9EtTzC17NbgB2WmPRBdKBxlN-9Uq0qcBPswPlJ3QcdTkxYeMaobsLoDxjLJ_qxYjrapEMl5QYmZrYOJ4YI7kqKj2ImLaZ_frUdkwfs7s4elPcLAzniZYk8GWcZZ5yVdV-_Bqmfb9TH-OkFxagDkBRFD27VVcma2OnVtmKQbhVnvSPs7S0Db0O37_PCZWlSxnOyjSrw9vv0qEmZ7mqo3ifgZOiiNdBFtH38Dbg_e7pHm6nrPlg5_bX8wR59-s15wSnOZDreQAi2_0wsBlqj_JcDsxvHDE5_5T3XwIg9qvbFzb1WU26V-YMD7AWHHnKQDfEQJhuw73Xi94CvAjOTTalXv1K8SDt0WW_EpuiDnn61CfIQ1IIBO8OiToiW_4&udm=8&sa=X&ved=2ahUKEwi59fu4woaYAxVDTDABHcCZNQQQkbEKegQIGhAF",
+          "serpapi_link": "https://serpapi.com/search.json?engine=google_jobs&gl=bo&google_domain=google.com&hl=es&q=programador+Santa+Cruz+Bolivia+en+el+%C3%BAltimo+mes&uds=AE2AFgbf06ZzDvczg9XBG5Z3qflXbs8gUBOut4zQa8MGIIeO4hS6nniTp0Z9EtTzC17NbgB2WmPRBdKBxlN-9Uq0qcBPswPlJ3QcdTkxYeMaobsLoDxjLJ_qxYjrapEMl5QYmZrYOJ4YI7kqKj2ImLaZ_frUdkwfs7s4elPcLAzniZYk8GWcZZ5yVdV-_Bqmfb9TH-OkFxagDkBRFD27VVcma2OnVtmKQbhVnvSPs7S0Db0O37_PCZWlSxnOyjSrw9vv0qEmZ7mqo3ifgZOiiNdBFtH38Dbg_e7pHm6nrPlg5_bX8wR59-s15wSnOZDreQAi2_0wsBlqj_JcDsxvHDE5_5T3XwIg9qvbFzb1WU26V-YMD7AWHHnKQDfEQJhuw73Xi94CvAjOTTalXv1K8SDt0WW_EpuiDnn61CfIQ1IIBO8OiToiW_4"
+        }
+      ]
+    }
+  ],
+  "jobs_results": [
+    {
+      "title": "Programador/a Junior",
+      "company_name": "GRUPO SP",
+      "location": "Santa Cruz de la Sierra",
+      "via": "LinkedIn Bolivia",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=programador+Santa+Cruz+Bolivia&htidocid=a-TMNdbi9RVgcTqNAAAAAA%3D%3D&hl=es-BO&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_xXNMQ6CQBBA0dhyBKtJ7CxYo7HB0oLERiKxJgNMFsjuzjqzJMSLeBdbL2Zofvl-9tlkp0rYCnrsWQzCbQ4jSwHt76uvmXqEnoB8dMRAAUpm62h7GVKKWhij6nKrCdPY5R17w4FaXszEra5pdECh6DBRczwfljwGu9-Vj2d1h7pawRpDQrjK_F5HDqEeSQT_OxZ4vZoAAAA&shmds=v1_Ac3VAowm_5TLw9zzyODgGv6kmEeFlmT3k-CaSi9O9o9W3AJptQ&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=programador+Santa+Cruz+Bolivia&htidocid=a-TMNdbi9RVgcTqNAAAAAA%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/6af7d59953938190e6108648/images/AUY2gfXGru0e6XPp2iK2mqu4CvNLfyZtn3U8J6a6ITA.jpg",
+      "extensions": [
+        "hace 1 día",
+        "Tiempo completo"
+      ],
+      "detected_extensions": {
+        "posted_at": "hace 1 día",
+        "schedule_type": "Tiempo completo"
+      },
+      "source_link": "https://bo.linkedin.com/jobs/view/programador-a-junior-at-grupo-sp-4490348887",
+      "job_title": "Programador/a Junior",
+      "description": "¡Estamos buscando un/a Programador/a Junior!\n\nEn Grupo SP, empresa de software de Santa Cruz de la Sierra, desarrollamos un sistema administrativo y contable que usan empresas de distintos rubros en Bolivia.\n\n\n\n\nBuscamos a una persona recién egresada o titulada en Ingeniería de Sistemas, Informática o carreras afines, con ganas de aprender y crecer en un equipo cercano y que trabaja con herramientas de inteligencia artificial.\n\n\n\n\n¿Qué harás?\n\n\n\n\nDesarrollar reportes y mejoras.Resolver tickets de soporte y nuevas solicitudes de clientes.Programar con Claude Code como parte de tu día a día.\n\n\n¿Qué buscamos?\n\n\n\n\nExperiencia usando Claude Code u otras herramientas de programación con IA. Nos interesa que sepas darle instrucciones claras y revisar lo que hace.SQL básico: consultas, filtros y agrupaciones.Que puedas leer y entender código.Nociones de Git.Ganas de aprender, curiosidad y atención al detalle.\n\n\nSuma si tienes:\n\n\n\n\nConocimientos de Oracle, VB.NET o C#.Experiencia con Visual Studio.Nociones de contabilidad o de sistemas administrativos, como ventas, inventarios o cuentas por cobrar.\n\n\nNo necesitas experiencia laboral previa. Valoramos tus proyectos de la universidad o personales.\n\n\n\n\nTe ofrecemos:\n\n\n\n\nAprender sobre sistemas empresariales reales, usados por clientes de distintos rubros.Trabajar con herramientas de IA desde el primer día.Acompañamiento de un equipo con experiencia.Modalidad: presencial en Santa Cruz de la Sierra.\n\n\n📩 Envía tu CV a cecilia.castellon@grupo-sp.com con el asunto “Programador/a Junior”. Si tienes proyectos en GitHub o similares, ¡inclúyelos!\n\n\n\n\n#Empleo #ProgramadorJunior #SantaCruz #Bolivia #InteligenciaArtificial #ClaudeCode",
+      "apply_options": [
+        {
+          "title": "LinkedIn Bolivia",
+          "link": "https://bo.linkedin.com/jobs/view/programador-a-junior-at-grupo-sp-4490348887?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Bolivia | Trabajo.org",
+          "link": "https://bo.trabajo.org/oferta-4112-c16332cf940644c16666311ba3dea6da?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "BeBee",
+          "link": "https://bebee.com/bo/jobs/programador-junior-grupo-sp-municipio-santa-cruz-de-la-sierra--fj-2465188328?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJQcm9ncmFtYWRvci9hIEp1bmlvciIsImNvbXBhbnlfbmFtZSI6IkdSVVBPIFNQIiwiaHRpZG9jaWQiOiJhLVRNTmRiaTlSVmdjVHFOQUFBQUFBPT0iLCJnbCI6ImJvIiwiaGwiOiJlcyIsImZjIjoiRXNzQkNvd0JRVVJFWWxkbFdrY3RUVEZyTm5wdVFuTmhaVUpqZDBGc1JFcGpSRjh6YlVGdWQzZHlSM2hFUlU1amRGWk5TRXRHVnpGR1VVSm5UMDR6V1U0NGJHeEVYMGQ1VjBwcWFVdG1ZbUpWTWpkSlNuVXdUeTFUYWpSRFNFUlpiV1IzV1VKeGNFUXdjemh6UkdoT2VEQnVjMUF0U2poUk56QmphMkozWm10WU0zQmFZVWhYYm5wbGFHTkpUR2xtVFdVU0ZtMDVXRE5oZG0wM1EzTlBXWGRpYTFCM1RGQlhTVkVhSWtGSVRqQkZOMGd3UlZvM05qTkpVbGQwVnpoeExYTnpibm8zTlRsUlNGOVJWRUUiLCJmY3YiOiIzIiwiZmNfaWQiOiJhLVRNTmRiaTlSVmdjVHFOQUFBQUFBPT0ifQ=="
+    },
+    {
+      "title": "Desarrollador(a) Full Stack (Desarrollo Integral) Senior",
+      "company_name": "Talavera y Asociados S.R.L.",
+      "location": "Santa Cruz de la Sierra",
+      "via": "Trabajopolis.bo",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=programador+Santa+Cruz+Bolivia&htidocid=Qfef0niAXS9ov1swAAAAAA%3D%3D&hl=es-BO&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_z2OsQ4BQRBAo_UJqilR7ImEgkoIkaisRClzd5NzjJ0zsyf4NK3eN3GN5jWveK_9abX3CzJUFWbMRbvYg2XNDD5idobuXwqsQ6RCkXvgKZSiE0jfL7vWlCPkBHSpmAQowEqkYOpMjzFWNkkSM3aFRYxl5jK5JBIolXtyktQaHOyIShVjpMNwNLi7KhT98Q4Zb6QID5iZZOVvzsC7rdu4puExRIS51s-mzQi-JFX8ApsU5tTRAAAA&shmds=v1_Ac3VAoy2qn5AM8aPn4oikSpbiQihScoXEGgD8orKGHvOP-N2Wg&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=programador+Santa+Cruz+Bolivia&htidocid=Qfef0niAXS9ov1swAAAAAA%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/6af7d59953938190e6108648/images/MRAb4bb0RNmDzEle1gSBYP9G9B2Hto__h9a48ESakdU.jpg",
+      "extensions": [
+        "hace 2 días",
+        "Tiempo completo"
+      ],
+      "detected_extensions": {
+        "posted_at": "hace 2 días",
+        "schedule_type": "Tiempo completo"
+      },
+      "source_link": "https://www.trabajopolis.bo/trabajo/1240489/desarrollador-full-stack-senior",
+      "job_title": "Desarrollador(a) Full Stack (Desarrollo Integral) Senior",
+      "description": "Nuestro cliente, un prestigioso grupo empresarial multisectorial, busca incorporar un(a) Desarrollador(a) Full Stack Senior, orientado(a) a rediseñar, fortalecer y evolucionar sistemas de negocio que soportan operaciones críticas y de alta transaccionalidad.\n\nDesarrollador(a) Full Stack (Desarrollo Integral) Senior\n\nObjetivo del Cargo:\n\nLiderar el diseño, desarrollo y mejora continua de aplicaciones web de negocio, optimizando sistemas existentes y asegurando soluciones robustas, escalables, seguras y trazables.\n\nFunciones Principales:\n\nAnalizar sistemas existentes para identificar cuellos de botella, deuda técnica y riesgos para la integridad de los datos.Diseñar y ejecutar el rediseño y la refactorización de módulos y sistemas, priorizando escalabilidad, mantenibilidad y trazabilidad.Desarrollar soluciones frontend y backend, APIs y lógica de negocio segura y eficiente.Optimizar el modelado de bases de datos relacionales, las consultas y las migraciones en entornos productivos.Implementar buenas prácticas de calidad de código, pruebas y documentación técnica.Coordinar con las áreas de negocio para traducir necesidades operativas en mejoras tecnológicas.Asegurar la evolución continua de las aplicaciones, atendiendo requerimientos de seguridad, rendimiento y estabilidad.Requisitos:\n\nFormación en Ingeniería de Sistemas, Informática, Ciencias de la Computación o carreras afines.Más de 4 años de experiencia como desarrollador(a) Full Stack en entornos productivos.Experiencia comprobada en rediseño o migración de sistemas existentes.Dominio de PostgreSQL, Microsoft SQL Server, C# y ASP.  NET Core.Manejo de React, Next.js o Angular, APIs REST y WebSockets.Experiencia con Git y Docker o Kubernetes.Sólidos conocimientos de modelado de datos, testing, seguridad web y arquitectura escalable.Se Valorará:\n\nExperiencia en integración y despliegue continuo (CI/CD).Conocimientos en visualización de datos.Experiencia con sistemas ERP, CRM, contables o inmobiliarios.Competencias:\n\nPensamiento analítico.Criterio arquitectónico.Resolución de problemas.Orientación a la calidad.Trabajo colaborativo.Autonomía.Mejora continua.Atención al detalle.",
+      "apply_options": [
+        {
+          "title": "Trabajopolis.bo",
+          "link": "https://www.trabajopolis.bo/trabajo/1240489/desarrollador-full-stack-senior?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJEZXNhcnJvbGxhZG9yKGEpIEZ1bGwgU3RhY2sgKERlc2Fycm9sbG8gSW50ZWdyYWwpIFNlbmlvciIsImNvbXBhbnlfbmFtZSI6IlRhbGF2ZXJhIHkgQXNvY2lhZG9zIFMuUi5MLiIsImh0aWRvY2lkIjoiUWZlZjBuaUFYUzlvdjFzd0FBQUFBQT09IiwiZ2wiOiJibyIsImhsIjoiZXMiLCJmYyI6IkVzc0JDb3dCUVVSRVlsZGxXVlZLZEhkWlVqWkxUamR4WmtONU16bHlaVFl6Y2pKVFMydExUV1pPWWpSUlYzZEhhVXcyV0ZOU1kxbFphMU5HUldGWmVXNXlMVVF4V21OblNWaDFUVzl1T1c1dllVcFlWbDlwVlZjNE5YcDBVM1ZUTUhseGNUWktWMXBFTmxsVGQyZFRhV1pwWkRSUk4zVlJhalpKWjNoSU5rOUNSMGhqT0U5VU5GVklZUzFmVEZNdE5VSVNGbTA1V0ROaGRtMDNRM05QV1hkaWExQjNURkJYU1ZFYUlrRklUakJGTjBWVE1VZE1lRzFFT1RSSlNWVjZZbU5NWDNwQllXRkZlWHAxWTBFIiwiZmN2IjoiMyIsImZjX2lkIjoiUWZlZjBuaUFYUzlvdjFzd0FBQUFBQT09In0="
+    },
+    {
+      "title": "Analista Programador(a) Senior - Oracle",
+      "company_name": "Compañía de Seguros y Reaseguros Fortaleza S.A.",
+      "location": "Santa Cruz de la Sierra",
+      "via": "Trabajopolis.bo",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=programador+Santa+Cruz+Bolivia&htidocid=csam6ZI_8fW3LANfAAAAAA%3D%3D&hl=es-BO&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_y2OsQrCQBBEsfUTrLZUwYsINlqJoI2gmA-QTbKckcvtuXsB9Z8sbG3zCf6QidgMDMO8mf6n19-sPLpSI8JB2ApWWLAMcQQp-ZIFJrAXzB0tIGveeq2pQCgIqAqOGMjDltk6GizPMQZdJImqM7blxTI3OVcJe8r4llw4005Oekah4DDSaTaf3kzwdrxbcxWweTXPHzwlWwsr3OFIqH-zYYno6IGQmpXpllP07e211I-u5NqgJBH8AugH13HWAAAA&shmds=v1_Ac3VAoyBSLXL6kxDVJKKqMNebHjDO4LdYJ7jVtwuXBmssZ6LPg&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=programador+Santa+Cruz+Bolivia&htidocid=csam6ZI_8fW3LANfAAAAAA%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/6af7d59953938190e6108648/images/bU8lsqyd1hITA87bMdiavJdZ05bbiAMBHHhOiuzw6ZQ.jpg",
+      "extensions": [
+        "hace 1 día",
+        "Tiempo completo"
+      ],
+      "detected_extensions": {
+        "posted_at": "hace 1 día",
+        "schedule_type": "Tiempo completo"
+      },
+      "source_link": "https://www.trabajopolis.bo/trabajo/1240478/analista-programador-senior-oracle",
+      "job_title": "Analista Programador(a) Senior - Oracle",
+      "description": "Analista Programador(a) Senior - Oracle\n\nEspecialidad:\n\nAnálisis, diseño, pruebas y programación de sistemas\n\nUbicación:\n\nSanta Cruz\n\nAcerca del Rol:\n\nEstamos en la búsqueda de un(a) Analista Programador(a) Senior con sólida experiencia en desarrollo y mantenimiento de sistemas basados en tecnologías Oracle y con fuerte conocimiento funcional en procesos de seguros.\n\nResponsabilidades:\n\nLevantamiento de requerimientos y análisis funcional.Diseño técnico de nuevas funcionalidades y mantenimiento evolutivo.Desarrollo en Oracle Forms and Oracle Reports.Programación avanzada en Oracle PL/SQL.Ejecución y diseño de casos de prueba (unitarias e integrales).Acompañamiento a usuarios clave durante pruebas y despliegues.Soporte, gestión y resolución de incidencias nivel 3.Cumplimiento de normativas, mejores prácticas y uso de herramientas de control y versiones de código.Documentación técnica y funcional.Requisitos:\n\nFormación en Ingeniería en Sistemas, Informática o afines.+5 años de experiencia en desarrollo y mantenimiento de sistemas con:Oracle Developer Forms.Oracle Reports.Oracle PL/SQL.Experiencia comprobable en el sector seguros.Capacidad de análisis crítico, autonomía y trabajo con equipos multidisciplinarios.Conocimiento y capacidad para trabajo y gestión de tareas en metodologías ágiles y tradicionales.",
+      "apply_options": [
+        {
+          "title": "Trabajopolis.bo",
+          "link": "https://www.trabajopolis.bo/trabajo/1240478/analista-programador-senior-oracle?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJBbmFsaXN0YSBQcm9ncmFtYWRvcihhKSBTZW5pb3IgLSBPcmFjbGUiLCJjb21wYW55X25hbWUiOiJDb21wYcOxw61hIGRlIFNlZ3Vyb3MgeSBSZWFzZWd1cm9zIEZvcnRhbGV6YSBTLkEuIiwiaHRpZG9jaWQiOiJjc2FtNlpJXzhmVzNMQU5mQUFBQUFBPT0iLCJnbCI6ImJvIiwiaGwiOiJlcyIsImZjIjoiRXNzQkNvd0JRVVJFWWxkbFlteFBXVlZwTjJaQ1JuUlpZakF3TFVsUFlrMTZaMkZZVTBSVlUyWlZMVkZuUmxkTGVWVjFPVlEzZGtOSlZYcGlUelUxVm1WbU5EUTJkVjkzVmtGTWJHdzBURkU1YUhwbU9HUk5OMDFtWjJaaldWTlNlbFUwTkVwVFZWRTJVazVMUVdkVVpHZDNkbmxxUjFGd1pFSnlSSFYyZWxOV2FtNXBNbUZmT0VscGNYbEJjSEJ1U2pjU0ZtMDVXRE5oZG0wM1EzTlBXWGRpYTFCM1RGQlhTVkVhSWtGSVRqQkZOMFpmYlhJdFVHSkpWVkU0VWpoNlYyeHFXV0pETURaemJUaEtVR2MiLCJmY3YiOiIzIiwiZmNfaWQiOiJjc2FtNlpJXzhmVzNMQU5mQUFBQUFBPT0ifQ=="
+    },
+    {
+      "title": "Analista Asistente de Desarrollo de Aplicaciones (Junior)",
+      "company_name": "confidential",
+      "location": "Santa Cruz de la Sierra",
+      "via": "Trabajopolis.bo",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=programador+Santa+Cruz+Bolivia&htidocid=Txf03vWyofYQl8tPAAAAAA%3D%3D&hl=es-BO&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_xWOvQrCQBCEsc0jWF3nT5ETwSZWQUGwTWMnm8uanGxuz9sLBB_NSvDFvGtmGBjmm-K7KG61A7ISQdWSDF1E1aE6o0AITMQ51Z6sAWPZoaj1dXKWw6ZS7e8jrwk7yB0cPSErdOrC3BMuj0OMXiqtRajsEyFaUxoedVppedZPbiXLXQYI6Aki3veH3Vx6129Xht3DdumOBcqjDbj08RSmd4YRqMZiCPAHg2Wo9cMAAAA&shmds=v1_Ac3VAowmJ2Ecuj0CD8Hmi1T8aqtRVT6oCsAdsFIaNGvyKlKK8A&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=programador+Santa+Cruz+Bolivia&htidocid=Txf03vWyofYQl8tPAAAAAA%3D%3D",
+      "extensions": [
+        "hace 7 días",
+        "Tiempo completo"
+      ],
+      "detected_extensions": {
+        "posted_at": "hace 7 días",
+        "schedule_type": "Tiempo completo"
+      },
+      "source_link": "https://www.trabajopolis.bo/trabajo/1240260/analista-asistente-de-desarrollo-de-aplicaciones",
+      "job_title": "Analista Asistente de Desarrollo de Aplicaciones (Junior)",
+      "description": "Analista Asistente de Desarrollo de Aplicaciones (Junior)\n\nAcerca del Rol:\n\nApoyar en el ciclo de desarrollo de aplicaciones empresariales (análisis, programación, pruebas, documentación y puesta en funcionamiento), garantizando soluciones eficientes para la organización.\n\nFormación:\n\nEstudiante de últimos semestres o recién egresado(a) de:\n\nIngeniería en Sistemas.Ingeniería Informática.Ciencias de la Computación (o carreras afines).Conocimientos Necesarios:\n\nProgramación orientada a objetos (POO).Desarrollo de aplicaciones en ambientes Windows.Manejo de bases de datos relacionales (SQL Server; MySQL o PostgreSQL).Dominio del lenguaje SQL (consultas, procedimientos, etc.).Conocimientos Extras (Valorables):\n\nLenguajes y frameworks: C# y .NET (.NET Framework/.NET Core).Consumo e integración de APIs REST.Desarrollo de interfaces gráficas para Windows (WinForms, WPF, etc.).Herramientas de automatización: PowerShell y/o Power Automate.Conocimientos de inteligencia artificial aplicada al desarrollo.Experiencia utilizando asistentes de código como GitHub Copilot, Microsoft Copilot o similares.Interés en la automatización de procesos y transformación digital.Nociones básicas de infraestructura Windows y redes.",
+      "apply_options": [
+        {
+          "title": "Trabajopolis.bo",
+          "link": "https://www.trabajopolis.bo/trabajo/1240260/analista-asistente-de-desarrollo-de-aplicaciones?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJBbmFsaXN0YSBBc2lzdGVudGUgZGUgRGVzYXJyb2xsbyBkZSBBcGxpY2FjaW9uZXMgKEp1bmlvcikiLCJjb21wYW55X25hbWUiOiJjb25maWRlbnRpYWwiLCJodGlkb2NpZCI6IlR4ZjAzdld5b2ZZUWw4dFBBQUFBQUE9PSIsImdsIjoiYm8iLCJobCI6ImVzIiwiZmMiOiJFc3NCQ293QlFVUkVZbGRsWVRkSU5XWnBSbVpNYlVzeGFIb3lWa3BCVGxGMU4yeG9TM1kwYmsxd1lrMUlhVFpHVFhVMVpGRlROV1ZhYjJsU2FITkJURVpsWlhkVU0yeFZWa3RKVDA1c1pYSnNTamRMVVVOeFZUWlJlRFpUWjBWblZsWnNVSFp3V0VaMlQyRkxVM3BVVW1vMFZtUkZZVmRaVUdOM1NHZ3paak41YjNOa1gza3lOMFZDZEhaRmFtcDBTM0lTRm0wNVdETmhkbTAzUTNOUFdYZGlhMUIzVEZCWFNWRWFJa0ZJVGpCRk4wWk9UbFJaYlhKb2NHRllXRGN0Yldod2N6ZG1kSFJPZDIxck9IYyIsImZjdiI6IjMiLCJmY19pZCI6IlR4ZjAzdld5b2ZZUWw4dFBBQUFBQUE9PSJ9"
+    },
+    {
+      "title": "Desarrollador(a) Fullstack Integración e Implementación de ERP (Planificación de Recursos Empresariales)",
+      "company_name": "Tortas Dolly S.R.L.",
+      "location": "Santa Cruz de la Sierra",
+      "via": "Trabajopolis.bo",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=programador+Santa+Cruz+Bolivia&htidocid=RybiasJlul2qvTzLAAAAAA%3D%3D&hl=es-BO&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_0WPsU7DQBBElTafQLVlQnFGSDShJAmKRBHZ9NH6vDhH1rfH7lkKfAK_Q0ebv6LCJyHRTDEavZmZ_8zmn7M1GaoKM3aiC1zCdmS2jP4Eu5ipV_Th8hWBYDckpoFi_nM6gk29h8WeMYaX4P_tmvyoJgabIWnhB2Sy5Qray7e9jdRhSVHhCVCER5Ge6er-mHOyVVWZseunDTl452WoJFIr5-pVWitysCMqJcZMh9u7m7NLsb92z6IZDdbTlXdoXO2eXGE3OA2GBx0_SicjNIFU8RfHtta8_QAAAA&shmds=v1_Ac3VAowZ2MGC9ySTcgJUfh0kUNW9A5tKBLYXgprMpRfuVDgUuA&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=programador+Santa+Cruz+Bolivia&htidocid=RybiasJlul2qvTzLAAAAAA%3D%3D",
+      "thumbnail": "https://serpapi.com/images/i/_9j_4AAQSkZJRgABAQAAAQABAAD_2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys_RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N__AABEIACMAOAMBIgACEQEDEQH_xAAZAAEAAwEBAAAAAAAAAAAAAAAAAwQFAgb_xAAnEAACAgEEAQMEAwAAAAAAAAABAgADEQQSIUExE1GhBSJhgjJCgf_EABgBAQADAQAAAAAAAAAAAAAAAAABAgMH_8QAHhEAAwEAAQUBAAAAAAAAAAAAAAECERIEEyGx0QP_2gAMAwEAAhEDEQA_APJxEkpqe99lY5ALEk4CgeST0JgdGbSWsjiWG0li7-tihmLKQMHx1n4z59jOhpg6PZUt71ryXCDA4yc8_g_HvBTuSVYlrQ6DUa5j6FZZVzlus48SC2p6bWqtUpYpwynowSrl1xT8nEREFhJqHrUWrYzhbFCkIgOfuDdkY5Ue8hiCGtWGjX9QpqpFKUE17GBzxliP5Yz-AMZ8bvJYmXdJrdE2msSzSenpkUsy7s7iSv2jvkgj9UP9DnBjrGeJOmF9NFGxprNGa69-p0NZJLOjaTcVyPGWpbnJ6OMDiVPqPoMUerU0W2FQHWij01B742IMf4T7ylEqWn8VNct9fBERJNhERAEREAREQBERAP_Z.jpg",
+      "extensions": [
+        "hace 15 días",
+        "Tiempo completo"
+      ],
+      "detected_extensions": {
+        "posted_at": "hace 15 días",
+        "schedule_type": "Tiempo completo"
+      },
+      "source_link": "https://www.trabajopolis.bo/trabajo/1239980/desarrollador-fullstack-integracion-e-implementacion-de-erp",
+      "job_title": "Desarrollador(a) Fullstack Integración e Implementación de ERP (Planificación de Recursos Empresariales)",
+      "description": "Tortas Dolly busca un(a) Desarrollador(a) Fullstack Integración e Implementación de ERP. La persona seleccionada será responsable de consolidar la base técnica que conecta todos los módulos del sistema y de llevar cada módulo desde el diseño hasta su uso real en la operación de la empresa.\n\nDesarrollador(a) Fullstack Integración e Implementación de ERP (Planificación de Recursos Empresariales)\n\nFunciones Principales:\n\nConsolidar y mantener la base que interconecta los módulos del nuevo ERP.Desarrollar e implementar los módulos del sistema, desde el diseño hasta su puesta en marcha.Integrar cada módulo con los procesos y sistemas que se usan actualmente.Planificar y ejecutar la transición del sistema actual al nuevo ERP.Realizar la migración de datos de los sistemas existentes.Reemplazar de forma progresiva los sistemas actuales hasta completar el ERP.Requisitos:\n\nExperiencia en desarrollo backend con TypeScript y Node.js.Experiencia con Next.js y Prisma.Conocimiento de PostgreSQL.Experiencia en diseño de bases de datos relacionales.Experiencia en software de gestión empresarial (ERP, POS, inventarios o facturación).Capacidad para trabajar sobre código existente.Experiencia en migración de datos.Ofrecemos:\n\nSalario o salario acorde a experiencia.Participar en un proyecto clave de transformación digital de la empresa.",
+      "apply_options": [
+        {
+          "title": "Trabajopolis.bo",
+          "link": "https://www.trabajopolis.bo/trabajo/1239980/desarrollador-fullstack-integracion-e-implementacion-de-erp?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJEZXNhcnJvbGxhZG9yKGEpIEZ1bGxzdGFjayBJbnRlZ3JhY2nDs24gZSBJbXBsZW1lbnRhY2nDs24gZGUgRVJQIChQbGFuaWZpY2FjacOzbiBkZSBSZWN1cnNvcyBFbXByZXNhcmlhbGVzKSIsImNvbXBhbnlfbmFtZSI6IlRvcnRhcyBEb2xseSBTLlIuTC4iLCJodGlkb2NpZCI6IlJ5Ymlhc0psdWwycXZUekxBQUFBQUE9PSIsImdsIjoiYm8iLCJobCI6ImVzIiwiZmMiOiJFc3NCQ293QlFVUkVZbGRsWVVadU1XbFhWazVCWTB0RmJFaHlUVE01Wm5OTmRWVk1TV000VVZkdlpDMUZNVFpxZURCS1lXTlZVbEp1UjBsbVJGVktaR0oyVkVaRlEwbFdZbEJRVEVaMlZsRmxXakpOTFRkR1VUVkNSamx1UzFsb1ZFZHZZMGxYTVVKQmRsRlNXbkZVY2xFNVFXODRXbFJHZURSQ04wcFJORVI2WkRGTVJrd3pibWx3T1hBM1V6RlFkSE1TRm0wNVdETmhkbTAzUTNOUFdYZGlhMUIzVEZCWFNWRWFJa0ZJVGpCRk4wWnpZMFF4VXpKbGVIaExSR1JDUjFkMFkyMXJNRGRKZUhkWVRsRSIsImZjdiI6IjMiLCJmY19pZCI6IlJ5Ymlhc0psdWwycXZUekxBQUFBQUE9PSJ9"
+    },
+    {
+      "title": "Ingeniero(a) Fullstack",
+      "company_name": "MyApps S.R.L.",
+      "location": "Santa Cruz de la Sierra",
+      "via": "Trabajopolis.bo",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=programador+Santa+Cruz+Bolivia&htidocid=au3LaG5FzWrNLjLpAAAAAA%3D%3D&hl=es-BO&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_xWOMQ6CQBBFY8sRrKZEi11jQoOVMdGYaCMHIANMFnTZWXeWBD2MB7H1YkLzu_feTz6LJDs7Q66jwCmu4DhYKxHrRw7V7yvPgRqEhoB6b4mBHJyYjaXlro3RS661iFVmQmJXq5p7zY4qHvWdK5mnlBYDeYuRym22GZV3Zp1eX3vvBQp1Uxc1Wwt0EeEQhvdcswjF9CjgH_igU3WhAAAA&shmds=v1_Ac3VAox4VqxQO3ogBEnrwvkYVIZKCP9N3GlLXLH4AFNZiyZHYA&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=programador+Santa+Cruz+Bolivia&htidocid=au3LaG5FzWrNLjLpAAAAAA%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/6af7d59953938190e6108648/images/0bA2Y_24JYUKeBXvDk0luaNn571HjDvs4JpSwxUBegg.jpg",
+      "extensions": [
+        "hace 24 días",
+        "Tiempo completo"
+      ],
+      "detected_extensions": {
+        "posted_at": "hace 24 días",
+        "schedule_type": "Tiempo completo"
+      },
+      "source_link": "https://www.trabajopolis.bo/trabajo/1239623/ingeniero-fullstack",
+      "job_title": "Ingeniero(a) Fullstack",
+      "description": "Ingeniero(a) Fullstack\n\nRequisitos:\n\nExperiencia en desarrollo frontend con Angular, React, Stencil.Experiencia en desarrollo backend con Node.js.Experiencia en implementación de despliegues automáticos (CI/CD) utilizando Jenkins.Conocimiento y manejo de contenedores (Docker) y orquestación con Kubernetes.Aplicación de principios SOLID y buenas prácticas de desarrollo.Experiencia en desarrollo de APIs RESTful, mensajería y manejo de bases de datos (SQL y/o NoSQL).Experiencia en pruebas de performance utilizando herramientas como k6.Manejo de control de versiones (Git) y metodologías ágiles (Scrum/Kanban).",
+      "apply_options": [
+        {
+          "title": "Trabajopolis.bo",
+          "link": "https://www.trabajopolis.bo/trabajo/1239623/ingeniero-fullstack?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJJbmdlbmllcm8oYSkgRnVsbHN0YWNrIiwiY29tcGFueV9uYW1lIjoiTXlBcHBzIFMuUi5MLiIsImh0aWRvY2lkIjoiYXUzTGFHNUZ6V3JOTGpMcEFBQUFBQT09IiwiZ2wiOiJibyIsImhsIjoiZXMiLCJmYyI6IkVzc0JDb3dCUVVSRVlsZGxZbkpHTkVWTmExUlpVMEpvTm01MFZIZGZVM0p3TVc1b2JYY3RWSFZNZG1wUGVIbFhlVXRZU1ZoQ1VFbElNVEZ0Y2tkRFl5MWZPRUY1ZUZkb1QzSnVjRTlaTFRkaVltZEhWVUpzVDBRNU5FaHhYMmh5Y2xWd1RubzNReTFaZWtZMGNrcGxjSFphYkVSelZGQkZNMjFMTVdkalozSnpZMjVFV1ZaQk0wSllRbDh3ZG0xNGNHVVNGbTA1V0ROaGRtMDNRM05QV1hkaWExQjNURkJYU1ZFYUlrRklUakJGTjBkQ1RUSnZURnBVU2pReVQwUnBhV0pqWVZVeGVXeG1XbE5EUWxFIiwiZmN2IjoiMyIsImZjX2lkIjoiYXUzTGFHNUZ6V3JOTGpMcEFBQUFBQT09In0="
+    },
+    {
+      "title": "Programador full stack",
+      "company_name": "VemperGames",
+      "location": "Santa Cruz de la Sierra",
+      "via": "BeBee",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=programador+Santa+Cruz+Bolivia&htidocid=QCkGD665qjZK29rPAAAAAA%3D%3D&hl=es-BO&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_xWNMQ6CQBAAY8sTrLaysOCMCQ2WFrQkJLZkgfVA727P3SMhvsWX2PoxoZluZrLPLitqYSvocWCB--wcaML-WUL3--prpgFhICAfHTFQgIrZOtpfxpSilsaoutyuSpr6vGdvOFDHi3lwpxtaHVEoOkzUnovTksdgj4fb2iOp0JNuzQZDQrjK_N5eDqGZSAT_czrqEp8AAAA&shmds=v1_Ac3VAoycPsmABlMUxI-gge5iIneK63ZehhCFEtgs7T3eBSQPJw&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=programador+Santa+Cruz+Bolivia&htidocid=QCkGD665qjZK29rPAAAAAA%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/6af7d59953938190e6108648/images/y-SCtmaVBGv6wXB0WdwSFRc28C6Y3C_rPdImQHICiWw.jpg",
+      "extensions": [
+        "Tiempo completo"
+      ],
+      "detected_extensions": {
+        "schedule_type": "Tiempo completo"
+      },
+      "source_link": "https://bebee.com/bo/jobs/programador-full-stack-vempergames-santa-cruz-de-la-sierra--techmap_bo_4460795554",
+      "job_title": "Programador full stack",
+      "description": "Acerca de Vemper Games En Vemper Games desarrollamos una plataforma digital de bienes, servicios y comercio para jugadores, creadores y desarrolladores de videojuegos en toda Latinoamérica (vemper.games). Operamos con base en Santa Cruz de la Sierra y buscamos sumar al equipo técnico a un Desarrollador Full Stack apasionado por la tecnología moderna y los videojuegos para liderar el desarrollo y la escalabilidad de nuestras plataformas web.\n\n\nResponsabilidades del rol\n Diseñar, construir y mantener arquitecturas web escalables y modulares tanto en frontend como en backend. Desarrollar e integrar APIs RESTful, GraphQL o Webhooks para pasarelas de pago, servicios de terceros y sistemas de catálogos en tiempo real. Implementar interfaces de usuario dinámicas, responsivas y de alto rendimiento orientadas a comercio electrónico y flujos transaccionales. Diseñar y optimizar esquemas de bases de datos relacionales (PostgreSQL / MySQL) y no relacionales. Configurar contenedores (Docker) y apoyar en la automatización de despliegues continuos (CI/CD) en servidores VPS o entornos de nube. Aplicar buenas prácticas de Clean Code, patrones de arquitectura limpia y estándares de seguridad web (OWASP Top 10) para proteger transacciones de usuarios. Trabajar bajo metodologías ágiles (SCRUM) con sprints, revisiones de código y entregas continuas orientadas a producto.  Requisitos del perfil\n Formación: Titulado o egresado en Ingeniería Informática, Sistemas, Ciencias de la Computación o experiencia práctica equivalente. Frontend: Dominio de React.js o Next.js, TypeScript/JavaScript moderno, HTML5 y CSS3. (Se valora experiencia complementaria en Angular o Flutter). Backend: Experiencia sólida en desarrollo backend con frameworks modernos como NestJS / Node.js, .NET Core o similares. Bases de datos: Manejo fluido de PostgreSQL, SQL Server o MySQL; uso de ORMs y manejo de transacciones. DevOps & Herramientas: Manejo de Git, Docker, GitHub Actions y despliegues en servidores Linux / VPS. Seguridad: Criterio técnico para autenticación segura (JWT/OAuth), validación de endpoints y prevención de vulnerabilidades web. Productividad con IA: Familiaridad con herramientas de asistencia de código (Cursor, Claude Code, Copilot) para acelerar entregas y optimizar flujos técnicos. Ubicación: Residir en Santa Cruz de la Sierra, Bolivia. \nPuntos extra / Deseables\n Experiencia previa en plataformas de e-commerce, integración de pagos digitales o APIs transaccionales. \n Interés o conocimientos en ecosistemas Web3 / Blockchain. \n Pasión activa por los videojuegos, gaming competitivo o cultura digital. \nQué ofrecemos\n Compensación mensual fija en USD (Dólares): Pago puntual en moneda extranjera. \n Modalidad de trabajo flexible: Esquema ágil con base operativa en Santa Cruz de la Sierra. \n Impacto directo: Liderarás features centrales de una plataforma en pleno despliegue regional, sin burocracia técnica. \n Cultura gamer: Un entorno dinámico, colaborativo y enfocado en entregar valor real a la comunidad de videojuegos.",
+      "apply_options": [
+        {
+          "title": "BeBee",
+          "link": "https://bebee.com/bo/jobs/programador-full-stack-vempergames-santa-cruz-de-la-sierra--techmap_bo_4460795554?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJQcm9ncmFtYWRvciBmdWxsIHN0YWNrIiwiY29tcGFueV9uYW1lIjoiVmVtcGVyR2FtZXMiLCJodGlkb2NpZCI6IlFDa0dENjY1cWpaSzI5clBBQUFBQUE9PSIsImdsIjoiYm8iLCJobCI6ImVzIiwiZmMiOiJFc3NCQ293QlFVUkVZbGRsV1hwTlZsOUZhREF3ZFU5NFZVSjZOamxqVUZGMWREQTRPR1JHWDBaWU0wSmtka3RHTm0xaGNGQkViVlpIVWpOTE9XODVXbmRZYUhwck0yTkdNVms1WmpsWFkzZGFTVmhUY2tVelNsOHhNR2hSVEhnMU1qUkNMV1ZWYTBGRFN6aHRkakZqZWpObFFXZHlNMVZIY1VJM09WbzNYMFp2UVdoUFVYVXhhR2R5YTA1WFdVZHROelFTRm0wNVdETmhkbTAzUTNOUFdYZGlhMUIzVEZCWFNWRWFJa0ZJVGpCRk4wZFVXR1ZTVTFkc05HbHJObDg1Y0doV1RYVk9SMTlwUjJ0UGFHYyIsImZjdiI6IjMiLCJmY19pZCI6IlFDa0dENjY1cWpaSzI5clBBQUFBQUE9PSJ9"
+    },
+    {
+      "title": "Programador(a) de Rutas de Distribución Indirecta",
+      "company_name": "Grupo BPO Center",
+      "location": "Santa Cruz de la Sierra",
+      "via": "Trabajopolis.bo",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=programador+Santa+Cruz+Bolivia&htidocid=wV5aehHjSawYGTEAAAAAAA%3D%3D&hl=es-BO&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_xWNuwrCQBBFsfUTrKb0AYkINtqpIFa-PkAmyZCsbHbWmVkQf8tOsPLHZJvLKQ7nDr-D4fkk3Ar22LCMcQINwSUZaoadUxNXpdr93gEOoXFCteEKqt9HH4kazBb10RMDBdgzt55G684s6qosVX3RqqG5uqi5LzlQxc_yzpXmuWmHQtGj0W2xnD-LGNrpbC8pMmxOR9hSMJIcvmIwhK2kVz70CFdHIvgHcRo4e8AAAAA&shmds=v1_Ac3VAoyfYEqj-W1Vz495Xx9SUf4HYRfG2z9Fm72OG8_rt2plcw&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=programador+Santa+Cruz+Bolivia&htidocid=wV5aehHjSawYGTEAAAAAAA%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/6af7d59953938190e6108648/images/cFKlBBMGmqQUX52JVSYfZSWMgnEvuT27wFsiyA8VS8E.jpg",
+      "extensions": [
+        "hace 4 días",
+        "De Bs 5 K a Bs 5,9 K por mes",
+        "Tiempo completo"
+      ],
+      "detected_extensions": {
+        "posted_at": "hace 4 días",
+        "salary": "De Bs 5 K a Bs 5,9 K por mes",
+        "schedule_type": "Tiempo completo"
+      },
+      "source_link": "https://www.trabajopolis.bo/trabajo/1240249/programador-de-rutas-de-distribucion-indirecta",
+      "job_title": "Programador(a) de Rutas de Distribución Indirecta",
+      "description": "Lebrand SRL. Parte de la corporación BPO (externalización de procesos de negocio) Center busca incorporar:\n\nProgramador(a) de Rutas de Distribución Indirecta\n\nObjetivo del Puesto:\n\nPlanificar y programar eficientemente las rutas de distribución para clientes finales en las zonas asignadas, optimizando la capacidad de transporte y los recursos logísticos, asegurando el cumplimiento de los niveles de servicio establecidos mediante el análisis de indicadores operativos y el seguimiento oportuno de la operación.\n\nFunciones Principales:\n\nDiseñar y programar diariamente las rutas de distribución, considerando la capacidad de transporte, el balance de carga y la cantidad de clientes por unidad.Elaborar y analizar reportes diarios de programación, liquidación y despacho, realizando el seguimiento de volúmenes de venta, recaudación y capacidad operativa.Coordinar con las áreas de Ventas y Almacenes el cumplimiento de horarios de cierre de preventa, liberación de pedidos y disponibilidad de productos.Monitorear la efectividad del reparto y la productividad de las rutas mediante indicadores logísticos.Identificar desviaciones en costos, niveles de servicio, ocupación de carga y kilometraje recorrido, proponiendo acciones correctivas.Realizar seguimiento continuo a la operación de distribución, buscando optimizar los recursos y mejorar la eficiencia de los despachos.Requisitos del Cargo:\n\nLicenciatura en Ingeniería Industrial, Ingeniería de Producción, Administración de Empresas o carreras afines.Experiencia mínima de 2 años en planificación de distribución, logística, transporte o programación de operaciones.Experiencia deseable en programación de flotas de distribución y gestión de rutas urbanas y provinciales.Conocimientos en procesos de distribución, logística y transporte.Manejo de Excel avanzado.Conocimientos de SAP / SVM a nivel intermedio.Experiencia o conocimientos en sistemas de ruteo y TMS (Roadnet, Drivin o similares).Conocimientos en sistemas de recepción, programación y prefacturación de pedidos.Se valorará el manejo de herramientas de Business Intelligence como Power BI, Tableau o similares.Competencias Clave:\n\nPensamiento analítico y capacidad de planificación.Orientación a resultados.Organización y atención al detalle.Capacidad para la resolución de problemas.Toma de decisiones.Comunicación efectiva.Trabajo colaborativo.Proactividad y orientación a la mejora continua.Condiciones y Beneficios:\n\nSalario básico: Bs. 5.000.Bono dominical: Bs. 770 (por 4 domingos).Tipo de contrato: Plazo fijo - 6 meses.Modalidad: Presencial - Santa Cruz.",
+      "apply_options": [
+        {
+          "title": "Trabajopolis.bo",
+          "link": "https://www.trabajopolis.bo/trabajo/1240249/programador-de-rutas-de-distribucion-indirecta?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        },
+        {
+          "title": "Trabajito",
+          "link": "https://www.trabajito.com.bo/trabajo/santa-cruz/programadora-de-rutas-de-distribucion-indirecta-bpo-center-B5X7?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJQcm9ncmFtYWRvcihhKSBkZSBSdXRhcyBkZSBEaXN0cmlidWNpw7NuIEluZGlyZWN0YSIsImNvbXBhbnlfbmFtZSI6IkdydXBvIEJQTyBDZW50ZXIiLCJodGlkb2NpZCI6IndWNWFlaEhqU2F3WUdURUFBQUFBQUE9PSIsImdsIjoiYm8iLCJobCI6ImVzIiwiZmMiOiJFc3NCQ293QlFVUkVZbGRsV1dGcGJqYzVabVI0V0ZCR1dXaFpjM1ExTlhwUmNXVTFXbEpyVG5Cd1QzWnVZbTlhTkRWT0xYaG1VMVF4VFMxUGFHVTFORU5wVTNGcWJEQkhRbUpzVm1WelltSnVkWFY0WjI1Qk9FcGpVSE5SZWxSelZWbFlaa1JrZG5aNk1WZFhaMUJXWXpoaVFXdFpTR3RyVmtGeGIyWXRibXhJVGs5WU5sQkxVRVpoU3pZeGMyNVJhemdTRm0wNVdETmhkbTAzUTNOUFdYZGlhMUIzVEZCWFNWRWFJa0ZJVGpCRk4wWkRkbGhrYlZKNWNVSXhRVWxCVkhSSlIwZHRUalZKYTE5cE0yYyIsImZjdiI6IjMiLCJmY19pZCI6IndWNWFlaEhqU2F3WUdURUFBQUFBQUE9PSJ9"
+    },
+    {
+      "title": "Analista de Seguridad Informática",
+      "company_name": "Importadora y Exportadora Monterrey S.R.L.",
+      "location": "Santa Cruz de la Sierra",
+      "via": "Trabajopolis.bo",
+      "share_link": "https://www.google.com/search?ibp=htl;jobs&q=programador+Santa+Cruz+Bolivia&htidocid=UqM_Npz8WkAEUgX6AAAAAA%3D%3D&hl=es-BO&shem=epsd1,esd2e,rimspwouoe,sdpie&shndl=37&shmd=H4sIAAAAAAAA_0WOPQ6CQBCFY8sRrKa2WIyJDVbEEEOijRyADOwImN2ddXdJwNt4DVsKryXY2LzkJd_7iT6rKE0Nqs4HBElQUNO7TqKE3NzY6ekVuhoTqKa3f_QkfxBpq4iBDJyYG0XrQxuC9Ukce69EM1fNIVGzjtlQxUN858ovUvoWHVmFgcrdfjsIa5pNlmvLLqBkhzBCNvzdhU0g52iEQlzFWSyTBZr56tH1z-WKQii6GcEvvwcCOsoAAAA&shmds=v1_Ac3VAoz-7Ed_njAACohhRxfOzNePWhBsfbmehGi-JQBIoRoiTg&source=sh/x/job/li/m1/1#fpstate=tldetail&htivrt=jobs&htiq=programador+Santa+Cruz+Bolivia&htidocid=UqM_Npz8WkAEUgX6AAAAAA%3D%3D",
+      "thumbnail": "https://serpapi.com/searches/6af7d59953938190e6108648/images/TQZR415o77mZd-dPWuwOhIn3RRalWO3LkhUZUN27MAg.jpg",
+      "extensions": [
+        "hace 13 días",
+        "Tiempo completo"
+      ],
+      "detected_extensions": {
+        "posted_at": "hace 13 días",
+        "schedule_type": "Tiempo completo"
+      },
+      "source_link": "https://www.trabajopolis.bo/trabajo/1240080/analista-de-seguridad-informatica",
+      "job_title": "Analista de Seguridad Informática",
+      "description": "¡Seguimos creciendo y queremos que seas parte de nuestro equipo!\n\nAnalista de Seguridad Informática\n\nObjetivo del Cargo:\n\nGarantizar la protección de los sistemas informáticos, redes y datos de la organización mediante la implementación, monitoreo y mejora continua de controles de seguridad, minimizando riesgos y asegurando la continuidad operativa.\n\nRequisitos:\n\nLicenciatura o Ingeniería en Sistemas, Informática, Telecomunicaciones o carreras afines.Deseable especialización en Seguridad Informática o Ciberseguridad.Experiencia mínima de 3 años de experiencia en administración de seguridad informática, infraestructura tecnológica o ciberseguridad.Conocimiento en seguridad de redes y sistemas.Firewalls, VPN, IDS/IPS.EDR, XDR y MDR.Gestión de vulnerabilidades.Sistemas operativos Windows y Linux.Seguridad en nube (Cloud Security).Normas ISO 27001, NIST, COBIT.Gestión de incidentes de seguridad.Herramientas SIEM.Funciones:\n\nIdentificar y evaluar riesgos de seguridad informática.Implementar políticas y procedimientos de seguridad.Administrar accesos a sistemas, redes y aplicaciones.Monitorear eventos e incidentes de seguridad.Gestionar vulnerabilidades, actualizaciones y parches.Coordinar la respuesta ante incidentes de ciberseguridad.",
+      "apply_options": [
+        {
+          "title": "Trabajopolis.bo",
+          "link": "https://www.trabajopolis.bo/trabajo/1240080/analista-de-seguridad-informatica?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic"
+        }
+      ],
+      "job_id": "eyJqb2JfdGl0bGUiOiJBbmFsaXN0YSBkZSBTZWd1cmlkYWQgSW5mb3Jtw6F0aWNhIiwiY29tcGFueV9uYW1lIjoiSW1wb3J0YWRvcmEgeSBFeHBvcnRhZG9yYSBNb250ZXJyZXkgUy5SLkwuIiwiaHRpZG9jaWQiOiJVcU1fTnB6OFdrQUVVZ1g2QUFBQUFBPT0iLCJnbCI6ImJvIiwiaGwiOiJlcyIsImZjIjoiRXNzQkNvd0JRVVJFWWxkbFdrTkRaVGcwVnkxdFlrNW9iRlZPTlZnMVZHSlNVa1F4UldaRk1sQjNWVU01ZWpKcFgyczBVbkJKTFZkMGJFdDVaVFJyY1c1R1gwRXlXbGQ0YVRZeFZsbDVkMkUyWWpOVFFqVlJaR0ZPVlVwZmJVVjRWaTFqYlZrM1VXRlFla2hoTTNKTE1GUlZlR0Z2VUVsdU5ta3dOVmRyVlRCeU5HOVlMWFl0WkVkakxWVlhiMHd3UlRFU0ZtMDVXRE5oZG0wM1EzTlBXWGRpYTFCM1RGQlhTVkVhSWtGSVRqQkZOMFo0V2pCaGIwUnpObTlRTmpaV1MwSTNia1U1YkZscmEweDVVbmMiLCJmY3YiOiIzIiwiZmNfaWQiOiJVcU1fTnB6OFdrQUVVZ1g2QUFBQUFBPT0ifQ=="
+    }
+  ],
+  "serpapi_pagination": {
+    "next_page_token": "eyJmYyI6IkVzc0JDb3dCUVVSRVlsZGxXa2N0VFRGck5ucHVRbk5oWlVKamQwRnNSRXBqUkY4emJVRnVkM2R5UjNoRVJVNWpkRlpOU0V0R1Z6RkdVVUpuVDA0eldVNDRiR3hFWDBkNVYwcHFhVXRtWW1KVk1qZEpTblV3VHkxVGFqUkRTRVJaYldSM1dVSnhjRVF3Y3poelJHaE9lREJ1YzFBdFNqaFJOekJqYTJKM1ptdFlNM0JhWVVoWGJucGxhR05KVEdsbVRXVVNGbTA1V0ROaGRtMDNRM05QV1hkaWExQjNURkJYU1ZFYUlrRklUakJGTjBnd1JWbzNOak5KVWxkMFZ6aHhMWE56Ym5vM05UbFJTRjlSVkVFIiwiZmN2IjoiMyJ9",
+    "next": "https://serpapi.com/search.json?engine=google_jobs&gl=bo&google_domain=google.com&hl=es&next_page_token=eyJmYyI6IkVzc0JDb3dCUVVSRVlsZGxXa2N0VFRGck5ucHVRbk5oWlVKamQwRnNSRXBqUkY4emJVRnVkM2R5UjNoRVJVNWpkRlpOU0V0R1Z6RkdVVUpuVDA0eldVNDRiR3hFWDBkNVYwcHFhVXRtWW1KVk1qZEpTblV3VHkxVGFqUkRTRVJaYldSM1dVSnhjRVF3Y3poelJHaE9lREJ1YzFBdFNqaFJOekJqYTJKM1ptdFlNM0JhWVVoWGJucGxhR05KVEdsbVRXVVNGbTA1V0ROaGRtMDNRM05QV1hkaWExQjNURkJYU1ZFYUlrRklUakJGTjBnd1JWbzNOak5KVWxkMFZ6aHhMWE56Ym5vM05UbFJTRjlSVkVFIiwiZmN2IjoiMyJ9&q=programador+Santa+Cruz+Bolivia"
+  }
+}

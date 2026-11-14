@@ -1,0 +1,915 @@
+{
+  "search_metadata": {
+    "id": "6af7d59ec346eddeff290bca",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/MdbWmYOKofN8F_a4cgWGD_qxnBz0AI-lIGxLFNJADCE/6af7d59ec346eddeff290bca.json",
+    "markdown_endpoint": "https://serpapi.com/searches/MdbWmYOKofN8F_a4cgWGD_qxnBz0AI-lIGxLFNJADCE/6af7d59ec346eddeff290bca.md",
+    "created_at": "2026-11-14 03:29:34 UTC",
+    "processed_at": "2026-11-14 03:29:34 UTC",
+    "youtube_url": "https://www.youtube.com/results?search_query=n8n+tutorial+espa%C3%B1ol&gl=bo&hl=es",
+    "raw_html_file": "https://serpapi.com/searches/MdbWmYOKofN8F_a4cgWGD_qxnBz0AI-lIGxLFNJADCE/6af7d59ec346eddeff290bca.html",
+    "total_time_taken": 1.85
+  },
+  "search_parameters": {
+    "engine": "youtube",
+    "search_query": "n8n tutorial español",
+    "gl": "bo",
+    "hl": "es"
+  },
+  "search_information": {
+    "total_results": 998987,
+    "video_results_state": "Results for exact spelling"
+  },
+  "ads_results": [
+    {
+      "position_on_page": 1,
+      "title": "If you can type it, you can see it – with new AI tools from Squarespace.",
+      "link": "https://www.youtube.com/watch?v=_BUE-O-ELdI",
+      "serpapi_link": "https://serpapi.com/search.json?engine=youtube_video&gl=bo&hl=es&v=_BUE-O-ELdI",
+      "website": "https://www.googleadservices.com/pagead/aclk?sa=L&ai=Ce9oAn9X3aofbEaf3u_kP9IKS-Qj50MrWigGf37X-7xawkB8QASAAYMnGlIqcpKAWggEXY2EtcHViLTYyMTk4MTE3NDcwNDkzNzGgAfClvdICqAMEyAMKqgTLAk_Qv-oBTaPFXgYPV5xQE1FSTY0Y61W7f_FC2TA7S6ke6pk6AN2uE5b6Yf6g7bZt19JyHySxK1T-dVTcb8IPsKqvjU0IjF-h_ZABwc1ATt7nSqo04V4rhYDU3Vt4d9R5x9kXg121pfjtUY3fLMPEGUqiqHqAANxVVI6exZrsjaBSuHI7MaiNSdxWWW31uUXLi3dhhVi0u_oTns5UoWMRveTBkGv5iPJpZwKUnjZtcBOZkjJopcOy-DXy1xirD4FBQmLngUH05e-Ar6laSERLv-bcA-bI_syxqxSRdqnxcpL9HLRQVNKGEGFmYiFteJsxaN4FPZ9Zd84xJQGHr-JpIjNSbUGWr9la9X65HnO0jsTHXmQHr25u2eC0nCiKVVZt0Q9gVRJ4XoaOxzD_ZTh4eS6Pxhw6vpf9Jhb64tiFgqrpmqQc7rup4k6NI5KIBbqSqqJRkgUICBN4pPnhrQGgBqEBgAf42cKtAZAHBKgH6u6xAqgHpc-xAqgH552xAqgH6J2xAqgHg_axAqgH-dOxAqgHydqxAqgHqeCxAqgHqNIbqAex3BuoB7CbsQKoB_2ysQKoB8jPsQKoB8nPsQKoB_zVsQKoB_vVsQKoB4zWsQKoB4vWsQKoB5risQKoB5visQKoB57qsQKoB5_qsQKoB_jrsQKoB7zqsQKoB_yvsQKoB9XOG6gHvtmxAqgHv9mxAqgHnNwbqAe3obECqAfVqbECqAfn2rECqAfetbECqAfqsbECqAe-t7ECqAeZtbECqAeFwbECqAfrpbECqAfKqbECkggLX0JVRS1PLUVMZEmoCAHSCC4IgEEQARheMgKCAjoPgEKAwICAgICAgAKqgIAYSNmg0jVQFFjAlfe6woaYA2ABmgk3aHR0cHM6Ly93d3cuc3F1YXJlc3BhY2UuY29tL3dlYnNpdGVzL2FpLXdlYnNpdGUtYnVpbGRlcrEJq38CzbCivMHICRfICY8ByAnCAcgJlwK6CzoIAxAFGAQgBygBMBxAAUgAWH1gAGgAcAGIAQCYAQGiAQgKAKgCAdgCAtgBA4ACAYgCBboDBXZpY2Jm0AsS4AsBogxRYiAKHmNvbS5zcXVhcmVzcGFjZS5zcXVhcmVzcGFjZWFwcGooCiZjb20uc3F1YXJlc3BhY2UuYW5kcm9pZC5zcXVhcmVzcGFjZWFwcHgAiAEA0gwCEAHaDCUKChCw8vK9raKdhkgSAgEDGg0YupKqolEgxbTSy_UEQAFKAhAfmg0BEqoNAlVTyA0B0g3lBWh0dHBzOi8vYWQuZG91YmxlY2xpY2submV0L2RkbS90cmFja2Nsay9ONzE4Njc5LjMxNTlHT09HTEUvQjM0NDQ1NDg5LjQ1ODIzOTU2NztkY190cmtfYWlkPTY1MjY4MzcxNjtkY190cmtfY2lkPTI2NTU5Nzc0NztkY19kYm1fdG9rZW49QU9qZUxORUFBQUE2Q2pNS0RBZ0FGUUFBQUFBZEFBQUFBQklNQ0FBVkFBQUFBQjBBQUFBQUloTUl1cEtxb2xHb0FvUGd0UUt3QXRfQzhPVURRRHNRdTRDMEFzZTFSWTdmZDF5SWlxbWNBRVBjTWNJPTtkY19sYXQ9O2RjX3JkaWQ9O3RhZ19mb3JfY2hpbGRfZGlyZWN0ZWRfdHJlYXRtZW50PTt0ZnVhPTtsdGQ9O2RjX3Rkdj0xO2RjX3RyYW5zcGFyZW50PTE7ZGNfcnVpPTE7ZGNfZXBzPUFIYXM4Y0NxeFUtWHFDV1o1ajVQS1F0M0pRZklNNFlZY3IzUG1OTmotc1VudWNlUXZvQXFHWFIxV29EQ0pqVlRWWTQwMWRVSGc4d3FtNVRkeGVFdWRRO2RjX3B1YmlkPTY_aHR0cHM6Ly93d3cuc3F1YXJlc3BhY2UuY29tL3dlYnNpdGVzL2FpLXdlYnNpdGUtYnVpbGRlcj9jaGFubmVsPXZpZGVvX3Byb2dyYW1tYXRpYyZzdWJjaGFubmVsPU43MTg2NzkuMzE1OUdPT0dMRSZjYW1wYWlnbj0zNDQ0NTQ4OSZzdWJjYW1wYWlnbj00NTgyMzk1NjdfNjUyNjgzNzE2JnNvdXJjZT0yNjU1OTc3NDcmdXRtX21lZGl1bT12aWRlb19wcm9ncmFtbWF0aWMmdXRtX3NvdXJjZT1ONzE4Njc5LjMxNTlHT09HTEUmdXRtX2NvbnRlbnQ9JmdhZF9zb3VyY2U9MiZnYWRfY2FtcGFpZ25pZD0yMTgxNTI2NTU5NLATyI7tJLgT____________AYgUAbAUA8AVgYCAQNAVAdgVAZgWAagWAeIWAggBgBcBihcYCAMYASABKAEwATgBQAFIAVABWAFgAmgBoBcBqRfNgFOOGzmNWLoXBigAMAA4AdAYAfAYAcIZAggB&ase=2&gclid=EAIaIQobChMIx6b3usKGmAMVp_suCR10gSSPEAEYASAAEgIikfD_BwE&num=1&cid=CAASqgHkaKmkqijeWlvi6TBvPfXv3weu08KdSr1ZmE2xC1CmghUADuEnKd2aGTmV6b7RpCG_dXLM59rInmqsPvdpM7L5wwdwu0OZgH7OSuEBDUYNiwHu4RrBpKqv-izll50yKCiLM4bnIwRHCvW0G9jF6IriQyGmPdf33SJkQ48aPJ3cRetyeKYKsSla15ZePeqrpQLBmxG-c4R4TQvircLz1xGV6diaPe86E6wITA&ad_cpn=%5BCPN%5D&sig=AOD64_2zsnq2K6EUqVUIEJ3fJdi90zGoaw&ctype=110&video_id=_BUE-O-ELdI&label=video_click_to_advertiser_site&ms=%5BCLICK_MS%5D&nb=2&nx=%5BNX%5D&ny=%5BNY%5D&dim=%5BDIM%5D",
+      "channel": {
+        "name": "Squarespace",
+        "thumbnail": "https://yt3.ggpht.com/proxy/OV0yjYL3Kk9I_i7Omx09d9RPjt0_v4WbF7A4zOK17mKSTTLGS6IO5mPBrpBATxaPMOmf0MGg_Ub91n5qb0n0PLL_J9gidUb63dm9kE-Nwkg_7ZqLObNCs5G-E0YLi1MvkceqjxZndTLsAbHnJpP7OC_QAhOQZtbUFk8jZD838Uhn1Ibf0TfqBSYqRLc2WV7uen0op44FyOJoJOb0pAE2hP68C2i7Kf-ZIeH6Z7WWqDm3UWjzKA17dHtTZKxulgfXUtKJF44=w68-h68-nd"
+      },
+      "description": "See how your brand shows up online—right from your Squarespace dashboard",
+      "thumbnail": {
+        "static": "https://tpc.googlesyndication.com/simgad/4762166292783364134"
+      }
+    },
+    {
+      "position_on_page": 6,
+      "title": "Know what works",
+      "link": "https://www.youtube.com/watch?v=Lo8pIlhKu-0",
+      "serpapi_link": "https://serpapi.com/search.json?engine=youtube_video&gl=bo&hl=es&v=Lo8pIlhKu-0",
+      "website": "https://www.googleadservices.com/pagead/aclk?sa=L&ai=CZVa4n9X3aofbEaf3u_kP9IKS-Qi-uP_7igHByvLEtxawkB8QAyAAYMnGlIqcpKAWggEXY2EtcHViLTYyMTk4MTE3NDcwNDkzNzGgAcrC_KsCqAMEyAMKqgTLAk_Qv-oBTaPFXgYPV5xQE1FSTY0Y61W7f_FC2TA7S6ke6pk6AN2uE5b6Yf6g7bZt19JyHySxK1T-dVTcb8IPsKqvjU0IjF-h_ZABwc1ATt7nSqo04V4rhYDU3Vt4d9R5x9kXg121pfjtUY3fLMPEGUqiqHqAANxVVI6exZrsjaBSuHI7MaiNSdxWWW31uUXLi3dhhVi0u_oTns5UoWMRveTBkGv5iPJpZwKUnjZtcBOZkjJopcOy-DXy1xirD4FBQmLngUH05e-Ar6laSERLv-bcA-bI_syxqxSRdqnxcpL9HPd3VNKGEGFcfgQieJsxaN4FPZ9Zd855JwGHr-IZBgoMbUGWr9la9X65s5cOjcTHXmQH_m1u2eC0nDL0SFVtqyJmNBN4BdynqjD_ZTh4eS6PxmYXuPb8Jhb64tje2IOEmqQc7rup4lTzPpGIBbKZ59pZkgUICBN41N3Y8wGgBqEBgAeevYPUAZAHBKgH6u6xAqgHpc-xAqgH552xAqgH6J2xAqgHg_axAqgH-dOxAqgHydqxAqgHqeCxAqgHqNIbqAex3BuoB7CbsQKoB_2ysQKoB8jPsQKoB8nPsQKoB_zVsQKoB_vVsQKoB4zWsQKoB4vWsQKoB5risQKoB5visQKoB57qsQKoB5_qsQKoB_jrsQKoB7zqsQKoB_yvsQKoB9XOG6gHvtmxAqgHv9mxAqgHnNwbqAe3obECqAfVqbECqAfn2rECqAfetbECqAfqsbECqAe-t7ECqAeZtbECqAeFwbECqAfrpbECqAfKqbECkggLTG84cElsaEt1LTCoCAHSCC4IgEEQARheMgKCAjoPgEKAwICAgICAgAKqgIAYSNmg0jVQFFjAlfe6woaYA2ABmgkpaHR0cHM6Ly9tYWlsY2hpbXAuY29tL3NvbHV0aW9ucy9haS10b29scy-xCceA6UnI5JHtyAkXyAmPAcgJwgHICZcCugs6CAMQBRgEIAcoATAcQAFIAFh9YABoAHABiAEAmAEBogEICgCoAgHYAgLYAQOAAgGIAgW6AwV2aWNiZtALEuALAaIMR2IlCiNjb20udGhlUm9ja2V0U2NpZW5jZUdyb3VwLm1haWxDaGltcGoZChdjb20ubWFpbGNoaW1wLm1haWxjaGltcHgAiAEA0gwCEAHaDCYKCxCw-NqI_L-0y7EBEgIBAxoNGLKZ59pZIKavr8vvBUABSgIQH5oNARKqDQJVU8gNAdIN2AZodHRwczovL2FkLmRvdWJsZWNsaWNrLm5ldC9kZG0vdHJhY2tjbGsvTjEyMjQzMjMuNTc0MzQzMEtTTy1EVjM2MC9CMzY0MDM1NjUuNDU2ODcwNjEwO2RjX3Rya19haWQ9NjUxNzE3NTA2O2RjX3Rya19jaWQ9MjY0Nzk0NTQ1O2RjX2RibV90b2tlbj1BT2plTE5FQUFBQTdDalFLREFnQUZRQUFBQUFkQUFBQUFCSU1DQUFWQUFBQUFCMEFBQUFBSWhRSXNwbm4ybG1vQXRUZDJQTUJzQUwza29fckEwQTdFT1A5OVFJdGs3dkZGT3NjNUdHSGJGQWI1eHI5O2RjX2xhdD07ZGNfcmRpZD07dGFnX2Zvcl9jaGlsZF9kaXJlY3RlZF90cmVhdG1lbnQ9O3RmdWE9O2x0ZD07ZGNfdGR2PTE7ZGNfdHJhbnNwYXJlbnQ9MTtkY19ydWk9MTtkY19lcHM9QUhhczhjQW9lZ044d2M0ejZSTHB1U2ZjSWZLbFJhUk9PVFNSRDZVekJXUE14aDNEY0JmaUN4THRtM1JQSVR5b2hfdzFyYXNPRVEwQW11eXdWYVp3THc7ZGNfcHViaWQ9Nj9odHRwczovL21haWxjaGltcC5jb20vc29sdXRpb25zL2FpLXRvb2xzLz91dG1fc291cmNlPWR2MzYwZGcmdXRtX21lZGl1bT12aWQmdXRtX2NhbXBhaWduPWluaV9iYXVfYnJhbmRfbXltX21vZl9kdjM2MGRnX3VzYV9lbl8yMDI2MDhfdmlkX3Byc3BjdF9jdXN0b21hZmZfbmFfZGVtYW5kZ2VuX2ludHVpdGludGVsbGlnZW5jZWRzYl9teW1fdmlkZW9fMTVzX3VzYSZ1dG1fY29udGVudD1wcnNwY3RfY3VzdG9tYWZmXzE2MDg0X2RlbWFuZGdlbl9pbnR1aXRpbnRlbGxpZ2VuY2Vkc2JfbXltX3ZpZGVvXzE1cyZkY2xpZD1DTHI4dW8zUHk1Y0RGUS1sWmdJZEdmd2loZyZnYWRfc291cmNlPTcmZ2FkX2NhbXBhaWduaWQ9MjQyNTM3MTU2NDYmZ2FkX3NvdXJjZT0yJmdhZF9jYW1wYWlnbmlkPTI0MDgxMTkwMDY2sBOb5LgmuBP___________8BiBQCsBQDwBWBgIBA0BUB2BUBmBYBqBYB4hYCCAGAFwGKFxgIAxgBIAEoATABOAFAAUgBUAFYAWACaAGgFwGpF2O5JDT42T5RuhcGKAAwADgB0BgB8BgBwhkCCAE&ase=2&gclid=EAIaIQobChMIx6b3usKGmAMVp_suCR10gSSPEAEYAyAAEgLhdvD_BwE&num=3&cid=CAASqgHkaKmkqijeWlvi6TBvPfXv3weu08KdSr1ZmE2xC1CmghUADuEnKd2aGTmV6b7RpCG_dXLM59rInmqsPvdpM7L5wwdwu0OZgH7OSuEBDUYNiwHu4RrBpKqv-izll50yKCiLM4bnIwRHCvW0G9jF6IriQyGmPdf33SJkQ48aPJ3cRetyeKYKsSla15ZePeqrpQLBmxG-c4R4TQvircLz1xGV6diaPe86E6wITA&ad_cpn=%5BCPN%5D&sig=AOD64_1clKQlVlnwHI6U8vJrD80Cwlb3mg&ctype=110&video_id=Lo8pIlhKu-0&label=video_click_to_advertiser_site&ms=%5BCLICK_MS%5D&nb=2&nx=%5BNX%5D&ny=%5BNY%5D&dim=%5BDIM%5D",
+      "channel": {
+        "name": "Intuit Mailchimp",
+        "thumbnail": "https://yt3.ggpht.com/proxy/MaLlrkFuo2nwXYzKs6nf85y96UsqGHKycj6KUbO1HA1MkKtSxJOYrDwASM2VS1YWOTkKA5hGOGgaX4iEkn6hmD5iU_IpwRI-RGlhRGeJBXbOOsXCCqWON9QEri4NoAt1pjC838B7K7m_V3ZzJ2NgZfPPteSNG44nHCM6slS-ckiWSXvy1xk2o9Eeqm9foy9mnuEF9vpYP8r89NQa2HBc_BZj4xQh2LvcjFMLkbq-BgEUrSJvw246lI8KWbqCIZWbNiCh=w68-h68-nd"
+      },
+      "description": "Know what's driving revenue and do more of it with Mailchimp with Intuit Intelligence",
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/Lo8pIlhKu-0/hq720.jpg?sqp=-oaymwE2COgCEMoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_g6AArgIigIMCAAQARhOIGIoZTAP&rs=AOn4CLDg8m-dr0-6crAp7SZ-DU9eXhADoQ"
+      }
+    },
+    {
+      "position_on_page": 12,
+      "title": "Learn for real with Student Spaces in Adobe Acrobat.",
+      "link": "https://www.youtube.com/watch?v=6NrKyYl8Q6A",
+      "serpapi_link": "https://serpapi.com/search.json?engine=youtube_video&gl=bo&hl=es&v=6NrKyYl8Q6A",
+      "website": "https://www.googleadservices.com/pagead/aclk?sa=L&ai=CY6TOn9X3aofbEaf3u_kP9IKS-Qihl_77igGF6OmGlxawkB8QBCAAYMnGlIqcpKAWggEXY2EtcHViLTYyMTk4MTE3NDcwNDkzNzGgAbH6_-oCqAMEyAMKqgTYAk_Qv-oBTaPFXgYPV5xQE1FSTY0Y61W7f_FC2TA7S6ke6pk6AN2uE5b6Yf6g7bZt19JyHySxK1T-dVTcb8IPsKqvjU0IjF-h_ZABwc1ATt7nSqo04V4rhYDU3Vt4d9R5x9kXg121pfjtUY3fLMPEGUqiqHqAANxVVI6exZrsjaBSuHI7MaiNSdxWWW31uUXLi3dhhVi0u_oTns5UoWMRveTBkGv5iPJpZwKUnjZtcBOZkjJopcOy-DXy1xirD4FBQmLngUH05e-Ar6laSERLv-bcA-bI_syxqxSRdqnpcgFj3kB8XNIpCPcdiBbmdis-a3IJJZxhlLvNOqGAtSlSTtMfa1FEyCMA0k2Akb_Oux5PVTl76BG220I_93kDxbO-zUi2_ObWb-AbeaY0ZOJpUSem3tyaQfhhnoXIzMAufBWuelry35exA-IGFm3u8qc_qUlNjOdIiFSfiAXm0O-tWJIFCAgTePrNn5UBoAahAYAHt4WAlQGQBwSoB-rusQKoB6XPsQKoB-edsQKoB-idsQKoB4P2sQKoB_nTsQKoB8nasQKoB6ngsQKoB6jSG6gHsdwbqAewm7ECqAf9srECqAfIz7ECqAfJz7ECqAf81bECqAf71bECqAeM1rECqAeL1rECqAea4rECqAeb4rECqAee6rECqAef6rECqAf467ECqAe86rECqAf8r7ECqAfVzhuoB77ZsQKoB7_ZsQKoB5zcG6gHt6GxAqgH1amxAqgH59qxAqgH3rWxAqgH6rGxAqgHvrexAqgHmbWxAqgHhcGxAqgH66WxAqgHyqmxApIICzZOckt5WWw4UTZBqAgB0gguCIBBEAEYXjICggI6D4BCgMCAgICAgIACqoCAGEjZoNI1UBRYwJX3usKGmANgAZoJLGh0dHBzOi8vYWNyb2JhdC5hZG9iZS5jb20vc3R1ZGVudHNwYWNlcy9ob21lsQnGLh_KGyvKLcgJF8gJjwHICcIBugs6CAMQBRgEIAcoATAcQAFIAFh9YABoAHABiAEAmAEBogEICgCoAgHYAgLYAQOAAgGIAhK6AwV2aWNiZtALE-ALAaIMH2IYChZjb20uYWRvYmUuZWNob3NpZ24uaW9zeACIAQDSDAIQAdoMJgoLEJDntqeUmO-Z5QESAgEDGg0Y5tDvrVggw4PpqdUFQAFKAhAfmg0BE6oNAlVTyA0B0g3pBGh0dHBzOi8vYWQuZG91YmxlY2xpY2submV0L2RkbS90cmFja2Nsay9OOTcyOTUyLjI3OTM4MkJJRE1BTkFHRVJfREZBU0lURS9CMjIzNDQ0MTMuMjQxNTM5MzIxO2RjX3Rya19haWQ9NDM4MTI4NjIyO2RjX3Rya19jaWQ9MTEyODg0NjEzO2RjX2RibV90b2tlbj1BT2plTE5FQUFBQTZDak1LREFnQUZRQUFBQUFkQUFBQUFCSU1DQUFWQUFBQUFCMEFBQUFBSWhNSTV0RHZyVmlvQXNPNDlBR3dBc3lXNHVrRFFEc1FsLWU2QWFwU28zTGo2OUhxbVJTR0Q3TmxKdGM9O2RjX2xhdD07ZGNfcmRpZD07dGFnX2Zvcl9jaGlsZF9kaXJlY3RlZF90cmVhdG1lbnQ9O3RmdWE9O2x0ZD07ZGNfdGR2PTE7ZGNfdHJhbnNwYXJlbnQ9MTtkY19ydWk9MTtkY19lcHM9QUhhczhjRG5MVVdlWFN0LXBzOGNldkF2MmdxaExMckR5d0pqMGNSZU03VWhIRWkxNEVsRUZDejhDOGVhcFFOYlhDNlhyWDgyVWJlNnVCWEQyZVFuR2c7ZGNfcHViaWQ9Nj9odHRwczovL2Fjcm9iYXQuYWRvYmUuY29tL3N0dWRlbnRzcGFjZXMvaG9tZT9zZGlkPUpaQkpWS1JaJm12PXNvY2lhbCZtdjI9cGFpZHNvYyZ4X2FwaV9jbGllbnRfaWQ9cGFpZG1lZGlhJnhfYXBpX2NsaWVudF9sb2NhdGlvbj1hZHNfSlpCSlZLUlomZ2FkX3NvdXJjZT0ysBPK05gkuBP___________8BiBQFsBQDwBWBgIBA0BUB2BUBmBYBqBYBgBcBihcYCAMYASABKAEwATgBQAFIAVABWAFgAmgBoBcBqRdXv8ICGj4Y8LoXBigAMAA4AdAYAfAYAQ&ase=2&gclid=EAIaIQobChMIx6b3usKGmAMVp_suCR10gSSPEAEYBCAAEgKVc_D_BwE&num=4&cid=CAASqgHkaKmkqijeWlvi6TBvPfXv3weu08KdSr1ZmE2xC1CmghUADuEnKd2aGTmV6b7RpCG_dXLM59rInmqsPvdpM7L5wwdwu0OZgH7OSuEBDUYNiwHu4RrBpKqv-izll50yKCiLM4bnIwRHCvW0G9jF6IriQyGmPdf33SJkQ48aPJ3cRetyeKYKsSla15ZePeqrpQLBmxG-c4R4TQvircLz1xGV6diaPe86E6wITA&ad_cpn=%5BCPN%5D&sig=AOD64_2NrV-YcNS347uu0Jik_fzGcDBCwQ&ctype=110&video_id=6NrKyYl8Q6A&label=video_click_to_advertiser_site&ms=%5BCLICK_MS%5D&nb=2&nx=%5BNX%5D&ny=%5BNY%5D&dim=%5BDIM%5D",
+      "channel": {
+        "name": "Acrobat",
+        "thumbnail": "https://yt3.ggpht.com/proxy/MOuz2I13I1fAnFfngtXtL_W4we9dtMgr0pZOHx9ZvXrWe0TzDLTj2mq2_seyh8bAOYiFhihUkC0bcCbQ2Rr3ROUyAm-g7fKx7ikqVy2aYwv8ap82JEQltB0uNj5JlrrMcTbQ-wFlNo0DfytWwYBrrCyx4-VnwgCwx-dn0fy6KEEwJzLjssuJHIvXA-MdWMvBvChh3bzxW7-sQCuvX2mDwrBOQUGt_eZzMbPzNL_oO6Ke1vjjr2458wPYmALVc80eUKLvvs8=w68-h68-nd"
+      },
+      "description": "Student Spaces is your free, go-to study partner.",
+      "thumbnail": {
+        "static": "https://tpc.googlesyndication.com/simgad/11041622813235535218"
+      }
+    },
+    {
+      "position_on_page": 18,
+      "title": "New updates to SkyCiv for Excel!",
+      "link": "https://www.youtube.com/watch?v=z0U5RjGmQkA",
+      "serpapi_link": "https://serpapi.com/search.json?engine=youtube_video&gl=bo&hl=es&v=z0U5RjGmQkA",
+      "website": "https://www.googleadservices.com/pagead/aclk?sa=L&ai=Cf9v5n9X3aofbEaf3u_kP9IKS-Qjgy9KnigG95OSzmhawkB8QBSAAYMnGlIqcpKAWggEXY2EtcHViLTYyMTk4MTE3NDcwNDkzNzGgAafiqrgDqQIkZ0_r-rimPqgDBMgDCqoErQJP0L_qAU2jxV4GD1ecUBNRUk2NGOtVu3_xQtkwO0upHuqZOgDdrhOW-mH-oO22bdfSch8ksStU_nVU3G_CD7Cqr41NCIxfof2QAcHNQE7e50qqNOFeK4WA1N1beHfUecfZF4NdtaX47VGN3yzDxBlKoqh6gADcVVSOnsWa7I2gUrhyOzGojUncVllt9blFy4t3YYVYtLv6E57OVKFjEb3kwZBr-YjyaWcClJ42bXATmZIyaKXDsvg18tcYqw-BQUJi54FB9OXvgK-pWkhES7_m3APmyP7MsasUkXap8XKS_RyjcFTShhBhQwtDcFqJMtod1n1_ToQzGhSMjp_QteUK924hmKL8z0C5kgZViwz59VQB2JaZz_NMvl-IGclSgM9KDc8CePV9MaaWYAwDiAXmieThWpIFBwgTeLmB2kigBqEBgAfBndVHkAcEqAfq7rECqAelz7ECqAfnnbECqAfonbECqAeD9rECqAf507ECqAfJ2rECqAep4LECqAeo0huoB7HcG6gHsJuxAqgH_bKxAqgHyM-xAqgHyc-xAqgH_NWxAqgH-9WxAqgHjNaxAqgHi9axAqgHmuKxAqgHm-KxAqgHnuqxAqgHn-qxAqgH-OuxAqgHvOqxAqgH_K-xAqgH1c4bqAe-2bECqAe_2bECqAec3BuoB7ehsQKoB9WpsQKoB-fasQKoB961sQKoB-qxsQKoB763sQKoB5m1sQKoB4XBsQKoB-ulsQKoB8qpsQKSCAt6MFU1UmpHbVFrQagIAdIILgiAQRABGF4yAoICOg-AQoDAgICAgICAAqqAgBhI2aDSNVAUWMCV97rChpgDYAGaCR1odHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaLEJdh6u9f8MfXHICRfICY8ByAnCAcgJlQKYCwG6CzoIAxAFGAQgBygBMBxAAUgAWH1gAGgAcAGIAQCYAQGiAQgKAKgCAdgCAtgBAYACAYgCEroDBXZpY2Jm0AsTogw0YhgKFmNvbS5nb29nbGUuaW9zLnlvdXR1YmVqEwoRY29tLnNreWNpdi5Ta3lDaXZ4AIgBANIMAhAB2gwlCgoQsMCWxZy827cSEgIBAxoNGOaJ5OFaIPbz-_3oBUABSgIQH5oNAROqDQJVU8gNAbgT____________AbAUA8AVgYCAQNAVAdgVAZgWAYAXAYoXGAgDGAEgASgBMAE4AUABSAFQAVgBYAJoAaAXAboXBigAMAA4AdAYAfAYAcIZAggB&ase=2&gclid=EAIaIQobChMIx6b3usKGmAMVp_suCR10gSSPEAEYBSAAEgKQivD_BwE&num=5&cid=CAASqgHkaKmkqijeWlvi6TBvPfXv3weu08KdSr1ZmE2xC1CmghUADuEnKd2aGTmV6b7RpCG_dXLM59rInmqsPvdpM7L5wwdwu0OZgH7OSuEBDUYNiwHu4RrBpKqv-izll50yKCiLM4bnIwRHCvW0G9jF6IriQyGmPdf33SJkQ48aPJ3cRetyeKYKsSla15ZePeqrpQLBmxG-c4R4TQvircLz1xGV6diaPe86E6wITA&ad_cpn=%5BCPN%5D&sig=AOD64_3g17Oe9LxJhPR0EuKY_u9969tGOQ&ms=%5BCLICK_MS%5D&adurl=https://www.youtube.com/watch%3Fv%3DRHmlHX6gqo4%26gad_source%3D2%26gad_campaignid%3D24364254438&ctype=110&video_id=z0U5RjGmQkA&label=video_click_to_advertiser_site&nb=2&nx=%5BNX%5D&ny=%5BNY%5D&dim=%5BDIM%5D",
+      "channel": {
+        "name": "SkyCiv",
+        "thumbnail": "https://yt3.ggpht.com/proxy/WLpzKJtPyLZCkaCTdcBvgg7fgvPqCKK8rZuW1hXGh23hYGUeOrPZfgRuLPSE4GEd5wxzMalmZAFoTViPN6bEveyoUOmV1Muwfn4DKEippwST2hF5V6mO3wJQ_1MX4lajlHrFpKrD35uIrOyjVtv-G-RKCJYrBC_ttb5UCzYaof5rRVhIC_vDT6d7A-Psj7HEZzTeKz2nW8dOJRwODQSHQeke-BCYL56_nZxNRZsoLW84H-E0mLzQnNi5cV5bzs8zxcrnhJE=w68-h68-nd"
+      },
+      "description": "Take Your Excel Engineering Workflow to the Next Level with SkyCiv",
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/z0U5RjGmQkA/hq720.jpg?sqp=-oaymwE2COgCEMoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARgtIEcofzAP&rs=AOn4CLDsMjh414-AFfwtAQY2GLZ8CDNmZg"
+      }
+    }
+  ],
+  "video_results": [
+    {
+      "position_on_page": 2,
+      "title": "Tutorial de n8n para Principiantes 2026: Crea Agentes de IA Paso a Paso",
+      "link": "https://www.youtube.com/watch?v=AJfd-eVf5eU",
+      "serpapi_link": "https://serpapi.com/search.json?engine=youtube_video&gl=bo&hl=es&v=AJfd-eVf5eU",
+      "video_id": "AJfd-eVf5eU",
+      "channel": {
+        "name": "Metics Media | Español",
+        "channel_id": "UCpTMvk2IXn5juo_uKd2zfdw",
+        "link": "https://www.youtube.com/@MeticsMediaEspanol",
+        "thumbnail": "https://yt3.ggpht.com/cWJIHOG4-KZbN7pGqHb4JtJlZ2MXakU7v7zWrCrye2aePQSf8tApCTmFOIO7m6k2RCBOcMcddA=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "published_date": "hace 1 a",
+      "views": 262064,
+      "length": "27:45",
+      "description": "Este tutorial para principiantes de n8n te muestra cómo crear agentes de IA paso a paso. Automatiza flujos de trabajo, integra ...",
+      "extensions": [
+        "4K"
+      ],
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/AJfd-eVf5eU/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA9UoCbYSEBHMk5CQvQmP8n8mskMA",
+        "rich": "https://i.ytimg.com/an_webp/AJfd-eVf5eU/mqdefault_6s.webp?du=3000&sqp=CMKB39cG&rs=AOn4CLAKkI-Qvskym3IiTgXR_LEHLlmlDA"
+      }
+    },
+    {
+      "position_on_page": 3,
+      "title": "🤔 ¿Qué es N8N y para qué sirve? | Curso de N8N desde Cero para Principiantes | Capítulo 2",
+      "link": "https://www.youtube.com/watch?v=TixlT7lTWMQ",
+      "serpapi_link": "https://serpapi.com/search.json?engine=youtube_video&gl=bo&hl=es&v=TixlT7lTWMQ",
+      "video_id": "TixlT7lTWMQ",
+      "channel": {
+        "name": "Aprende a Programar",
+        "channel_id": "UC-aSfQ1bPJNZGQSRsA1xGMA",
+        "link": "https://www.youtube.com/@aprendeaprogramar6670",
+        "thumbnail": "https://yt3.ggpht.com/0wKflpV0DaoxzPpYO7qqmu8adavadBHZDpoIRElzwUdsswAmJ0Zk-jI0IrEzisA_48L0PlrGDQ=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "published_date": "hace 1 a",
+      "views": 53545,
+      "length": "3:23",
+      "description": "Aprende N8N ahora! Curso completo GRATIS desde cero ¿Querés automatizar tareas, crear flujos sin saber programar o ...",
+      "extensions": [
+        "4K"
+      ],
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/TixlT7lTWMQ/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBlQZGmxVQibGqQ01zoGqJb3xIOiw",
+        "rich": "https://i.ytimg.com/an_webp/TixlT7lTWMQ/mqdefault_6s.webp?du=3000&sqp=CIyf39cG&rs=AOn4CLCq678CE9TiAVB2_AXA9IdTP1jEgQ"
+      }
+    },
+    {
+      "position_on_page": 4,
+      "title": "Curso de N8N desde CERO (completo)",
+      "link": "https://www.youtube.com/watch?v=4eRPQmzO_Nw",
+      "serpapi_link": "https://serpapi.com/search.json?engine=youtube_video&gl=bo&hl=es&v=4eRPQmzO_Nw",
+      "video_id": "4eRPQmzO_Nw",
+      "channel": {
+        "name": "Soy Dalto",
+        "channel_id": "UCtoo4_P6ilCj7jwa4FmA5lQ",
+        "link": "https://www.youtube.com/@soydalto",
+        "verified": true,
+        "thumbnail": "https://yt3.ggpht.com/BaWrdCez09FC6hT6ItEnPBPy9iU-q3ko5kuaGXPaPlI0EuZtqnklw9dd6H2cWVbAy7NlILOXaW0=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "published_date": "hace 8 m",
+      "views": 318039,
+      "length": "1:48:16",
+      "description": "Bienvenidos al mejor curso de N8N que vas a encontrar en internet. Temario: 00:00 - Intro 01:54 - Entendiendo N8N 17:02 - Por ...",
+      "extensions": [
+        "4K"
+      ],
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/4eRPQmzO_Nw/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCEesgQvjdVnWe2mc0zsAv85jKwiQ",
+        "rich": "https://i.ytimg.com/an_webp/4eRPQmzO_Nw/mqdefault_6s.webp?du=3000&sqp=CMzo3tcG&rs=AOn4CLAFsKK_kvBTgDY8LvT8CgPPhD7d0w"
+      },
+      "chapters": [
+        {
+          "title": "Intro",
+          "thumbnail": "https://i.ytimg.com/vi/4eRPQmzO_Nw/hqdefault_24033.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB9eETcZDWsTxr-lNhtnu_7uEpLpQ",
+          "time_start": 0
+        },
+        {
+          "title": "Entendiendo N8N",
+          "thumbnail": "https://i.ytimg.com/vi/4eRPQmzO_Nw/hqdefault_131300.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDEebPg8uj6L2eJ8GN4xofy70EEyw",
+          "time_start": 114
+        },
+        {
+          "title": "Por qué usar N8N",
+          "thumbnail": "https://i.ytimg.com/vi/4eRPQmzO_Nw/hqdefault_1031000.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDvi0WHoJxItUGSdevyw_by69GhEQ",
+          "time_start": 1022
+        },
+        {
+          "title": "Flujo de datos itemizados",
+          "thumbnail": "https://i.ytimg.com/vi/4eRPQmzO_Nw/hqdefault_1650233.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDyHsNdJVIxv28kfStuSwPngXyn5A",
+          "time_start": 1633
+        },
+        {
+          "title": "Tipo de alojamiento",
+          "thumbnail": "https://i.ytimg.com/vi/4eRPQmzO_Nw/hqdefault_2406766.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB3vgYpDVrdgR2Moqj5tMBrBcRNvw",
+          "time_start": 2395
+        },
+        {
+          "title": "VPS",
+          "thumbnail": "https://i.ytimg.com/vi/4eRPQmzO_Nw/hqdefault_2499166.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCzx-XCOdkdtpz3Svh7Em4D1Tmb1A",
+          "time_start": 2470
+        },
+        {
+          "title": "Interfaz N8N",
+          "thumbnail": "https://i.ytimg.com/vi/4eRPQmzO_Nw/hqdefault_2707166.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC-l0EOY7mySggYa1_YQYs_CuaRbQ",
+          "time_start": 2689
+        },
+        {
+          "title": "Primer Flujo",
+          "thumbnail": "https://i.ytimg.com/vi/4eRPQmzO_Nw/hqdefault_2987233.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBnjM8yNSVZXKpZN1KbTA3Z6SSoOA",
+          "time_start": 2987
+        },
+        {
+          "title": "Triggers",
+          "thumbnail": "https://i.ytimg.com/vi/4eRPQmzO_Nw/hqdefault_3074900.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB2RX_ul_x4RosGV8elGYIJzHqqOw",
+          "time_start": 3047
+        },
+        {
+          "title": "Variables o expresiones",
+          "thumbnail": "https://i.ytimg.com/vi/4eRPQmzO_Nw/hqdefault_3197066.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAVfF6GtXagvei7I-PM_wPyBlhhqg",
+          "time_start": 3190
+        },
+        {
+          "title": "Gestión de credenciales",
+          "thumbnail": "https://i.ytimg.com/vi/4eRPQmzO_Nw/hqdefault_3361000.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA2FAEUDTjrIsncLhk5U4SDMB2wXg",
+          "time_start": 3358
+        },
+        {
+          "title": "Webhooks / Conexiones externas",
+          "thumbnail": "https://i.ytimg.com/vi/4eRPQmzO_Nw/hqdefault_3593233.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBMStDo1Sg8hhKy7MQpdM7VWwfI9g",
+          "time_start": 3593
+        },
+        {
+          "title": "Primera automatización",
+          "thumbnail": "https://i.ytimg.com/vi/4eRPQmzO_Nw/hqdefault_4280700.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBIZV-hFllDafWiMEtBzS03XC-ucw",
+          "time_start": 4251
+        },
+        {
+          "title": "Debug",
+          "thumbnail": "https://i.ytimg.com/vi/4eRPQmzO_Nw/hqdefault_5173033.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCJe9-DB4nndwSusmZkMVsEYSWbtA",
+          "time_start": 5150
+        },
+        {
+          "title": "Optimizaciones",
+          "thumbnail": "https://i.ytimg.com/vi/4eRPQmzO_Nw/hqdefault_6111200.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA1tHS4Dt-m7we4LfAScd042vxBlQ",
+          "time_start": 6087
+        },
+        {
+          "title": "Despedida",
+          "thumbnail": "https://i.ytimg.com/vi/4eRPQmzO_Nw/hqdefault_6326900.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB8fseIC8MVT8FMmfL_B6AqGOUWnQ",
+          "time_start": 6324
+        }
+      ]
+    },
+    {
+      "position_on_page": 5,
+      "title": "n8n EXPLICADO en 3 Minutos",
+      "link": "https://www.youtube.com/watch?v=X13qYrBfhXY",
+      "serpapi_link": "https://serpapi.com/search.json?engine=youtube_video&gl=bo&hl=es&v=X13qYrBfhXY",
+      "video_id": "X13qYrBfhXY",
+      "channel": {
+        "name": "codigofacilito",
+        "channel_id": "UCLXRGxAzeaLDGaOphqapzmg",
+        "link": "https://www.youtube.com/@codigofacilito",
+        "verified": true,
+        "thumbnail": "https://yt3.ggpht.com/ytc/AIdro_kt9RHOt4zZmKV8wIWZaIdyumK9yS1VXfvh_iDJozt7i4w=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "published_date": "hace 8 m",
+      "views": 3709,
+      "length": "3:06",
+      "description": "Desbloquea más de +170 cursos Premium a un precio especial: https://codigofacilito.com/promo Síguenos en: Twitter: ...",
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/X13qYrBfhXY/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCERGE-MYTrAXD13fbZlOMhKjFHXA",
+        "rich": "https://i.ytimg.com/an_webp/X13qYrBfhXY/mqdefault_6s.webp?du=3000&sqp=CMKn39cG&rs=AOn4CLBjEM5LDq8ukwgrpriyM4OnYLAiGQ"
+      }
+    },
+    {
+      "position_on_page": 7,
+      "title": "¿Qué es N8N y para que sirve? - Explicación Rápida y Fácil",
+      "link": "https://www.youtube.com/watch?v=V50I7_Idu2E",
+      "serpapi_link": "https://serpapi.com/search.json?engine=youtube_video&gl=bo&hl=es&v=V50I7_Idu2E",
+      "video_id": "V50I7_Idu2E",
+      "channel": {
+        "name": "Omar Pumariega",
+        "channel_id": "UCtwU6yTAjtRjJILJcAJ-fvg",
+        "link": "https://www.youtube.com/@OmarPumariega",
+        "thumbnail": "https://yt3.ggpht.com/iRysB6mJG2VBfcd0HuQgp8mKiOXodk6n6895xIsmWT7LGEQfd47a2aAQWn6aAuDo0jQJ_58rizw=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "published_date": "hace 1 a",
+      "views": 13848,
+      "length": "12:14",
+      "description": "En este vídeo te explico qué es N8N, una herramienta de automatización que está dando tanto que hablar porque ha integrado la ...",
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/V50I7_Idu2E/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCoM2oGQOSxHDAN5TRiYL6rJsq8-w",
+        "rich": "https://i.ytimg.com/an_webp/V50I7_Idu2E/mqdefault_6s.webp?du=3000&sqp=CNWM39cG&rs=AOn4CLBLlDj2btmfB1G3MWb5BjlKH_3sRw"
+      },
+      "chapters": [
+        {
+          "title": "Introducción a N8N y las automatizaciones",
+          "thumbnail": "https://i.ytimg.com/vi_webp/V50I7_Idu2E/hqdefault.webp",
+          "time_start": 0
+        },
+        {
+          "title": "La gran diferencia de N8N con la IA",
+          "thumbnail": "https://i.ytimg.com/vi_webp/V50I7_Idu2E/hqdefault.webp",
+          "time_start": 31
+        },
+        {
+          "title": "Cómo funciona N8N visualmente como un Lego",
+          "thumbnail": "https://i.ytimg.com/vi_webp/V50I7_Idu2E/hqdefault.webp",
+          "time_start": 61
+        },
+        {
+          "title": "Integraciones y plataformas que puedes conectar",
+          "thumbnail": "https://i.ytimg.com/vi_webp/V50I7_Idu2E/hqdefault.webp",
+          "time_start": 121
+        },
+        {
+          "title": "Precios N8N Cloud vs instalarlo en tu VPS",
+          "thumbnail": "https://i.ytimg.com/vi_webp/V50I7_Idu2E/hqdefault.webp",
+          "time_start": 152
+        },
+        {
+          "title": "Herramientas conectables y miles de plantillas",
+          "thumbnail": "https://i.ytimg.com/vi_webp/V50I7_Idu2E/hqdefault.webp",
+          "time_start": 213
+        },
+        {
+          "title": "Empieza por automatizaciones sencillas",
+          "thumbnail": "https://i.ytimg.com/vi_webp/V50I7_Idu2E/hqdefault.webp",
+          "time_start": 307
+        },
+        {
+          "title": "Caso real crear contenido para redes sociales",
+          "thumbnail": "https://i.ytimg.com/vi_webp/V50I7_Idu2E/hqdefault.webp",
+          "time_start": 367
+        },
+        {
+          "title": "Caso real agente de soporte IA 24/7 para tienda",
+          "thumbnail": "https://i.ytimg.com/vi_webp/V50I7_Idu2E/hqdefault.webp",
+          "time_start": 398
+        },
+        {
+          "title": "Caso real publicar posts de blog automáticamente",
+          "thumbnail": "https://i.ytimg.com/vi_webp/V50I7_Idu2E/hqdefault.webp",
+          "time_start": 458
+        },
+        {
+          "title": "Analizar páginas web para SEO con IA",
+          "thumbnail": "https://i.ytimg.com/vi_webp/V50I7_Idu2E/hqdefault.webp",
+          "time_start": 492
+        },
+        {
+          "title": "Tendencias actuales asistentes de voz y generación",
+          "thumbnail": "https://i.ytimg.com/vi_webp/V50I7_Idu2E/hqdefault.webp",
+          "time_start": 553
+        },
+        {
+          "title": "Por qué los agentes conversacionales son el futuro",
+          "thumbnail": "https://i.ytimg.com/vi_webp/V50I7_Idu2E/hqdefault.webp",
+          "time_start": 614
+        },
+        {
+          "title": "Conclusión y qué veremos en el canal",
+          "thumbnail": "https://i.ytimg.com/vi_webp/V50I7_Idu2E/hqdefault.webp",
+          "time_start": 705
+        }
+      ]
+    },
+    {
+      "position_on_page": 10,
+      "title": "Tutorial de n8n para Principiantes (2026) – Guía Completa",
+      "link": "https://www.youtube.com/watch?v=oHgtwr3Txig",
+      "serpapi_link": "https://serpapi.com/search.json?engine=youtube_video&gl=bo&hl=es&v=oHgtwr3Txig",
+      "video_id": "oHgtwr3Txig",
+      "channel": {
+        "name": "Metics Media | Español",
+        "channel_id": "UCpTMvk2IXn5juo_uKd2zfdw",
+        "link": "https://www.youtube.com/@MeticsMediaEspanol",
+        "thumbnail": "https://yt3.ggpht.com/cWJIHOG4-KZbN7pGqHb4JtJlZ2MXakU7v7zWrCrye2aePQSf8tApCTmFOIO7m6k2RCBOcMcddA=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "published_date": "hace 10 m",
+      "views": 3318,
+      "length": "16:19",
+      "description": "Este tutorial de n8n para principiantes te muestra paso a paso cómo crear tu primer flujo de trabajo en n8n, incluyendo ...",
+      "extensions": [
+        "4K"
+      ],
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/oHgtwr3Txig/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLARaNO0I3E-_NROUpieuGoUU-8nLg",
+        "rich": "https://i.ytimg.com/an_webp/oHgtwr3Txig/mqdefault_6s.webp?du=3000&sqp=CICU39cG&rs=AOn4CLCa3wJpDORkLRpVSdGkzTmWOddNxA"
+      },
+      "chapters": [
+        {
+          "title": "Intro",
+          "thumbnail": "https://i.ytimg.com/vi/oHgtwr3Txig/hqdefault_1933.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBMy-sZn7plIj06SkiyN2YhIndVxQ",
+          "time_start": 0
+        },
+        {
+          "title": "Configurar n8n (Autoalojado)",
+          "thumbnail": "https://i.ytimg.com/vi/oHgtwr3Txig/hqdefault_58300.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDm6y6Vt95pz9jZh8m9HwIsPHevUQ",
+          "time_start": 36
+        },
+        {
+          "title": "Crear tu primer flujo de trabajo (Automatización)",
+          "thumbnail": "https://i.ytimg.com/vi/oHgtwr3Txig/hqdefault_112866.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAna6ZB4Tb2vGmmTNfTVAepXWioBA",
+          "time_start": 111
+        },
+        {
+          "title": "Añadir nodos de flujo y lógica condicional",
+          "thumbnail": "https://i.ytimg.com/vi/oHgtwr3Txig/hqdefault_467066.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC-244UO3DaC5cMmHZb4QAWTOiKjA",
+          "time_start": 456
+        },
+        {
+          "title": "Integración de agentes de IA",
+          "thumbnail": "https://i.ytimg.com/vi/oHgtwr3Txig/hqdefault_606866.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAOHLQN0hoy8rdAKLCc-z7KieBNTA",
+          "time_start": 600
+        },
+        {
+          "title": "Uso de plantillas",
+          "thumbnail": "https://i.ytimg.com/vi/oHgtwr3Txig/hqdefault_845900.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDf4URf-FYqKBhK9530vLHmS66jow",
+          "time_start": 843
+        },
+        {
+          "title": "Instalación de nodos de la comunidad",
+          "thumbnail": "https://i.ytimg.com/vi/oHgtwr3Txig/hqdefault_909800.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAROojQsId8XwYK4PTlVB5dWpKnaA",
+          "time_start": 892
+        }
+      ]
+    },
+    {
+      "position_on_page": 11,
+      "title": "¿Qué es n8n y para qué sirve? (FÁCIL)",
+      "link": "https://www.youtube.com/watch?v=RGNCtAj0298",
+      "serpapi_link": "https://serpapi.com/search.json?engine=youtube_video&gl=bo&hl=es&v=RGNCtAj0298",
+      "video_id": "RGNCtAj0298",
+      "channel": {
+        "name": "Pedro SEO",
+        "channel_id": "UC5ABuhKL2CIfTf54qTnTUhQ",
+        "link": "https://www.youtube.com/@PedroSEO",
+        "verified": true,
+        "thumbnail": "https://yt3.ggpht.com/ytc/AIdro_nnTu9hCKl6IQ1oxgMqDCgnFDK_shnrm9sM1G1aqu0kAw4T=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "published_date": "hace 1 a",
+      "views": 47637,
+      "length": "7:05",
+      "description": "Todos mis cursos +: soporte ilimitado: https://www.skool.com/ia-business-club/about Aprende porque n8n es la revolución de las ...",
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/RGNCtAj0298/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBkD0iZRGrSLchzb-mUBLmP_t0Qsw",
+        "rich": "https://i.ytimg.com/an_webp/RGNCtAj0298/mqdefault_6s.webp?du=3000&sqp=CJyR39cG&rs=AOn4CLApFtgvPqJkz8Ey8k0RUEY8nj3-Mw"
+      }
+    },
+    {
+      "position_on_page": 14,
+      "title": "Qué es N8n y cómo crear tu primer agente",
+      "link": "https://www.youtube.com/watch?v=k3YUGsfPRPg",
+      "serpapi_link": "https://serpapi.com/search.json?engine=youtube_video&gl=bo&hl=es&v=k3YUGsfPRPg",
+      "video_id": "k3YUGsfPRPg",
+      "channel": {
+        "name": "Alan Daitch",
+        "channel_id": "UCzfyW6wo2Q123IqMKe7B_Qw",
+        "link": "https://www.youtube.com/@AlanDaitch",
+        "thumbnail": "https://yt3.ggpht.com/Uz9lThC-9KI34uVl2Mwpx8w46e9u8vXlB8Ryk04Eg58rFWKNS1kV6XbnI8BKgtn5Lvp_pQKSZpU=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "published_date": "hace 1 a",
+      "views": 69008,
+      "length": "0:52",
+      "description": "Sabías que podés automatizar las tareas más aburridas de tu negocio sin programar nada? Podés encontrar mi tutorial ...",
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/k3YUGsfPRPg/hq720_2.jpg?sqp=-oaymwE2COgCEMoBSFXyq4qpAygIARUAAIhCGABwAcABBvABAfgBtgiAAoAPigIMCAAQARhyIEsoQTAP&rs=AOn4CLC-1hopSKFcVP4M1syhWooeqGx3Hg",
+        "rich": "https://i.ytimg.com/an_webp/k3YUGsfPRPg/mqdefault_6s.webp?du=3000&sqp=CLD83tcG&rs=AOn4CLDLSozci1rWbl9bv0xzNEt32aPwQw"
+      }
+    },
+    {
+      "position_on_page": 15,
+      "title": "Claude vs N8N: Cual Automatiza Mejor (el Resultado me Sorprendió)",
+      "link": "https://www.youtube.com/watch?v=vSB7FvxB0LQ",
+      "serpapi_link": "https://serpapi.com/search.json?engine=youtube_video&gl=bo&hl=es&v=vSB7FvxB0LQ",
+      "video_id": "vSB7FvxB0LQ",
+      "channel": {
+        "name": "Academia IA Lab",
+        "channel_id": "UC_j6RqDBHE-G53Qjs8riHeg",
+        "link": "https://www.youtube.com/@AcademiaIAlab",
+        "thumbnail": "https://yt3.ggpht.com/ngGpl2VWRTNrW5i_7zRQfeFgOBKASMqF5urPfFV-nbUusIIzL62EFpAT-a4nNasj9Qp4tfoZ-w=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "published_date": "hace 7 m",
+      "views": 10533,
+      "length": "9:46",
+      "description": "Le di la misma tarea a #claude y a #N8N. Una tardé 20 minutos en configurar. La otra me tomó un día entero. Los resultados ...",
+      "extensions": [
+        "4K"
+      ],
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/vSB7FvxB0LQ/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBn91J5GzHRpIbGtRNbrH1VvJQdsg",
+        "rich": "https://i.ytimg.com/an_webp/vSB7FvxB0LQ/mqdefault_6s.webp?du=3000&sqp=CKyb39cG&rs=AOn4CLB-bkaziJzFptV3rwfkViDTW4mZMQ"
+      },
+      "chapters": [
+        {
+          "title": "Claude Cowork vs N8N: la misma tarea, dos sistemas",
+          "thumbnail": "https://i.ytimg.com/vi/vSB7FvxB0LQ/hqdefault_7966.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCbDLBQOMUIsc-ru4BqNS-mFHOW3g",
+          "time_start": 0
+        },
+        {
+          "title": "El problema real: cómo detectar tendencias de IA antes de que exploten",
+          "thumbnail": "https://i.ytimg.com/vi/vSB7FvxB0LQ/hqdefault_33966.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD0hynC2B4oO0ynRzO3VxQnvmlZpQ",
+          "time_start": 30
+        },
+        {
+          "title": "La metodología: fuentes, puntajes y el criterio de tendencia",
+          "thumbnail": "https://i.ytimg.com/vi/vSB7FvxB0LQ/hqdefault_86000.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBETPjBZwJBsOHFfsck5KObMglWaA",
+          "time_start": 58
+        },
+        {
+          "title": "Claude Cowork: configuración en 20 minutos",
+          "thumbnail": "https://i.ytimg.com/vi/vSB7FvxB0LQ/hqdefault_152266.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACkhN-2MAor4a4dCVX5EhBjA5svw",
+          "time_start": 133
+        },
+        {
+          "title": "El prompt clave y cómo pedirle que entregue el resultado",
+          "thumbnail": "https://i.ytimg.com/vi/vSB7FvxB0LQ/hqdefault_229866.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDd5A4IZl44kEQWCRlexWphxdnPQA",
+          "time_start": 212
+        },
+        {
+          "title": "Tip importante: usa Haiku para las pruebas, no Sonnet",
+          "thumbnail": "https://i.ytimg.com/vi/vSB7FvxB0LQ/hqdefault_254866.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBp7uknN_Eun017AeesPClYLO-iJg",
+          "time_start": 248
+        },
+        {
+          "title": "N8N: el método complejo (y por qué vale la pena)",
+          "thumbnail": "https://i.ytimg.com/vi/vSB7FvxB0LQ/hqdefault_262100.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAXrW1RU_djUcPZQKWBQc8HxSUsRg",
+          "time_start": 255
+        },
+        {
+          "title": "Cómo usar Claude para generar el flujo JSON completo de N8N",
+          "thumbnail": "https://i.ytimg.com/vi/vSB7FvxB0LQ/hqdefault_295100.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAIguQW9TcS-DuNfcS8XF52pGv0oA",
+          "time_start": 281
+        },
+        {
+          "title": "La realidad de N8N: nunca funciona a la primera",
+          "thumbnail": "https://i.ytimg.com/vi/vSB7FvxB0LQ/hqdefault_345066.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC6YYz4-Ftl-ya8ELADJs_jM9H-Ng",
+          "time_start": 334
+        },
+        {
+          "title": "Los resultados reales después de una semana",
+          "thumbnail": "https://i.ytimg.com/vi/vSB7FvxB0LQ/hqdefault_407766.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLChU0K_1986w68DVi8sHoCU-fQJag",
+          "time_start": 385
+        },
+        {
+          "title": "¿Cuál es mejor? La respuesta honesta",
+          "thumbnail": "https://i.ytimg.com/vi/vSB7FvxB0LQ/hqdefault_506966.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBb0TOU6918lD5XQnreV9poClErwA",
+          "time_start": 501
+        },
+        {
+          "title": "Advertencia real: el consumo de tokens en Claude Cowork",
+          "thumbnail": "https://i.ytimg.com/vi/vSB7FvxB0LQ/hqdefault_530900.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDRTYItzExtWlSXbJYLJey1-Ux_gA",
+          "time_start": 525
+        },
+        {
+          "title": "El factor económico de N8N a largo plazo",
+          "thumbnail": "https://i.ytimg.com/vi/vSB7FvxB0LQ/hqdefault_571933.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD6gM6LeIPe_mbwcQh0Ehk4LGUqXA",
+          "time_start": 542
+        }
+      ]
+    },
+    {
+      "position_on_page": 16,
+      "title": "De Principiante a Arquitecto de Workflows: Tu Viaje Práctico con n8n",
+      "link": "https://www.youtube.com/watch?v=EvqVVFRnYOY",
+      "serpapi_link": "https://serpapi.com/search.json?engine=youtube_video&gl=bo&hl=es&v=EvqVVFRnYOY",
+      "video_id": "EvqVVFRnYOY",
+      "channel": {
+        "name": "Centro de Graduados de Ingeniería",
+        "channel_id": "UCmXtpdu6SIFMDC5OATfFbyQ",
+        "link": "https://www.youtube.com/@CentrodeGraduadosdeIngenier%C3%ADa",
+        "thumbnail": "https://yt3.ggpht.com/ytc/AIdro_k-PjOG5qjYHoSTH6pAJykJPshMNCTnZkdLtCckOZ99Fe4=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "published_date": "hace 5 m",
+      "views": 1024,
+      "length": "2:14:25",
+      "description": "Pasá de usar ChatGPT como herramienta a diseñar agentes y automatizaciones que trabajan por vos Formulario de inscripción ...",
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/EvqVVFRnYOY/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDJrUgKaIud9PSBqUBmZ34Reiy0hw",
+        "rich": "https://i.ytimg.com/an_webp/EvqVVFRnYOY/mqdefault_6s.webp?du=3000&sqp=CNr_3tcG&rs=AOn4CLA4Kah9FW0l-A0Dr71NOZO5zcA_Rg"
+      }
+    },
+    {
+      "position_on_page": 19,
+      "title": "Tutorial de n8n para Principiantes: Cómo Crear Automatizaciones con IA GRATIS en 2026 (Paso a Paso)",
+      "link": "https://www.youtube.com/watch?v=BAveIPkWaL4",
+      "serpapi_link": "https://serpapi.com/search.json?engine=youtube_video&gl=bo&hl=es&v=BAveIPkWaL4",
+      "video_id": "BAveIPkWaL4",
+      "channel": {
+        "name": "Victor Robles WEB",
+        "channel_id": "UCv85NiROLKddHa0fBATwTzw",
+        "link": "https://www.youtube.com/@victorroblesweb",
+        "verified": true,
+        "thumbnail": "https://yt3.ggpht.com/ytc/AIdro_njmB5jmScUOEAkHOvLmlbiwyDW6Sjo9QNMAn_mYqKW17c=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "published_date": "hace 10 m",
+      "views": 28324,
+      "length": "18:38",
+      "description": "Suscribete: https://youtube.com/c/VictorRoblesWEB?sub_confirmation=1 Master en n8n: Automatizaciones y Agentes de IA: ...",
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/BAveIPkWaL4/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBAen4vsgQs-aQPsKmRRrZWkTcK-Q",
+        "rich": "https://i.ytimg.com/an_webp/BAveIPkWaL4/mqdefault_6s.webp?du=3000&sqp=CKyQ39cG&rs=AOn4CLCP8izwCjtlLjM1UbwaQyqbiAm0fw"
+      }
+    },
+    {
+      "position_on_page": 21,
+      "title": "Claude con N8N: Automatiza tu Trabajo en 10 Minutos Sin Código",
+      "link": "https://www.youtube.com/watch?v=pHxDINOerb4",
+      "serpapi_link": "https://serpapi.com/search.json?engine=youtube_video&gl=bo&hl=es&v=pHxDINOerb4",
+      "video_id": "pHxDINOerb4",
+      "channel": {
+        "name": "Academia IA Lab",
+        "channel_id": "UC_j6RqDBHE-G53Qjs8riHeg",
+        "link": "https://www.youtube.com/@AcademiaIAlab",
+        "thumbnail": "https://yt3.ggpht.com/ngGpl2VWRTNrW5i_7zRQfeFgOBKASMqF5urPfFV-nbUusIIzL62EFpAT-a4nNasj9Qp4tfoZ-w=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "published_date": "hace 6 m",
+      "views": 23809,
+      "length": "10:16",
+      "description": "Claude te ayuda a crear flujos IMPRESIONANTES en N8N en minutos. En este video te explico como crearlos en #claude y ...",
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/pHxDINOerb4/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCWaIM26DmM4SGIX96V98SQ6ayD5w",
+        "rich": "https://i.ytimg.com/an_webp/pHxDINOerb4/mqdefault_6s.webp?du=3000&sqp=COSc39cG&rs=AOn4CLC6gt7XThovkPg2_vINx17vjeKmpw"
+      },
+      "chapters": [
+        {
+          "title": "Por qué N8N parece complicado (y cómo resolverlo)",
+          "thumbnail": "https://i.ytimg.com/vi/pHxDINOerb4/hqdefault_12933.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCY17Wi4nVJNEBp1aMBpjM0Ri8Gvw",
+          "time_start": 0
+        },
+        {
+          "title": "Qué necesitas para empezar",
+          "thumbnail": "https://i.ytimg.com/vi/pHxDINOerb4/hqdefault_41200.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDzNvilojpHYYQ9_pEjU99pyqlP3w",
+          "time_start": 28
+        },
+        {
+          "title": "Por qué N8N necesita un VPS (patrocinador: HostGator)",
+          "thumbnail": "https://i.ytimg.com/vi/pHxDINOerb4/hqdefault_90300.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD8x_46T857zETOMXyiWSKDKYscEg",
+          "time_start": 68
+        },
+        {
+          "title": "El método en 3 pasos",
+          "thumbnail": "https://i.ytimg.com/vi/pHxDINOerb4/hqdefault_172100.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAh1i2ODLOcKYRzUWIynztmNoFddw",
+          "time_start": 168
+        },
+        {
+          "title": "Ejemplo 1: Flujo de noticias de IA por email",
+          "thumbnail": "https://i.ytimg.com/vi/pHxDINOerb4/hqdefault_208766.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAnrsFesChiFVKI-lblEr_Wp_DONA",
+          "time_start": 202
+        },
+        {
+          "title": "Cómo importar el JSON en N8N",
+          "thumbnail": "https://i.ytimg.com/vi/pHxDINOerb4/hqdefault_272866.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC1Ah1oGk4MxgmkeRYiM6McZUvakA",
+          "time_start": 262
+        },
+        {
+          "title": "Cómo conectar credenciales",
+          "thumbnail": "https://i.ytimg.com/vi/pHxDINOerb4/hqdefault_329866.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD0_QlKtAc8tXBGBwDHbkJTivAlwA",
+          "time_start": 315
+        },
+        {
+          "title": "Tip esencial: cómo debuggear errores con Claude",
+          "thumbnail": "https://i.ytimg.com/vi/pHxDINOerb4/hqdefault_363833.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA0yRdGIJsCX0JvrrQgW_JbkWzOUA",
+          "time_start": 353
+        },
+        {
+          "title": "Ejemplo 2: Resumen inteligente de tu bandeja de entrada",
+          "thumbnail": "https://i.ytimg.com/vi/pHxDINOerb4/hqdefault_425100.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC72ezLGXUvSPnyq72DAhKpVGqyDg",
+          "time_start": 410
+        },
+        {
+          "title": "3 cosas importantes antes de empezar",
+          "thumbnail": "https://i.ytimg.com/vi/pHxDINOerb4/hqdefault_535066.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCqlYxmbbv-AeuhSLZd80r5ADw4WQ",
+          "time_start": 518
+        }
+      ]
+    },
+    {
+      "position_on_page": 22,
+      "title": "Aprende n8n AHORA! curso gratis desde cero",
+      "link": "https://www.youtube.com/watch?v=T3LNPmYp980",
+      "serpapi_link": "https://serpapi.com/search.json?engine=youtube_video&gl=bo&hl=es&v=T3LNPmYp980",
+      "video_id": "T3LNPmYp980",
+      "channel": {
+        "name": "HolaMundo",
+        "channel_id": "UC4FHiPgS1KXkUMx3dxBUtPg",
+        "link": "https://www.youtube.com/@HolaMundoDev",
+        "verified": true,
+        "thumbnail": "https://yt3.ggpht.com/mNbmN9qWmMpQ-XN37IejdhwF5rn2-WD6fjRY8ZKcYUFer6F5Y-2vQTCDs3HpCHmOBtpeeWgu6g=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "published_date": "hace 1 a",
+      "views": 186959,
+      "length": "34:07",
+      "description": "Accede a tu VPS con n8n instalado aquí https://www.hostgator.la/7484-70-3-36.html Accede a todos mis cursos aquí y obtén ...",
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/T3LNPmYp980/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBCSN_ai1PSlOYdcPg2W6BQllH2pg",
+        "rich": "https://i.ytimg.com/an_webp/T3LNPmYp980/mqdefault_6s.webp?du=3000&sqp=CN2T39cG&rs=AOn4CLDRhYpS7L4vjupatdiGp7s9SXwOuA"
+      }
+    },
+    {
+      "position_on_page": 23,
+      "title": "Curso Completo De N8N: Cómo Crear y Vender Automatizaciones IA",
+      "link": "https://www.youtube.com/watch?v=7Z-vRvIUqNs",
+      "serpapi_link": "https://serpapi.com/search.json?engine=youtube_video&gl=bo&hl=es&v=7Z-vRvIUqNs",
+      "video_id": "7Z-vRvIUqNs",
+      "channel": {
+        "name": "Adrián Sáenz y Juan Pe Navarro | IA y Automatización",
+        "thumbnail": "https://yt3.ggpht.com/-OdZAIOOkVnjrjiB9DY5Ax3Fc7xM_-mozEpleTNUTdmzWs_mtjtMZ_HzlBVFUqCe-W76nWJkTQ=s68-c-k-c0x00ffffff-no-rj"
+      },
+      "published_date": "hace 9 m",
+      "views": 485684,
+      "length": "8:30:03",
+      "description": "Descarga las plantillas: https://divisualproject.academy/curso-adrian-n8n-2 Servidor n8n: http://hostinger.com/adrianvps (utiliza el ...",
+      "extensions": [
+        "4K"
+      ],
+      "thumbnail": {
+        "static": "https://i.ytimg.com/vi/7Z-vRvIUqNs/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCVRxkpEZvhHudIQWp7uCB04vb0DQ",
+        "rich": "https://i.ytimg.com/an_webp/7Z-vRvIUqNs/mqdefault_6s.webp?du=3000&sqp=CNmf39cG&rs=AOn4CLAuYbQZ6LDL4e82OlHgsADt833v5w"
+      },
+      "chapters": [
+        {
+          "title": "Introducción",
+          "thumbnail": "https://i.ytimg.com/vi_webp/7Z-vRvIUqNs/hqdefault.webp",
+          "time_start": 0
+        },
+        {
+          "title": "Cómo vamos a ganar dinero",
+          "thumbnail": "https://i.ytimg.com/vi_webp/7Z-vRvIUqNs/hqdefault.webp",
+          "time_start": 110
+        },
+        {
+          "title": "Cómo instalar N8N",
+          "thumbnail": "https://i.ytimg.com/vi_webp/7Z-vRvIUqNs/hqdefault.webp",
+          "time_start": 1077
+        },
+        {
+          "title": "Automatización de redes sociales con IA",
+          "thumbnail": "https://i.ytimg.com/vi_webp/7Z-vRvIUqNs/hqdefault.webp",
+          "time_start": 6271
+        },
+        {
+          "title": "Automatización de captación de leads",
+          "thumbnail": "https://i.ytimg.com/vi_webp/7Z-vRvIUqNs/hqdefault.webp",
+          "time_start": 10113
+        },
+        {
+          "title": "Automatización de atención al cliente con IA",
+          "thumbnail": "https://i.ytimg.com/vi_webp/7Z-vRvIUqNs/hqdefault.webp",
+          "time_start": 13561
+        },
+        {
+          "title": "Automatización de vídeos virales",
+          "thumbnail": "https://i.ytimg.com/vi_webp/7Z-vRvIUqNs/hqdefault.webp",
+          "time_start": 20796
+        },
+        {
+          "title": "Cómo instalar tu asistente IA para n8n",
+          "thumbnail": "https://i.ytimg.com/vi_webp/7Z-vRvIUqNs/hqdefault.webp",
+          "time_start": 24152
+        },
+        {
+          "title": "Cómo conseguir clientes",
+          "thumbnail": "https://i.ytimg.com/vi_webp/7Z-vRvIUqNs/hqdefault.webp",
+          "time_start": 27863
+        }
+      ]
+    }
+  ],
+  "playlist_results": [
+    {
+      "position_on_page": 8,
+      "title": "CURSO COMPLETO DE AUTOMATIZACIÓN CON N8N",
+      "link": "https://www.youtube.com/playlist?list=PLwjjPKgjif66Gaa_euauV1UtwZqBv_O_i",
+      "channel": {
+        "name": "Agustín Medina | IA Partner ",
+        "channel_id": "UCDu7DnPnAfdwTg_bzDE1yKA",
+        "link": "https://www.youtube.com/@agustinmedinaIA"
+      },
+      "videos": [
+        {
+          "title": "Curso GRATIS de Automatización n8n en 1 hora (Sin Humo)",
+          "length": "1:12:52",
+          "link": "https://www.youtube.com/watch?v=tfYQSvWTA68&list=PLwjjPKgjif66Gaa_euauV1UtwZqBv_O_i"
+        },
+        {
+          "title": "Cómo instalar n8n  paso a paso (listo para entregar)",
+          "length": "25:43",
+          "link": "https://www.youtube.com/watch?v=r5XpEfUdM7M&list=PLwjjPKgjif66Gaa_euauV1UtwZqBv_O_i"
+        }
+      ],
+      "video_count": 15,
+      "thumbnail": "https://i.ytimg.com/vi/tfYQSvWTA68/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBbv4UJuHJci4-kRCQO0w-7-gB79A"
+    },
+    {
+      "position_on_page": 9,
+      "title": "🚀 Curso N8N para PRINCIPIANTES | DESDE CERO ⚡ Automatizá sin Código 💻 2026",
+      "link": "https://www.youtube.com/playlist?list=PL5YuOOJ-FGGiIpGdaQi4Ewv0BW1tc9wjn",
+      "channel": {
+        "name": "Aprende a Programar",
+        "channel_id": "UC-aSfQ1bPJNZGQSRsA1xGMA",
+        "link": "https://www.youtube.com/@aprendeaprogramar6670"
+      },
+      "videos": [
+        {
+          "title": "🔥 Curso de N8N desde Cero para Principiantes | Capítulo 1 - Introducción",
+          "length": "1:58",
+          "link": "https://www.youtube.com/watch?v=-4vJRHCerO8&list=PL5YuOOJ-FGGiIpGdaQi4Ewv0BW1tc9wjn"
+        },
+        {
+          "title": "🤔 ¿Qué es N8N y para qué sirve? | Curso de N8N desde Cero para Principiantes | Capítulo 2",
+          "length": "3:23",
+          "link": "https://www.youtube.com/watch?v=TixlT7lTWMQ&list=PL5YuOOJ-FGGiIpGdaQi4Ewv0BW1tc9wjn"
+        }
+      ],
+      "video_count": 74,
+      "thumbnail": "https://i.ytimg.com/vi/-4vJRHCerO8/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAOw3tDSr2EBIcekrqL0Wz0VsS-Tg"
+    },
+    {
+      "position_on_page": 13,
+      "title": "CURSO N8N de 0 a EXPERTO en ESPAÑOL ACADEMIA N8N",
+      "link": "https://www.youtube.com/playlist?list=PLec8cxMgUMyG3AcfjGeuNpoChqS9eFbvs",
+      "channel": {
+        "name": "Jorge cárdenas - IA - Automatizaciones ",
+        "channel_id": "UCTwcvqABLOrEyucgLKQwJfA",
+        "link": "https://www.youtube.com/@Jorge.IA_Automatizaciones"
+      },
+      "videos": [
+        {
+          "title": "CURSO N8N de 0 a experto en español | recorrido por la plataforma | ACADEMIA N8N | lección 1",
+          "length": "18:23",
+          "link": "https://www.youtube.com/watch?v=KCrUzFfankI&list=PLec8cxMgUMyG3AcfjGeuNpoChqS9eFbvs"
+        },
+        {
+          "title": "CURSO N8N de 0 a experto en español | tipos de TRIGGERS | ACADEMIA N8N | lección 2",
+          "length": "6:26",
+          "link": "https://www.youtube.com/watch?v=0Y7-0p2Rl3g&list=PLec8cxMgUMyG3AcfjGeuNpoChqS9eFbvs"
+        }
+      ],
+      "video_count": 39,
+      "thumbnail": "https://i.ytimg.com/vi/KCrUzFfankI/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBHccSZWB_x0zLvc9YCSoEpMd5Oeg"
+    },
+    {
+      "position_on_page": 17,
+      "title": "N8N para Principiantes: El Curso GRATIS (DESDE CERO) para Automatizar SIN SABER PROGRAMAR",
+      "link": "https://www.youtube.com/playlist?list=PL49RS_LkwT5kioPGs6z0PEw1wPDrkRCeJ",
+      "channel": {
+        "name": "Alan Daitch",
+        "channel_id": "UCzfyW6wo2Q123IqMKe7B_Qw",
+        "link": "https://www.youtube.com/@AlanDaitch"
+      },
+      "videos": [
+        {
+          "title": "N8N para Principiantes: El Curso GRATIS (DESDE CERO) para Automatizar SIN SABER PROGRAMAR",
+          "length": "0:51",
+          "link": "https://www.youtube.com/watch?v=XO3JIhcXAUw&list=PL49RS_LkwT5kioPGs6z0PEw1wPDrkRCeJ"
+        },
+        {
+          "title": "Qué es un AGENTE IA de Inteligencia Artificial EXPLICADO FÁCIL",
+          "length": "4:37",
+          "link": "https://www.youtube.com/watch?v=V8Wb3aijSdc&list=PL49RS_LkwT5kioPGs6z0PEw1wPDrkRCeJ"
+        }
+      ],
+      "video_count": 13,
+      "thumbnail": "https://i.ytimg.com/vi/XO3JIhcXAUw/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBd600W5L-B-CJxuSI5J1lhPpeS0g"
+    },
+    {
+      "position_on_page": 20,
+      "title": "Curso: n8n + MCP - Automatización y agentes de IA inteligentes | por Fernando Herrera",
+      "link": "https://www.youtube.com/playlist?list=PL3x8UHsMKD3llT0O03r8IosBKA5Dn-npG",
+      "channel": {
+        "name": "DevTalles",
+        "channel_id": "UCbIUE35mIBgbLY3sZJy2FZw",
+        "link": "https://www.youtube.com/@DevTalles"
+      },
+      "videos": [
+        {
+          "title": "n8n + MCP: Automatización y agentes IA inteligentes - video promocional | curso de Fernando Herrera",
+          "length": "2:51",
+          "link": "https://www.youtube.com/watch?v=Hx32BUkoSjA&list=PL3x8UHsMKD3llT0O03r8IosBKA5Dn-npG"
+        },
+        {
+          "title": "Curso de n8n + MCP:  Demostración sección 17",
+          "length": "2:04",
+          "link": "https://www.youtube.com/watch?v=UPhXMrZeckQ&list=PL3x8UHsMKD3llT0O03r8IosBKA5Dn-npG"
+        }
+      ],
+      "video_count": 29,
+      "thumbnail": "https://i.ytimg.com/vi/Hx32BUkoSjA/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCLbjtvwdB6EE_pvSCZofCqVU-GKA"
+    },
+    {
+      "position_on_page": 24,
+      "title": "Curso Completo n8n y Docker 2026 (De Cero a Producción)",
+      "link": "https://www.youtube.com/playlist?list=PL8TEYDeWgHjWOgeJ47LozerOnbRIzMPYt",
+      "channel": {
+        "name": "Comarca IA",
+        "channel_id": "UC0FU2N0p753yu7FRQfFCegQ",
+        "link": "https://www.youtube.com/@ComarcaIA"
+      },
+      "videos": [
+        {
+          "title": "Curso n8n y Docker 2026 Parte 1: Instalación Correcta de WSL2 y Docker en Windows 🪟🐳",
+          "length": "9:14",
+          "link": "https://www.youtube.com/watch?v=cJYUE8Zf0p8&list=PL8TEYDeWgHjWOgeJ47LozerOnbRIzMPYt"
+        },
+        {
+          "title": "Curso n8n y Docker 2026 Parte 2: Arquitectura de Redes Privadas y Volúmenes Persistentes 🔒🐳",
+          "length": "6:20",
+          "link": "https://www.youtube.com/watch?v=sw2Os1sBNSc&list=PL8TEYDeWgHjWOgeJ47LozerOnbRIzMPYt"
+        }
+      ],
+      "video_count": 10,
+      "thumbnail": "https://i.ytimg.com/vi/cJYUE8Zf0p8/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDf8Ofy1aG-YRxPzKzza6TLZclVNQ"
+    }
+  ],
+  "pagination": {
+    "current": "https://www.youtube.com/results?search_query=n8n+tutorial+espa%C3%B1ol&gl=bo&hl=es",
+    "next": "https://www.youtube.com/results?gl=bo&hl=es&search_query=n8n%20tutorial%20espa%C3%B1ol&sp=SBSCAQtBSmZkLWVWZjVlVYIBC1RpeGxUN2xUV01RggELNGVSUFFtek9fTneCAQtYMTNxWXJCZmhYWYIBC1Y1MEk3X0lkdTJFggEiUEx3ampQS2dqaWY2NkdhYV9ldWF1VjFVdHdacUJ2X09faYIBIlBMNVl1T09KLUZHR2lJcEdkYVFpNEV3djBCVzF0Yzl3am6CAQtvSGd0d3IzVHhpZ4IBC1JHTkN0QWowMjk4ggEiUExlYzhjeE1nVU15RzNBY2ZqR2V1TnBvQ2hxUzllRmJ2c4IBC2szWVVHc2ZQUlBnggELdlNCN0Z2eEIwTFGCAQtFdnFWVkZSbllPWYIBIlBMNDlSU19Ma3dUNWtpb1BHczZ6MFBFdzF3UERya1JDZUqCAQtCQXZlSVBrV2FMNIIBIlBMM3g4VUhzTUtEM2xsVDBPMDNyOElvc0JLQTVEbi1ucEeCAQtwSHhESU5PZXJiNIIBC1QzTE5QbVlwOTgwggELN1otdlJ2SVVxTnOCASJQTDhURVlEZVdnSGpXT2dlSjQ3TG96ZXJPbmJSSXpNUFl0sgEGCgQIGRAC",
+    "next_page_token": "SBSCAQtBSmZkLWVWZjVlVYIBC1RpeGxUN2xUV01RggELNGVSUFFtek9fTneCAQtYMTNxWXJCZmhYWYIBC1Y1MEk3X0lkdTJFggEiUEx3ampQS2dqaWY2NkdhYV9ldWF1VjFVdHdacUJ2X09faYIBIlBMNVl1T09KLUZHR2lJcEdkYVFpNEV3djBCVzF0Yzl3am6CAQtvSGd0d3IzVHhpZ4IBC1JHTkN0QWowMjk4ggEiUExlYzhjeE1nVU15RzNBY2ZqR2V1TnBvQ2hxUzllRmJ2c4IBC2szWVVHc2ZQUlBnggELdlNCN0Z2eEIwTFGCAQtFdnFWVkZSbllPWYIBIlBMNDlSU19Ma3dUNWtpb1BHczZ6MFBFdzF3UERya1JDZUqCAQtCQXZlSVBrV2FMNIIBIlBMM3g4VUhzTUtEM2xsVDBPMDNyOElvc0JLQTVEbi1ucEeCAQtwSHhESU5PZXJiNIIBC1QzTE5QbVlwOTgwggELN1otdlJ2SVVxTnOCASJQTDhURVlEZVdnSGpXT2dlSjQ3TG96ZXJPbmJSSXpNUFl0sgEGCgQIGRAC"
+  },
+  "serpapi_pagination": {
+    "current": "https://serpapi.com/search.json?engine=youtube&gl=bo&hl=es&search_query=n8n+tutorial+espa%C3%B1ol",
+    "next": "https://serpapi.com/search.json?engine=youtube&gl=bo&hl=es&search_query=n8n+tutorial+espa%C3%B1ol&sp=SBSCAQtBSmZkLWVWZjVlVYIBC1RpeGxUN2xUV01RggELNGVSUFFtek9fTneCAQtYMTNxWXJCZmhYWYIBC1Y1MEk3X0lkdTJFggEiUEx3ampQS2dqaWY2NkdhYV9ldWF1VjFVdHdacUJ2X09faYIBIlBMNVl1T09KLUZHR2lJcEdkYVFpNEV3djBCVzF0Yzl3am6CAQtvSGd0d3IzVHhpZ4IBC1JHTkN0QWowMjk4ggEiUExlYzhjeE1nVU15RzNBY2ZqR2V1TnBvQ2hxUzllRmJ2c4IBC2szWVVHc2ZQUlBnggELdlNCN0Z2eEIwTFGCAQtFdnFWVkZSbllPWYIBIlBMNDlSU19Ma3dUNWtpb1BHczZ6MFBFdzF3UERya1JDZUqCAQtCQXZlSVBrV2FMNIIBIlBMM3g4VUhzTUtEM2xsVDBPMDNyOElvc0JLQTVEbi1ucEeCAQtwSHhESU5PZXJiNIIBC1QzTE5QbVlwOTgwggELN1otdlJ2SVVxTnOCASJQTDhURVlEZVdnSGpXT2dlSjQ3TG96ZXJPbmJSSXpNUFl0sgEGCgQIGRAC",
+    "next_page_token": "SBSCAQtBSmZkLWVWZjVlVYIBC1RpeGxUN2xUV01RggELNGVSUFFtek9fTneCAQtYMTNxWXJCZmhYWYIBC1Y1MEk3X0lkdTJFggEiUEx3ampQS2dqaWY2NkdhYV9ldWF1VjFVdHdacUJ2X09faYIBIlBMNVl1T09KLUZHR2lJcEdkYVFpNEV3djBCVzF0Yzl3am6CAQtvSGd0d3IzVHhpZ4IBC1JHTkN0QWowMjk4ggEiUExlYzhjeE1nVU15RzNBY2ZqR2V1TnBvQ2hxUzllRmJ2c4IBC2szWVVHc2ZQUlBnggELdlNCN0Z2eEIwTFGCAQtFdnFWVkZSbllPWYIBIlBMNDlSU19Ma3dUNWtpb1BHczZ6MFBFdzF3UERya1JDZUqCAQtCQXZlSVBrV2FMNIIBIlBMM3g4VUhzTUtEM2xsVDBPMDNyOElvc0JLQTVEbi1ucEeCAQtwSHhESU5PZXJiNIIBC1QzTE5QbVlwOTgwggELN1otdlJ2SVVxTnOCASJQTDhURVlEZVdnSGpXT2dlSjQ3TG96ZXJPbmJSSXpNUFl0sgEGCgQIGRAC"
+  }
+}

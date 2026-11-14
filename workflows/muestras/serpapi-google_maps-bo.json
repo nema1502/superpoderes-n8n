@@ -1,0 +1,825 @@
+{
+  "search_metadata": {
+    "id": "6af7d59bc8816bfbdf369b18",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/xQt0IsDY5zDonQIr0fMlWhs0M9JXvLYfhLlP7PG8P44/6af7d59bc8816bfbdf369b18.json",
+    "markdown_endpoint": "https://serpapi.com/searches/xQt0IsDY5zDonQIr0fMlWhs0M9JXvLYfhLlP7PG8P44/6af7d59bc8816bfbdf369b18.md",
+    "created_at": "2026-11-14 03:29:31 UTC",
+    "processed_at": "2026-11-14 03:29:31 UTC",
+    "google_maps_url": "https://www.google.com/maps/search/caf%C3%A9/@-17.7833,-63.1821,14z/data=!3m1!4b1!4m2!2m1!6e5?hl=es",
+    "raw_html_file": "https://serpapi.com/searches/xQt0IsDY5zDonQIr0fMlWhs0M9JXvLYfhLlP7PG8P44/6af7d59bc8816bfbdf369b18.html",
+    "prettify_html_file": "https://serpapi.com/searches/xQt0IsDY5zDonQIr0fMlWhs0M9JXvLYfhLlP7PG8P44/6af7d59bc8816bfbdf369b18.prettify",
+    "total_time_taken": 0.97
+  },
+  "search_parameters": {
+    "engine": "google_maps",
+    "type": "search",
+    "q": "café",
+    "ll": "@-17.7833,-63.1821,14z",
+    "google_domain": "google.com",
+    "hl": "es"
+  },
+  "search_information": {
+    "local_results_state": "Results for exact spelling",
+    "query_displayed": "café"
+  },
+  "local_results": [
+    {
+      "position": 1,
+      "title": "Lúmina Café",
+      "place_id": "ChIJtQGDODrn8ZMRrCk2j3ONFiI",
+      "data_id": "0x93f1e73a388301b5:0x22168d738f3629ac",
+      "data_cid": "2456306174240631212",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x93f1e73a388301b5%3A0x22168d738f3629ac&engine=google_maps_reviews&hl=es",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x93f1e73a388301b5%3A0x22168d738f3629ac&engine=google_maps_photos&hl=es",
+      "gps_coordinates": {
+        "latitude": -17.7560731,
+        "longitude": -63.195854499999996
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=es&place_id=ChIJtQGDODrn8ZMRrCk2j3ONFiI",
+      "provider_id": "/g/11mkvgk5c3",
+      "rating": 4.7,
+      "reviews": 30,
+      "type": "Cafetería",
+      "types": [
+        "Cafetería"
+      ],
+      "address": "Calle Dra. María de Oliveira, Barchilones y, Santa Cruz de la Sierra, Bolivia",
+      "country": "Bolivia",
+      "open_state": "Cerrado · Abre a las 8:30 a.m. del sáb",
+      "hours": "Cerrado · Abre a las 8:30 a.m. del sáb",
+      "operating_hours": {
+        "viernes": "8 a.m.–9 p.m.",
+        "sábado": "8:30 a.m.–8:30 p.m.",
+        "domingo": "Cerrado",
+        "lunes": "8 a.m.–9 p.m.",
+        "martes": "8 a.m.–9 p.m.",
+        "miércoles": "8 a.m.–9 p.m.",
+        "jueves": "8 a.m.–9 p.m."
+      },
+      "phone": "+591 75047849",
+      "website": "https://www.instagram.com/luminacafe.bo",
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLdpbSPVbMFLAUUqwtoNswYtld1hGJ0XE6USRSpVAG3MKAz6oVRBjOk9HtC6pe0J8CYr2CYZ5xESuUwEEER0bqwGdOGHuNHB6Vr8kuA4i1EetuRqCzSIt80FTD25F5DrduPDgP39FOiLBnbA=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/T5ikWXicHcTBboIwGADgJ0KKCMElOxQoMIdCqJCxm0ADClJo_6bGl9x5b2Pid_j-_waARX6Y5jTYm57zfmJKMtHyGdgMm5bfzV5cpDRaaWLsj_e0WxqaV80xSnFZrhr4Seoaps4a4gP6IW5JC7pUOLaP3_jp8qrwb9m4TyBwF4YOXlCLbVD_Og9CVakJIQVqVh13WZyoU-K7lfBGhXdXizBQxRo86Rd4KDqHWydyQtGpPOxzex9l19SfG_ypLYSQMbxvjfkFhxZGHQ"
+    },
+    {
+      "position": 2,
+      "title": "Sitcom Café",
+      "place_id": "ChIJyf9W3DPn8ZMRsINKK9ubMhc",
+      "data_id": "0x93f1e733dc56ffc9:0x17329bdb2b4a83b0",
+      "data_cid": "1671569777334322096",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x93f1e733dc56ffc9%3A0x17329bdb2b4a83b0&engine=google_maps_reviews&hl=es",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x93f1e733dc56ffc9%3A0x17329bdb2b4a83b0&engine=google_maps_photos&hl=es",
+      "gps_coordinates": {
+        "latitude": -17.7669009,
+        "longitude": -63.196401699999996
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=es&place_id=ChIJyf9W3DPn8ZMRsINKK9ubMhc",
+      "provider_id": "/g/11ywmz6dmk",
+      "rating": 4.7,
+      "reviews": 122,
+      "type": "Cafetería",
+      "types": [
+        "Cafetería"
+      ],
+      "address": "C. 8 Oeste 13, Santa Cruz de la Sierra, Bolivia",
+      "country": "Bolivia",
+      "open_state": "Abierto · Cierra a las 2 a.m.",
+      "hours": "Abierto · Cierra a las 2 a.m.",
+      "operating_hours": {
+        "viernes": "3:30 p.m.–2 a.m.",
+        "sábado": "3:30 p.m.–2 a.m.",
+        "domingo": "3:30–11:30 p.m.",
+        "lunes": "3:30–11 p.m.",
+        "martes": "3:30–11:30 p.m.",
+        "miércoles": "3:30–11:30 p.m.",
+        "jueves": "3:30 p.m.–1 a.m."
+      },
+      "phone": "+591 75009936",
+      "website": "https://www.facebook.com/share/1DMZiVJHBr/?mibextid=wwXIfr",
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLedYFiZxg2OiNPRg1krwWvZIFffNVOHqJCoqNv4SAcGZqq7W8LAJtIhwy9mdfZyqEqc0cjWZz7NwOvt9-3IgQCz5zAO8kC2fgjaFYunYGlKmf0rrWyTHJwgaUCS_pzkC_QtsODnpMXFqx4I=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/R2U00HicHcRLcoIwAADQEyHxN2pnXMRUFLREqy2SjcNEEhRIyEciXLLr3qYzfYv3-1NY25g336-K8YBLyav8aXJNpbC5sAMqa5_rzBiPGh_CVVnv81sa3MmLj_A9PnzyYald0pIwYCz-xlsVIanidnKCdEOUmiXzPYxsWLhuUd8Y6dRaUUAfCelnscOtXXjjkB9RP-0hnpdoxPgjC9KnSDfVrmZA66Q7byPHsy90ujZ9ia5Ha_C7aD4ugXpNwqUbAgC84n_qiT9vAkmb"
+    },
+    {
+      "position": 3,
+      "title": "LA SALITA CAFÉ & SABOR",
+      "place_id": "ChIJB0XpAQDn8ZMRVnXYpxfaHU0",
+      "data_id": "0x93f1e70001e94507:0x4d1dda17a7d87556",
+      "data_cid": "5556837310380143958",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x93f1e70001e94507%3A0x4d1dda17a7d87556&engine=google_maps_reviews&hl=es",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x93f1e70001e94507%3A0x4d1dda17a7d87556&engine=google_maps_photos&hl=es",
+      "gps_coordinates": {
+        "latitude": -17.7627552,
+        "longitude": -63.1559824
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=es&place_id=ChIJB0XpAQDn8ZMRVnXYpxfaHU0",
+      "provider_id": "/g/11p1f4y8kz",
+      "rating": 5,
+      "reviews": 10,
+      "type": "Cafetería",
+      "types": [
+        "Cafetería"
+      ],
+      "address": "C. A. de Coca 3125, Santa Cruz de la Sierra, Bolivia",
+      "country": "Bolivia",
+      "open_state": "Cerrado · Abre a las 2:30 p.m. del sáb",
+      "hours": "Cerrado · Abre a las 2:30 p.m. del sáb",
+      "operating_hours": {
+        "viernes": "2:30–9:30 p.m.",
+        "sábado": "2:30–7:30 p.m.",
+        "domingo": "Cerrado",
+        "lunes": "2:30–7:30 p.m.",
+        "martes": "2:30–7:30 p.m.",
+        "miércoles": "2:30–7:30 p.m.",
+        "jueves": "2:30–7:30 p.m."
+      },
+      "phone": "+591 75500766",
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLebfuwo6ep7037h0N68FH5zjJQtMxnKhcLVRSoON5GTw6RO-e5ZltQpt5AO_6I2OzUUgDGHdYAUFLemxuEjE4szKtUEI35Sf6qX00e4jfRuMOoZtQQEkv38tH9W49ePE3-SgKONq-xTAWXb=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/wYiymXicHcTBboIwGADgJ6p0K0VdskPNqjiQDhB1XpbZlTYIFO3PILzkznubJfsO3--PAejck-fVhsy0tbpWvVN3aVtQLcykbTx9_3QOSecxtro2sbqU_WAD1c0xmRucBIt1SKfqNYXd2EZGxocstyKhm_0QZAIpeq4h7YAy8RFsH8VUFPplE369s2Idq2bsecV9N0VQ8C2heRncThgrvyqzfifsGdKUX7_JAsLl0V-qN05QriOR3NC4Z8fT5Xl4wBgj879E7R9g6UYU"
+    },
+    {
+      "position": 4,
+      "title": "Puro Café",
+      "place_id": "ChIJGx5nx_np8ZMR88tDCMpY47Y",
+      "data_id": "0x93f1e9f9c7671e1b:0xb6e358ca0843cbf3",
+      "data_cid": "13178474559361502195",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x93f1e9f9c7671e1b%3A0xb6e358ca0843cbf3&engine=google_maps_reviews&hl=es",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x93f1e9f9c7671e1b%3A0xb6e358ca0843cbf3&engine=google_maps_photos&hl=es",
+      "gps_coordinates": {
+        "latitude": -17.7771851,
+        "longitude": -63.189676
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=es&place_id=ChIJGx5nx_np8ZMR88tDCMpY47Y",
+      "provider_id": "/g/11xngn_q2g",
+      "rating": 4.9,
+      "reviews": 22,
+      "type": "Cafetería",
+      "types": [
+        "Cafetería"
+      ],
+      "address": "+591, Santa Cruz de la Sierra, Bolivia",
+      "country": "Bolivia",
+      "open_state": "Cerrado · Abre a las 8:30 a.m. del sáb",
+      "hours": "Cerrado · Abre a las 8:30 a.m. del sáb",
+      "operating_hours": {
+        "viernes": "7:30 a.m.–6 p.m.",
+        "sábado": "8:30 a.m.–12 p.m.",
+        "domingo": "Cerrado",
+        "lunes": "7:30 a.m.–6 p.m.",
+        "martes": "7:30 a.m.–6 p.m.",
+        "miércoles": "7:30 a.m.–6 p.m.",
+        "jueves": "7:30 a.m.–6 p.m."
+      },
+      "phone": "+591 75316249",
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLdeJCICk64uKW1CPgnOKwWkecmlCd0ojIuFRq1zvg0Z5mLdMD_0fJG-5kOAKxO3Ym0gDuC0JKjLs5YiQ8nDPXkwN_oIJ7GH4BQwNbwBDqgkEQGuhqoeJNAy44VVqlZFNsoyW2DAkIM1Ods=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/cHdFVXicHcrBkoIgAADQLzJx03anmT0glIml2SGrS1NIWChkSFQf2b2_qenyTu_1rLrurIeuW1f9HleK18xodqFKdkx2Paoal192WjtUuxCGopmWjKAYiYFvksJDcy6zxBaC0aZGJVCn2IwXrfe4crAJPnmGt-BAIicQGUxuWX_dAI4NAiQ5TXWwPuZ_Es9XwqZbFZPfaOKHuU33NsQtF6M8MlWrGEnh3feXy7bejFOt7sUPhiKeeVmp_60HAHCqr9SRb0HeRrE"
+    },
+    {
+      "position": 5,
+      "title": "MACA Café y Flores",
+      "place_id": "ChIJS27RLADn8ZMR66GfDOaBevA",
+      "data_id": "0x93f1e7002cd16e4b:0xf07a81e60c9fa1eb",
+      "data_cid": "17328305341315654123",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x93f1e7002cd16e4b%3A0xf07a81e60c9fa1eb&engine=google_maps_reviews&hl=es",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x93f1e7002cd16e4b%3A0xf07a81e60c9fa1eb&engine=google_maps_photos&hl=es",
+      "gps_coordinates": {
+        "latitude": -17.7575598,
+        "longitude": -63.173369199999996
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=es&place_id=ChIJS27RLADn8ZMR66GfDOaBevA",
+      "provider_id": "/g/11zf3t91s_",
+      "rating": 4.9,
+      "reviews": 13,
+      "type": "Cafetería",
+      "types": [
+        "Cafetería"
+      ],
+      "address": "Av. Beni, Santa Cruz de la Sierra, Bolivia",
+      "country": "Bolivia",
+      "open_state": "Cerrado · Abre a las 8 a.m. del sáb",
+      "hours": "Cerrado · Abre a las 8 a.m. del sáb",
+      "operating_hours": {
+        "viernes": "7:30 a.m.–8 p.m.",
+        "sábado": "8 a.m.–6 p.m.",
+        "domingo": "Cerrado",
+        "lunes": "7:30 a.m.–8 p.m.",
+        "martes": "7:30 a.m.–8 p.m.",
+        "miércoles": "7:30 a.m.–8 p.m.",
+        "jueves": "7:30 a.m.–8 p.m."
+      },
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLcYS1_y3NqSDIcml-Isvq086IQZe0MAYOBLzK5zOMrICmawM1sVyYOTtl3u989dyNqvsQGY-zYWqR6Dk68AAw3t7LA1GvYmhEbiSmDGtt93s8Bh-mVsIUZ_DNi70XPEogJaNjxqKJW0KDel=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/-dKbMHicHcTNboMgAADgJ6JiyKwu2QFHY6h_69za0UvjKJG2IEOoTl9y573Nkn2H7_dHev_lHoNASbTqjOmUuDsxcNN70fsVNzrohtY5wF2AcXrTBWdNeJpRZRtCuVaAutHCOKK7o4AlZnVaLPnDUpcDfdbtVIZuP7P6zSt0T-LkPFd2dLuMgYUd7GtEblGM8YT8usBhNjItN5-XRpPM-wS5OJVA7x19P55IdVnDj5eN6bZtdf22-fYAcyLU0xRCCIH8n4P-D4mJRtw"
+    },
+    {
+      "position": 6,
+      "title": "Punto Sabor - Café Bistró",
+      "place_id": "ChIJlZxNQBzn8ZMRhcakq26V7eQ",
+      "data_id": "0x93f1e71c404d9c95:0xe4ed956eaba4c685",
+      "data_cid": "16496005312686638725",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x93f1e71c404d9c95%3A0xe4ed956eaba4c685&engine=google_maps_reviews&hl=es",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x93f1e71c404d9c95%3A0xe4ed956eaba4c685&engine=google_maps_photos&hl=es",
+      "gps_coordinates": {
+        "latitude": -17.761784499999997,
+        "longitude": -63.1680881
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=es&place_id=ChIJlZxNQBzn8ZMRhcakq26V7eQ",
+      "provider_id": "/g/11zbnnpfbc",
+      "rating": 4.9,
+      "reviews": 19,
+      "type": "Cafetería",
+      "types": [
+        "Cafetería",
+        "Restaurante"
+      ],
+      "address": "Av. Alemana, esq 2363, Santa Cruz de la Sierra, Bolivia",
+      "country": "Bolivia",
+      "open_state": "Cerrado · Abre a las 12 a.m. del sáb",
+      "hours": "Cerrado · Abre a las 12 a.m. del sáb",
+      "operating_hours": {
+        "viernes": "12–7 p.m.",
+        "sábado": "12 a.m.–7 p.m.",
+        "domingo": "Cerrado",
+        "lunes": "12–7 p.m.",
+        "martes": "12–7 p.m.",
+        "miércoles": "12–7 p.m.",
+        "jueves": "12–7 p.m."
+      },
+      "phone": "+591 72139944",
+      "website": "https://catalogo.treinta.co/puntosaborsc",
+      "pedir_en_línea": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTF6Ym5ucGZiYxgAOgMI8A0%3D&hl=es-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=nNX3auGjDpapruEPnNSfoAY&ei=nNX3auGjDpapruEPnNSfoAY&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLcTNu01BRud5tcyKbL-JTySmjroPMSzRYcgknWShP64IVM_B3-q_CrxqjxOZ45sDk2ncRbdTkquUcmPhE7AfBdb2eSQa7Z2mmb7nWIxVpndnRH1CKc7cP4gahP-RILbkKoRgbjxweTstRTh=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/9WgZ7XicHcTdboIwGADQJ6r8iCNZsgtwJiK4daVq5o2hH7UNta3QEnEv6bVvs8RzcZ4P6f3VvQfBRc5nwlpx4aPjA1jjufEzsDoQQ-McAhdkWa50BfRrDKOcjO3Cw71kFdrQe627weJt_Ud-QShzqCV-S4r99pTPUX9aDlPfTd_HZOE-VWyAsJaqftyBxnKVZue8ZTGvf5r0GGvNUnMopv3VtIaso2UJKeBENBIjUlRMlZYI1k03Tp0nVH7cojAMkXwNyPwDKqhI8w"
+    },
+    {
+      "position": 7,
+      "title": "D' Castilla Bistró",
+      "place_id": "ChIJL6hJ-XTD8ZMROmriOp2VV7c",
+      "data_id": "0x93f1c374f949a82f:0xb757959d3ae26a3a",
+      "data_cid": "13211192534444960314",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x93f1c374f949a82f%3A0xb757959d3ae26a3a&engine=google_maps_reviews&hl=es",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x93f1c374f949a82f%3A0xb757959d3ae26a3a&engine=google_maps_photos&hl=es",
+      "gps_coordinates": {
+        "latitude": -17.807671499999998,
+        "longitude": -63.2106566
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=es&place_id=ChIJL6hJ-XTD8ZMROmriOp2VV7c",
+      "provider_id": "/g/11tfnchkyk",
+      "rating": 4.8,
+      "reviews": 640,
+      "type": "Cafetería",
+      "types": [
+        "Cafetería",
+        "Bar",
+        "Restaurante"
+      ],
+      "address": "Radial Castilla 1187, Santa Cruz de la Sierra, Bolivia",
+      "country": "Bolivia",
+      "open_state": "Cerrado · Abre a las 7:30 a.m. del sáb",
+      "hours": "Cerrado · Abre a las 7:30 a.m. del sáb",
+      "operating_hours": {
+        "viernes": "7:30 a.m.–10 p.m.",
+        "sábado": "7:30 a.m.–10 p.m.",
+        "domingo": "7:30 a.m.–9 p.m.",
+        "lunes": "7:30 a.m.–10 p.m.",
+        "martes": "7:30 a.m.–10 p.m.",
+        "miércoles": "7:30 a.m.–10 p.m.",
+        "jueves": "7:30 a.m.–10 p.m."
+      },
+      "phone": "+591 76664066",
+      "extensions": [
+        {
+          "accessibility": [
+            "Espacio accesible para personas en silla de ruedas"
+          ]
+        }
+      ],
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLe_ZM6Qh2FwcxrGdWcOM5Y_vNPaHnLhHAVam4DURG2aN6pA0y-z5MSQG3Cipp4QiNnnl72DyCVqIMvKBdM8lJ0F88rApXpDYlmEOaqUDn1cb3GvXZEvNdHKUOGrFYSp9jFcN2Kr=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/TMbKkXicHcRRboIwAADQEyEVxOESPypImdgiM6j4Y7pCqFpKbRnKLrgzeBsT38d7_vOuU-bTtgV3R3Xb1qL6NZVmrewq2Y1Y29i1psZYzNgQLq7Nujod8TTjTnRnD43KPUuxV5x6sqGxXPMY7mgzCfNv5FAyVRAM1p-Htxlyg7NSk-xMpBQfTjgEu9sX7pNFiX2xApHva6gOKixEs0zpLQ_lmP24qD8clz0p4yRPkY6KrZpdIkacRM_vYwCAxd8zS74ANx9D3g"
+    },
+    {
+      "position": 8,
+      "title": "Punto Café",
+      "place_id": "ChIJjxmsGQDn8ZMRP-IWofePkvE",
+      "data_id": "0x93f1e70019ac198f:0xf1928ff7a116e23f",
+      "data_cid": "17407133803462713919",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x93f1e70019ac198f%3A0xf1928ff7a116e23f&engine=google_maps_reviews&hl=es",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x93f1e70019ac198f%3A0xf1928ff7a116e23f&engine=google_maps_photos&hl=es",
+      "gps_coordinates": {
+        "latitude": -17.7649507,
+        "longitude": -63.191377599999996
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=es&place_id=ChIJjxmsGQDn8ZMRP-IWofePkvE",
+      "provider_id": "/g/11m6xylkbz",
+      "rating": 4.8,
+      "reviews": 30,
+      "unclaimed_listing": true,
+      "type": "Cafetería",
+      "types": [
+        "Cafetería"
+      ],
+      "address": "6RP5+2C9, Av. La salle, Santa Cruz de la Sierra, Bolivia",
+      "country": "Bolivia",
+      "open_state": "Cerrado · Abre a las 7 a.m. del sáb",
+      "hours": "Cerrado · Abre a las 7 a.m. del sáb",
+      "operating_hours": {
+        "viernes": "7 a.m.–8 p.m.",
+        "sábado": "7 a.m.–8 p.m.",
+        "domingo": "2–7 p.m.",
+        "lunes": "7 a.m.–8 p.m.",
+        "martes": "7 a.m.–8 p.m.",
+        "miércoles": "7 a.m.–8 p.m.",
+        "jueves": "7 a.m.–8 p.m."
+      },
+      "pedir_en_línea": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTFtNnh5bGtiehgAOgMI8A0%3D&hl=es-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=nNX3auGjDpapruEPnNSfoAY&ei=nNX3auGjDpapruEPnNSfoAY&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "thumbnail": "https://lh3.googleusercontent.com/grass-proxy/AIM7gW1e9RrYEyU0r-XTINPsD7yOmlBDGOvlPFbKagXj8F32L8ZnBQZDpI6okWLo07jN-LiDYPODcSzEPl0SG4h5yjNg-NPk68v0UWXMn_Q6PsiVn-otPLTxnu4U11n1XweGW1GiHa7tnSHA_bAifKIM16db4C08gxeUxhbQOU6GdRVvYO4QbdSMjFw=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/qtTPvXicHcRLcoIwAADQE0WSSoF2pgssgox8goiAG4dPGkBMGBL59KY9Sned6Vu8n99GykG8K0rfbDeUc9qTpyBjxZkkTG4q_lDoWAgBhpEvq2K6vk5TRN5OY75fEziC7OwGWFj6Gj76neWEU4_t8ljQrDPs7YtnXNkuulqDq_F76nGodwHwWivHoVXF33vcw9hRm9e1CygI8F0zJpikmc9ukYZFe2GAS-ydF_ZUE4QYymbipMhpD4UuWXwwb6XZfh1dH2l1qX5Cgy4kWZoyChPNqU-XKQ_VqKxjv7PnjxlBCEHzfwXYH3L6VF0"
+    },
+    {
+      "position": 9,
+      "title": "Nook Coffee",
+      "place_id": "ChIJ2cJiCSvp8ZMRcc9DXEqvHIc",
+      "data_id": "0x93f1e92b0962c2d9:0x871caf4a5c43cf71",
+      "data_cid": "9735849228378558321",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x93f1e92b0962c2d9%3A0x871caf4a5c43cf71&engine=google_maps_reviews&hl=es",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x93f1e92b0962c2d9%3A0x871caf4a5c43cf71&engine=google_maps_photos&hl=es",
+      "gps_coordinates": {
+        "latitude": -17.793419,
+        "longitude": -63.197162299999995
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=es&place_id=ChIJ2cJiCSvp8ZMRcc9DXEqvHIc",
+      "provider_id": "/g/11trcz1cxh",
+      "rating": 4.7,
+      "reviews": 60,
+      "type": "Cafetería",
+      "types": [
+        "Cafetería"
+      ],
+      "address": "00000, Santa Cruz de la Sierra, Bolivia",
+      "country": "Bolivia",
+      "open_state": "Cerrado · Abre a las 7 a.m. del sáb",
+      "hours": "Cerrado · Abre a las 7 a.m. del sáb",
+      "operating_hours": {
+        "viernes": "7 a.m.–8 p.m.",
+        "sábado": "7 a.m.–8 p.m.",
+        "domingo": "8:30 a.m.–7:30 p.m.",
+        "lunes": "7 a.m.–8 p.m.",
+        "martes": "7 a.m.–8 p.m.",
+        "miércoles": "7 a.m.–8 p.m.",
+        "jueves": "7 a.m.–8 p.m."
+      },
+      "phone": "+591 62005586",
+      "website": "https://linktr.ee/nookcoffeescz",
+      "pedir_en_línea": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTF0cmN6MWN4aBgAOgMI8A0%3D&hl=es-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=nNX3auGjDpapruEPnNSfoAY&ei=nNX3auGjDpapruEPnNSfoAY&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLdtv5bvt6pCUInglY3W4VampBWe0_9_shQTvAeKLSGxGWucNI49ENa6maJ6klpT7N1EF4eGOZHwW17TToAF-LFS9A5yiqJXRVcTsMjNsoPCPTIFAm4GNcdB2DPt5n20139QcmVu=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/UQ7Wv3icHcTvEoEwAADwJ0rrr8udDytKZMIUvrjMrtC2tBWe0DN4G3d-H37fT6VUI0e6XlfWoBSirGknaUsEV5SrARFML9tCSo1IHUL_zpKL6p1zr9wm2MW8rA9WbmcFa_ycgpN3ktUa95Aukm30ivKOoNj2pqhwWTF373WDh8iYhjaNVsfZMzeGGAsYakm49aDzvj7m-01GsFzekBRpkOI4hMyOELn45iRVDjeBYXlrwrJu_DQAAFr1n2j8B0iHQ0A"
+    },
+    {
+      "position": 10,
+      "title": "TESTIMONIO CAFÉ",
+      "place_id": "ChIJc4RIPQDp8ZMRulxKXQEO28k",
+      "data_id": "0x93f1e9003d488473:0xc9db0e015d4a5cba",
+      "data_cid": "14545234820546059450",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x93f1e9003d488473%3A0xc9db0e015d4a5cba&engine=google_maps_reviews&hl=es",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x93f1e9003d488473%3A0xc9db0e015d4a5cba&engine=google_maps_photos&hl=es",
+      "gps_coordinates": {
+        "latitude": -17.7891753,
+        "longitude": -63.1823169
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=es&place_id=ChIJc4RIPQDp8ZMRulxKXQEO28k",
+      "provider_id": "/g/11yzzdznpc",
+      "rating": 5,
+      "reviews": 16,
+      "type": "Cafetería",
+      "types": [
+        "Cafetería"
+      ],
+      "address": "Monseñor Salvatierra, Santa Cruz de la Sierra, Bolivia",
+      "country": "Bolivia",
+      "open_state": "Cerrado · Abre a las 7:30 a.m. del sáb",
+      "hours": "Cerrado · Abre a las 7:30 a.m. del sáb",
+      "operating_hours": {
+        "viernes": "7:30 a.m.–8 p.m.",
+        "sábado": "7:30 a.m.–8 p.m.",
+        "domingo": "Cerrado",
+        "lunes": "7:30 a.m.–8 p.m.",
+        "martes": "7:30 a.m.–8 p.m.",
+        "miércoles": "7:30 a.m.–8 p.m.",
+        "jueves": "7:30 a.m.–8 p.m."
+      },
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLePOCdZXEiQ8bZZF25_G4L6qkk-Ll1QJxywRryqzuemIAnfKD6uHHHxXKKmCDzWrUSnPIuMfey2QMOQ9_IEJVNZo9TmknhOfkDMvqeQJXeg4UG-E_na8Yet69RG9h5Ix0l4tGo4UqVEhLxX=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/S_Eki3icHcRNcoIwGADQE0VQkZHOdEEF-S9GiyIbRukH6YQkQoKCl-za23Smb_Fev0Spm3zTtJYsZ40QTQuDhL4SXAFXs0owrekvUqJKarb9QVkMu3TzXeTuD15fi2K7WJWeEZsdpShu5zgcp8e-n7rnACyweR055uD7_phHEds4z1OfHfguGJIapgVOUmyVgRsePwthfTHKSVpTJ7l3gMMcGiPzkFvyy_oMyrT2nkVWwai3hvKEkXVHl8Rj_v6Y67qOyP8V4n_gt0fA"
+    },
+    {
+      "position": 11,
+      "title": "Essência do Café",
+      "place_id": "ChIJrTLFBq3p8ZMRoF15C1CW8ms",
+      "data_id": "0x93f1e9ad06c532ad:0x6bf296500b795da0",
+      "data_cid": "7778444776956321184",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x93f1e9ad06c532ad%3A0x6bf296500b795da0&engine=google_maps_reviews&hl=es",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x93f1e9ad06c532ad%3A0x6bf296500b795da0&engine=google_maps_photos&hl=es",
+      "gps_coordinates": {
+        "latitude": -17.7748797,
+        "longitude": -63.1728415
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=es&place_id=ChIJrTLFBq3p8ZMRoF15C1CW8ms",
+      "provider_id": "/g/11vsfbwn82",
+      "rating": 4.8,
+      "reviews": 19,
+      "type": "Cafetería",
+      "types": [
+        "Cafetería"
+      ],
+      "address": "Pedro Antelo 107, Santa Cruz de la Sierra, Bolivia",
+      "country": "Bolivia",
+      "open_state": "Cerrado · Abre a las 8 a.m. del sáb",
+      "hours": "Cerrado · Abre a las 8 a.m. del sáb",
+      "operating_hours": {
+        "viernes": "8 a.m.–9 p.m.",
+        "sábado": "8 a.m.–9 p.m.",
+        "domingo": "Cerrado",
+        "lunes": "8 a.m.–9 p.m.",
+        "martes": "8 a.m.–9 p.m.",
+        "miércoles": "8 a.m.–9 p.m.",
+        "jueves": "8 a.m.–9 p.m."
+      },
+      "phone": "+591 57381212",
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLcsLyfKNmBjhsQPiKNIdoCnnLDHp3rCARnJLe9TZqh34epaM__-t6ETOWmOMFwZ0pXEIslKcG_HMuxugaWYSUnLNSqkocUPMexQ3MPiKvIO47EGHMI_uPIG50OW3EygLdp5vpWxFvZElqOr=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/YaZNrXicHczBboIwAADQL0K6VLfMZAd0FSotxalh40JI7VoV2kIL4lfu7N9s2eUd3-NHeW_dMgwbBWfSGNmIwYmeG-2F9jNu2lD2tXMBd2EUra4t4Y7cv9OsXV2U2-XnNMMns9aavCcW9uvoQ2-JeD2UnYJzYWtaVYF_RgdWtIxubiWwnwi7JuVxldBhGmRdfO2PmmT77mr4Madi2kH6146YzV9QnFBcDTmOF4AVEN0lOdnFaItpM5ao6Vj_dnsCAATqXx7oXxxQSFw"
+    },
+    {
+      "position": 12,
+      "title": "Casa Cruceña Café Cultural",
+      "place_id": "ChIJsYOnB6jp8ZMRylpI9EhOEPY",
+      "data_id": "0x93f1e9a807a783b1:0xf6104e48f4485aca",
+      "data_cid": "17730757808200637130",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x93f1e9a807a783b1%3A0xf6104e48f4485aca&engine=google_maps_reviews&hl=es",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x93f1e9a807a783b1%3A0xf6104e48f4485aca&engine=google_maps_photos&hl=es",
+      "gps_coordinates": {
+        "latitude": -17.780984099999998,
+        "longitude": -63.180787499999994
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=es&place_id=ChIJsYOnB6jp8ZMRylpI9EhOEPY",
+      "provider_id": "/g/11xh48bs21",
+      "rating": 4.8,
+      "reviews": 15,
+      "type": "Cafetería",
+      "types": [
+        "Cafetería"
+      ],
+      "address": "0000, Santa Cruz de la Sierra, Bolivia",
+      "country": "Bolivia",
+      "open_state": "Cerrado · Abre a las 8 a.m. del sáb",
+      "hours": "Cerrado · Abre a las 8 a.m. del sáb",
+      "operating_hours": {
+        "viernes": "8 a.m.–7 p.m.",
+        "sábado": "8 a.m.–7 p.m.",
+        "domingo": "8 a.m.–7 p.m.",
+        "lunes": "8 a.m.–7 p.m.",
+        "martes": "8 a.m.–7 p.m.",
+        "miércoles": "8 a.m.–7 p.m.",
+        "jueves": "8 a.m.–7 p.m."
+      },
+      "phone": "+591 76014737",
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLdz-vMbNcvEoVdFj-MSpPKQ-uf7eawEYrZtQePX-mH_gxPB5UzZPE0wEthEf0kt0Dq-brUuwQ_pc_44xwrvq8xAU3h_SC5RURro28vjSL18ilDl4ZmS4IxJ9nhfYsLHtXYyoxZd11a5w2s=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/yL-cRHicHcTNDoIgAADgJyKxdFlbBytaP9Y0Z1MvzhClUjFAoR6ye2_T1nf4vh8qZSfmhlHTyahirKpJLwjHrJWklSPMGqPiuRAAC8N1l4_GK95gOF5PeEDsUmzu4Bh2_iEAfTkluUIJT2VA_Bg026zS_tKO3qmPoEKSohI-JFw_wZVHvQqyDmeWpRUfno52ownNwpV9js6cjZ3hHnqmc6vXtZU2obXT-1lLy0R4WxknL6bTwjRzW43FQpkQQkD_Y9D-AOxUSFY"
+    },
+    {
+      "position": 13,
+      "title": "Desiderata Café de Barrio",
+      "place_id": "ChIJ40Arw_vn8ZMR9GPfjTGKVJw",
+      "data_id": "0x93f1e7fbc32b40e3:0x9c548a318ddf63f4",
+      "data_cid": "11264780513398711284",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x93f1e7fbc32b40e3%3A0x9c548a318ddf63f4&engine=google_maps_reviews&hl=es",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x93f1e7fbc32b40e3%3A0x9c548a318ddf63f4&engine=google_maps_photos&hl=es",
+      "gps_coordinates": {
+        "latitude": -17.7863369,
+        "longitude": -63.219947399999995
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=es&place_id=ChIJ40Arw_vn8ZMR9GPfjTGKVJw",
+      "provider_id": "/g/11c0rvxj7c",
+      "rating": 4.6,
+      "reviews": 538,
+      "type": "Cafetería",
+      "types": [
+        "Cafetería",
+        "Restaurante de desayunos"
+      ],
+      "address": "Avenida Roca y Coronado # 1750, Santa Cruz de la Sierra, Bolivia",
+      "country": "Bolivia",
+      "open_state": "Cerrado · Abre a las 8:30 a.m. del sáb",
+      "hours": "Cerrado · Abre a las 8:30 a.m. del sáb",
+      "operating_hours": {
+        "viernes": "8:30 a.m.–12 p.m., 4:15–8:30 p.m.",
+        "sábado": "8:30 a.m.–12 p.m., 4:15–8:30 p.m.",
+        "domingo": "Cerrado",
+        "lunes": "Cerrado",
+        "martes": "8:30 a.m.–12 p.m., 4:15–8:30 p.m.",
+        "miércoles": "8:30 a.m.–12 p.m., 4:15–8:30 p.m.",
+        "jueves": "8:30 a.m.–12 p.m., 4:15–8:30 p.m."
+      },
+      "phone": "+591 75530003",
+      "website": "https://www.facebook.com/DesiderataCafe/",
+      "extensions": [
+        {
+          "accessibility": [
+            "Espacio accesible para personas en silla de ruedas"
+          ]
+        }
+      ],
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLf1We-gKwaNisU_wqqYUFXD7MOKzeDXVWOBAkIQIepyMZLD8pP2DY53MVnJqybgxpyk2mADKz_a2mR4fNnvvW_cwyUneHXo9VWLPZI8kEWNGR-I76Y6LqHoJXo51tiPhV6qmv0=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/35h5qHicHcRJDoIwAADAF1UWFZfEA6QuyCKaQMELwaYWg22prSA-0D_4GxPnMN9PrXWrloZxr8cjKgS9k6ciDyy4JlyPsGAGfVRKAawM1_UaFl4tRAAN-iq-qbTspSzSTQ5n0SF4E5hn6OC5jX_0STtE5xDO28SGxXQcZXwvhwt9tUNjMxcG77Ky2WlyjXnXoRL3Q8rJLheLDIXJ2Z83axRvT8CfOYUTyp3Y52Jq6VtSZ45knbnqLdM0Qf0fA_4DcZNE0Q"
+    },
+    {
+      "position": 14,
+      "title": "Maizer Café",
+      "place_id": "ChIJD84ssjLp8ZMRyEI4QxiDq0w",
+      "data_id": "0x93f1e932b22cce0f:0x4cab8318433842c8",
+      "data_cid": "5524653508130259656",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x93f1e932b22cce0f%3A0x4cab8318433842c8&engine=google_maps_reviews&hl=es",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x93f1e932b22cce0f%3A0x4cab8318433842c8&engine=google_maps_photos&hl=es",
+      "gps_coordinates": {
+        "latitude": -17.8019797,
+        "longitude": -63.2029198
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=es&place_id=ChIJD84ssjLp8ZMRyEI4QxiDq0w",
+      "provider_id": "/g/11s554xtys",
+      "rating": 4.6,
+      "reviews": 86,
+      "type": "Cafetería",
+      "types": [
+        "Cafetería"
+      ],
+      "address": "0000, Santa Cruz de la Sierra, Bolivia",
+      "country": "Bolivia",
+      "open_state": "Cerrado · Abre a las 8 a.m. del sáb",
+      "hours": "Cerrado · Abre a las 8 a.m. del sáb",
+      "operating_hours": {
+        "viernes": "7:15 a.m.–9 p.m.",
+        "sábado": "8 a.m.–9 p.m.",
+        "domingo": "Cerrado",
+        "lunes": "7:15 a.m.–9 p.m.",
+        "martes": "7:15 a.m.–9 p.m.",
+        "miércoles": "7:15 a.m.–9 p.m.",
+        "jueves": "7:15 a.m.–9 p.m."
+      },
+      "phone": "+591 75608765",
+      "website": "http://instagram.com/maizercafe.bo",
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLc7pkVwrWsDJgxgqafUSLwg-TMy4u6t-xs_DpFbz8rqxLDTIQVSNEidUK3ZtwH2b7yx5Or0VTPK5zUwvUeJBF7xATMF-l-Fe-Xxgxc29hwwMN5zxggaDub0FqqVVU870snU0MiVnje-dqM=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/ZZCJtHicHcTdTsIwGADQJ_pYBefQxIuR2SisqGGtxhuzlfoNGd36M1v2kNz7Niaei_N7ab0f3F2SdO1ihn2PnRqdsrLXXmk_k_0pQVs7B9Ileb46nkqZDUcR7Jsr1hjR1F98VwaEip2vxxsP0X0WA22mpTWxLKqnV7HbPhz2fLP48OFx3mTnmD5bIqqXTTrx8MPVekWzmFeMQgdUwXvEKOe3bQhsm04RsS7GhlBjhODLjDjNCTsI_a1gb9h9uCKEQPu_BP0HEVlIVg"
+    },
+    {
+      "position": 15,
+      "title": "Yandé Café",
+      "place_id": "ChIJX1e0qljp8ZMRMpH-pW6hwFo",
+      "data_id": "0x93f1e958aab4575f:0x5ac0a16ea5fe9132",
+      "data_cid": "6539404155545358642",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x93f1e958aab4575f%3A0x5ac0a16ea5fe9132&engine=google_maps_reviews&hl=es",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x93f1e958aab4575f%3A0x5ac0a16ea5fe9132&engine=google_maps_photos&hl=es",
+      "gps_coordinates": {
+        "latitude": -17.8009482,
+        "longitude": -63.1653017
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=es&place_id=ChIJX1e0qljp8ZMRMpH-pW6hwFo",
+      "provider_id": "/g/11kjnsr34f",
+      "rating": 4.7,
+      "reviews": 38,
+      "type": "Cafetería",
+      "types": [
+        "Cafetería"
+      ],
+      "address": "Ave Francisco Mora 2170B, Santa Cruz de la Sierra, Bolivia",
+      "country": "Bolivia",
+      "open_state": "Cerrado · Abre a las 9 a.m. del sáb",
+      "hours": "Cerrado · Abre a las 9 a.m. del sáb",
+      "operating_hours": {
+        "viernes": "8 a.m.–7:30 p.m.",
+        "sábado": "9 a.m.–7:30 p.m.",
+        "domingo": "Cerrado",
+        "lunes": "8 a.m.–7:30 p.m.",
+        "martes": "8 a.m.–7:30 p.m.",
+        "miércoles": "8 a.m.–7:30 p.m.",
+        "jueves": "8 a.m.–7:30 p.m."
+      },
+      "phone": "+591 77660676",
+      "website": "https://www.instagram.com/yande_tostadores/",
+      "extensions": [
+        {
+          "accessibility": [
+            "Entrada accesible para personas en silla de ruedas",
+            "Espacio accesible para personas en silla de ruedas",
+            "Estacionamiento accesible para personas en silla de ruedas"
+          ]
+        }
+      ],
+      "unsupported_extensions": [
+        {
+          "accessibility": [
+            "Sanitarios accesibles para personas en silla de ruedas"
+          ]
+        }
+      ],
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLfpuOMrsxK46dcanH7NzqSwTQ5eF0EmONATEfcj9Bd5Xv_OWwYGotogU6vD1qU_CxX6zU3HSzIqT-YSa68GMrJ0jrlbNOY5b49ggDya-A3NZPaHMOgD0SA0Zix8Nd5zfP0WXTzw=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/9zPWWnicHcRBjoIwAADAF1VqEFZNPNTFlVVpNUAEL6YWKCpQaatgP-gb_I2Jc5j3q9T6pqaWVZX2gAvBq_yucslEo_NGD5ioLS6pUoApC6H5td4UtzsJpOrXIzdjtPF_sGnDLto5-R9c1ASjaFGwy2SeOcnjSPZduhRa8Nh9eMM2Pv72iWti2w_NfxuBNKTueBnIFbzI6oRJ6pxGE869JwXIxoct9QPCPRgieDj3Y5w5ptjCfRKZbtYNIYSg_M5A8wGTd0Rp"
+    },
+    {
+      "position": 16,
+      "title": "Café Buena Vista",
+      "place_id": "ChIJ2a7WCljd8ZMRgmpf3izFsko",
+      "data_id": "0x93f1dd580ad6aed9:0x4ab2c52cde5f6a82",
+      "data_cid": "5382581301161192066",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x93f1dd580ad6aed9%3A0x4ab2c52cde5f6a82&engine=google_maps_reviews&hl=es",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x93f1dd580ad6aed9%3A0x4ab2c52cde5f6a82&engine=google_maps_photos&hl=es",
+      "gps_coordinates": {
+        "latitude": -17.7657214,
+        "longitude": -63.203466399999996
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=es&place_id=ChIJ2a7WCljd8ZMRgmpf3izFsko",
+      "provider_id": "/g/11gg65jjd0",
+      "rating": 4.8,
+      "reviews": 354,
+      "type": "Tostaderos de café",
+      "types": [
+        "Tostaderos de café"
+      ],
+      "address": "y calles, Calle los robles, C. los Claveles, Santa Cruz de la Sierra, Bolivia",
+      "country": "Bolivia",
+      "open_state": "Cerrado · Abre a las 7 a.m. del sáb",
+      "hours": "Cerrado · Abre a las 7 a.m. del sáb",
+      "operating_hours": {
+        "viernes": "7 a.m.–8 p.m.",
+        "sábado": "7 a.m.–8 p.m.",
+        "domingo": "Cerrado",
+        "lunes": "7 a.m.–8 p.m.",
+        "martes": "7 a.m.–8 p.m.",
+        "miércoles": "7 a.m.–8 p.m.",
+        "jueves": "7 a.m.–8 p.m."
+      },
+      "phone": "+591 77211129",
+      "website": "http://www.cafebuenavista.com/",
+      "extensions": [
+        {
+          "accessibility": [
+            "Entrada accesible para personas en silla de ruedas",
+            "Estacionamiento accesible para personas en silla de ruedas"
+          ]
+        }
+      ],
+      "pedir_en_línea": "https://www.google.com/searchviewer/42?cvd=CLw_EicKJeICIjIgEhkiF9LX29IPEQoNL2cvMTFnZzY1ampkMBgAOgMI8A0%3D&hl=es-US&gl=us&fo_m=MfohQo559jFvMUOzJVpjPL1YMfZ3bInYwBDuMfaXTPp5KXh-&utm_source=tactile&gei=nNX3auGjDpapruEPnNSfoAY&ei=nNX3auGjDpapruEPnNSfoAY&fo_s=OA,SOE&opi=79508299&ebb=1&cs=0&foub=mcpp",
+      "thumbnail": "https://lh3.googleusercontent.com/grass-proxy/AIM7gW3UC0-96Ez1mZ2gc99MtH65XQpNpXU2tNkyonQ40QqXK2scniJo8y1eZ4wWKAs2TvU5LpE4B8mTvk5Knx20k8teJFGGD4lzyz13tOx2xgATcNOwdoCVm7wPl8o1yHkzdxO-3RhMs7dVy8r9dgGZPOHT8x4SBCRQXN-mfLM-8fNE5KR6redv3bEA=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/zjfG_HicHcTNckQwAADgJ8qK_-hMD1aVrsVSdo1bSzY6SFRSwpvuq_TUmX6H7_HbCTHxJ0UZOv1AGCMD_uF4bhgVmIpDw0aFzB-cg2lmclPct9gmN730IHAsf1fHWiON48QitMwqm5KpKjWR9BujmQGz7yrSeEO_TgxtKq6N9Ra5XCuW0jxPvnFEY7H0ZkSlBnsk8Ok1CF6MYd92VRep1CRxiyZJ15Z519FeLwNi6hb2eytToOddzO32uqHZaUlQX9KwQNJ4P3p5ViVgvJ9jgO6Jb0a5NeN20T9993lVIYSg-78B9A_aMlS0"
+    },
+    {
+      "position": 17,
+      "title": "Caffé del Barrio",
+      "place_id": "ChIJc3vieADp8ZMRqKlNiMjxQsY",
+      "data_id": "0x93f1e90078e27b73:0xc642f1c8884da9a8",
+      "data_cid": "14286246811555178920",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x93f1e90078e27b73%3A0xc642f1c8884da9a8&engine=google_maps_reviews&hl=es",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x93f1e90078e27b73%3A0xc642f1c8884da9a8&engine=google_maps_photos&hl=es",
+      "gps_coordinates": {
+        "latitude": -17.7913376,
+        "longitude": -63.181897
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=es&place_id=ChIJc3vieADp8ZMRqKlNiMjxQsY",
+      "provider_id": "/g/11vr75gb4j",
+      "rating": 4.8,
+      "reviews": 55,
+      "unclaimed_listing": true,
+      "type": "Cafetería",
+      "types": [
+        "Cafetería"
+      ],
+      "address": "La Riva 124, Santa Cruz de la Sierra, Bolivia",
+      "country": "Bolivia",
+      "open_state": "Cerrado · Abre a las 7 a.m. del sáb",
+      "hours": "Cerrado · Abre a las 7 a.m. del sáb",
+      "operating_hours": {
+        "viernes": "7 a.m.–7 p.m.",
+        "sábado": "7 a.m.–1 p.m.",
+        "domingo": "Cerrado",
+        "lunes": "7 a.m.–7 p.m.",
+        "martes": "7 a.m.–7 p.m.",
+        "miércoles": "7 a.m.–7 p.m.",
+        "jueves": "7 a.m.–7 p.m."
+      },
+      "website": "https://www.instagram.com/caffedelbarrio_bo?igsh=OXVic2Vqd2ltOHB0&utm_source=qr",
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLfpfT_yWCGOh8eO6Ebn3f3Ff7UVVObDYjV0Lvpe-lJmnrTForRB7enuWAzDpjINv7kfra2M7mU3B2xJZYyOMBeWJnW702MoGWPKLWcZHqSnmI0UfDacNj_s7miJpnc1szEQjE8lPL160RCo=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/cr4GpHicHcRJDoIwFADQEyEFEmtMXIDggCBO0OjGYNOCSH9ri-MlXXsbE9_ifT911ykztO229nqVlFXLboZpKqFj0PWoFHalS2MsamzfDy4i4Yrvji8ynmb1gGX96AQe9yYc50WRncJ9U6DkrpjVxgL0biL1JsAMbsR_h6qZL-_4wnXppljkXuA-48P-laUBIzEQjNxUTslqkRB6mF23IOYo52FJl83RYHGOFVDHvKN1Ew3aVeL00WYsRw8HIWTV_6kFP9NhR2U"
+    },
+    {
+      "position": 18,
+      "title": "Café 4 Llamas - Santa Cruz",
+      "place_id": "ChIJQQml9Z3n8ZMR757J0RJzv20",
+      "data_id": "0x93f1e79df5a50941:0x6dbf7312d1c99eef",
+      "data_cid": "7908165995352137455",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x93f1e79df5a50941%3A0x6dbf7312d1c99eef&engine=google_maps_reviews&hl=es",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x93f1e79df5a50941%3A0x6dbf7312d1c99eef&engine=google_maps_photos&hl=es",
+      "gps_coordinates": {
+        "latitude": -17.7584932,
+        "longitude": -63.197984
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=es&place_id=ChIJQQml9Z3n8ZMR757J0RJzv20",
+      "provider_id": "/g/11wbsn86ph",
+      "rating": 4.6,
+      "reviews": 221,
+      "type": "Cafetería",
+      "types": [
+        "Cafetería"
+      ],
+      "address": "Av. Salvador esq, C. H, Santa Cruz de la Sierra, Bolivia",
+      "country": "Bolivia",
+      "open_state": "Cerrado · Abre a las 7:30 a.m. del sáb",
+      "hours": "Cerrado · Abre a las 7:30 a.m. del sáb",
+      "operating_hours": {
+        "viernes": "7:30 a.m.–8:30 p.m.",
+        "sábado": "7:30 a.m.–8:30 p.m.",
+        "domingo": "Cerrado",
+        "lunes": "7:30 a.m.–8:30 p.m.",
+        "martes": "7:30 a.m.–8:30 p.m.",
+        "miércoles": "7:30 a.m.–8:30 p.m.",
+        "jueves": "7:30 a.m.–8:30 p.m."
+      },
+      "phone": "+591 75053536",
+      "website": "https://www.4llamascoffee.com/",
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLc8P8wPEfgTjZbd4SpAZgGAAzEmkR6VMwxS6acfeKjcHPC4HntnHY8tDBlS0PMw5fJDXGcgqUt6T5ytgjfDGbxX-Reef92y0cTGF9V82xgvFdX_7iAQJh8ipkUaSxpDSBxfm8gsa131oUt-=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/K3LWl3icHcTbboIwGADgJ6oUD6wu8aKIQtxMmAXCvDFY2yKHltl_UveSXu9tluy7-H6fNcBgXz2vq2cTZYzqxLcVN240CA0TbnpP3SprEbcepWHbv3OSkjHdSJU1x_NlzgZ6VDGlP5u-PQTFfnQsqLgUbw1P0vU80aCTTwJR2DGc7seF3EVlzNVXDkG2eIBqZBSfXYkOQsjl9IF5Fm-XBZk6dd9eytPLlX7sanId2rxibohY6GRPlK38mW9yQKvRxxij-n-O9B_WaEeq"
+    },
+    {
+      "position": 19,
+      "title": "Café 400",
+      "place_id": "ChIJtYgmgEbo8ZMRaQXmNPblOQc",
+      "data_id": "0x93f1e846802688b5:0x739e5f634e60569",
+      "data_cid": "520700077550208361",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x93f1e846802688b5%3A0x739e5f634e60569&engine=google_maps_reviews&hl=es",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x93f1e846802688b5%3A0x739e5f634e60569&engine=google_maps_photos&hl=es",
+      "gps_coordinates": {
+        "latitude": -17.803518699999998,
+        "longitude": -63.173975999999996
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=es&place_id=ChIJtYgmgEbo8ZMRaQXmNPblOQc",
+      "provider_id": "/g/11g027f396",
+      "rating": 4.9,
+      "reviews": 19,
+      "type": "Cafetería",
+      "types": [
+        "Cafetería"
+      ],
+      "address": "Av. La Barranca 400, Santa Cruz de la Sierra, Bolivia",
+      "country": "Bolivia",
+      "open_state": "Cerrado · Abre a las 7 a.m. del lun",
+      "hours": "Cerrado · Abre a las 7 a.m. del lun",
+      "operating_hours": {
+        "viernes": "7–10:30 a.m.",
+        "sábado": "Cerrado",
+        "domingo": "Cerrado",
+        "lunes": "7–10:30 a.m.",
+        "martes": "7–10:30 a.m.",
+        "miércoles": "7–10:30 a.m.",
+        "jueves": "7–10:30 a.m."
+      },
+      "phone": "+591 78105542",
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLepzF5QvBr1JGGE36wm0qu1Qi0aLh8NEblBmyXVfhLyBlygJW--jmU0q_bHq4AXRq0qMG5K_MqGJCQ8rKgm_bIG5hLZU8SfeAS6WdbNil-ciIT-9fRv8JqoQQwD7X1ywobYDmqt=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/uXBoOXicHcRRboIwAADQE1VKHMqW7INOV0U0KcyJ_hDblRZtqaVVghf0DLuNie_j_T-k9xf3EQRKjkfCGKH41fGOmdbz1o-Y0YHojs4B5oIkQWed8cv9OyI31IUpxvPxpNfQXkPSwGMm482cKqSH8reW2YDUINIdACe9hbaiC_uWlLmFdo2jVbW2OP0icbcSuqJLHMnssI2LmifFZPdHN40CrFn-gPc6v8WpNYT0s2kZDr2h-5m2_rMPIYRAvmagfQJS3ESO"
+    },
+    {
+      "position": 20,
+      "title": "KOLACHE Café & Bakery",
+      "place_id": "ChIJRbPq1zXD8ZMRNTbTqOzvy1M",
+      "data_id": "0x93f1c335d7eab345:0x53cbefeca8d33635",
+      "data_cid": "6038183525144016437",
+      "reviews_link": "https://serpapi.com/search.json?data_id=0x93f1c335d7eab345%3A0x53cbefeca8d33635&engine=google_maps_reviews&hl=es",
+      "photos_link": "https://serpapi.com/search.json?data_id=0x93f1c335d7eab345%3A0x53cbefeca8d33635&engine=google_maps_photos&hl=es",
+      "gps_coordinates": {
+        "latitude": -17.807762399999998,
+        "longitude": -63.2082104
+      },
+      "place_id_search": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=es&place_id=ChIJRbPq1zXD8ZMRNTbTqOzvy1M",
+      "provider_id": "/g/11y__n1srg",
+      "rating": 5,
+      "reviews": 10,
+      "type": "Cafetería",
+      "types": [
+        "Cafetería"
+      ],
+      "address": "San Miguel, Santa Cruz de la Sierra, Bolivia",
+      "country": "Bolivia",
+      "open_state": "Cerrado · Abre a las 7:30 a.m. del sáb",
+      "hours": "Cerrado · Abre a las 7:30 a.m. del sáb",
+      "operating_hours": {
+        "viernes": "7:30 a.m.–7 p.m.",
+        "sábado": "7:30 a.m.–7 p.m.",
+        "domingo": "9 a.m.–7 p.m.",
+        "lunes": "Cerrado",
+        "martes": "7:30 a.m.–7 p.m.",
+        "miércoles": "7:30 a.m.–7 p.m.",
+        "jueves": "7:30 a.m.–7 p.m."
+      },
+      "phone": "+591 76855595",
+      "thumbnail": "https://lh3.googleusercontent.com/grass-cs/AABkmLfR_QhHL0Ab7Z52_WDJMcuGhJsum--fjOykHplQnv-6JPxRNmeDIsQtntwHRtNdF0HtOh-J7cBgWWto8eoq2jN6rjuzBifzCaVeh9S6w3xFAHGJpihy1pX1Cye60mEY065F1CZBXHydlCE1=w1000-h1000-c-n",
+      "serpapi_thumbnail": "https://serpapi.com/images/url/Z-eLDnicHcTBboIwGADgJ6q0Guu2ZAdAsTaKA5OhXozWQkXaIv0Z4kt69m2W-B2-11MB1O7L8yo1GhTWFpVsnWyENSANDITVXtEcnUPCeb4fXPUyTw-JYkvsnyb78fCQTflKtHPFXasRyst1f2V1lZg_RPnPPY21nC5cAgY6lkJ8jjCDtUJ8IoIiy8B-SHsbljFtyvYRXPJHePyV6nNDu9E98tmc1xfVk3pLwl5SrGc7TMcRCffBlvXnKpyR745gjJF6L5D5B9sjR0g"
+    }
+  ],
+  "serpapi_pagination": {
+    "next": "https://serpapi.com/search.json?engine=google_maps&google_domain=google.com&hl=es&ll=%40-17.7833%2C-63.1821%2C14z&q=caf%C3%A9&start=20&type=search"
+  }
+}
