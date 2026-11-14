@@ -2,14 +2,15 @@
 //
 // Chrome sin cabeza propio (perfil temporal), la página abierta como archivo local y SIN red
 // (resolución de nombres anulada, proxy muerto y Network.emulateNetworkConditions offline).
-// Fases: carga, recorrido entero con cada tecla del clicker, volver, diez avances rápidos,
-// saltos, Inicio y Fin, pantalla negra, ayuda, silencio (M), pantalla completa, vista del orador
-// (notas que entran, reloj que anda, maneja la presentación), recarga a mitad de la charla,
-// cuatro tamaños de ventana y el procesador frenado 4 veces.
+// Fases: carga, la portada antes de empezar (en negro en el paso 1, cada forma de avanzar la vuelve a
+// pasar desde cero, y en el paso 2 o con la charla empezada solo saca el negro), recorrido entero con cada
+// tecla del clicker, volver, diez avances rápidos, saltos, Inicio y Fin, pantalla negra, ayuda, silencio (M),
+// pantalla completa, vista del orador (notas que entran, reloj que anda, maneja la presentación), recarga a
+// mitad de la charla, cuatro tamaños de ventana y el procesador frenado 4 veces.
 //
-// Uso, detrás del turno de la máquina (abre un Chrome, unos 7 minutos con todas las fases):
+// Uso, detrás del turno de la máquina (abre un Chrome, unos 8 minutos con todas las fases):
 //   node armar/probar_uso.mjs salida/Charla_n8n_SerpApi_IA.html <carpeta> [--fases carga,recorrido,...] [--chrome <exe>]
-// Fases: recorrido, controles, orador, recarga, tamanos y cpu (por defecto todas) y diag (aparte: por qué
+// Fases: portada, recorrido, controles, orador, recarga, tamanos y cpu (por defecto todas) y diag (aparte: por qué
 // falla la pantalla completa y qué pasa con la ventana del orador al recargar). La carga corre siempre.
 // Deja <carpeta>/*.png, una captura por cada cosa que falla (FALLA_*.png) y <carpeta>/informe.json.
 // Cierra solo SU Chrome (por PID si hace falta).
@@ -26,7 +27,7 @@ const html = path.resolve(args[0] ?? "");
 const carpeta = path.resolve(args[1] ?? "capturas_uso");
 const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
 const CHROME = opt("--chrome", "C:/Program Files/Google/Chrome/Application/chrome.exe");
-const FASES = opt("--fases", "carga,recorrido,controles,orador,recarga,tamanos,cpu").split(",");
+const FASES = opt("--fases", "carga,portada,recorrido,controles,orador,recarga,tamanos,cpu").split(",");
 if (!fs.existsSync(html)) { console.error(`no existe ${html}`); process.exit(2); }
 fs.mkdirSync(carpeta, { recursive: true });
 const perfil = fs.mkdtempSync(path.join(carpeta, "perfil-chrome-"));
@@ -132,6 +133,23 @@ const INSTRUMENTOS = `(() => {
   return true;
 })()`;
 
+// cada vez que sale la pantalla negra: dónde estaba el video visible en ese momento (si todavía buscaba su
+// primer cuadro o seguía quieto en su final, eso es lo que asoma)
+const OBSERVAR_NEGRO = `(() => {
+  if (window.__negroSale) return true;
+  window.__negroSale = [];
+  let antes = document.body.classList.contains('negro');
+  new MutationObserver(() => {
+    const ahora = document.body.classList.contains('negro');
+    if (antes && !ahora) {
+      const v = [...document.querySelectorAll('video.paso')].find(x => x.classList.contains('visible'));
+      window.__negroSale.push({ t: v ? v.currentTime : null, seeking: v ? v.seeking : null, terminado: v ? v.ended : null });
+    }
+    antes = ahora;
+  }).observe(document.body, { attributes: true, attributeFilter: ['class'] });
+  return true;
+})()`;
+
 let N = 0;
 async function abrirPagina(s, nombre) {
   try { await evaluar(s, "window.__vieja = 1"); } catch { /* sin página */ }
@@ -185,6 +203,146 @@ async function main() {
     `reproductor ${c.reproductor_listo_ms} ms, primer cuadro ${c.primer_cuadro_ms} ms, video andando ${c.video_andando_ms} ms, ${N} pasos`);
   await terminado(s, 1, 30000);
   await captura(s, "carga_paso1_final.png");
+
+  let so = null, oradorTarget = null;
+  async function abrirOrador(ancho = 1280, alto = 800) {
+    const nuevo = esperarEvento((d) => d.method === "Target.targetCreated" && d.params.targetInfo.type === "page", 8000);
+    await tecla(s, "s");
+    const ev = await nuevo;
+    oradorTarget = ev.params.targetInfo.targetId;
+    so = (await enviar("Target.attachToTarget", { targetId: oradorTarget, flatten: true })).sessionId;
+    await enviar("Runtime.enable", {}, so);
+    await enviar("Page.enable", {}, so);
+    await enviar("Emulation.setDeviceMetricsOverride", { width: ancho, height: alto, deviceScaleFactor: 1, mobile: false }, so);
+    await hasta(so, "!!document.getElementById('numero') && document.getElementById('numero').textContent.includes('/')", 8000);
+  }
+
+  // ---------------------------------------------------------------- la portada antes de empezar
+  // Con la pantalla en negro en el paso 1 y la charla sin empezar (el cronómetro no arrancó), cada forma de
+  // avanzar saca el negro y la portada vuelve a correr desde cero, sin pasar al paso 2, y el negro sale con el
+  // video ya en su primer cuadro. Los controles: en el paso 2 o con la charla empezada, avanzar solo saca el
+  // negro, sin avanzar ni reiniciar, como siempre.
+  if (FASES.includes("portada")) {
+    await evaluar(s, OBSERVAR_NEGRO);
+    const dur1 = (await estado(s)).videos.find((v) => v.visible).duracion;
+    const ultimoCambio = async () => (await estado(s)).registro.at(-1)?.t ?? null;
+    let negros = 0;
+    const ponerNegroCon = async () => { await tecla(s, negros++ % 2 ? "." : "b"); await dormir(200); };
+    // aprieta en negro y mide: cómo salió el negro, dónde quedó y si el video volvió a correr
+    async function enNegro(n, apretar) {
+      await terminado(s, n, 20000);
+      await ponerNegroCon();
+      const e0 = await estado(s);
+      const sal0 = await evaluar(s, "window.__negroSale.length");
+      const fin0 = await evaluar(s, "window.__uso.fin.length");
+      const cambio0 = await ultimoCambio();
+      await apretar();
+      let salio = true;
+      try { await hasta(s, "!window.__pitch.estado().negro", 5000, 20); } catch { salio = false; }
+      await dormir(250);
+      const e1 = await estado(s); const v1 = e1.videos.find((v) => v.visible);
+      let termino = true;
+      try { await terminado(s, n, 20000); } catch { termino = false; }
+      await dormir(150);
+      const e2 = await estado(s);
+      const sal = (await evaluar(s, "window.__negroSale")).slice(sal0);
+      const fin = (await evaluar(s, "window.__uso.fin")).slice(fin0).filter((f) => f.visible && f.paso === n);
+      return { e0, e1, v1, e2, sal, fin, salio, termino, reinicio: (await ultimoCambio()) !== cambio0 };
+    }
+    // la portada arrancó de cero y quedó en el paso 1, con la charla sin empezar
+    function encendio(r) {
+      const s0 = r.sal[0];
+      const f = r.fin.at(-1);
+      const ok = r.e0.negro && r.e0.portada && !r.e0.empezada && r.salio && r.sal.length === 1
+        && s0.t < 0.1 && !s0.seeking && !s0.terminado
+        && r.v1 && r.v1.paso === 1 && r.v1.t < 1.0 && !r.v1.pausado && r.e1.actual === 0
+        && r.termino && r.e2.actual === 0 && !r.e2.empezada && !!f && f.video_s > dur1 - 0.15 && f.pared_s <= f.video_s + 0.35;
+      const det = `negro antes ${r.e0.negro}, al salir el video en ${s0 ? s0.t.toFixed(3) : "?"} s${s0 && s0.seeking ? " buscando" : ""}${s0 && s0.terminado ? " terminado" : ""}`
+        + `, a los 0,25 s en ${r.v1 ? r.v1.t.toFixed(2) : "?"} s, quedó en ${r.e2.actual + 1}, corrió ${f ? f.video_s.toFixed(2) + " s en " + f.pared_s.toFixed(2) : "?"} s`
+        + `, charla empezada ${r.e2.empezada}`;
+      return [ok, det];
+    }
+    // solo salió el negro: mismo paso, sin reiniciar el video
+    function soloSaca(r, n) {
+      const s0 = r.sal[0];
+      const ok = r.e0.negro && r.salio && r.sal.length === 1 && s0.terminado && !r.reinicio && r.e2.actual === n - 1 && r.e1.actual === n - 1;
+      return [ok, `quedó en ${r.e2.actual + 1}, al salir el video ${s0 ? (s0.terminado ? "quieto en su final" : "en " + s0.t.toFixed(2) + " s") : "?"}, ${r.reinicio ? "con" : "sin"} cambio de paso`];
+    }
+
+    await abrirOrador();
+    await dormir(400);
+    const cabeza0 = await evaluar(so, "document.querySelector('header').offsetHeight");
+    await ponerNegroCon(); await dormir(500);
+    const chip = await evaluar(so, "(() => { const c = document.getElementById('seccion'); const r = c.getBoundingClientRect(); return { texto: c.textContent, der: r.right, ancho: innerWidth, cabeza: document.querySelector('header').offsetHeight, titulo: document.getElementById('titulo').getBoundingClientRect().width }; })()");
+    await captura(so, "portada_orador_en_negro.png");
+    await captura(s, "portada_en_negro.png");
+    controlar("portada", "en negro antes de empezar, la vista del orador dice que siguiente enciende la portada", /siguiente enciende la portada/.test(chip.texto)
+      && chip.der <= chip.ancho && chip.cabeza === cabeza0, `${chip.texto}, cabecera ${cabeza0} y ${chip.cabeza} px, borde ${Math.round(chip.der)} de ${chip.ancho}, título ${Math.round(chip.titulo)} px`);
+    await tecla(s, "b"); await dormir(200);
+
+    const formas = [
+      ["flecha derecha", () => tecla(s, "ArrowRight")], ["espacio", () => tecla(s, " ")], ["Av Pág", () => tecla(s, "PageDown")],
+      ["Enter", () => tecla(s, "Enter")], ["N", () => tecla(s, "n")], ["un clic sobre el negro", () => clic(s)],
+      ["Av Pág desde la ventana del orador", () => tecla(so, "PageDown")], ["1 y Enter", async () => { await tecla(s, "1"); await tecla(s, "Enter"); }],
+    ];
+    const portada = [];
+    for (const [nombre, apretar] of formas) {
+      const r = await enNegro(1, apretar);
+      const [ok, det] = encendio(r);
+      portada.push({ forma: nombre, ok, det });
+      controlar("portada", `en negro en el paso 1 sin empezar, ${nombre} saca el negro y la portada arranca de cero en el paso 1`, ok, det);
+    }
+    await captura(s, "portada_encendida_final.png");
+    // dos avances seguidos: la portada arranca en oscuro y es fácil apretar dos veces
+    const doble = await enNegro(1, async () => { await tecla(s, "ArrowRight"); await dormir(300); await tecla(s, "ArrowRight"); });
+    const [okD, detD] = encendio(doble);
+    controlar("portada", "dos avances seguidos (0,3 s) encienden la portada una sola vez y no saltan al paso 2", okD, detD);
+    // como hoy: B otra vez y flecha izquierda solo sacan el negro
+    for (const [nombre, apretar] of [["B otra vez", () => tecla(s, "b")], ["flecha izquierda", () => tecla(s, "ArrowLeft")]]) {
+      const [ok, det] = soloSaca(await enNegro(1, apretar), 1);
+      controlar("portada", `en negro en el paso 1 sin empezar, ${nombre} solo saca el negro (como hoy)`, ok, det);
+    }
+    // control: en el paso 2, todavía sin empezar (se llega saltando, que no arranca el cronómetro)
+    await tecla(s, "2"); await tecla(s, "Enter"); await terminado(s, 2, 20000);
+    const sinEmpezar2 = !(await estado(s)).empezada;
+    for (const [nombre, apretar] of [["flecha derecha", () => tecla(s, "ArrowRight")], ["un clic", () => clic(s)]]) {
+      const [ok, det] = soloSaca(await enNegro(2, apretar), 2);
+      controlar("portada", `en negro en el paso 2 sin empezar, ${nombre} saca el negro sin avanzar ni reiniciar`, ok && sinEmpezar2, det);
+    }
+    // la charla empieza: desde la portada, siguiente pasa al paso 2 y arranca el cronómetro
+    await tecla(s, "1"); await tecla(s, "Enter"); await terminado(s, 1, 20000);
+    await dormir(1100);
+    await tecla(s, "ArrowRight"); await terminado(s, 2, 20000);
+    const emp = await estado(s);
+    controlar("portada", "sin negro, siguiente en la portada pasa al paso 2 y arranca el cronómetro", emp.actual === 1 && emp.empezada, `paso ${emp.actual + 1}, charla empezada ${emp.empezada}`);
+    {
+      const [ok, det] = soloSaca(await enNegro(2, () => tecla(s, "ArrowRight")), 2);
+      controlar("portada", "con la charla empezada, en negro en el paso 2 avanzar saca el negro sin avanzar ni reiniciar", ok, det);
+    }
+    await tecla(s, "Home"); await terminado(s, 1, 20000);
+    {
+      const r = await enNegro(1, async () => {
+        const c = await evaluar(so, "document.getElementById('seccion').textContent");
+        portada.push({ forma: "orador en negro con la charla empezada", det: c });
+        await tecla(s, "ArrowRight");
+      });
+      const [ok, det] = soloSaca(r, 1);
+      controlar("portada", "con la charla empezada, en negro en el paso 1 avanzar solo saca el negro (como hoy)", ok && !r.e0.portada, `${det}, la vista del orador decía ${portada.at(-1).det}`);
+    }
+    {
+      const r = await enNegro(1, async () => { await tecla(s, "1"); await tecla(s, "Enter"); });
+      const s0 = r.sal[0];
+      const ok = r.salio && r.sal.length === 1 && s0.t < 0.1 && !s0.seeking && !s0.terminado && r.reinicio && r.e2.actual === 0;
+      controlar("portada", "con la charla empezada, 1 y Enter en negro pasa la portada de cero (como hoy) sin que asome su final", ok,
+        `al salir el video en ${s0 ? s0.t.toFixed(3) : "?"} s, quedó en ${r.e2.actual + 1}`);
+    }
+    informe.fases.portada = { duracion_paso1: dur1, formas: portada, salidas_del_negro: await evaluar(s, "window.__negroSale") };
+    try { await evaluar(so, "window.close()"); } catch { /* ya cerrada */ }
+    so = null;
+    await dormir(400);
+    // el recorrido mide sus videos desde cero
+    await evaluar(s, "window.__uso.fin = []; window.__uso.esperas = []; true");
+  }
 
   // ---------------------------------------------------------------- recorrido entero con cada tecla
   if (FASES.includes("recorrido")) {
@@ -314,18 +472,6 @@ async function main() {
   }
 
   // ---------------------------------------------------------------- vista del orador
-  let so = null, oradorTarget = null;
-  async function abrirOrador(ancho = 1280, alto = 800) {
-    const nuevo = esperarEvento((d) => d.method === "Target.targetCreated" && d.params.targetInfo.type === "page", 8000);
-    await tecla(s, "s");
-    const ev = await nuevo;
-    oradorTarget = ev.params.targetInfo.targetId;
-    so = (await enviar("Target.attachToTarget", { targetId: oradorTarget, flatten: true })).sessionId;
-    await enviar("Runtime.enable", {}, so);
-    await enviar("Page.enable", {}, so);
-    await enviar("Emulation.setDeviceMetricsOverride", { width: ancho, height: alto, deviceScaleFactor: 1, mobile: false }, so);
-    await hasta(so, "!!document.getElementById('numero') && document.getElementById('numero').textContent.includes('/')", 8000);
-  }
   if (FASES.includes("diag")) {
     const d = informe.fases.diag = {};
     const r = await enviar("Runtime.evaluate", { expression: "document.documentElement.requestFullscreen().then(() => 'ok', e => e.name + ': ' + e.message)", awaitPromise: true, userGesture: true, returnByValue: true }, s);

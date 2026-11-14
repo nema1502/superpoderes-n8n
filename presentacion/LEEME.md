@@ -32,6 +32,7 @@ Cada paso es un video corto que arranca solo y queda quieto en su último cuadro
 | Inicio o Fin | Primer o último paso |
 | F | Pantalla completa (otra vez para salir) |
 | B o punto | Pantalla negra. La próxima tecla del clicker la saca, sin avanzar |
+| Antes de empezar | B deja la portada en negro, y al arrancar, siguiente la enciende desde el principio. Si ya pasaste al paso 2: Inicio y B, y al arrancar, 1 y Enter |
 | M | Silenciar o volver a dar sonido |
 | S | Vista del orador: notas, lo que viene, la hora y el tiempo que va |
 | H o signo de pregunta | Ayuda con las teclas. Escape la cierra |
@@ -164,3 +165,5 @@ Más tarde esa mañana, con la versión de esta carpeta (más luz y movimiento e
 - El PowerPoint con `armar/verificar_pptx.ps1`: abre sin reparar, con las 35 diapositivas.
 - Los dos PDF, pasados a imágenes: 21 y 35 páginas.
 - Los videos siguen sin sonido: los de `../videos/` llevan una pista de silencio y los de la presentación no tienen pista.
+
+Al mediodía, con la portada que se enciende (5,0 s), la llegada de los superpoderes (5,4 s) y la portada que arranca desde la pantalla negra, se repitió todo: el HTML sin red listo en menos de un segundo, los 35 pasos con su captura y ningún pedido a internet, `armar/probar_uso.mjs` con sus 67 controles (los 18 nuevos prueban la portada desde el negro con cada tecla del clicker y desde la ventana del orador), el PowerPoint sin reparar con sus 35 diapositivas y los dos PDF con 21 y 35 páginas. El cuadro final de cada paso es el mismo que en la versión anterior.

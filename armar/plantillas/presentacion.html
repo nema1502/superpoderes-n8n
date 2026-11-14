@@ -56,6 +56,7 @@
     <tr><td>Inicio o Fin</td><td>primer o último paso</td></tr>
     <tr><td>F</td><td>pantalla completa</td></tr>
     <tr><td>B o punto</td><td>pantalla negra (la tecla siguiente la saca sin avanzar)</td></tr>
+    <tr><td>Antes de empezar</td><td>B deja la portada en negro, y siguiente la enciende desde el principio</td></tr>
     <tr><td>M</td><td>silenciar o volver a dar sonido</td></tr>
     <tr><td>S</td><td>vista del orador en otra ventana: notas, lo que viene, reloj y tiempo transcurrido</td></tr>
     <tr><td>? o H</td><td>esta ayuda</td></tr>
@@ -76,7 +77,7 @@
   #numero { font-size: 30px; font-weight: 700; color: var(--ambar); font-variant-numeric: tabular-nums; }
   #etiqueta { font-size: 22px; font-weight: 700; }
   #titulo { font-size: 20px; color: var(--gris); flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  #seccion { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; padding: 3px 10px; border-radius: 999px; border: 2px solid var(--acero2); color: var(--gris); }
+  #seccion { white-space: nowrap; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; padding: 3px 10px; border-radius: 999px; border: 2px solid var(--acero2); color: var(--gris); }
   #seccion.respaldo { border-color: var(--ambar); color: var(--ambar); }
   main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 34%); min-height: 0; }
   #notas { padding: 20px 26px; overflow: auto; font-size: 27px; line-height: 1.42; }
@@ -271,10 +272,31 @@
   }
 
   const base = () => (objetivo >= 0 ? objetivo : actual);
-  const siguiente = () => { if (salirDeNegro()) return; if (base() + 1 < N) ir(base() + 1, "siguiente"); };
+  const siguiente = () => {
+    if (portadaSinEmpezar()) { encenderPortada("portada"); return; }
+    if (salirDeNegro()) return;
+    if (base() === 0 && performance.now() < guardaPortada) return;
+    if (base() + 1 < N) ir(base() + 1, "siguiente");
+  };
   const anterior = () => { if (salirDeNegro()) return; if (base() > 0) ir(base() - 1, "anterior"); };
   function salirDeNegro() { if (negro) { ponerNegro(false); return true; } return false; }
   function ponerNegro(si) { negro = si; document.body.classList.toggle("negro", si); enviarEstado(); }
+
+  // La portada antes de empezar. Con la pantalla en negro en el primer paso y el cronómetro sin arrancar,
+  // avanzar no pasa al paso 2: saca el negro y la portada arranca desde el principio, para que su animación
+  // se vea con la sala mirando. El negro queda arriba hasta que el video está en su primer cuadro (así no
+  // asoma el último), y durante el primer segundo otro avance no la saltea: arranca en oscuro y es fácil
+  // apretar dos veces. En cualquier otro paso, o con la charla empezada, avanzar solo saca el negro.
+  let guardaPortada = 0;
+  const portadaSinEmpezar = () => negro && base() === 0 && !inicio;
+  async function encenderPortada(motivo) {
+    const guardar = !inicio;
+    try { await ir(0, motivo); }
+    finally {
+      ponerNegro(false);
+      if (guardar) guardaPortada = performance.now() + 1000;
+    }
+  }
 
   // ------------------------------------------------------------ teclas
   // e puede venir de esta ventana o de la del orador (un objeto con key y desdeOrador)
@@ -284,7 +306,8 @@
     if (/^[0-9]$/.test(k)) { digitos = (digitos + k).slice(-3); digitosT = Date.now(); enviarEstado(); e.preventDefault(); return; }
     if (k === "Enter" && digitos) {
       const n = parseInt(digitos, 10); digitos = ""; e.preventDefault();
-      if (n >= 1 && n <= N) { if (negro) ponerNegro(false); ir(n - 1, "salto"); } else enviarEstado();
+      if (n === 1 && negro && base() === 0) encenderPortada("salto");      // la portada de nuevo, sin que asome su final
+      else if (n >= 1 && n <= N) { if (negro) ponerNegro(false); ir(n - 1, "salto"); } else enviarEstado();
       return;
     }
     if (k === "Escape" && digitos) { digitos = ""; enviarEstado(); return; }
@@ -314,7 +337,7 @@
   }
   document.addEventListener("keydown", tecla);
   document.getElementById("escenario").addEventListener("click", () => { if (ayuda) { ayuda = false; document.body.classList.remove("ayuda"); return; } siguiente(); });
-  document.getElementById("negro").addEventListener("click", () => ponerNegro(false));
+  document.getElementById("negro").addEventListener("click", () => siguiente());   // como la tecla siguiente
   document.getElementById("ayuda").addEventListener("click", () => { ayuda = false; document.body.classList.remove("ayuda"); });
   let quieto = 0;
   document.addEventListener("mousemove", () => { document.body.classList.remove("sin-cursor"); clearTimeout(quieto); quieto = setTimeout(() => document.body.classList.add("sin-cursor"), 2000); });
@@ -359,7 +382,7 @@
   function enviarEstado() {
     if (!orador || orador.closed) return;
     const v = elementoDe(actual);
-    aOrador({ tipo: "estado", i: Math.max(actual, 0), negro, digitos, silencio, sonidoBloqueado, aviso: avisoTexto, inicio, pausado,
+    aOrador({ tipo: "estado", i: Math.max(actual, 0), negro, portada: portadaSinEmpezar(), digitos, silencio, sonidoBloqueado, aviso: avisoTexto, inicio, pausado,
       videoT: v ? v.currentTime : 0, videoDur: v && v.duration ? v.duration : 0, terminado: !!(v && v.ended) });
   }
   function abrirOrador() {
@@ -453,7 +476,7 @@
       $("etiqueta").textContent = p.etiqueta;
       $("titulo").textContent = p.titulo;
       const sec = $("seccion");
-      sec.textContent = est.negro ? "pantalla negra" : p.seccion;
+      sec.textContent = est.negro ? (est.portada ? "pantalla negra: siguiente enciende la portada" : "pantalla negra") : p.seccion;
       sec.className = p.seccion === "respaldo" || est.negro ? "respaldo" : "";
       if (notasDe !== i) { $("notas").innerHTML = notasHtml(p.notas); $("notas").scrollTop = 0; notasDe = i; ajustar(); }
       if (imgAhora !== i) { $("ahora").src = p.mini; imgAhora = i; }
@@ -486,7 +509,7 @@
 
   window.__pitch = {
     estado: () => ({
-      actual, objetivo, total: N, negro, ayuda, silencio, orador: !!(orador && !orador.closed), sonidoBloqueado,
+      actual, objetivo, total: N, negro, ayuda, silencio, empezada: !!inicio, portada: portadaSinEmpezar(), orador: !!(orador && !orador.closed), sonidoBloqueado,
       videos: videos.map(v => ({ paso: asignado.has(v) ? P[asignado.get(v)].n : null, visible: v.classList.contains("visible"),
         readyState: v.readyState, t: v.currentTime, duracion: v.duration, pausado: v.paused, terminado: v.ended, muted: v.muted })),
       registro: registro.slice(-20),
