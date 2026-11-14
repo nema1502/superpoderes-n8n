@@ -6,6 +6,73 @@
 <title>¿Ya existe tu nombre? Satelitazo</title>
 </head>
 <body>
-<style>html, body{background:#070A0F}html, body{margin:0}body{color:#F5F7FF}body{font-family:"Segoe UI", system-ui, sans-serif}body{font-weight:700}body{font-size:22px}body{line-height:1.4}body{display:block}.tarjeta{max-width:720px}.tarjeta{margin:0 auto}.tarjeta{padding:48px 24px}.tarjeta p{margin:0 0 16px 0}.tarjeta p{font-size:22px}.tarjeta .rotulo{color:#9AA3B8}.tarjeta .rotulo{margin:32px 0 8px 0}.tarjeta h1{font-size:56px}.tarjeta h1{line-height:1.1}.tarjeta h1{margin:8px 0 0 0}.tarjeta h1{overflow-wrap:anywhere}.tarjeta .veredicto{font-size:64px}.tarjeta .veredicto{letter-spacing:2px}.tarjeta .veredicto{margin:16px 0}.tarjeta .libre{color:#FFB547}.tarjeta .ocupado{color:#FF7A7A}.tarjeta .dudoso{color:#9AA3B8}.tarjeta .otros{color:#FFB547}.tarjeta .otros{font-size:28px}.tarjeta ul{margin:0}.tarjeta ul{padding:0 0 0 28px}.tarjeta li{margin:0 0 12px 0}.tarjeta a{color:#4DA3FF}</style><main class="tarjeta"><p class="rotulo">¿Ya existe tu nombre?</p><h1>Satelitazo</h1><p class="veredicto libre">LIBRE</p><p>No apareció ningún resultado con el nombre &quot;Satelitazo&quot;, los resultados muestran artículos y definiciones generales sobre satélites en sitios como Servnet, Diario Extra, 2001 Online, Adobe Stock y El Comercio</p><p class="rotulo">Otros nombres</p><p class="otros">PasaSat / SatAviso / OrbitaYa</p><p class="rotulo">Lo que encontró Google</p><ul><li><a href="https://www.google.com/goto?url=CAESZQHEIkXX_FIgsNhTiYcXGgaHRzZIT_p4isty8kk0QmuJy5oBJDHjR798gxqAeVV3comob9JUrwuA8rYNw31ZQlhe52cB5ZodPvbuedvYinDHiCd9NBvOGlWoZ0lEfcI5pBjhGPJg" target="_blank" rel="noopener">Satélite - Servnet</a></li><li><a href="https://www.google.com/goto?url=CAESlgEBxCJF137hAYf7ui0xiHM2MdJ6a2WL73IzvNn3tbwcQ3490Fs6Yxza9wK3aZT6Jg1F4FYAt8HnVC-OOpFSIVRVxkP0gFmopyiwwPEepadla-cDvG6nvred1wE64JOHdviSFFOM-a57Fu5ZFH5PKvMjLo5GSQojpoaH9DejxJ5FpAEXD_n7n9pwv_X4i7tPUwBK3XscfEQ" target="_blank" rel="noopener">EE.UU. lanza satélite para pronosticar clima espacial</a></li><li><a href="https://www.google.com/goto?url=CAESqgEBxCJF17x-NQreGggFNqvLckOoGmAREyrf6n0BRTIyL3l1M7iFjrp4yNd_ZXjoIFAME2vXpI6dcXS7DxhhAVO2ZnvGG2_5JsWo0KKEX90ubB1t2hgaLQnvFQ51wOh7sVkfWA_E0e07PgNXVC_W_COMnlAFUpdEI1AJwRZQ7Ke1VwfCTOs4KSkSCW6Wgq7FfBfXYOE9qKZQY6x8lshfwchxdj5hn8qsWjchSw" target="_blank" rel="noopener">Lanzan desde Florida un satélite que rastreará fenómenos ...</a></li></ul></main>
+<style>
+html, body { margin: 0; background: #070A0F; }
+body { color: #F5F7FF; font-family: "Segoe UI", "Segoe UI Variable", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif; font-weight: 700; line-height: 1.3; display: block; min-height: 100vh; -webkit-text-size-adjust: 100%; }
+.cielo, .cielo::before, .cielo::after { position: fixed; top: 0; right: 0; bottom: 0; left: 0; pointer-events: none; }
+.cielo { z-index: 0; opacity: 0.6; background-image:
+  radial-gradient(1.6px 1.6px at 24px 36px, rgba(245,247,255,0.8), transparent),
+  radial-gradient(1.2px 1.2px at 170px 96px, rgba(245,247,255,0.6), transparent),
+  radial-gradient(1.6px 1.6px at 96px 180px, rgba(154,163,184,0.8), transparent),
+  radial-gradient(1.2px 1.2px at 230px 236px, rgba(245,247,255,0.5), transparent),
+  radial-gradient(2px 2px at 64px 280px, rgba(242,230,58,0.45), transparent);
+  background-size: 250px 250px, 310px 310px, 270px 270px, 340px 340px, 420px 420px; }
+.cielo::before { content: ""; background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27440%27%20height%3D%27260%27%20viewBox%3D%270%200%20440%20260%27%20fill%3D%27none%27%20stroke%3D%27%234DA3FF%27%20stroke-opacity%3D%270.32%27%20stroke-width%3D%272%27%3E%3Cpath%20d%3D%27M0%2070H120L160%2030H330%27%2F%3E%3Cpath%20d%3D%27M44%200V150L84%20190V260%27%2F%3E%3Cpath%20d%3D%27M0%20210H40%27%2F%3E%3Ccircle%20cx%3D%27330%27%20cy%3D%2730%27%20r%3D%275%27%20fill%3D%27%23070A0F%27%2F%3E%3Ccircle%20cx%3D%2784%27%20cy%3D%27190%27%20r%3D%275%27%20fill%3D%27%23070A0F%27%2F%3E%3Ccircle%20cx%3D%2740%27%20cy%3D%27210%27%20r%3D%274%27%20fill%3D%27%23070A0F%27%2F%3E%3Ccircle%20cx%3D%27120%27%20cy%3D%2770%27%20r%3D%273%27%20fill%3D%27%234DA3FF%27%20fill-opacity%3D%270.5%27%2F%3E%3C%2Fsvg%3E") left top no-repeat; background-size: 440px 260px; }
+.cielo::after { content: ""; background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20width%3D%27440%27%20height%3D%27260%27%20viewBox%3D%270%200%20440%20260%27%20fill%3D%27none%27%20stroke%3D%27%234DA3FF%27%20stroke-opacity%3D%270.32%27%20stroke-width%3D%272%27%3E%3Cpath%20d%3D%27M440%20190H320L280%20230H110%27%2F%3E%3Cpath%20d%3D%27M396%20260V110L356%2070V0%27%2F%3E%3Cpath%20d%3D%27M440%2050H400%27%2F%3E%3Ccircle%20cx%3D%27110%27%20cy%3D%27230%27%20r%3D%275%27%20fill%3D%27%23070A0F%27%2F%3E%3Ccircle%20cx%3D%27356%27%20cy%3D%2770%27%20r%3D%275%27%20fill%3D%27%23070A0F%27%2F%3E%3Ccircle%20cx%3D%27400%27%20cy%3D%2750%27%20r%3D%274%27%20fill%3D%27%23070A0F%27%2F%3E%3Ccircle%20cx%3D%27320%27%20cy%3D%27190%27%20r%3D%273%27%20fill%3D%27%234DA3FF%27%20fill-opacity%3D%270.5%27%2F%3E%3C%2Fsvg%3E") right bottom no-repeat; background-size: 440px 260px; }
+.escena { position: relative; z-index: 1; box-sizing: border-box; max-width: 1680px; min-height: 100vh; margin: 0 auto; padding: 48px 72px 28px; display: flex; flex-direction: column; }
+.chip { display: inline-block; align-self: flex-start; margin: 0; padding: 8px 22px; border: 2px solid rgba(154,163,184,0.55); border-radius: 999px; color: #F5F7FF; font-size: 24px; }
+.nombre { margin: 28px 0 0; color: #F2E63A; font-size: 64px; font-size: clamp(48px, 7.4vw, 150px); line-height: 1.04; letter-spacing: -0.01em; overflow-wrap: anywhere; }
+.nombre.largo { font-size: 56px; font-size: clamp(40px, 5vw, 100px); }
+.nombre.muy-largo { font-size: 44px; font-size: clamp(32px, 3.7vw, 72px); }
+.veredicto { position: relative; display: inline-flex; align-items: center; align-self: flex-start; margin: 30px 0 0; padding: 14px 40px 14px 30px; border: 4px solid currentColor; border-radius: 999px; font-size: 52px; font-size: clamp(36px, 4.4vw, 86px); line-height: 1; letter-spacing: 0.04em; }
+.veredicto::before { content: ""; width: 0.9em; height: 0.9em; margin-right: 0.32em; background-position: center; background-repeat: no-repeat; background-size: contain; }
+.veredicto::after { content: ""; position: absolute; top: -4px; right: -4px; bottom: -4px; left: -4px; border: 4px solid currentColor; border-radius: 999px; opacity: 0; }
+.libre { color: #FFB547; background: rgba(255,181,71,0.12); box-shadow: 0 0 36px rgba(255,181,71,0.35); }
+.libre::before { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%23FFB547%27%20stroke-width%3D%273.6%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M4%2012.5l5.2%205.2L20%206.8%27%2F%3E%3C%2Fsvg%3E"); }
+.ocupado { color: #FF7A7A; background: rgba(255,122,122,0.12); box-shadow: 0 0 36px rgba(255,122,122,0.32); }
+.ocupado::before { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%23FF7A7A%27%20stroke-width%3D%273.6%27%20stroke-linecap%3D%27round%27%3E%3Cpath%20d%3D%27M6%206l12%2012M18%206L6%2018%27%2F%3E%3C%2Fsvg%3E"); }
+.dudoso { color: #9AA3B8; background: rgba(154,163,184,0.12); box-shadow: 0 0 30px rgba(154,163,184,0.25); }
+.dudoso::before { background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%239AA3B8%27%20stroke-width%3D%273.2%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M8.5%208.5a3.6%203.6%200%201%201%205.2%203.2c-1.1.6-1.7%201.4-1.7%202.6v.7%27%2F%3E%3Ccircle%20cx%3D%2712%27%20cy%3D%2719%27%20r%3D%270.6%27%20fill%3D%27%239AA3B8%27%2F%3E%3C%2Fsvg%3E"); }
+.porque { margin: 30px 0 0; max-width: 1500px; font-size: 24px; font-size: clamp(20px, 1.95vw, 38px); line-height: 1.32; }
+.abajo { display: flex; flex-wrap: wrap; gap: 28px 64px; margin-top: 40px; }
+.abajo h2 { margin: 0 0 14px; color: #9AA3B8; font-size: 20px; font-size: clamp(17px, 1.25vw, 24px); letter-spacing: 0.06em; text-transform: uppercase; }
+.otros { flex: 0 1 auto; }
+.otros ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 12px; }
+.otros li { padding: 10px 22px; border: 2px solid rgba(255,181,71,0.75); border-radius: 14px; color: #FFB547; font-size: 26px; font-size: clamp(20px, 1.7vw, 32px); background: rgba(14,20,29,0.9); }
+.google { flex: 1 1 520px; min-width: 0; }
+.google ol { list-style: none; margin: 0; padding: 0; }
+.google li { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; margin: 0 0 12px; padding-left: 24px; position: relative; font-size: 21px; font-size: clamp(18px, 1.35vw, 26px); }
+.google li::before { content: ""; position: absolute; left: 0; top: 0.5em; width: 10px; height: 10px; border-radius: 50%; background: #4DA3FF; box-shadow: 0 0 10px rgba(77,163,255,0.8); }
+.google a { color: #F5F7FF; text-decoration: none; border-bottom: 2px solid rgba(77,163,255,0.7); overflow-wrap: anywhere; }
+.google .sitio { color: #9AA3B8; font-size: 0.8em; }
+.pie { margin: auto 0 0; padding-top: 36px; color: #9AA3B8; font-size: 15px; font-weight: 600; line-height: 1.5; }
+.pie span { color: #4DA3FF; }
+@keyframes subir { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes golpe { 0% { opacity: 0; transform: scale(1.7); } 55% { opacity: 1; transform: scale(0.94); } 78% { transform: scale(1.03); } 100% { opacity: 1; transform: scale(1); } }
+@keyframes aro { 0% { opacity: 0.9; transform: scale(1); } 100% { opacity: 0; transform: scale(1.35, 1.7); } }
+@media (prefers-reduced-motion: no-preference) {
+  .chip { animation: subir 0.5s ease-out both; }
+  .nombre { animation: subir 0.6s ease-out 0.1s both; }
+  .veredicto { animation: golpe 0.55s cubic-bezier(0.2, 0.9, 0.3, 1.25) 0.55s both; }
+  .veredicto::after { animation: aro 0.9s ease-out 0.85s 1 both; }
+  .porque { animation: subir 0.6s ease-out 1.05s both; }
+  .abajo { animation: subir 0.6s ease-out 1.3s both; }
+}
+@media (max-width: 700px) {
+  .escena { padding: 28px 16px 20px; }
+  .chip { font-size: 16px; padding: 6px 16px; }
+  .cielo::before, .cielo::after { background-size: 220px 130px; opacity: 0.7; }
+  .nombre { margin-top: 20px; font-size: 44px; line-height: 1.08; }
+  .nombre.largo { font-size: 34px; }
+  .nombre.muy-largo { font-size: 28px; }
+  .veredicto { margin-top: 22px; padding: 10px 26px 10px 20px; font-size: 32px; border-width: 3px; }
+  .porque { margin-top: 22px; font-size: 19px; }
+  .abajo { margin-top: 28px; gap: 24px; }
+  .abajo h2 { font-size: 14px; }
+  .otros li { font-size: 18px; padding: 8px 14px; }
+  .google li { font-size: 17px; }
+  .pie { font-size: 12px; }
+}
+</style><div class="cielo" aria-hidden="true"></div><main class="escena"><p class="chip">¿Ya existe tu nombre?</p><h1 class="nombre">Satelitazo</h1><p class="veredicto libre">LIBRE</p><p class="porque">No apareció ningún resultado con el nombre &quot;Satelitazo&quot;, los resultados muestran artículos y definiciones generales sobre satélites en sitios como Servnet, Diario Extra, 2001 Online, Adobe Stock y El Comercio</p><div class="abajo"><section class="otros"><h2>Otros nombres</h2><ul><li>PasaSat</li><li>SatAviso</li><li>OrbitaYa</li></ul></section><section class="google"><h2>Lo que encontró Google</h2><ol><li><a href="https://www.google.com/goto?url=CAESZQHEIkXX_FIgsNhTiYcXGgaHRzZIT_p4isty8kk0QmuJy5oBJDHjR798gxqAeVV3comob9JUrwuA8rYNw31ZQlhe52cB5ZodPvbuedvYinDHiCd9NBvOGlWoZ0lEfcI5pBjhGPJg" target="_blank" rel="noopener">Satélite - Servnet</a></li><li><a href="https://www.google.com/goto?url=CAESlgEBxCJF137hAYf7ui0xiHM2MdJ6a2WL73IzvNn3tbwcQ3490Fs6Yxza9wK3aZT6Jg1F4FYAt8HnVC-OOpFSIVRVxkP0gFmopyiwwPEepadla-cDvG6nvred1wE64JOHdviSFFOM-a57Fu5ZFH5PKvMjLo5GSQojpoaH9DejxJ5FpAEXD_n7n9pwv_X4i7tPUwBK3XscfEQ" target="_blank" rel="noopener">EE.UU. lanza satélite para pronosticar clima espacial</a></li><li><a href="https://www.google.com/goto?url=CAESqgEBxCJF17x-NQreGggFNqvLckOoGmAREyrf6n0BRTIyL3l1M7iFjrp4yNd_ZXjoIFAME2vXpI6dcXS7DxhhAVO2ZnvGG2_5JsWo0KKEX90ubB1t2hgaLQnvFQ51wOh7sVkfWA_E0e07PgNXVC_W_COMnlAFUpdEI1AJwRZQ7Ke1VwfCTOs4KSkSCW6Wgq7FfBfXYOE9qKZQY6x8lshfwchxdj5hn8qsWjchSw" target="_blank" rel="noopener">Lanzan desde Florida un satélite que rastreará fenómenos ...</a></li></ol></section></div><footer class="pie">Hecho con n8n + SerpApi + IA. Space Talks, NASA Space Apps Santa Cruz 2026. <span>github.com/nema1502/superpoderes-n8n</span></footer></main>
 </body>
 </html>
