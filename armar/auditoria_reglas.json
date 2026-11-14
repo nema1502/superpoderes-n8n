@@ -1,0 +1,39 @@
+{
+  "_que_es": "Reglas por paso y excepciones de armar/auditar_cuadros.py para esta charla. Las listas las mantiene quien escribe el deck (pasos sin marca de agua, igual que diseno/tokens.json → persistentes.marca_agua_sin) y cada diapositiva suma sus excepciones con su motivo. Cómo se usa cada campo: docs/auditoria.md.",
+  "pasos_sin_marca_de_agua": ["D01", "D03", "D15"],
+  "pasos_con_reloj_grande": [],
+  "pasos_de_marca": ["D01.1", "D03.1", "D15.2"],
+  "umbrales": {},
+  "excepciones": [
+    {
+      "pasos": ["D01.1"],
+      "regla": "zona_segura",
+      "permitir": [[1853, 38, 1920, 1042]],
+      "motivo": "Las pistas de circuito entran desde el borde derecho del cuadro: es el guiño al afiche (deck D01.1)."
+    },
+    {
+      "pasos": ["D13.1"],
+      "regla": "lima",
+      "permitir": [[150, 95, 1080, 230]],
+      "motivo": "El título en amarillo del afiche (titulo, #F2E63A, tono 56 grados) no es lima: en el PNG sin pérdida del cuadro no hay ni un píxel en la máscara del lima. Al pasar a video (yuv420p, el color a la mitad de resolución) unos pocos píxeles oscuros del borde de las letras toman el color de la letra vecina y caen en la máscara. Se permite solo en el renglón del título."
+    },
+    {
+      "pasos": ["A1.1", "A2.1", "A3.1"],
+      "regla": "lima",
+      "permitir": [[150, 240, 720, 450]],
+      "motivo": "Lo mismo que en D13.1: el título Así salió en el ensayo va en el amarillo del afiche (titulo, tono 56 grados) y en el PNG sin pérdida no tiene ni un píxel en la máscara del lima (medido en A1_1.png). En el video, el color a la mitad de resolución deja de 8 a 11 píxeles del borde de las letras en la máscara. Se permite solo en los dos renglones del título."
+    },
+    {
+      "pasos": ["D05.1"],
+      "regla": "lima",
+      "permitir": [[300, 150, 1620, 250]],
+      "motivo": "Lo mismo que en D13.1: el título va en el amarillo del afiche (titulo, tono 56 grados). Con Anotarse al sorteo es un flujo, el título que va cuando el deck no tiene el formulario, el PNG sin pérdida del cuadro final no tiene ni un píxel en la máscara del lima (medido en D05_1.png), y en el video el color a la mitad de resolución deja 6 píxeles del borde de las letras en la máscara. Se permite solo en el renglón del título."
+    },
+    {
+      "pasos": ["D14.2"],
+      "regla": "frontera",
+      "tolerancia": "vista",
+      "motivo": "Remotion renderiza cada paso aparte, así que el cuadro de la frontera se dibuja dos veces. En D14 las dos veces salen apenas distintas en el borde de la llama, del logo y del texto (máximo 21 niveles en unos 20 píxeles, PSNR 65,9 dB, medido el 14 de noviembre en dos renders seguidos), con la misma pose en los dos pasos. No se ve: se acepta igual a la vista."
+    }
+  ]
+}

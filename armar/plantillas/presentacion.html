@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="__AUTOR__">
+<title>__TITULO__</title>
+<style>
+  :root {
+    --tinta: #070A0F; --hueso: #F5F7FF; --gris: #9AA3B8; --ambar: #FFB547; --acero: #1A2230; --acero2: #2A3446;
+    --rojo: #FF5C5C;
+  }
+  html, body { margin: 0; height: 100%; background: var(--tinta); overflow: hidden; }
+  body { font-family: "Segoe UI", system-ui, sans-serif; color: var(--hueso); }
+  body.sin-cursor, body.sin-cursor * { cursor: none !important; }
+  #escenario { position: fixed; inset: 0; background: var(--tinta); }
+  #escenario video {
+    position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: var(--tinta);
+    opacity: 0; z-index: 1; pointer-events: none;
+  }
+  #escenario video.visible { opacity: 1; z-index: 3; }
+  #escenario video.debajo { opacity: 1; z-index: 2; }
+  #negro { position: fixed; inset: 0; background: #000; z-index: 20; display: none; }
+  body.negro #negro { display: block; }
+  #ayuda {
+    position: fixed; z-index: 30; left: 50%; top: 50%; transform: translate(-50%, -50%);
+    width: min(760px, calc(100vw - 32px)); max-height: calc(100vh - 32px); overflow: auto; box-sizing: border-box;
+    background: var(--acero); border: 2px solid var(--acero2); border-radius: 14px; padding: 28px 32px;
+    font-size: 18px; line-height: 1.45; display: none; box-shadow: 0 20px 60px rgba(0,0,0,.6);
+  }
+  body.ayuda #ayuda { display: block; }
+  #ayuda h2 { margin: 0 0 14px; font-size: 24px; color: var(--ambar); }
+  #ayuda table { border-collapse: collapse; width: 100%; }
+  #ayuda td { padding: 6px 8px; border-top: 1px solid var(--acero2); vertical-align: top; }
+  #ayuda td:first-child { white-space: nowrap; color: var(--ambar); font-weight: 700; width: 38%; }
+  #ayuda p { color: var(--gris); margin: 14px 0 0; font-size: 15px; }
+  kbd { font-family: inherit; }
+  #cargando { position: fixed; inset: 0; display: grid; place-items: center; color: var(--gris); font-size: 20px; z-index: 0; }
+</style>
+</head>
+<body>
+<div id="cargando">Cargando la presentación…</div>
+<div id="escenario">
+  <video class="paso" preload="auto" playsinline disablepictureinpicture disableremoteplayback></video>
+  <video class="paso" preload="auto" playsinline disablepictureinpicture disableremoteplayback></video>
+  <video class="paso" preload="auto" playsinline disablepictureinpicture disableremoteplayback></video>
+</div>
+<div id="negro"></div>
+<div id="ayuda" role="dialog" aria-label="Atajos de teclado">
+  <h2>Teclas</h2>
+  <table>
+    <tr><td>Flecha derecha, Espacio, Av Pág o clic</td><td>siguiente paso (lo que manda el clicker)</td></tr>
+    <tr><td>Flecha izquierda o Re Pág</td><td>paso anterior (el video arranca de cero)</td></tr>
+    <tr><td>Número y Enter</td><td>ir a ese paso, como en PowerPoint</td></tr>
+    <tr><td>Inicio o Fin</td><td>primer o último paso</td></tr>
+    <tr><td>F</td><td>pantalla completa (y habilita el sonido)</td></tr>
+    <tr><td>B o punto</td><td>pantalla negra (otra vez para volver)</td></tr>
+    <tr><td>S</td><td>vista del orador en otra ventana: notas, lo que viene, reloj y tiempo transcurrido</td></tr>
+    <tr><td>? o H</td><td>esta ayuda</td></tr>
+  </table>
+  <p>Cada paso es un video que arranca solo y queda quieto en su último cuadro. El siguiente ya está cargado: no hay parpadeo al cambiar. Funciona sin internet.</p>
+</div>
+
+<script id="datos" type="application/json">__DATOS__</script>
+<script id="html-orador" type="text/html">
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>Orador: __TITULO__</title>
+<style>
+  :root { --tinta:#070A0F; --hueso:#F5F7FF; --gris:#9AA3B8; --ambar:#FFB547; --acero:#1A2230; --acero2:#2A3446; --rojo:#FF5C5C; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--tinta); color: var(--hueso); font-family: "Segoe UI", system-ui, sans-serif; overflow: hidden; }
+  #marco { display: grid; grid-template-rows: auto 1fr auto; height: 100vh; }
+  header { display: flex; align-items: baseline; gap: 14px; padding: 14px 22px; border-bottom: 2px solid var(--acero2); background: var(--acero); }
+  #numero { font-size: 30px; font-weight: 700; color: var(--ambar); font-variant-numeric: tabular-nums; }
+  #etiqueta { font-size: 22px; font-weight: 700; }
+  #titulo { font-size: 20px; color: var(--gris); flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #seccion { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; padding: 3px 10px; border-radius: 999px; border: 2px solid var(--acero2); color: var(--gris); }
+  #seccion.respaldo { border-color: var(--ambar); color: var(--ambar); }
+  main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 34%); min-height: 0; }
+  #notas { padding: 20px 26px; overflow: auto; font-size: 27px; line-height: 1.42; }
+  #notas .acot { color: var(--gris); font-size: .8em; }
+  #notas .meta { color: var(--gris); font-size: 16px; line-height: 1.4; margin-top: 18px; padding-top: 10px; border-top: 1px solid var(--acero2); }
+  #notas .vacia { color: var(--gris); font-style: italic; }
+  aside { border-left: 2px solid var(--acero2); padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; min-height: 0; overflow: auto; }
+  .rotulo { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--gris); }
+  .cuadro { width: 100%; aspect-ratio: 16 / 9; background: #000; border: 2px solid var(--acero2); border-radius: 6px; display: block; object-fit: contain; }
+  #sig .cuadro { border-color: var(--ambar); }
+  #sig-texto { font-size: 17px; }
+  #sig-texto b { color: var(--ambar); }
+  #barra { height: 8px; background: var(--acero2); border-radius: 4px; overflow: hidden; }
+  #barra div { height: 100%; width: 0; background: var(--ambar); }
+  #video-t { font-size: 15px; color: var(--gris); font-variant-numeric: tabular-nums; }
+  footer { display: flex; align-items: center; gap: 24px; padding: 12px 22px; border-top: 2px solid var(--acero2); background: var(--acero); }
+  #reloj { font-size: 34px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  #trans { font-size: 34px; font-weight: 700; color: var(--ambar); font-variant-numeric: tabular-nums; }
+  #plan { font-size: 16px; color: var(--gris); }
+  #plan.tarde { color: var(--rojo); }
+  .espacio { flex: 1; }
+  button { font: inherit; font-size: 15px; font-weight: 700; color: var(--hueso); background: var(--acero2); border: 0; border-radius: 8px; padding: 8px 14px; cursor: pointer; }
+  button:hover { background: #38445b; }
+  #aviso { font-size: 15px; color: var(--ambar); }
+  #salto { font-size: 22px; font-weight: 700; color: var(--tinta); background: var(--ambar); border-radius: 8px; padding: 2px 12px; display: none; }
+  #salto.activo { display: inline-block; }
+</style></head>
+<body>
+<div id="marco">
+  <header>
+    <span id="numero">–</span><span id="etiqueta"></span><span id="titulo"></span><span id="salto"></span><span id="seccion"></span>
+  </header>
+  <main>
+    <div id="notas"></div>
+    <aside>
+      <div class="rotulo">Ahora (así queda)</div>
+      <img id="ahora" class="cuadro" alt="">
+      <div id="barra"><div></div></div>
+      <div id="video-t"></div>
+      <div id="sig">
+        <div class="rotulo" style="margin-bottom:8px">Siguiente (así queda)</div>
+        <img id="sig-img" class="cuadro" alt="">
+      </div>
+      <div id="sig-texto"></div>
+    </aside>
+  </main>
+  <footer>
+    <div><div class="rotulo">Hora</div><div id="reloj">--:--</div></div>
+    <div><div class="rotulo">Transcurrido</div><div id="trans">0:00</div></div>
+    <div id="plan"></div>
+    <div class="espacio"></div>
+    <div id="aviso"></div>
+    <button id="pausar" type="button">Pausar</button>
+    <button id="reiniciar" type="button">Reiniciar</button>
+  </footer>
+</div>
+</body></html>
+</script>
+<!--__VIDEOS__-->
+<script>
+(() => {
+  "use strict";
+  const D = JSON.parse(document.getElementById("datos").textContent);
+  const P = D.pasos;
+  const N = P.length;
+  const videos = [...document.querySelectorAll("video.paso")];
+  const asignado = new Map();          // elemento -> índice de paso
+  const urls = new Map();              // índice -> blob: URL
+  const usoUrl = [];                   // orden de uso (para soltar memoria)
+  const MAX_URLS = 8;
+  const registro = [];                 // para las pruebas: cada cambio de paso
+  let actual = -1, objetivo = -1, turno = 0;
+  let negro = false, ayuda = false;
+  let digitos = "", digitosT = 0;
+  let orador = null;
+  let inicio = null, pausado = null, acumulado = 0;   // cronómetro de la charla
+  let sonidoBloqueado = false;
+
+  // ------------------------------------------------------------ videos
+  async function urlDe(i) {
+    if (urls.has(i)) { tocar(i); return urls.get(i); }
+    const el = document.getElementById("v" + P[i].n);
+    const b64 = el.textContent.trim();
+    let blob;
+    try {
+      blob = await (await fetch("data:video/mp4;base64," + b64)).blob();
+    } catch (e) {
+      const bin = atob(b64), u8 = new Uint8Array(bin.length);
+      for (let k = 0; k < bin.length; k++) u8[k] = bin.charCodeAt(k);
+      blob = new Blob([u8], { type: "video/mp4" });
+    }
+    const u = URL.createObjectURL(blob);
+    urls.set(i, u); tocar(i); soltar();
+    return u;
+  }
+  function tocar(i) { const k = usoUrl.indexOf(i); if (k >= 0) usoUrl.splice(k, 1); usoUrl.push(i); }
+  function soltar() {
+    const enUso = new Set(asignado.values());
+    while (usoUrl.length > MAX_URLS) {
+      const k = usoUrl.findIndex(i => !enUso.has(i) && Math.abs(i - actual) > 1);
+      if (k < 0) break;
+      const i = usoUrl.splice(k, 1)[0];
+      URL.revokeObjectURL(urls.get(i)); urls.delete(i);
+    }
+  }
+  function elementoDe(i) { for (const [v, j] of asignado) if (j === i) return v; return null; }
+  function libre(evitar) {
+    // ni el visible ni los que hay que evitar; entre los demás, el que esté más lejos del paso actual
+    const visible = elementoDe(actual);
+    let mejor = null, lejos = -1;
+    for (const v of videos) {
+      if (v === visible || evitar.includes(v)) continue;
+      const j = asignado.get(v);
+      const d = j === undefined ? Infinity : (j === objetivo ? -0.5 : Math.abs(j - actual));
+      if (d > lejos) { lejos = d; mejor = v; }
+    }
+    return mejor || videos.find(v => v !== visible);
+  }
+  function esperar(v, evento) {
+    return new Promise((ok, mal) => {
+      const listo = () => { limpiar(); ok(); };
+      const falla = () => { limpiar(); mal(new Error("no se pudo cargar el video")); };
+      const limpiar = () => { v.removeEventListener(evento, listo); v.removeEventListener("error", falla); };
+      v.addEventListener(evento, listo); v.addEventListener("error", falla);
+    });
+  }
+  async function preparar(i, evitar = []) {
+    let v = elementoDe(i);
+    if (!v) {
+      v = libre(evitar);
+      asignado.set(v, i);
+      v.pause();
+      v.classList.remove("visible", "debajo");
+      const u = await urlDe(i);
+      if (asignado.get(v) !== i) return preparar(i, evitar);
+      v.muted = !P[i].audio;
+      v.src = u;
+      v.load();
+    }
+    if (v.readyState < 2) await esperar(v, "loadeddata");
+    if (v.currentTime !== 0 && v !== elementoDe(actual)) {
+      v.currentTime = 0;
+      if (v.seeking) await esperar(v, "seeked");
+    }
+    return v;
+  }
+
+  async function ir(i, motivo = "") {
+    if (i < 0 || i >= N) return;
+    const mio = ++turno;
+    objetivo = i;
+    const visible = elementoDe(actual);
+    let v;
+    try {
+      v = elementoDe(i) === visible && visible ? null : await preparar(i, visible ? [visible] : []);
+    } catch (e) { avisar("No se pudo cargar el paso " + P[i].n + ": " + e.message); return; }
+    if (mio !== turno) return;                       // llegó otra tecla antes: manda la última
+    if (!v) {                                        // el mismo paso: arranca de cero
+      v = visible; v.currentTime = 0; if (v.seeking) await esperar(v, "seeked");
+    } else if (v.currentTime !== 0 || v.ended) {
+      v.currentTime = 0;
+    }
+    // el nuevo arriba (su primer cuadro es el último del anterior), el viejo queda debajo
+    for (const o of videos) if (o !== v) { o.classList.remove("visible"); o.classList.toggle("debajo", o === visible); }
+    v.classList.add("visible"); v.classList.remove("debajo");
+    registro.push({ i, n: P[i].n, readyState: v.readyState, t: performance.now(), motivo });
+    actual = i;
+    document.getElementById("cargando").style.display = "none";
+    reproducir(v, i);
+    if (visible && visible !== v) setTimeout(() => { if (elementoDe(actual) !== visible) { visible.pause(); visible.classList.remove("debajo"); } }, 400);
+    if (!inicio && motivo === "siguiente" && i > 0) iniciarCronometro();
+    try { history.replaceState(null, "", "#" + P[i].n); } catch (e) {}
+    actualizarOrador();
+    if (i + 1 < N) preparar(i + 1, [v]).catch(() => {});
+  }
+
+  function reproducir(v, i) {
+    v.muted = !P[i].audio;
+    const pr = v.play();
+    if (pr && pr.catch) pr.catch(err => {
+      if (err && err.name === "NotAllowedError" && !v.muted) {   // sonido bloqueado: que igual se vea
+        sonidoBloqueado = true; v.muted = true; v.play().catch(() => {});
+        avisar("El navegador bloqueó el sonido: hacé clic una vez en la ventana de la presentación (o apretá F ahí).");
+      }
+    });
+  }
+
+  const base = () => (objetivo >= 0 ? objetivo : actual);
+  const siguiente = () => { if (salirDeNegro()) return; if (base() + 1 < N) ir(base() + 1, "siguiente"); };
+  const anterior = () => { if (salirDeNegro()) return; if (base() > 0) ir(base() - 1, "anterior"); };
+  function salirDeNegro() { if (negro) { ponerNegro(false); return true; } return false; }
+  function ponerNegro(si) { negro = si; document.body.classList.toggle("negro", si); actualizarOrador(); }
+
+  // ------------------------------------------------------------ teclas
+  function tecla(e) {
+    const k = e.key;
+    if (e.ctrlKey || e.metaKey || e.altKey) return;
+    if (/^[0-9]$/.test(k)) { digitos = (digitos + k).slice(-3); digitosT = Date.now(); actualizarOrador(); e.preventDefault(); return; }
+    if (k === "Enter" && digitos) {
+      const n = parseInt(digitos, 10); digitos = ""; e.preventDefault();
+      if (n >= 1 && n <= N) { if (negro) ponerNegro(false); ir(n - 1, "salto"); } else actualizarOrador();
+      return;
+    }
+    if (k === "Escape" && digitos) { digitos = ""; actualizarOrador(); return; }
+    switch (k) {
+      case "ArrowRight": case "ArrowDown": case "PageDown": case " ": case "Enter": case "n": case "N":
+        e.preventDefault(); siguiente(); break;
+      case "ArrowLeft": case "ArrowUp": case "PageUp": case "Backspace": case "p": case "P":
+        e.preventDefault(); anterior(); break;
+      case "Home": e.preventDefault(); ir(0, "salto"); break;
+      case "End": e.preventDefault(); ir(N - 1, "salto"); break;
+      case "f": case "F": case "F5":                                    // F5: el botón de "presentar" de algunos clickers
+        e.preventDefault();
+        if (e.view && e.view !== window) avisar("La pantalla completa se pide desde la ventana de la presentación: hacé clic ahí y apretá F.");
+        else pantallaCompleta(k === "F5");
+        break;
+      case "b": case "B": case ".": e.preventDefault(); ponerNegro(!negro); break;
+      case "s": case "S": e.preventDefault(); abrirOrador(); break;
+      case "?": case "h": case "H": e.preventDefault(); ayuda = !ayuda; document.body.classList.toggle("ayuda", ayuda); break;
+      case "Escape": if (ayuda) { ayuda = false; document.body.classList.remove("ayuda"); } break;
+    }
+  }
+  function pantallaCompleta(soloEntrar = false) {
+    const el = document.documentElement;
+    if (!document.fullscreenElement) { el.requestFullscreen({ navigationUI: "hide" }).catch(() => {}); }
+    else if (!soloEntrar) { document.exitFullscreen().catch(() => {}); }
+  }
+  document.addEventListener("keydown", tecla);
+  document.getElementById("escenario").addEventListener("click", () => { if (ayuda) { ayuda = false; document.body.classList.remove("ayuda"); return; } siguiente(); });
+  document.getElementById("negro").addEventListener("click", () => ponerNegro(false));
+  document.getElementById("ayuda").addEventListener("click", () => { ayuda = false; document.body.classList.remove("ayuda"); });
+  let quieto = 0;
+  document.addEventListener("mousemove", () => { document.body.classList.remove("sin-cursor"); clearTimeout(quieto); quieto = setTimeout(() => document.body.classList.add("sin-cursor"), 2000); });
+  document.body.classList.add("sin-cursor");
+  for (const v of videos) v.addEventListener("ended", () => actualizarOrador());
+
+  // ------------------------------------------------------------ vista del orador
+  function abrirOrador() {
+    if (orador && !orador.closed) { orador.focus(); return; }
+    const w = window.open("", "orador_charla", "width=1280,height=800");
+    if (!w) { avisar("El navegador bloqueó la ventana del orador: permití las ventanas emergentes para este archivo y apretá S de nuevo."); return; }
+    // siempre un documento nuevo: si la presentación se recargó, la ventana vieja queda con escuchas muertas
+    w.document.open();
+    w.document.write(document.getElementById("html-orador").textContent);
+    w.document.close();
+    orador = w; notasDe = -1;
+    w.addEventListener("keydown", tecla);            // el clicker manda las teclas a la ventana que tenga el foco
+    w.document.getElementById("reiniciar").onclick = () => { inicio = Date.now(); acumulado = 0; pausado = null; actualizarRelojes(); };
+    w.document.getElementById("pausar").onclick = () => {
+      if (!inicio) iniciarCronometro();
+      else if (pausado) { inicio += Date.now() - pausado; pausado = null; }
+      else pausado = Date.now();
+      actualizarRelojes();
+    };
+    actualizarOrador();
+  }
+  function iniciarCronometro() { inicio = Date.now(); pausado = null; }
+  function fmt(s) {
+    s = Math.max(0, Math.floor(s));
+    const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), x = s % 60;
+    return (h ? h + ":" + String(m).padStart(2, "0") : m) + ":" + String(x).padStart(2, "0");
+  }
+  function esc(t) { return t.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+  function notasHtml(texto) {
+    if (!texto) return '<div class="vacia">Sin notas.</div>';
+    const partes = texto.split(/\n\n(?=(?:Fuente|Recortable): )/);
+    const habla = partes.shift();
+    let h = habla.split(/\n+/).map(par => "<p>" + esc(par).replace(/\[[^\]]*\]/g, m => '<span class="acot">' + m + "</span>") + "</p>").join("");
+    if (partes.length) h += '<div class="meta">' + partes.map(p => esc(p)).join("<br>") + "</div>";
+    return h;
+  }
+  let notasDe = -1;
+  function actualizarOrador() {
+    if (!orador || orador.closed) return;
+    const d = orador.document, i = Math.max(actual, 0), p = P[i];
+    if (!p || !d.getElementById("numero")) return;
+    d.getElementById("numero").textContent = p.n + " / " + N;
+    d.getElementById("etiqueta").textContent = p.etiqueta;
+    d.getElementById("titulo").textContent = p.titulo;
+    const sec = d.getElementById("seccion");
+    sec.textContent = negro ? "pantalla negra" : p.seccion;
+    sec.className = p.seccion === "respaldo" || negro ? "respaldo" : "";
+    if (notasDe !== i) { d.getElementById("notas").innerHTML = notasHtml(p.notas); d.getElementById("notas").scrollTop = 0; notasDe = i; }
+    d.getElementById("ahora").src = p.mini;
+    const s = P[i + 1];
+    d.getElementById("sig").style.visibility = s ? "visible" : "hidden";
+    if (s) d.getElementById("sig-img").src = s.mini;
+    d.getElementById("sig-texto").innerHTML = s ? "<b>" + esc(s.etiqueta) + "</b> " + esc(s.titulo) + (s.diapo !== p.diapo ? " (diapositiva nueva)" : "") : "Fin de la presentación.";
+    const salto = d.getElementById("salto");
+    salto.textContent = digitos ? "ir a " + digitos + " con Enter" : "";
+    salto.className = digitos ? "activo" : "";
+    d.getElementById("aviso").textContent = sonidoBloqueado ? "Sonido bloqueado: clic en la presentación" : (avisoTexto || "");
+    actualizarRelojes();
+  }
+  let avisoTexto = "";
+  function avisar(t) { avisoTexto = t; console.warn(t); actualizarOrador(); }
+  function actualizarRelojes() {
+    if (!orador || orador.closed) return;
+    const d = orador.document;
+    if (!d.getElementById("reloj")) return;
+    const ahora = new Date();
+    d.getElementById("reloj").textContent = String(ahora.getHours()).padStart(2, "0") + ":" + String(ahora.getMinutes()).padStart(2, "0") + ":" + String(ahora.getSeconds()).padStart(2, "0");
+    const t = inicio ? ((pausado || Date.now()) - inicio) / 1000 : 0;
+    d.getElementById("trans").textContent = fmt(t) + (pausado ? " en pausa" : "");
+    const p = P[Math.max(actual, 0)];
+    const plan = d.getElementById("plan");
+    if (p && p.plan != null) {
+      plan.textContent = "plan al llegar acá: " + fmt(p.plan);
+      plan.className = inicio && t - p.plan > 60 ? "tarde" : "";
+    } else plan.textContent = "";
+    const v = elementoDe(actual);
+    if (v && v.duration) {
+      d.querySelector("#barra div").style.width = (100 * v.currentTime / v.duration).toFixed(1) + "%";
+      d.getElementById("video-t").textContent = "video " + v.currentTime.toFixed(1).replace(".", ",") + " de " + v.duration.toFixed(1).replace(".", ",") + " s" + (v.ended ? ", terminó" : "");
+    }
+    if (digitos && Date.now() - digitosT > 4000) { digitos = ""; actualizarOrador(); }
+  }
+  setInterval(actualizarRelojes, 250);
+
+  window.__pitch = {
+    estado: () => ({
+      actual, objetivo, total: N, negro, ayuda, orador: !!(orador && !orador.closed), sonidoBloqueado,
+      videos: videos.map(v => ({ paso: asignado.has(v) ? P[asignado.get(v)].n : null, visible: v.classList.contains("visible"),
+        readyState: v.readyState, t: v.currentTime, duracion: v.duration, pausado: v.paused, terminado: v.ended, muted: v.muted })),
+      registro: registro.slice(-20),
+    }),
+    ir: n => ir(n - 1, "salto"),
+  };
+
+  const h = parseInt((location.hash || "").slice(1), 10);
+  ir(h >= 1 && h <= N ? h - 1 : 0, "inicio");
+})();
+</script>
+</body>
+</html>

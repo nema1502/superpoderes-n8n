@@ -1,0 +1,50 @@
+{
+  "_doc": "Piezas de Remotion para Manim, en el mismo píxel (x, y = esquina de arriba a la izquierda del recorte en el cuadro de 1920×1080). Las genera remotion/generar_assets.mjs; no se editan a mano.",
+  "generado": "2026-10-23",
+  "piezas": {
+    "marca_agua": {
+      "x": 56,
+      "y": 28,
+      "ancho": 268,
+      "alto": 68,
+      "archivos": {
+        "transparente": "marca_agua.png",
+        "cuadro": "marca_agua_1080.png",
+        "tinta": "marca_agua_tinta.png"
+      }
+    },
+    "chip_piso_1": {
+      "x": 1713,
+      "y": 30,
+      "ancho": 148,
+      "alto": 100,
+      "archivos": {
+        "transparente": "chip_piso_1.png",
+        "cuadro": "chip_piso_1_1080.png",
+        "tinta": "chip_piso_1_tinta.png"
+      }
+    },
+    "chip_piso_2": {
+      "x": 1713,
+      "y": 30,
+      "ancho": 148,
+      "alto": 100,
+      "archivos": {
+        "transparente": "chip_piso_2.png",
+        "cuadro": "chip_piso_2_1080.png",
+        "tinta": "chip_piso_2_tinta.png"
+      }
+    },
+    "chip_piso_3": {
+      "x": 1713,
+      "y": 30,
+      "ancho": 148,
+      "alto": 100,
+      "archivos": {
+        "transparente": "chip_piso_3.png",
+        "cuadro": "chip_piso_3_1080.png",
+        "tinta": "chip_piso_3_tinta.png"
+      }
+    }
+  }
+}

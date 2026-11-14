@@ -1,0 +1,2 @@
+# La presentación HTML lleva los videos adentro: se guarda y se baja tal cual, sin cambiar los finales de línea.
+presentacion/*.html -text

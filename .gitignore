@@ -1,0 +1,52 @@
+.env
+.env.*
+*.local
+node_modules/
+.venv/
+.tmp*/
+__pycache__/
+*.pyc
+.n8n/
+credenciales*.json
+privado/
+
+# --- Armado de las diapositivas: intermedios y salidas que se regeneran con un comando ---
+render/
+salida/
+media/
+manim/media/
+manim/auditoria/
+remotion/out/
+auditoria/
+
+# --- Remotion: código que rehace remotion/generar_registro.mjs en cada render ---
+remotion/src/diapos/index.ts
+remotion/src/entradas/*
+!remotion/src/entradas/_Sistema.ts
+remotion/src/comun/iconos.generado.ts
+*.tmp.png
+*.tmp.mp4
+*.tsbuildinfo
+.remotion/
+.pnpm-store/
+
+# --- Audio que regenera armar/ding.py ---
+armar/assets/ding.wav
+
+# --- LaTeX: auxiliares de compilación ---
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.xdv
+
+# --- Secretos y sistema ---
+*.key
+*.pem
+Thumbs.db
+desktop.ini
+.DS_Store
+~$*
