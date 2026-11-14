@@ -3,7 +3,7 @@
 La sala se anotó al sorteo desde el celular en D04. Esta diapositiva muestra que eso fue un flujo:
 el celular de cerca, con el nombre que acaba de salir, y la cámara se aleja hasta que aparece el
 flujo entero (Formulario, Revisar palabra, Limpiar, Guardar). El nombre viaja por las conexiones,
-entra en cada nodo (que late mientras lo procesa) y termina como una fila de la tabla. Después,
+entra en cada nodo (que late mientras lo procesa) y queda guardado debajo de Guardar. Después,
 disparador y pasos, y al final dos datos de n8n con su logo.
 
     <python del entorno> manim/render_diapo.py D05
@@ -23,7 +23,8 @@ Decisiones:
   flujo aparece.
 - El nombre pasa por DETRÁS de los nodos: entra en cada uno y sale del otro lado (el nodo late
   cuando lo tiene), como un dato que procesa cada paso. Por encima tapaba los íconos.
-- La tablita es un renglón de esquinas casi rectas: con radio grande se leía como otra pastilla.
+- El nombre queda guardado tal como viajó, la pastilla ámbar, y late una vez al llegar. La fila de
+  borde fino en que se convertía antes se leía como otra cosa.
 - D05.2: los corchetes van en gris y en el trazo normal (como en la charla de octubre) y abarcan el
   nodo y su rótulo. Todo el flujo va 20 px más arriba que en el deck (nodos en y 500): así
   disparador y pasos (y 748) quedan con aire arriba y abajo. El título
@@ -330,7 +331,7 @@ def partes_titulo(texto: str) -> list[str]:
     return [palabras[0]] + [" " + x for x in palabras[1:]]
 
 
-FILA = {"cx": 1650, "cy": 770, "ancho": 280, "alto": 70, "radio": 8}   # la tablita
+FILA = {"cx": 1650, "cy": 770}   # donde queda guardado el nombre, debajo de Guardar
 PILDORA = {"alto": 64, "aire": 26, "separacion": 30}                    # el nombre que viaja
 FOCO_CERCA = (330, 500)    # D05.1: donde mira la cámara al principio (el celular y el nombre)
 ZOOM_CERCA = 2.0
@@ -413,15 +414,10 @@ class D05QueEsUnFlujo(DiapoCharla):
             t_i = instante("suave", (CX[i] - x0) / (CX[3] - x0)) * viaje
             tramos.append(Latido(nodos[i], max(0.0, t_i - 0.2), 0.4, escala=1.06))
         self.tocar(*tramos)
-        # Baja hasta la tablita, debajo de Guardar,
+        # Baja debajo de Guardar y queda ahí tal como viajó: la misma pastilla ámbar, que late una vez
+        # al quedar guardada (antes se convertía en una fila de borde fino que se leía como otra cosa).
         self.tocar(Desplazar(pildora, 0, FILA["cy"] - CY, 0.0, 0.35, curva="suave"))
-        # y queda como una fila: el borde en hueso al 40 % y el nombre en ámbar.
-        fila = rect_borde(FILA["cx"], FILA["cy"], FILA["ancho"], FILA["alto"], FILA["radio"], GROSOR["borde"], color=HUESO)
-        fila.set_stroke(opacity=OPACIDAD["borde_apoyo"])
-        ana_fila = Texto(t1[5], FILA["cx"], FILA["cy"], tam="rotulo", color=AMBAR, alinear="centro")
-        self.tocar(Mover(caja_ana, fila, 0.0, 0.35), Mover(ana, ana_fila, 0.0, 0.35))
-        self.remove(pildora, caja_ana, ana)
-        self.add(fila, ana_fila)
+        self.tocar(Latido(pildora, 0.0, 0.35, escala=1.08))
 
         # ---------------- Paso 2: disparador y pasos ----------------
         self.paso(2)
@@ -440,7 +436,7 @@ class D05QueEsUnFlujo(DiapoCharla):
         titulo_gris = Texto(t1[0], 960, Y_TITULO, tam="frase", color=GRIS, alinear="centro", partes=partes)
         self.tocar(
             Mover(titulo, titulo_gris, 0.0, 0.3),
-            Desvanecer(VGroup(fila, ana_fila), 0.0, 0.3),
+            Desvanecer(pildora, 0.0, 0.3),
             Trazo(cor1, 0.2, 0.4),
             Latido(nodos[0], 0.25, 0.4),
             Entrar(disparador, 0.35),

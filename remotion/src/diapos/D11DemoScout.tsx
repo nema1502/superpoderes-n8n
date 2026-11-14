@@ -9,17 +9,24 @@
 //
 // El flujo sale de workflows/ESPEC.md (flujo 3), dibujado con el nodo de la charla.
 // La tarjeta de demo (de TARJETA hasta FlujoQueSeAleja) es la misma pieza en D09, D10 y D11,
-// copiada igual en los tres archivos: si cambia en uno, se copia a los otros dos.
-import { evolvePath, getLength, getPointAtLength } from "@remotion/paths";
+// copiada igual en los tres archivos: si cambia en uno, se copia a los otros dos. Diferencias de
+// D10 y D11 (14-nov): NodoDemo acepta brilloComun (el brillo() de tres capas en lugar del halo
+// propio, solo en el nodo que queda encendido) y PuntoDato dibuja el DatoViajero de la capa común
+// (brillo y estela de 4). Copiar la tarjeta desde D09 encima de este archivo borraría la página que
+// se arma: los cambios se copian a mano.
+// Debajo de todo va el fondo de la charla con dos destellos por las pistas en el paso 1 (FondoVivo).
+import { evolvePath } from "@remotion/paths";
 import React from "react";
-import { FondoCircuito } from "./D01Portada";
 import {
   anchoIcono,
+  brillo,
   Capa,
   COLOR,
   conAlfa,
   CURVA,
+  DatoViajero,
   Foco,
+  FondoVivo,
   GROSOR,
   Icono,
   medidasPastilla,
@@ -121,10 +128,12 @@ export type PropsNodoDemo = {
   /** Escala extra (latido, golpe) alrededor del centro. */
   escala?: number;
   estilo?: Estilo;
+  /** El brillo de tres capas de la charla (brillo de comun/Luz) en lugar del halo propio, con el mismo encendido. */
+  brilloComun?: boolean;
 };
 
 /** El nodo de flujo de la charla: cuadrado redondeado relleno noche, borde azul de 5 px, ícono en hueso. Encendido: borde ámbar y brillo. */
-const NodoDemo: React.FC<PropsNodoDemo> = ({ cx, cy, lado, icono, nombreAdentro, encendido = 0, escala = 1, estilo }) => {
+const NodoDemo: React.FC<PropsNodoDemo> = ({ cx, cy, lado, icono, nombreAdentro, encendido = 0, escala = 1, estilo, brilloComun = false }) => {
   const e = entre01(encendido);
   const borde = e > 0 ? mezclar(COLOR.azul, COLOR.ambar, e) : COLOR.azul;
   const ag = nombreAdentro ? medidasAgente(nombreAdentro, lado) : null;
@@ -144,7 +153,7 @@ const NodoDemo: React.FC<PropsNodoDemo> = ({ cx, cy, lado, icono, nombreAdentro,
           borderRadius: TARJETA.radio,
           border: `${GROSOR.trazo_normal}px solid ${borde}`,
           background: COLOR.noche,
-          boxShadow: e > 0 ? `0 0 ${b.radio}px ${b.extension}px ${conAlfa(COLOR.ambar, b.opacidad * e)}` : "none",
+          boxShadow: brilloComun ? brillo(COLOR.ambar, e) ?? "none" : e > 0 ? `0 0 ${b.radio}px ${b.extension}px ${conAlfa(COLOR.ambar, b.opacidad * e)}` : "none",
         }}
       />
       {ag ? (
@@ -193,18 +202,14 @@ const ConexionDemo: React.FC<{ id: string; d: string; progreso: number; trazos?:
   );
 };
 
-/** El dato que viaja: un círculo ámbar con su halo sobre el camino `d`, en `progreso` (0 a 1). Va debajo de los nodos: entra y sale de ellos. */
-const PuntoDato: React.FC<{ d: string; progreso: number }> = ({ d, progreso }) => {
-  if (progreso <= 0 || progreso >= 1) return null;
-  const punto = getPointAtLength(d, getLength(d) * progreso);
-  if (!punto) return null;
-  return (
-    <svg width={1920} height={1080} style={svgPantalla}>
-      <circle cx={punto.x} cy={punto.y} r={TARJETA.halo.radio} fill={conAlfa(COLOR.ambar, TARJETA.halo.opacidad)} />
-      <circle cx={punto.x} cy={punto.y} r={TARJETA.radioDato} fill={COLOR.ambar} />
-    </svg>
-  );
-};
+/**
+ * El dato que viaja: el DatoViajero de la charla (comun/Luz: círculo ámbar con brillo y una estela
+ * de 4), sobre el camino `d`, en `progreso` (0 a 1). Con 0 o 1 no se ve. Va debajo de los nodos:
+ * entra y sale de ellos.
+ */
+const PuntoDato: React.FC<{ d: string; progreso: number }> = ({ d, progreso }) => (
+  <DatoViajero d={d} progreso={progreso} radio={TARJETA.radioDato} estela={4} color={COLOR.ambar} brillo={1} />
+);
 
 /** Un latido: 0, sube a 1 a la mitad y vuelve a 0, en `dura` s desde `retraso`. */
 function useLatido(paso: number, retraso: number, dura: number = TARJETA.latidoDura): number {
@@ -323,17 +328,101 @@ const HERRAMIENTAS = {
   aireMinimo: 24,
 } as const;
 
-/** Paso 2: el flujo (de y 515 a 885, con los rótulos de abajo) se achica a 0,75 y baja 50 px: queda de y 611 a 889. */
-const ALEJA = { escala: 0.75, dy: 50, cy: 700 } as const;
+/**
+ * Paso 2: el flujo (de y 515 a 885, con los rótulos de abajo) se achica a 0,8 y baja 45 px: queda de
+ * y 597 a 893, con los rótulos de las herramientas a 39 px (antes 36,75) y los de la fila a 48.
+ * Ajuste: el plan pedía 0,9 (rótulos a 44 px), pero el flujo mediría 333 px y entre la lección (su
+ * línea de base, y 551) y y 900 no entra sin pegarse al segundo renglón o dejar los rótulos debajo
+ * de y 900.
+ */
+const ALEJA = { escala: 0.8, dy: 45, cy: 700 } as const;
 
-// ---------- Tiempos (s desde el comienzo de cada paso; los últimos 0,3 s, quietos) ----------
+/**
+ * La página que arma el flujo, dibujada sin texto sobre la línea vacía del agente a Página: centrada
+ * en x 1280 (la mitad entre el borde del agente y el de Página) y en la fila. Un marco, una barra
+ * ámbar arriba, tres tarjetas en noche con borde azul de 3 px y cuatro renglones grises. Se arma
+ * bloque por bloque cuando el dato pasa por encima (desfase 0,08 s, cada bloque de 0,9 a 1 en 0,25 s).
+ * Ajuste: 420 por 250 y no 280. Con 280 su borde de abajo (y 740) tocaba la esquina de arriba de la
+ * herramienta YouTube (x 1015 a 1105, desde y 740). Con 250 queda de y 475 a 725: 15 px sobre las
+ * herramientas y 40 debajo de la frase (y 390, 60 px).
+ */
+const DIBUJO = {
+  cx: 1280,
+  cy: 600,
+  ancho: 420,
+  alto: 250,
+  radio: 18,
+  pad: 20,
+  borde: 3,
+  barra: { alto: 26, radio: 8 },
+  tarjetas: { arriba: 14, alto: 80, aire: 14, radio: 12, borde: 3 },
+  renglones: { arriba: 16, alto: 12, paso: 20, radio: 6, anchos: [1, 0.86, 0.94, 0.58] },
+  desfase: 0.08,
+  dura: 0.25,
+  desde: 0.9,
+} as const;
+
+/** Un bloque del dibujo: un rectángulo que crece de 0,9 a 1 alrededor de su centro. */
+type Bloque = { x: number; y: number; w: number; h: number; radio: number; fondo: string; borde?: string };
+
+function bloquesDibujo(): Bloque[][] {
+  const D = DIBUJO;
+  const x0 = D.cx - D.ancho / 2;
+  const y0 = D.cy - D.alto / 2;
+  const xi = x0 + D.pad;
+  const wi = D.ancho - 2 * D.pad;
+  const yBarra = y0 + D.pad;
+  const yTarjetas = yBarra + D.barra.alto + D.tarjetas.arriba;
+  const wTarjeta = (wi - 2 * D.tarjetas.aire) / 3;
+  const yRenglones = yTarjetas + D.tarjetas.alto + D.renglones.arriba;
+  const renglon = (i: number): Bloque => ({ x: xi, y: yRenglones + i * D.renglones.paso, w: wi * D.renglones.anchos[i], h: D.renglones.alto, radio: D.renglones.radio, fondo: COLOR.gris });
+  return [
+    [{ x: x0, y: y0, w: D.ancho, h: D.alto, radio: D.radio, fondo: COLOR.tinta, borde: conAlfa(COLOR.hueso, 0.5) }],
+    [{ x: xi, y: yBarra, w: wi, h: D.barra.alto, radio: D.barra.radio, fondo: COLOR.ambar }],
+    ...[0, 1, 2].map((i) => [{ x: xi + i * (wTarjeta + D.tarjetas.aire), y: yTarjetas, w: wTarjeta, h: D.tarjetas.alto, radio: D.tarjetas.radio, fondo: COLOR.noche, borde: COLOR.azul }]),
+    [renglon(0), renglon(1)],
+    [renglon(2), renglon(3)],
+  ];
+}
+
+const BLOQUES = bloquesDibujo();
+
+const DibujoPagina: React.FC<{ estilos: Estilo[]; sale: Estilo }> = ({ estilos, sale }) => (
+  <Capa estilo={sale}>
+    {BLOQUES.map((grupo, g) => (
+      <React.Fragment key={g}>
+        {grupo.map((b, i) => (
+          <Capa key={i} estilo={estilos[g]} origen={[b.x + b.w / 2, b.y + b.h / 2]}>
+            <div
+              style={{
+                position: "absolute",
+                left: b.x,
+                top: b.y,
+                width: b.w,
+                height: b.h,
+                boxSizing: "border-box",
+                borderRadius: b.radio,
+                background: b.fondo,
+                border: b.borde ? `${b.fondo === COLOR.tinta ? DIBUJO.borde : DIBUJO.tarjetas.borde}px solid ${b.borde}` : undefined,
+              }}
+            />
+          </Capa>
+        ))}
+      </React.Fragment>
+    ))}
+  </Capa>
+);
+
+// ---------- Tiempos (s desde el comienzo de cada paso, los últimos 0,3 s quietos) ----------
 // D11.1 (3,5 s propios) 0, 0,15 y 0,3 la pastilla, el título y la frase. 0,45, 0,6 y 0,75 Tu
 //        reto, el agente y Página. 0,8 a 1,3 las conexiones de la fila. 1,0 a 1,95 las tres
-//        herramientas, de a una. 1,3 a 1,55 el dato entra al agente, de 1,55 a 2,49 visita las
-//        tres herramientas (va y vuelve, y cada una late cuando el dato llega), de 2,5 a 2,8 sale
-//        hacia Página, y Página se enciende con un golpe chico (hasta 3,15).
-// D11.2 (2,5 s) 0 a 0,5 el flujo se aleja y pasa a Foco, 0 a 0,3 se va la frase, 0,3 y 0,45
-//        los dos renglones de la lección.
+//        herramientas, de a una. 1,18 a 1,4 el dato entra al agente, de 1,4 a 2,12 visita las
+//        tres herramientas (va y vuelve, y cada una late cuando el dato llega), de 2,12 a 2,42
+//        sale hacia Página. Cuando entra en la línea vacía (2,22) la página se arma encima, bloque
+//        por bloque, hasta 2,95. Página se enciende con un golpe chico y el brillo de la charla
+//        (2,42 a 2,77). Quieto desde 2,95.
+// D11.2 (2,5 s) 0 a 0,5 el flujo se aleja y pasa a Foco, 0 a 0,3 se van la frase y el dibujo de
+//        la página, 0,3 y 0,45 los dos renglones de la lección.
 const T1 = {
   reto: 0.45,
   agente: 0.6,
@@ -345,13 +434,15 @@ const T1 = {
   desfaseHerramienta: 0.12,
   conexionHerramientaDura: 0.25,
   nodoHerramienta: 0.1,
-  datoAlAgente: 1.3,
-  datoAlAgenteDura: 0.25,
-  visitas: [1.55, 1.87, 2.19],
-  visitaDura: 0.3,
+  datoAlAgente: 1.18,
+  datoAlAgenteDura: 0.22,
+  visitas: [1.4, 1.64, 1.88],
+  visitaDura: 0.24,
   latido: 0.25,
-  aPagina: 2.5,
+  aPagina: 2.12,
   aPaginaDura: 0.3,
+  /** Cuando el dato entra en la línea vacía (x 1070): empieza a armarse la página. */
+  arma: 2.22,
   golpe: 0.35,
   enciende: 0.15,
 } as const;
@@ -386,6 +477,8 @@ export const D11DemoScout: React.FC = () => {
   const aPagina = useTramo(1, T1.aPagina, T1.aPaginaDura, CURVA.lineal);
   const golpe = useEntra(1, T1.aPagina + T1.aPaginaDura, T1.golpe, RESORTE.golpe);
   const enciende = useTramo(1, T1.aPagina + T1.aPaginaDura, T1.enciende, CURVA.sale);
+  const estilosDibujo = BLOQUES.map((_, g) => useEscalar(1, T1.arma + g * DIBUJO.desfase, { desde: DIBUJO.desde, dura: DIBUJO.dura }));
+  const saleDibujo = useDesvanecer(2, 0, 0.3);
   const leccion = useLeccion();
 
   const y = TARJETA.filaY;
@@ -404,7 +497,7 @@ export const D11DemoScout: React.FC = () => {
 
   return (
     <>
-      <FondoCircuito />
+      <FondoVivo pulsos={[1]} />
       <Cabecera demo={t1[0]} titulo={t1[1]} frase={t1[2]} anim={cabecera} />
 
       <FlujoQueSeAleja aleja={leccion.aleja} {...ALEJA}>
@@ -413,6 +506,7 @@ export const D11DemoScout: React.FC = () => {
         {h.xs.map((_, i) => (
           <ConexionDemo key={`c${i}`} id={`d11-h${i}`} d={colgante(i)} progreso={conexionesH[i]} trazos encendido={Math.sin(Math.PI * visitas[i])} />
         ))}
+        <DibujoPagina estilos={estilosDibujo} sale={saleDibujo} />
         <PuntoDato d={`M ${RETO.x} ${y} L ${AGENTE.x} ${y}`} progreso={datoAlAgente} />
         {h.xs.map((_, i) => (
           <PuntoDato key={`v${i}`} d={visita(i)} progreso={idaYVuelta(visitas[i])} />
@@ -421,7 +515,7 @@ export const D11DemoScout: React.FC = () => {
 
         <NodoDemo cx={RETO.x} cy={y} lado={TARJETA.lado} icono={RETO.icono} estilo={nodos[0]} />
         <NodoDemo cx={AGENTE.x} cy={y} lado={TARJETA.lado} icono={AGENTE.icono} nombreAdentro={t1[4]} encendido={latidoAgente} escala={1 + TARJETA.latido * latidoAgente} estilo={nodos[1]} />
-        <NodoDemo cx={PAGINA.x} cy={y} lado={TARJETA.lado} icono={PAGINA.icono} encendido={enciende} escala={escalaPagina} estilo={nodos[2]} />
+        <NodoDemo cx={PAGINA.x} cy={y} lado={TARJETA.lado} icono={PAGINA.icono} encendido={enciende} escala={escalaPagina} estilo={nodos[2]} brilloComun />
         <Texto x={RETO.x} y={TARJETA.rotuloY} tam="lectura" alinear="centro" estilo={rotulosFila[0]}>
           {t1[3]}
         </Texto>

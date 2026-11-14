@@ -23,14 +23,21 @@
 // en D14.2 la llama queda a 0,8 (240 px) y no a 0,6, y la llama y las razones se centran en y 560
 // (antes el tercio de abajo quedaba vacío). En D14.3 los nodos son de 170 px como en las demos, la
 // fila baja a y 580 y el cuadrado de Tinkazo crece a 260 px con la llama a 0,55 adentro. Debajo de
-// todo, el fondo de circuito de la charla (FondoCircuito de D01Portada.tsx), fuera de la cámara.
+// todo, el fondo de la charla (FondoVivo de la capa común), fuera de la cámara.
+//
+// Luz (14-nov): en D14.1 se apagan las luces (el fondo baja al 30 % en 0,5 s y queda así en D14.2 y
+// D14.3: D15 entra por fundido con el fondo entero). Cada pisada levanta tres cuadrados de polvo. Al
+// llegar, la llama salta (36 px), cae y queda tres cuadros aplastada (saltoLlama, que usa también D04)
+// y del lomo sale una lluvia de 24 cuadrados de la marca, sin magenta ni turquesa, que se apaga antes
+// de los 3,25 s. Ahora, el sorteo. entra con un golpe. En D14.2 la llama no desaparece al darse vuelta
+// (miraSinCero).
 import React from "react";
-import { FondoCircuito } from "./D01Portada";
 import { Easing, Img, interpolateColors, staticFile } from "remotion";
 import {
   COLOR,
   conAlfa,
   CURVA,
+  FondoVivo,
   GROSOR,
   Hilo,
   Icono,
@@ -44,6 +51,7 @@ import {
   useEntrarPalabras,
   useGolpe,
   useSale,
+  useSegundos,
   useTramo,
   type Estilo,
 } from "../comun";
@@ -91,9 +99,39 @@ type PoseLlama = {
   /** 1 mira a la derecha, -1 a la izquierda (lo de en medio es la media vuelta). */
   mira: number;
   color: string;
+  /** El salto (saltoLlama): px que sube y escala de ancho y alto con el origen en las patas. */
+  alza?: number;
+  sx?: number;
+  sy?: number;
 };
 
-const Llama: React.FC<PoseLlama> = ({ cx, base, escala, fase, giro, mira, color }) => {
+// ---------- El salto al llegar (D14.1 y D04) ----------
+/** Sube 36 px en 0,15 s (CURVA.sale), baja en 0,13 s (CURVA.entra), queda tres cuadros aplastada
+ * (0,92 de alto y 1,05 de ancho, con el origen en las patas) y se endereza en otros tres. */
+export const SALTO = { alto: 36, sube: 0.15, baja: 0.13, aplastada: 3 / 30, vuelve: 3 / 30, sx: 1.05, sy: 0.92 } as const;
+/** Segundos desde que despega hasta que toca el piso. */
+export const SALTO_EN_AIRE = SALTO.sube + SALTO.baja;
+/** Segundos desde que despega hasta que queda quieta en la pose del archivo. */
+export const SALTO_DURA = SALTO_EN_AIRE + SALTO.aplastada + SALTO.vuelve;
+
+/** El salto según los segundos desde que despega. Antes y después: 0, 1 y 1 (la pose del archivo). */
+export function saltoLlama(t: number): { alza: number; sx: number; sy: number } {
+  if (!(t > 0) || t >= SALTO_DURA) return { alza: 0, sx: 1, sy: 1 };
+  if (t < SALTO.sube) return { alza: SALTO.alto * CURVA.sale(t / SALTO.sube), sx: 1, sy: 1 };
+  if (t < SALTO_EN_AIRE) return { alza: SALTO.alto * (1 - CURVA.entra((t - SALTO.sube) / SALTO.baja)), sx: 1, sy: 1 };
+  const enPiso = t - SALTO_EN_AIRE;
+  if (enPiso < SALTO.aplastada) return { alza: 0, sx: SALTO.sx, sy: SALTO.sy };
+  const k = CURVA.sale(Math.min(1, (enPiso - SALTO.aplastada) / SALTO.vuelve));
+  return { alza: 0, sx: SALTO.sx + (1 - SALTO.sx) * k, sy: SALTO.sy + (1 - SALTO.sy) * k };
+}
+
+/** Al darse vuelta el ancho no baja del 10 %: en el cuadro en que pasaría por cero, cambia de lado. */
+export function miraSinCero(m: number): number {
+  if (Math.abs(m) >= 0.1) return m;
+  return m < 0 ? -0.1 : 0.1;
+}
+
+const Llama: React.FC<PoseLlama> = ({ cx, base, escala, fase, giro, mira, color, alza = 0, sx = 1, sy = 1 }) => {
   const u = PX_POR_UNIDAD * escala;
   const a = ANGULO_PATA * Math.sin(fase);
   const rebote = -REBOTE_PX * escala * Math.abs(Math.sin(fase));
@@ -101,7 +139,7 @@ const Llama: React.FC<PoseLlama> = ({ cx, base, escala, fase, giro, mira, color 
   const caminando = Math.abs(a) > 1e-6;
   return (
     <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
-      <g transform={`translate(${cx} ${base + rebote}) rotate(${g}) scale(${mira * u} ${u}) translate(-11 -24)`} fill={color}>
+      <g transform={`translate(${cx} ${base + rebote - alza}) rotate(${g}) scale(${mira * u * sx} ${u * sy}) translate(-11 -24)`} fill={color}>
         {CUERPO.map(([x, y, w, h], i) => (
           <rect key={i} x={x} y={y} width={w} height={h} />
         ))}
@@ -256,7 +294,65 @@ const L3 = { x1: CUADRO_X, escalaFila: 0.6, baseFila: baseCentrada(FILA_Y, 0.6),
 const RAZONES = { y0: 410, paso: 150, xCirculo: 560, xTexto: 640 } as const;
 
 // ---------- Tiempos (s desde que empieza cada paso) ----------
-const T1 = { logo: 0.1, camina: [0.35, 2.0], inclina: [2.4, 0.35], titulo: 2.55, lema: 3.0 } as const;
+const T1 = { luces: [0, 0.5], logo: 0.1, camina: [0.35, 2.0], salto: 2.35, inclina: [2.65, 0.35], titulo: 2.7, lema: [3.15, 0.45] } as const;
+/** Luz del fondo con las luces de función: de 1 a 0,3 (queda así en D14.2 y D14.3). */
+const LUZ_FUNCION = 0.3;
+
+// ---------- El polvo de cada pisada (D14.1) ----------
+// Tres cuadrados hueso de 10 px al 50 % salen del casco de atrás, retroceden 20 px y se apagan en 0,3 s.
+const POLVO = { lado: 10, opacidad: 0.5, retrocede: 20, dura: 0.3 } as const;
+/** Centro de cada cuadrado respecto del casco al salir (dx, dy) y cuánto sube mientras retrocede. */
+const POLVO_CUADROS = [
+  { dx: 0, dy: -6, sube: 2 },
+  { dx: -10, dy: -14, sube: 8 },
+  { dx: 6, dy: -22, sube: 12 },
+] as const;
+/** Las pisadas de la caminata de D14.1: cada vez que la fase pasa por un múltiplo de pi (las patas
+ * derechas, el cuerpo abajo), con la última al llegar (el despegue del salto). Alternan las dos patas
+ * de atrás. */
+const PISADAS_1 = (() => {
+  const n = Math.max(1, Math.round(Math.abs(L1.x1 - L1.x0) / PASO_PX)); // los mismos pasos que caminata()
+  return Array.from({ length: n }, (_, i) => {
+    const p = (i + 1) / n;
+    const pata = PATAS_X[i % 2 === 0 ? 0 : 1];
+    return {
+      t: cuandoPasa(ENTRA_CAMINANDO, 0, 1, p, T1.camina[0], T1.camina[1]),
+      x: L1.x0 + (L1.x1 - L1.x0) * p + (pata + 1.25 - 11) * PX_POR_UNIDAD,
+    };
+  });
+})();
+
+// ---------- La lluvia de cuadrados al aterrizar (D14.1) ----------
+// 24 cuadrados de 8, 12 y 16 px en abanico hacia arriba desde el lomo: ángulos de 200 a 340 grados,
+// de 500 a 900 px/s, gravedad de 1800 px/s², giro de 0 a 180 grados. Viven 0,6 s y se apagan en los
+// últimos 0,15 s. Colores de la marca sin magenta (es de la llama) ni turquesa (junto al amarillo cae
+// en la máscara del lima). Cuadrados de fiesta, no fichas ni monedas.
+const FIESTA = ["#FF8B3D", "#FFD24D", "#9B7BFF"] as const; // naranja, amarillo y morado de Tinkazo
+const LLUVIA = { cantidad: 24, vida: 0.6, apaga: 0.15, gravedad: 1800 } as const;
+/** Pseudoazar con semilla fija (mulberry32): la misma lluvia en cada render. */
+function mulberry32(semilla: number) {
+  let a = semilla;
+  return () => {
+    a = (a + 0x6d2b79f5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+const CUADRADOS = (() => {
+  const azar = mulberry32(14);
+  return Array.from({ length: LLUVIA.cantidad }, () => {
+    const lado = [8, 12, 16][Math.floor(azar() * 3)];
+    const angulo = ((200 + 140 * azar()) * Math.PI) / 180;
+    const velocidad = 500 + 400 * azar();
+    const giro = 180 * azar();
+    const color = FIESTA[Math.floor(azar() * 3)];
+    const ux = 3 + 12 * azar(); // a lo largo del lomo (el cuerpo va de x 2 a 18 en la grilla)
+    return { lado, vx: velocidad * Math.cos(angulo), vy: velocidad * Math.sin(angulo), giro, color, ux };
+  });
+})();
+/** Cuando aterriza la llama en D14.1 (s del paso): ahí sale la lluvia. */
+const T_ATERRIZA_1 = T1.salto + SALTO_EN_AIRE;
 const T2 = { sale: 0.0, endereza: 0.0, vuelta1: [0.05, 0.25], camina: [0.25, 1.2], vuelta2: [1.45, 0.25], inclina: [1.7, 0.35], razones: 0.9, desfase: 0.3 } as const;
 const T3 = {
   sale: 0.0,
@@ -282,11 +378,14 @@ export const D14ElSorteo: React.FC = () => {
   const [titulo3, formulario, limpiar, guardar, web] = textos("D14", 3);
 
   // ---------- Paso 1 ----------
+  const apagaLuces = useTramo(1, T1.luces[0], T1.luces[1], CURVA.suave);
   const logoEntra = useEntrar(1, T1.logo, { desde: "arriba", distancia: 40 });
   const camina1 = useTramo(1, T1.camina[0], T1.camina[1], ENTRA_CAMINANDO);
   const inclina1 = useTramo(1, T1.inclina[0], T1.inclina[1], CURVA.suave);
-  const palabras1 = useEntrarPalabras(titulo1, 1, T1.titulo);
-  const lemaEntra = useEntrar(1, T1.lema);
+  const golpeTitulo1 = useGolpe(1, T1.titulo);
+  const lemaEntra = useEntrar(1, T1.lema[0], { dura: T1.lema[1] });
+  const t1 = useSegundos(1);
+  const salto1 = saltoLlama(t1 - T1.salto);
 
   // ---------- Paso 2 ----------
   const saleTitulo = useSale(2, T2.sale, 0.3, CURVA.fundido);
@@ -348,14 +447,35 @@ export const D14ElSorteo: React.FC = () => {
       escala: c.escala,
       fase: c.fase,
       giro: INCLINACION * (1 - endereza2) + INCLINACION * inclina2,
-      mira: vuelta2 > 0 ? -Math.cos(Math.PI * vuelta2) : Math.cos(Math.PI * vuelta1),
+      mira: miraSinCero(vuelta2 > 0 ? -Math.cos(Math.PI * vuelta2) : Math.cos(Math.PI * vuelta1)),
       color: MAGENTA_OSCURO,
     };
   } else {
-    // Paso 1: entra caminando, frena y se inclina hacia la sala.
+    // Paso 1: entra caminando, salta al llegar, cae aplastada y se inclina hacia la sala.
     const c = caminata(camina1, L1.x0, L1.x1, 1, 1);
-    pose = { cx: c.cx, base: L1.base, escala: 1, fase: c.fase, giro: INCLINACION * inclina1, mira: 1, color: MAGENTA_OSCURO };
+    pose = { cx: c.cx, base: L1.base, escala: 1, fase: c.fase, giro: INCLINACION * inclina1, mira: 1, color: MAGENTA_OSCURO, ...salto1 };
   }
+
+  // ---------- El polvo de las pisadas y la lluvia de cuadrados (D14.1) ----------
+  const u1 = PX_POR_UNIDAD;
+  const polvo = PISADAS_1.flatMap((p, i) => {
+    const edad = t1 - p.t;
+    if (!(edad >= 0 && edad < POLVO.dura)) return [];
+    const k = CURVA.sale(edad / POLVO.dura);
+    const opacidad = POLVO.opacidad * (1 - edad / POLVO.dura);
+    return POLVO_CUADROS.map((q, j) => ({
+      key: `${i}-${j}`,
+      x: p.x + q.dx - POLVO.retrocede * k,
+      y: L1.base + q.dy - q.sube * k,
+      opacidad,
+    }));
+  });
+  const edadLluvia = t1 - T_ATERRIZA_1;
+  const hayLluvia = edadLluvia >= 0 && edadLluvia < LLUVIA.vida;
+  const opacidadLluvia = hayLluvia ? Math.min(1, (LLUVIA.vida - edadLluvia) / LLUVIA.apaga) : 0;
+  // Salen dos unidades debajo del lomo, dentro del cuerpo: en el primer cuadro los tapa la llama y no
+  // se ve una fila de cuadrados sobre el lomo.
+  const lomoY = L1.base - (24 - 13) * u1;
 
   // ---------- La lista que viaja por la fila ----------
   const listaX = NODOS_X[0] + (CUADRO_X - NODOS_X[0]) * listaViaja;
@@ -378,7 +498,7 @@ export const D14ElSorteo: React.FC = () => {
 
   return (
     <>
-    <FondoCircuito />
+    <FondoVivo luz={1 - (1 - LUZ_FUNCION) * apagaLuces} />
     <div style={{ position: "absolute", left: 0, top: 0, width: 1920, height: 1080, transformOrigin: `${CUADRO_X - 130}px ${FILA_Y}px`, transform: `scale(${zoom})` }}>
       {/* El logo de Tinkazo, tal cual, arriba (pasos 1 y 2). */}
       <div style={{ position: "absolute", inset: 0, ...unir(logoEntra, { opacity: saleLogo }) }}>
@@ -390,7 +510,7 @@ export const D14ElSorteo: React.FC = () => {
 
       {/* Paso 1: el título y el lema. */}
       <div style={{ position: "absolute", inset: 0, opacity: saleTitulo }}>
-        <Texto x={960} y={760} tam="grande" color={COLOR.titulo} alinear="centro" estiloPalabras={palabras1}>
+        <Texto x={960} y={760} tam="grande" color={COLOR.titulo} alinear="centro" estilo={golpeTitulo1}>
           {titulo1}
         </Texto>
         <Texto x={960} y={860} tam="lectura" alinear="centro" estilo={lemaEntra}>
@@ -450,6 +570,34 @@ export const D14ElSorteo: React.FC = () => {
       <Texto x={CUADRO_X} y={ROTULO_Y} tam="lectura" alinear="centro" estilo={rotuloWeb}>
         {web}
       </Texto>
+
+      {/* D14.1: el polvo de las pisadas y la lluvia que sale del lomo, detrás de la llama. */}
+      {polvo.length > 0 && (
+        <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
+          {polvo.map((q) => (
+            <rect key={q.key} x={q.x - POLVO.lado / 2} y={q.y - POLVO.lado / 2} width={POLVO.lado} height={POLVO.lado} fill={COLOR.hueso} opacity={q.opacidad} />
+          ))}
+        </svg>
+      )}
+      {hayLluvia && (
+        <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible", opacity: opacidadLluvia }}>
+          {CUADRADOS.map((c, i) => {
+            const x = L1.x1 + (c.ux - 11) * u1 + c.vx * edadLluvia;
+            const y = lomoY + c.vy * edadLluvia + 0.5 * LLUVIA.gravedad * edadLluvia * edadLluvia;
+            return (
+              <rect
+                key={i}
+                x={-c.lado / 2}
+                y={-c.lado / 2}
+                width={c.lado}
+                height={c.lado}
+                fill={c.color}
+                transform={`translate(${x} ${y}) rotate(${(c.giro * edadLluvia) / LLUVIA.vida})`}
+              />
+            );
+          })}
+        </svg>
+      )}
 
       {/* La llama, encima de todo. */}
       <div style={{ position: "absolute", inset: 0, transformOrigin: `${CUADRO_X}px ${FILA_Y}px`, transform: `scale(${cuadro > 0 ? latido : 1})` }}>

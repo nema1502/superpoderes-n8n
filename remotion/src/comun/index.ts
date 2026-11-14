@@ -3,6 +3,7 @@
 // Cada componente está documentado en su archivo y en docs/convenciones.md.
 export * from "./Acero";
 export * from "./Anillo";
+export * from "./Luz";
 export * from "./Anterior";
 export * from "./Ascensor";
 export * from "./AscensorCorte";

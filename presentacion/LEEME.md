@@ -6,8 +6,8 @@ Esta carpeta tiene todo lo que se abre el día de la charla. Ninguno de estos ar
 
 | Archivo | Qué es | Cuándo usarlo |
 |---|---|---|
-| `Charla_n8n_SerpApi_IA.html` | La presentación entera en un solo archivo, con los 35 videos adentro (26 MB) | **La principal.** Se abre con doble clic |
-| `Charla_n8n_SerpApi_IA.pptx` | PowerPoint con los mismos 35 videos adentro y las notas del orador (25 MB) | Si el HTML no anda, o si la compu de la sala es otra |
+| `Charla_n8n_SerpApi_IA.html` | La presentación entera en un solo archivo, con los 35 videos adentro (29 MB) | **La principal.** Se abre con doble clic |
+| `Charla_n8n_SerpApi_IA.pptx` | PowerPoint con los mismos 35 videos adentro y las notas del orador (28 MB) | Si el HTML no anda, o si la compu de la sala es otra |
 | `Charla_n8n_SerpApi_IA_para_proyectar.pdf` | Una imagen por paso, sin animación, con los mismos números (35 páginas) | Si no anda ni el HTML ni el PowerPoint |
 | `Charla_n8n_SerpApi_IA.pdf` | El cuadro final de cada diapositiva (19) y las fuentes de cada dato | Para compartir y para leer después de la charla |
 
@@ -32,11 +32,13 @@ Cada paso es un video corto que arranca solo y queda quieto en su último cuadro
 | Inicio o Fin | Primer o último paso |
 | F | Pantalla completa (otra vez para salir) |
 | B o punto | Pantalla negra. La próxima tecla del clicker la saca, sin avanzar |
+| M | Silenciar o volver a dar sonido |
 | S | Vista del orador: notas, lo que viene, la hora y el tiempo que va |
 | H o signo de pregunta | Ayuda con las teclas. Escape la cierra |
 
 - El clicker manda las teclas a la ventana que está al frente. Las dos ventanas, la de la presentación y la del orador, las entienden.
-- El paso actual queda anotado en la barra de direcciones. Si se recarga la página (Ctrl + R), vuelve al mismo paso. En esta presentación F5 no recarga: pone pantalla completa, porque es el botón de presentar de algunos clickers.
+- El paso actual queda anotado en la barra de direcciones. Si se recarga la página (Ctrl + R), vuelve al mismo paso, el tiempo transcurrido sigue y la vista del orador se vuelve a conectar sola en uno o dos segundos. En esta presentación F5 no recarga: pone pantalla completa, porque es el botón de presentar de algunos clickers.
+- En la vista del orador, las notas achican la letra hasta entrar enteras, y cuando nombran una diapositiva de respaldo dicen al lado el número para saltar: A1 (32 y Enter).
 - El cursor del mouse se esconde solo a los 2 segundos.
 
 ## Los números para saltar
@@ -92,32 +94,33 @@ Se probó con PowerPoint 2021 en Windows. En PowerPoint de Mac, en Keynote o en 
 | Qué pasa | Qué hacer |
 |---|---|
 | El HTML se abre en un programa que no es el navegador | Clic derecho en el archivo, Abrir con, Google Chrome o Microsoft Edge |
-| El HTML queda en negro o dice Cargando la presentación | Esperá unos segundos: son 26 MB. Si sigue, copiá el archivo al escritorio y abrilo desde ahí |
+| El HTML queda en negro o dice Cargando la presentación | Esperá unos segundos: son 29 MB. Si sigue, copiá el archivo al escritorio y abrilo desde ahí |
 | El clicker no avanza | Hacé clic una vez sobre la presentación para que su ventana quede al frente y probá de nuevo |
 | Un video quedó en negro o trabado | Flecha izquierda y flecha derecha: el paso vuelve a arrancar |
 | La pantalla quedó negra | Se apretó B o punto. La flecha derecha o el clicker la saca, sin avanzar |
 | Apareció la ayuda en el medio | Escape o clic |
+| La vista del orador se quedó quieta | Esperá dos segundos: se vuelve a conectar sola. Si sigue quieta, cerrala y apretá S en la presentación |
 | La vista del orador no se abre con S | El navegador bloqueó la ventana emergente: en la barra de direcciones, permitir ventanas emergentes para este archivo, y S de nuevo. Si no, se presenta sin ella |
 | Se salió de pantalla completa | F de nuevo (o F11) |
 | El navegador no reproduce los videos | Probá con el otro (Edge viene con Windows). Si tampoco, el PowerPoint |
 | El PowerPoint muestra un cuadro negro o no arranca el video | Habilitar edición (si estaba en Vista protegida) y F5 de nuevo. Si sigue, el HTML o el PDF para proyectar |
 | No hay compu con nada de esto | `../videos/00_Charla_n8n_SerpApi_IA_completa.mp4` en cualquier reproductor, con pausa en cada paso |
 
-## Antes de presentar: la dirección del formulario y el LinkedIn
+## Antes de presentar: la dirección del formulario
 
-Esta versión se puede presentar tal cual, sin esos dos datos:
+El LinkedIn ya está en el deck (`contenido/generar_deck.py`). Falta solo la dirección del formulario, y sin ella esta versión se puede presentar tal cual:
 
 - **Paso 6** (Anotate al sorteo): anuncia el sorteo sin QR, con la palabra de la charla y la llama grande. Los pasos 7 y 29 dicen Anotarse al sorteo es un flujo y La lista la arma n8n, que valen aunque nadie se haya anotado.
-- **Paso 31** (Cierre): en el renglón del LinkedIn dice tinkazo.app.
+- **Paso 31** (Cierre): muestra el LinkedIn. Si en ese renglón dice tinkazo.app, es un armado anterior al LinkedIn: el comando de abajo lo rehace.
 
-Para poner los dos datos y volver a armar todo, desde la carpeta del repositorio, en una línea:
+Para poner la dirección del formulario y volver a armar todo, desde la carpeta del repositorio, en una línea:
 
 ```
-python armar/poner_datos.py --formulario "https://<cuenta>.app.n8n.cloud/form/sorteo-space-apps" --linkedin "https://www.linkedin.com/in/<usuario>"
+python armar/poner_datos.py --formulario "https://<cuenta>.app.n8n.cloud/form/sorteo-space-apps"
 ```
 
 - **Tarda unos 5 minutos** (con datos de prueba tardó 4,9). No hace falta tocar nada más: escribe los datos en `contenido/generar_deck.py` y en el `README.md` de la raíz, vuelve a renderizar las diapositivas que cambian (el paso 6 con el QR y la dirección, los pasos 7 y 29 con Lo que acaban de hacer es un flujo y La lista la armó n8n, y el 31 con el LinkedIn), lee el QR del cuadro final, arma todo y reemplaza los archivos de esta carpeta y de `../videos/`.
-- Se puede pasar uno solo de los dos (`--formulario` o `--linkedin`) y volver a correrlo con el otro cuando llegue.
+- También acepta `--linkedin "https://www.linkedin.com/in/<usuario>"`, solo o junto con el formulario, si el perfil cambia.
 - La dirección del formulario es la del flujo 4 ya publicado con Publish en n8n Cloud, que termina en `/form/sorteo-space-apps` (`workflows/README.md`, flujo 4). La del LinkedIn, la del perfil.
 - Cualquier Python 3 sirve para lanzarlo. Los pasos que lo necesitan usan el Python del entorno de la charla (`requirements.txt`): lo busca en la variable `CHARLA_PY`, en `armar/entorno.local` (un archivo que no va al repositorio, con las rutas de esa compu) o en `.venv/`.
 - Si algo falla, se corta en ese paso, lo dice, y no toca esta carpeta: la versión sin datos sigue sirviendo.
@@ -142,4 +145,22 @@ El 14 de noviembre de 2026 a la madrugada, en la laptop de la charla, con esta v
 - El HTML, en Chrome 157 sin ventana: se recorrieron los 35 pasos con la flecha derecha, cada video arrancó solo y terminó quieto, sin errores en la consola, y el siguiente ya estaba cargado en cada cambio. También el clicker (flecha, Av Pág, espacio y clic), la vista del orador, la pantalla negra, el salto con número y Enter, la vuelta atrás y dos avances rápidos.
 - El PowerPoint, en PowerPoint 2021: abre sin reparar, con 35 diapositivas, un video en cada una, las notas del guion y una sección por diapositiva. Con la presentación corriendo, los 35 videos arrancaron solos, y los 29 que terminaron mientras se medía quedaron quietos en su último cuadro.
 - Los dos PDF, pasados a imágenes página por página (21 y 35 páginas).
+
+El 14 de noviembre a la mañana, con los videos de la madrugada y el reproductor de esa mañana (`armar/plantillas/presentacion.html`), con `armar/probar_uso.mjs`, como la usaría el orador:
+
+- El HTML abierto como archivo local y sin red, en Chrome 157 sin ventana: listo para presentar en 1,9 s, ningún pedido a internet y ningún error en la consola. Los 35 pasos uno por uno con flecha derecha, espacio, Av Pág, Enter y clic, cada uno arrancó solo, terminó quieto y tenía su primer cuadro listo al cambiar. Volver con flecha izquierda, Re Pág y Retroceso (el video arranca de cero), volver y avanzar de nuevo, diez avances rápidos seguidos (llega diez pasos más adelante, con un solo video arriba) y diez para atrás, saltos con número y Enter, Inicio y Fin, pantalla negra con B y con punto, ayuda y M.
+- La vista del orador: el reloj anda, el clicker la maneja desde esa ventana y las notas de los 35 pasos entran sin scroll en ventanas de 1280 x 800, 1366 x 728 y 1280 x 680 (la letra más chica, 23 px).
+- Una recarga en el paso 14: vuelve al 14, el tiempo transcurrido sigue, la vista del orador se reconecta sola en menos de tres segundos y el clicker sigue andando desde ella.
+- Ventanas de 1920 x 1080, 1366 x 768 (también con la escala de Windows al 125 %), 1280 x 720 y 1024 x 768 (un proyector 4:3): el video entero y centrado. En 4:3 quedan franjas arriba y abajo del mismo color del fondo.
+- Con el procesador frenado 4 veces: 21 pasos sin un cuadro perdido ni una espera.
+- La pantalla completa no se puede probar en un Chrome sin ventana: probala con F en la compu de la sala.
+- El PowerPoint con `armar/verificar_pptx.ps1`: abre sin reparar, las 35 diapositivas con su video y sus notas, y con la presentación corriendo los 35 videos arrancaron solos al entrar.
+- Los dos PDF, otra vez: 35 páginas el de proyectar, en el orden de los pasos, y 21 el de compartir.
 - El comando de los dos datos, de punta a punta con datos de prueba: el QR del paso 6 se leyó bien en el cuadro final, el LinkedIn quedó en el paso 31, y el armado y su verificación pasaron sin errores.
+
+Más tarde esa mañana, con la versión de esta carpeta (más luz y movimiento en la portada, los superpoderes, las demos, el sorteo y el cierre, y el LinkedIn en el paso 31), se repitió todo:
+
+- El HTML sin red, en Chrome 157 sin ventana: listo en 1,9 s, los 35 pasos con su captura, ningún pedido a internet, ningún error en la consola y cada cambio con su primer cuadro listo. `armar/probar_uso.mjs` pasó sus 49 controles, también la recarga, la vista del orador y el procesador frenado (21 pasos sin un cuadro perdido).
+- El PowerPoint con `armar/verificar_pptx.ps1`: abre sin reparar, con las 35 diapositivas.
+- Los dos PDF, pasados a imágenes: 21 y 35 páginas.
+- Los videos siguen sin sonido: los de `../videos/` llevan una pista de silencio y los de la presentación no tienen pista.

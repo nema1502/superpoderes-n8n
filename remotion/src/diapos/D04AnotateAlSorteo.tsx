@@ -28,16 +28,21 @@
 // Sin formulario (mientras el deck diga FORMULARIO_PENDIENTE), la diapositiva se puede presentar igual:
 // anuncia el sorteo sin QR. No hay tarjeta, ni dirección, ni Escaneá y anotate (el deck trae cuatro
 // textos y no seis). Al final hay sorteo. en y 240, Palabra de la charla: en 440, llama en 550 y
-// Participar es gratis. en 700, desde x 140, y la llama grande (560 px) a la derecha, centrada en
-// x 1440 con las patas en y 820. Entra caminando desde el borde derecho del cuadro con los mismos
-// tiempos y se da vuelta como en la marca. Un QR de prueba (generar_qr.mjs --prueba) solo se ve si el
-// deck tiene una dirección.
+// Participar es gratis. en 700, desde x 140, y la llama de 420 px a la derecha, centrada en x 1380
+// con las patas en la línea de base de Participar es gratis. (y 721, medida en el cuadro): el texto y
+// la llama son un solo bloque y la palabra llama manda. Entra caminando desde el borde derecho del
+// cuadro (1,30 a 2,35 s), salta al llegar, se da vuelta en el aire y cae aplastada tres cuadros, con
+// el mismo salto de D14 (saltoLlama). Queda mirando a la derecha, como en la marca. Un QR de prueba
+// (generar_qr.mjs --prueba) solo se ve si el deck tiene una dirección.
+//
+// Al darse vuelta, el ancho de la llama no baja del 10 % (miraSinCero, de D14): antes desaparecía un
+// cuadro. El fondo lleva los pulsos de la capa común en las dos variantes.
 //
 // La llama sale de atrás de la tarjeta: entra por el borde izquierdo de la tarjeta, por abajo,
 // caminando hacia la izquierda (cuatro pasos en 1,2 s, mirando hacia donde camina), se para y se da
 // vuelta hacia el QR. Al final mira a la derecha, como en la marca, girada 3 grados.
 //
-// Debajo de todo, el fondo de circuito de la charla (FondoCircuito de D01).
+// Debajo de todo, el fondo de la charla con sus pulsos (FondoVivo de la capa común).
 //
 // Tiempos (s desde el comienzo del paso):
 //   0,05-0,55 el título sube            0,25-0,75 la tarjeta se acerca (escala 0,9 a 1)
@@ -51,6 +56,7 @@ import qrJson from "../../../diseno/medios/D04/qr.json";
 import {
   COLOR,
   CURVA,
+  FondoVivo,
   medirTexto,
   MOV,
   pasosDe,
@@ -63,11 +69,12 @@ import {
   useEntra,
   useEntrar,
   useEscalar,
+  useSegundos,
   useTramo,
   type Estilo,
 } from "../comun";
-import { FondoCircuito } from "./D01Portada";
 import { Llama, LLAMA_UNIDADES } from "./D03QuienHabla";
+import { miraSinCero, saltoLlama } from "./D14ElSorteo";
 
 export const pasos = pasosDe("D04");
 
@@ -101,9 +108,15 @@ const X_LLAMA_SALE = TARJETA.x0 + 16; // escondida detrás de la tarjeta
 
 // Sin formulario: sin tarjeta, los cuatro textos más repartidos y la llama grande a la derecha.
 const Y_SIN = { titulo: 240, palabraDe: 440, palabra: 550, gratis: 700 };
-const LLAMA_SIN = { alto: 560, piso: 820, cx: 1440 };
-const X_LLAMA_SIN = Math.round(LLAMA_SIN.cx - (LLAMA_SIN.alto * LLAMA_UNIDADES.ancho) / LLAMA_UNIDADES.alto / 2);
+// La llama de 420 px con las patas en la línea de base de Participar es gratis. (centrado en y 700, su
+// línea de base cae en y 721).
+const LLAMA_SIN = { alto: 420, piso: 721, cx: 1380 };
+const ANCHO_LLAMA_SIN = (LLAMA_SIN.alto * LLAMA_UNIDADES.ancho) / LLAMA_UNIDADES.alto;
+const X_LLAMA_SIN = Math.round(LLAMA_SIN.cx - ANCHO_LLAMA_SIN / 2);
 const X_LLAMA_SIN_SALE = 1960; // afuera del cuadro, a la derecha
+// Sin formulario: cuatro pasos de 1,30 a 2,35 s, el salto de D14 desde los 2,35 (toca el piso a los
+// 2,63 y queda quieta a los 2,83) y la media vuelta en el aire, de 2,37 a 2,61.
+const T_SIN = { camina: 1.3, duraCamina: 1.05, salto: 2.35, vuelta: 2.37, duraVuelta: 0.24 };
 
 // ---------------------------------------------------------------------------------------------
 // La dirección escrita: en un renglón si entra, si no en dos, cortada antes de una barra.
@@ -207,15 +220,27 @@ export const D04AnotateAlSorteo: React.FC = () => {
   const pasosDados = useTramo(1, T.camina, T.duraCamina, CURVA.lineal) * 4;
   const xLlama = X_LLAMA_SALE + (X_LLAMA - X_LLAMA_SALE) * camino;
   const vuelta = useTramo(1, T.vuelta, 0.25, CURVA.suave);
-  const mira = -1 + 2 * vuelta;
+  const mira = miraSinCero(-1 + 2 * vuelta);
   const enMarcha = pasosDados > 0 && pasosDados < 4;
 
+  // Sin formulario: su propia caminata, el salto y la media vuelta en el aire.
+  const caminoSin = useTramo(1, T_SIN.camina, T_SIN.duraCamina, CURVA.suave);
+  const pasosSin = useTramo(1, T_SIN.camina, T_SIN.duraCamina, CURVA.lineal) * 4;
+  const vueltaSin = useTramo(1, T_SIN.vuelta, T_SIN.duraVuelta, CURVA.suave);
+  const miraSin = miraSinCero(-1 + 2 * vueltaSin);
+  const saltoSin = saltoLlama(useSegundos(1) - T_SIN.salto);
+
   if (!direccion) {
-    // Sin formulario: el sorteo se anuncia sin QR, con la llama grande que entra desde el borde derecho.
-    const xLlamaSin = X_LLAMA_SIN_SALE + (X_LLAMA_SIN - X_LLAMA_SIN_SALE) * camino;
+    // Sin formulario: el sorteo se anuncia sin QR, con la llama que entra desde el borde derecho.
+    const xLlamaSin = X_LLAMA_SIN_SALE + (X_LLAMA_SIN - X_LLAMA_SIN_SALE) * caminoSin;
+    // El salto, con el origen en las patas (el medio de la caja, sobre el piso).
+    const estSalto: Estilo = {
+      transformOrigin: `${X_LLAMA_SIN + ANCHO_LLAMA_SIN / 2}px ${LLAMA_SIN.piso}px`,
+      transform: `translate(0px, ${-saltoSin.alza}px) scale(${saltoSin.sx}, ${saltoSin.sy})`,
+    };
     return (
       <>
-        <FondoCircuito />
+        <FondoVivo pulsos />
 
         <Texto x={X} y={Y_SIN.titulo} tam="grande" color={COLOR.titulo} estilo={estTitulo}>
           {titulo}
@@ -230,8 +255,15 @@ export const D04AnotateAlSorteo: React.FC = () => {
           {gratis}
         </Texto>
 
-        {pasosDados > 0 && (
-          <Llama x={xLlamaSin} piso={LLAMA_SIN.piso} alto={LLAMA_SIN.alto} pasosDados={enMarcha ? pasosDados : 0} mira={mira} />
+        {pasosSin > 0 && (
+          <Llama
+            x={xLlamaSin}
+            piso={LLAMA_SIN.piso}
+            alto={LLAMA_SIN.alto}
+            pasosDados={pasosSin < 4 ? pasosSin : 0}
+            mira={miraSin}
+            estilo={estSalto}
+          />
         )}
       </>
     );
@@ -239,7 +271,7 @@ export const D04AnotateAlSorteo: React.FC = () => {
 
   return (
     <>
-      <FondoCircuito />
+      <FondoVivo pulsos />
 
       <Texto x={X} y={Y.titulo} tam="grande" color={COLOR.titulo} estilo={estTitulo}>
         {titulo}

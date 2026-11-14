@@ -11,19 +11,22 @@
 //
 // El flujo sale de workflows/ESPEC.md (flujo 1), dibujado con el nodo de la charla.
 // La tarjeta de demo (de TARJETA hasta FlujoQueSeAleja) es la misma pieza en D09, D10 y D11,
-// copiada igual en los tres archivos: si cambia en uno, se copia a los otros dos.
-// Debajo de todo va el fondo de circuito de la charla
-// (FondoCircuito de D01Portada.tsx), el mismo de D02 a D15.
-import { evolvePath, getLength, getPointAtLength } from "@remotion/paths";
+// copiada igual en los tres archivos: si cambia en uno, se copia a los otros dos. Diferencias de
+// D09 (14-nov): el nodo encendido lleva brillo() de tres capas en lugar del halo propio, y el dato
+// viaja con DatoViajero (brillo y estela) en lugar de PuntoDato.
+// Debajo de todo va el fondo de la charla con dos destellos por las pistas en cada paso (FondoVivo).
+import { evolvePath } from "@remotion/paths";
 import React from "react";
-import { FondoCircuito } from "./D01Portada";
 import {
   anchoIcono,
+  brillo,
+  Camara,
   Capa,
   COLOR,
-  conAlfa,
   CURVA,
+  DatoViajero,
   Foco,
+  FondoVivo,
   GROSOR,
   Icono,
   medidasPastilla,
@@ -38,6 +41,7 @@ import {
   TIPO,
   unir,
   useDesvanecer,
+  useDestello,
   useEntrar,
   useEscalar,
   useGolpe,
@@ -46,6 +50,7 @@ import {
   type NombreIcono,
   type Resaltado,
 } from "../comun";
+import { FPS } from "../tokens";
 
 // Las duraciones de deck.json: 3,7 (con el fundido de 0,4 adentro) y 2,5 s.
 export const pasos = pasosDe("D09");
@@ -78,19 +83,16 @@ const TARJETA = {
   radio: 32,
   /** El ícono entra en un cuadro del 45 % del lado (guion). */
   iconoCaja: 0.45,
-  /** El dato que viaja: un círculo ámbar de 28 px, con un halo suave del doble. */
+  /** El dato que viaja: un círculo ámbar de 28 px, con brillo y estela (DatoViajero). */
   radioDato: 14,
-  halo: { radio: 30, opacidad: 0.22 },
+  estelaDato: 4,
   /** Las conexiones de herramientas, a trazos de 16 px con huecos de 12, como en el editor de n8n. */
   trazos: "16 12",
   /** Cuánto crece un nodo cuando el dato pasa (el Latido de Manim: 1,06) y cuánto dura. */
   latido: 0.06,
   latidoDura: 0.3,
-  /**
-   * El brillo del nodo encendido (nota de dirección 3: un brillo suave en el nodo activo). Un halo
-   * ámbar alrededor del borde, solo mientras el nodo está encendido. No es un resplandor de fondo.
-   */
-  brillo: { radio: 36, extension: 2, opacidad: 0.55 },
+  // El brillo del nodo encendido es brillo(COLOR.ambar, k) de la capa común (tres capas de 8, 24 y
+  // 60 px), solo mientras el nodo está encendido. No es un resplandor de fondo.
   /** La salida del flujo: centro en y 848, la franja que el auditor deja para leer (hasta y 900). */
   salidaY: 848,
 } as const;
@@ -133,7 +135,6 @@ const NodoDemo: React.FC<PropsNodoDemo> = ({ cx, cy, lado, icono, nombreAdentro,
   const ag = nombreAdentro ? medidasAgente(nombreAdentro, lado) : null;
   const ancho = ag ? ag.ancho : lado;
   const izq = cx - ancho / 2;
-  const b = TARJETA.brillo;
   return (
     <Capa estilo={unir(estilo, { transform: `scale(${escala})` })} origen={[cx, cy]}>
       <div
@@ -147,7 +148,7 @@ const NodoDemo: React.FC<PropsNodoDemo> = ({ cx, cy, lado, icono, nombreAdentro,
           borderRadius: TARJETA.radio,
           border: `${GROSOR.trazo_normal}px solid ${borde}`,
           background: COLOR.noche,
-          boxShadow: e > 0 ? `0 0 ${b.radio}px ${b.extension}px ${conAlfa(COLOR.ambar, b.opacidad * e)}` : "none",
+          boxShadow: brillo(COLOR.ambar, e) ?? "none",
         }}
       />
       {ag ? (
@@ -192,19 +193,6 @@ const ConexionDemo: React.FC<{ id: string; d: string; progreso: number; trazos?:
         </mask>
       </defs>
       <path d={d} fill="none" stroke={color} strokeWidth={GROSOR.trazo_normal} strokeDasharray={TARJETA.trazos} mask={`url(#${mascara})`} />
-    </svg>
-  );
-};
-
-/** El dato que viaja: un círculo ámbar con su halo sobre el camino `d`, en `progreso` (0 a 1). Va debajo de los nodos: entra y sale de ellos. */
-const PuntoDato: React.FC<{ d: string; progreso: number }> = ({ d, progreso }) => {
-  if (progreso <= 0 || progreso >= 1) return null;
-  const punto = getPointAtLength(d, getLength(d) * progreso);
-  if (!punto) return null;
-  return (
-    <svg width={1920} height={1080} style={svgPantalla}>
-      <circle cx={punto.x} cy={punto.y} r={TARJETA.halo.radio} fill={conAlfa(COLOR.ambar, TARJETA.halo.opacidad)} />
-      <circle cx={punto.x} cy={punto.y} r={TARJETA.radioDato} fill={COLOR.ambar} />
     </svg>
   );
 };
@@ -329,12 +317,78 @@ const ALEJA = { escala: 0.9, dy: 95, cy: 640 } as const;
 
 // ---------- Tiempos (s desde el comienzo de cada paso; los últimos 0,3 s, quietos) ----------
 // D09.1 (3,3 s propios) 0, 0,15 y 0,3 la pastilla, el título y la frase. 0,45 a 0,9 los cuatro
-//        nodos, de a uno, con su rótulo. 0,95 a 1,45 las conexiones. 1,4 a 2,2 el dato recorre
-//        el flujo y cada nodo late al pasar. Veredicto queda encendido. 2,3 a 2,7 sube la salida
-//        y la pastilla LIBRE da un golpe chico (2,45 a 2,95).
+//        nodos, de a uno, con su rótulo. 0,95 a 1,45 las conexiones. 1,45 a 2,05 el dato, con
+//        brillo y estela, recorre el flujo y cada nodo late al pasar. Veredicto queda encendido
+//        con el brillo ámbar. 2,05 aparece la franja de la salida y Satelitazo se escribe adentro,
+//        una letra por cuadro, con un cursor ámbar que se va con la última (hasta 2,35). 2,35 el
+//        héroe: LIBRE llega con un golpe (1,25 a 1 en 0,5 s), un aro ámbar que sale de su borde y
+//        crece 80 px de cada lado (0,45 s) y un fogonazo en su brillo. 2,45 los otros nombres
+//        entran callados (0,35 s). Todo termina a los 2,85. De 0 a 1,6 la tarjeta y el flujo se
+//        acercan un poco (Camara).
 // D09.2 (2,5 s) 0 a 0,3 se van la frase y la salida, 0 a 0,5 el flujo se aleja y pasa a Foco,
 //        0,3 y 0,45 los dos renglones de la lección.
-const T1 = { nodos: 0.45, desfaseNodo: 0.15, rotulo: 0.05, conexiones: 0.95, desfaseConexion: 0.1, conexionDura: 0.3, dato: 1.4, datoDura: 0.8, salida: 2.3, golpe: 2.45 } as const;
+const T1 = {
+  nodos: 0.45,
+  desfaseNodo: 0.15,
+  rotulo: 0.05,
+  conexiones: 0.95,
+  desfaseConexion: 0.1,
+  conexionDura: 0.3,
+  dato: 1.45,
+  datoDura: 0.6,
+  salida: 2.05,
+  salidaDura: 0.3,
+  escribe: 2.05,
+  heroe: 2.35,
+  heroeDura: 0.5,
+  aroDura: 0.45,
+  aroCrece: 80,
+  otros: 2.45,
+  otrosDura: 0.35,
+} as const;
+const CAMARA = { desde: 0.97, dura: 1.6 } as const;
+/** El cursor de la escritura: una barra ámbar del 75 % del alto del texto. */
+const CURSOR = { ancho: 5, alto: 0.75, aire: 4 } as const;
+
+/**
+ * Un aro con forma de pastilla que sale del borde de la pastilla y crece `crece` px de cada lado,
+ * de 0,9 a 0 de opacidad con CURVA.sale (el contrato del Aro de la capa común, que es cuadrado o
+ * redondo). Fuera de su tramo no dibuja nada.
+ */
+const AroPastilla: React.FC<{ paso: number; retraso: number; dura: number; x: number; y: number; ancho: number; alto: number; crece: number; color: string; grosor?: number }> = ({
+  paso,
+  retraso,
+  dura,
+  x,
+  y,
+  ancho,
+  alto,
+  crece,
+  color,
+  grosor = 4,
+}) => {
+  const t = useTramo(paso, retraso, dura, CURVA.lineal);
+  if (t <= 0 || t >= 1) return null;
+  const p = CURVA.sale(t);
+  const g = crece * p;
+  const w = ancho + 2 * g;
+  const h = alto + 2 * g;
+  return (
+    <div
+      style={{
+        position: "absolute",
+        left: x - w / 2,
+        top: y - h / 2,
+        width: w,
+        height: h,
+        boxSizing: "border-box",
+        border: `${grosor}px solid ${color}`,
+        borderRadius: h / 2,
+        opacity: 0.9 * (1 - p),
+      }}
+    />
+  );
+};
 
 export const D09DemoNombre: React.FC = () => {
   const t1 = textos("D09", 1); // ["Demo 1", "¿Ya existe tu nombre?", "Decí el nombre de tu proyecto.", "Formulario", "Google", "Modelo", "Veredicto"]
@@ -349,9 +403,17 @@ export const D09DemoNombre: React.FC = () => {
   // Cada nodo late cuando el dato pasa por su centro. Veredicto, además, queda encendido.
   const latidos = [0, 1, 2, 3].map((i) => useLatido(1, T1.dato + (T1.datoDura * i) / 3 - TARJETA.latidoDura / 2));
   const queda = useTramo(1, T1.dato + T1.datoDura - 0.1, 0.25, CURVA.sale);
-  const salida = useSalida(T1.salida);
-  const golpe = useGolpe(1, T1.golpe, { chico: true });
   const leccion = useLeccion();
+
+  // La salida: la franja aparece cuando llega el dato y el nombre se escribe adentro, una letra por
+  // cuadro (la primera en el cuadro de los 2,05 s), con un cursor que se va con la última.
+  const salida = useSalida(T1.salida, T1.salidaDura);
+  const letrasNombre = SALIDA.nombre.length;
+  const escritas = Math.round(letrasNombre * useTramo(1, T1.escribe - 1 / FPS, letrasNombre / FPS, CURVA.lineal));
+  // El héroe: LIBRE llega con peso. Los otros nombres, callados.
+  const golpe = useGolpe(1, T1.heroe, { dura: T1.heroeDura });
+  const fogonazo = useDestello(1, T1.heroe, T1.aroDura);
+  const otros = useEntrar(1, T1.otros, { dura: T1.otrosDura, distancia: 24 });
 
   // La fila de la salida, centrada bajo el flujo.
   const s = SALIDA;
@@ -370,16 +432,20 @@ export const D09DemoNombre: React.FC = () => {
 
   const y = TARJETA.filaY;
   const mitad = TARJETA.lado / 2;
+  const escrito = s.nombre.slice(0, escritas);
+  const xCursor = xNombre + (escritas > 0 ? medirTexto(escrito, tamNombre) : 0) + CURSOR.aire;
+  const altoCursor = Math.round(CURSOR.alto * tamNombre);
   return (
     <>
-      <FondoCircuito />
+      <FondoVivo pulsos />
+      <Camara paso={1} desde={CAMARA.desde} dura={CAMARA.dura}>
       <Cabecera demo={t1[0]} titulo={t1[1]} frase={t1[2]} anim={cabecera} />
 
       <FlujoQueSeAleja aleja={leccion.aleja} {...ALEJA}>
         {[0, 1, 2].map((i) => (
           <ConexionDemo key={`c${i}`} id={`d09-${i}`} d={`M ${NODOS.xs[i] + mitad} ${y} L ${NODOS.xs[i + 1] - mitad} ${y}`} progreso={conexiones[i]} />
         ))}
-        <PuntoDato d={`M ${NODOS.xs[0]} ${y} L ${NODOS.xs[3]} ${y}`} progreso={dato} />
+        <DatoViajero d={`M ${NODOS.xs[0]} ${y} L ${NODOS.xs[3]} ${y}`} progreso={dato} radio={TARJETA.radioDato} estela={TARJETA.estelaDato} />
         {NODOS.xs.map((x, i) => (
           <React.Fragment key={`n${i}`}>
             <NodoDemo cx={x} cy={y} lado={TARJETA.lado} icono={NODOS.iconos[i]} encendido={i === 3 ? Math.max(latidos[i], queda) : latidos[i]} escala={1 + TARJETA.latido * latidos[i]} estilo={nodos[i]} />
@@ -393,16 +459,47 @@ export const D09DemoNombre: React.FC = () => {
       {/* Lo que devolvió el flujo en el ensayo. */}
       <Capa estilo={salida}>
         <MarcoSalida x0={x0} x1={x0 + anchoSalida} y={ys} alto={s.alto} />
-        <Texto x={xNombre} y={ys} tam={tamNombre}>
-          {s.nombre}
-        </Texto>
+        {escritas > 0 && (
+          <Texto x={xNombre} y={ys} tam={tamNombre}>
+            {escrito}
+          </Texto>
+        )}
+        {escritas > 0 && escritas < letrasNombre && (
+          <div style={{ position: "absolute", left: xCursor, top: ys - altoCursor / 2, width: CURSOR.ancho, height: altoCursor, background: COLOR.ambar }} />
+        )}
+        {/* El fogonazo de LIBRE: el brillo ámbar con la forma de la pastilla, debajo de ella y con su golpe. */}
+        <div style={{ position: "absolute", left: 0, top: 0, width: 1920, height: 1080, transformOrigin: `${xVeredicto}px ${ys}px`, ...golpe }}>
+          <div
+            style={{
+              position: "absolute",
+              left: xVeredicto - pVeredicto.ancho / 2,
+              top: ys - pVeredicto.alto / 2,
+              width: pVeredicto.ancho,
+              height: pVeredicto.alto,
+              borderRadius: pVeredicto.alto / 2,
+              boxShadow: brillo(COLOR.ambar, fogonazo),
+            }}
+          />
+        </div>
         <Pastilla x={xVeredicto} y={ys} tam={tamNombre} color={COLOR.ambar} colorTexto={COLOR.ambar} marca={{ tipo: "palomita" }} estilo={golpe}>
           {s.veredicto}
         </Pastilla>
-        <Texto x={xOtros} y={ys} tam={tamOtros} color={COLOR.gris}>
+        <AroPastilla
+          paso={1}
+          retraso={T1.heroe}
+          dura={T1.aroDura}
+          x={xVeredicto}
+          y={ys}
+          ancho={pVeredicto.ancho}
+          alto={pVeredicto.alto}
+          crece={T1.aroCrece}
+          color={COLOR.ambar}
+        />
+        <Texto x={xOtros} y={ys} tam={tamOtros} color={COLOR.gris} estilo={otros}>
           {s.otros}
         </Texto>
       </Capa>
+      </Camara>
 
       <Leccion lineas={t2} resaltar={[undefined, ["primero ve", "después piensa"]]} anim={leccion} />
     </>

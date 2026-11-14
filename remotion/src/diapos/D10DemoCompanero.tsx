@@ -12,17 +12,27 @@
 //
 // El flujo sale de workflows/ESPEC.md (flujo 2), dibujado con el nodo de la charla.
 // La tarjeta de demo (de TARJETA hasta FlujoQueSeAleja) es la misma pieza en D09, D10 y D11,
-// copiada igual en los tres archivos: si cambia en uno, se copia a los otros dos.
-import { evolvePath, getLength, getPointAtLength } from "@remotion/paths";
+// copiada igual en los tres archivos: si cambia en uno, se copia a los otros dos. Diferencias de
+// D10 y D11 (14-nov): NodoDemo acepta brilloComun (el brillo() de tres capas en lugar del halo
+// propio, solo en el nodo que queda encendido) y PuntoDato dibuja el DatoViajero de la capa común
+// (brillo y estela de 4). Copiar la tarjeta desde D09 encima de este archivo borraría la línea que
+// se enciende: los cambios se copian a mano.
+// Debajo de todo va el fondo de la charla con dos destellos por las pistas en el paso 1 (FondoVivo).
+import { evolvePath } from "@remotion/paths";
 import React from "react";
-import { FondoCircuito } from "./D01Portada";
 import {
   anchoIcono,
+  Aro,
+  brillo,
+  Camara,
   Capa,
   COLOR,
   conAlfa,
   CURVA,
+  DatoViajero,
+  filtroBrillo,
   Foco,
+  FondoVivo,
   GROSOR,
   Icono,
   medidasPastilla,
@@ -122,10 +132,12 @@ export type PropsNodoDemo = {
   /** Escala extra (latido, golpe) alrededor del centro. */
   escala?: number;
   estilo?: Estilo;
+  /** El brillo de tres capas de la charla (brillo de comun/Luz) en lugar del halo propio, con el mismo encendido. */
+  brilloComun?: boolean;
 };
 
 /** El nodo de flujo de la charla: cuadrado redondeado relleno noche, borde azul de 5 px, ícono en hueso. Encendido: borde ámbar y brillo. */
-const NodoDemo: React.FC<PropsNodoDemo> = ({ cx, cy, lado, icono, nombreAdentro, encendido = 0, escala = 1, estilo }) => {
+const NodoDemo: React.FC<PropsNodoDemo> = ({ cx, cy, lado, icono, nombreAdentro, encendido = 0, escala = 1, estilo, brilloComun = false }) => {
   const e = entre01(encendido);
   const borde = e > 0 ? mezclar(COLOR.azul, COLOR.ambar, e) : COLOR.azul;
   const ag = nombreAdentro ? medidasAgente(nombreAdentro, lado) : null;
@@ -145,7 +157,7 @@ const NodoDemo: React.FC<PropsNodoDemo> = ({ cx, cy, lado, icono, nombreAdentro,
           borderRadius: TARJETA.radio,
           border: `${GROSOR.trazo_normal}px solid ${borde}`,
           background: COLOR.noche,
-          boxShadow: e > 0 ? `0 0 ${b.radio}px ${b.extension}px ${conAlfa(COLOR.ambar, b.opacidad * e)}` : "none",
+          boxShadow: brilloComun ? brillo(COLOR.ambar, e) ?? "none" : e > 0 ? `0 0 ${b.radio}px ${b.extension}px ${conAlfa(COLOR.ambar, b.opacidad * e)}` : "none",
         }}
       />
       {ag ? (
@@ -194,18 +206,14 @@ const ConexionDemo: React.FC<{ id: string; d: string; progreso: number; trazos?:
   );
 };
 
-/** El dato que viaja: un círculo ámbar con su halo sobre el camino `d`, en `progreso` (0 a 1). Va debajo de los nodos: entra y sale de ellos. */
-const PuntoDato: React.FC<{ d: string; progreso: number }> = ({ d, progreso }) => {
-  if (progreso <= 0 || progreso >= 1) return null;
-  const punto = getPointAtLength(d, getLength(d) * progreso);
-  if (!punto) return null;
-  return (
-    <svg width={1920} height={1080} style={svgPantalla}>
-      <circle cx={punto.x} cy={punto.y} r={TARJETA.halo.radio} fill={conAlfa(COLOR.ambar, TARJETA.halo.opacidad)} />
-      <circle cx={punto.x} cy={punto.y} r={TARJETA.radioDato} fill={COLOR.ambar} />
-    </svg>
-  );
-};
+/**
+ * El dato que viaja: el DatoViajero de la charla (comun/Luz: círculo ámbar con brillo y una estela
+ * de 4), sobre el camino `d`, en `progreso` (0 a 1). Con 0 o 1 no se ve. Va debajo de los nodos:
+ * entra y sale de ellos.
+ */
+const PuntoDato: React.FC<{ d: string; progreso: number }> = ({ d, progreso }) => (
+  <DatoViajero d={d} progreso={progreso} radio={TARJETA.radioDato} estela={4} color={COLOR.ambar} brillo={1} />
+);
 
 /** Un latido: 0, sube a 1 a la mitad y vuelve a 0, en `dura` s desde `retraso`. */
 function useLatido(paso: number, retraso: number, dura: number = TARJETA.latidoDura): number {
@@ -329,18 +337,26 @@ const RESPUESTA = { texto: "Podemos ir a Santuario Caffé Art", icono: "map-loca
 /** El orden en que el agente elige: Noticias, YouTube y al final Mapas, que es la que responde abajo. */
 const ORDEN = [1, 2, 0] as const;
 
-/** Paso 2: el flujo (de y 390 a 790) se achica a 0,7 y baja 160 px: queda de y 610 a 890. */
-const ALEJA = { escala: 0.7, dy: 160, cy: 590 } as const;
+/**
+ * Paso 2: el flujo (de y 390 a 790) se achica a 0,75 y baja 160 px: queda de y 600 a 900, con los
+ * rótulos a 45 px (con 0,7 quedaban en 42, por debajo de los 44 que se leen desde el fondo). Mapas
+ * queda a la derecha de la lección (x 1275 a 1365): no la pisa.
+ */
+const ALEJA = { escala: 0.75, dy: 160, cy: 590 } as const;
 
-// ---------- Tiempos (s desde el comienzo de cada paso; los últimos 0,3 s, quietos) ----------
+// ---------- Tiempos (s desde el comienzo de cada paso, los últimos 0,3 s quietos) ----------
 // D10.1 (3,3 s propios) 0, 0,15 y 0,3 la pastilla, el título y la frase. 0,45 el chat y 0,6
 //        el agente. 0,75 a 1,05 la conexión. 0,95 a 1,9 las tres herramientas salen del agente
 //        en abanico, de a una. 1,35 a 1,6 el dato va del chat al agente, y desde 1,6 elige una
-//        herramienta distinta cada vez: Noticias, YouTube y Mapas (cada viaje 0,28 s y cada
-//        herramienta late al recibirlo). Mapas queda encendida. 2,5 a 2,72 la respuesta vuelve
-//        al chat y 2,55 a 2,95 sube abajo.
+//        herramienta distinta cada vez: Noticias, YouTube y Mapas (cada viaje 0,26 s y cada
+//        herramienta late al recibirlo). Cuando el dato llega a Mapas (2,38), la línea se
+//        enciende: de 2,38 a 2,63 la conexión a Mapas pasa a una línea sólida ámbar de 6 px con
+//        brillo, Noticias y YouTube bajan a 0,4 con sus líneas, Mapas queda con el brillo de
+//        tres capas y un aro ámbar sale de su borde (2,38 a 2,78). 2,42 a 2,62 la respuesta
+//        vuelve al chat, que late hasta 2,8, y de 2,45 a 2,8 sube abajo. Quieto desde 2,8.
 // D10.2 (2,5 s) 0 a 0,3 se van la frase y la respuesta, 0 a 0,5 el flujo se aleja y pasa a Foco,
-//        0,3 y 0,45 los dos renglones de la lección.
+//        0,3 y 0,45 los dos renglones de la lección. La línea de Mapas, su brillo y las otras
+//        dos herramientas a 0,4 siguen como quedaron.
 const T1 = {
   chat: 0.45,
   agente: 0.6,
@@ -352,15 +368,29 @@ const T1 = {
   nodoHerramienta: 0.15,
   datoAlAgente: 1.35,
   datoAlAgenteDura: 0.25,
-  elige: [1.6, 1.9, 2.2],
-  eligeDura: 0.28,
+  elige: [1.6, 1.86, 2.12],
+  eligeDura: 0.26,
   latido: 0.25,
-  queda: 2.4,
-  vuelta: 2.5,
-  vueltaDura: 0.22,
-  latidoChat: 0.22,
-  respuesta: 2.55,
+  /** Cuando el dato llega a Mapas (2,12 + 0,26): la línea se enciende y lo demás baja. */
+  enciende: 2.38,
+  enciendeDura: 0.25,
+  aroDura: 0.4,
+  vuelta: 2.42,
+  vueltaDura: 0.2,
+  latidoChat: 0.18,
+  respuesta: 2.45,
+  respuestaDura: 0.35,
 } as const;
+
+/**
+ * La cámara del paso 1: el flujo y la respuesta, de 0,96 a 1 en 2,8 s alrededor del centro del flujo.
+ * Termina con lo demás, sin transform. La cabecera queda afuera: con el título amarillo a medio
+ * aparecer y escalado, el auditor de lima marcaba 11 px en el cuadro 15.
+ */
+const CAMARA = { desde: 0.96, dura: 2.8, origen: [960, 640] as [number, number] } as const;
+
+/** La línea elegida: sólida, ámbar, de 6 px, con el brillo de la charla. Las otras herramientas, a 0,4. El aro crece 80 px por lado. */
+const ELEGIDA = { grosor: 6, otras: 0.4, aroCrece: 160, aroGrosor: 5 } as const;
 
 export const D10DemoCompanero: React.FC = () => {
   const t1 = textos("D10", 1); // ["Demo 2", "El compañero de la madrugada", "Preguntale como a un amigo.", "Chat", "Agente", "Mapas", "Noticias", "YouTube"]
@@ -381,10 +411,13 @@ export const D10DemoCompanero: React.FC = () => {
   const vez = [0, 1, 2].map((i) => (ORDEN as readonly number[]).indexOf(i));
   const elige = [0, 1, 2].map((i) => useTramo(1, T1.elige[vez[i]], T1.eligeDura, CURVA.suave));
   const latidos = [0, 1, 2].map((i) => useLatido(1, T1.elige[vez[i]] + T1.eligeDura, T1.latido));
-  const queda = useTramo(1, T1.queda, 0.25, CURVA.sale);
+  const queda = useTramo(1, T1.enciende, T1.enciendeDura, CURVA.sale);
+  const lineaElegida = useTramo(1, T1.enciende, T1.enciendeDura, CURVA.sale);
+  const bajan = useTramo(1, T1.enciende, T1.enciendeDura, CURVA.suave);
+  const opOtras = 1 - (1 - ELEGIDA.otras) * bajan;
   const vuelta = useTramo(1, T1.vuelta, T1.vueltaDura, CURVA.lineal);
   const latidoChat = useLatido(1, T1.vuelta + T1.vueltaDura, T1.latidoChat);
-  const respuesta = useSalida(T1.respuesta);
+  const respuesta = useSalida(T1.respuesta, T1.respuestaDura);
   const leccion = useLeccion();
 
   const y = TARJETA.filaY;
@@ -418,14 +451,32 @@ export const D10DemoCompanero: React.FC = () => {
 
   return (
     <>
-      <FondoCircuito />
+      <FondoVivo pulsos={[1]} />
       <Cabecera demo={t1[0]} titulo={t1[1]} frase={t1[2]} anim={cabecera} />
+
+      {/* La cámara se acerca al flujo y a la respuesta durante el paso 1. La cabecera y el fondo quedan quietos. */}
+      <Camara paso={1} desde={CAMARA.desde} dura={CAMARA.dura} origen={CAMARA.origen}>
 
       <FlujoQueSeAleja aleja={leccion.aleja} {...ALEJA}>
         <ConexionDemo id="d10-chat" d={`M ${CHAT.x + TARJETA.lado / 2} ${y} L ${agIzq} ${y}`} progreso={conexion} />
         {h.ys.map((_, i) => (
-          <ConexionDemo key={`c${i}`} id={`d10-h${i}`} d={curva(i)} progreso={conexiones[i]} trazos encendido={encendidoConexion(i)} />
+          <Capa key={`c${i}`} estilo={i === ultima ? undefined : { opacity: opOtras }}>
+            <ConexionDemo id={`d10-h${i}`} d={curva(i)} progreso={conexiones[i]} trazos encendido={encendidoConexion(i)} />
+          </Capa>
         ))}
+        {/* La línea que se enciende: del agente a Mapas, sólida, ámbar y con brillo, encima de los trazos. */}
+        {lineaElegida > 0 && (
+          <svg width={1920} height={1080} style={{ ...svgPantalla, filter: filtroBrillo(COLOR.ambar, 1) }}>
+            <path
+              d={curva(ultima)}
+              fill="none"
+              stroke={COLOR.ambar}
+              strokeWidth={ELEGIDA.grosor}
+              strokeDasharray={evolvePath(lineaElegida, curva(ultima)).strokeDasharray}
+              strokeDashoffset={evolvePath(lineaElegida, curva(ultima)).strokeDashoffset}
+            />
+          </svg>
+        )}
         <PuntoDato d={`M ${CHAT.x} ${y} L ${AGENTE.x} ${y}`} progreso={datoAlAgente} />
         {h.ys.map((_, i) => (
           <PuntoDato key={`p${i}`} d={viaje(i)} progreso={elige[i]} />
@@ -438,13 +489,34 @@ export const D10DemoCompanero: React.FC = () => {
         </Texto>
         <NodoDemo cx={AGENTE.x} cy={y} lado={TARJETA.lado} icono={AGENTE.icono} nombreAdentro={t1[4]} encendido={latidoAgente} escala={1 + TARJETA.latido * latidoAgente} estilo={agente} />
         {h.ys.map((yh, i) => (
-          <React.Fragment key={`h${i}`}>
-            <NodoDemo cx={h.x} cy={yh} lado={h.lado} icono={h.iconos[i]} encendido={i === ultima ? Math.max(latidos[i], queda) : latidos[i]} escala={1 + TARJETA.latido * latidos[i]} estilo={herramientas[i]} />
+          <Capa key={`h${i}`} estilo={i === ultima ? undefined : { opacity: opOtras }}>
+            <NodoDemo
+              cx={h.x}
+              cy={yh}
+              lado={h.lado}
+              icono={h.iconos[i]}
+              encendido={i === ultima ? Math.max(latidos[i], queda) : latidos[i]}
+              escala={1 + TARJETA.latido * latidos[i]}
+              estilo={herramientas[i]}
+              brilloComun={i === ultima}
+            />
             <Texto x={h.x + h.lado / 2 + h.aireRotulo} y={yh} tam="lectura" estilo={rotulosEntran[i]}>
               {rotulosHerramientas[i]}
             </Texto>
-          </React.Fragment>
+          </Capa>
         ))}
+        <Aro
+          paso={1}
+          retraso={T1.enciende}
+          cx={h.x}
+          cy={h.ys[ultima]}
+          desde={h.lado}
+          hasta={h.lado + ELEGIDA.aroCrece}
+          radioEsquina={TARJETA.radio / h.lado}
+          color={COLOR.ambar}
+          grosor={ELEGIDA.aroGrosor}
+          dura={T1.aroDura}
+        />
       </FlujoQueSeAleja>
 
       {/* Lo que respondió el agente en el ensayo, con el ícono de la herramienta que eligió. */}
@@ -455,6 +527,7 @@ export const D10DemoCompanero: React.FC = () => {
           {r.texto}
         </Texto>
       </Capa>
+      </Camara>
 
       <Leccion lineas={t2} resaltar={[undefined, "Eligió solo"]} anim={leccion} />
     </>

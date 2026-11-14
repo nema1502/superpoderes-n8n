@@ -5,6 +5,9 @@
 // el borde derecho, se enciende y se apaga al 35 % (el guiño al afiche), desemboca en tres nodos (ver,
 // pensar y hacer), un dato ámbar los recorre y, a la izquierda, cae el título palabra por palabra.
 // Toda la escena se acerca un poco mientras llega (escala 0,965 a 1 con el centro del cuadro quieto).
+// Debajo de todo, fuera de esa cámara, las estrellas del fondo de la charla aparecen y se achican de
+// 1,08 a 1 al mismo tiempo: dos capas a distinta velocidad (el paralaje). Al terminar son exactamente
+// las estrellas del PNG de las demás diapositivas, así el fundido a D02 no las mueve.
 //
 // Cuadro final (deck D01.1), desde x 160 y alineado a la izquierda:
 //   Dale superpoderes en titulo (amarillo lima) a 120 px en y 300 y a tus automatizaciones a 104 px en
@@ -14,7 +17,7 @@
 //   después de que pasa el dato.
 //   Space Talks en gris a 60 px en y 720 y el evento en gris a 49 px en y 790.
 //   Firma en y 960: isotipo lima de 48 px y el nombre completo en hueso a 60 px.
-//   A la derecha, tres nodos de 96 px en x 1640 (y 300, 470 y 640) con lupa, cerebro y engranajes,
+//   A la derecha, tres nodos de 128 px en x 1640 (y 300, 470 y 640) con lupa, cerebro y engranajes,
 //   unidos por conexiones azules de 5 px, y nueve pistas de circuito de 3 px en azul al 35 %, cada
 //   una con su punto de 10 px: siete entran desde el borde derecho y dos salen de los nodos (por eso D01.1 tiene una excepción
 //   de zona segura a la derecha en armar/auditoria_reglas.json).
@@ -24,13 +27,17 @@
 // Sin logos de NASA Space Apps ni de la UCB: el deck los pide solo si llega el afiche o sus archivos.
 //
 // Tiempos (s desde el comienzo del paso):
-//   0,00-0,86 las pistas se dibujan desde el borde (0,5 s cada una, desfase 0,06 s) y bajan al 35 %
-//             en 0,9 s; 0,80-1,45 salen dos pistas más de los nodos hacia la izquierda
+//   0,00-0,80 aparecen las estrellas; 0,00-3,60 se achican de 1,08 a 1
+//   0,00-0,86 las pistas se dibujan desde el borde (0,5 s cada una, desfase 0,06 s), con una chispa
+//             en la punta, y bajan al 35 % en 0,9 s; 0,80-1,45 salen dos pistas más de los nodos
 //   0,45-1,05 los nodos aparecen cuando su pista llega; 0,85-1,15 se dibujan las conexiones
 //   0,55-1,51 el título cae palabra por palabra (desfase 0,12 s)
-//   1,30-2,30 el dato ámbar recorre la pista del primer nodo y baja por los tres; cada nodo late
+//   1,30-2,30 el dato ámbar, con brillo y estela, recorre la pista del primer nodo y baja por los
+//             tres; cada nodo late y se enciende con un brillo azul
+//   2,25-2,75 el dato llega al tercer nodo: un aro azul sale de él y su brillo da un fogonazo
 //   1,70-2,20 sube n8n + SerpApi + IA
 //   2,30-2,90 aparece el pie; 2,70-3,50 el isotipo se dibuja; 2,95-3,45 entra el nombre
+//   3,00-3,50 una franja de luz cruza Dale superpoderes, una vez
 //   0,00-3,60 el acercamiento
 //
 // Exporta NodoFlujo (el nodo de la charla), que usa también D02, y FondoCircuito (las pistas de la
@@ -39,19 +46,27 @@ import React from "react";
 import { Img, staticFile } from "remotion";
 import {
   anchoIsotipo,
+  Aro,
+  BarridoLuz,
+  brillo,
+  Camara,
   Capa,
   COLOR,
   conAlfa,
   CURVA,
+  DatoViajero,
+  FondoVivo,
   GROSOR,
   Icono,
   Isotipo,
   MOV,
   pasosDe,
+  PuntaLuz,
   Texto,
   textos,
   unir,
   useAparecer,
+  useDestello,
   useEntra,
   useEntrar,
   useEntrarPalabras,
@@ -189,7 +204,7 @@ const X = 160;
 const Y = { titulo1: 300, titulo2: 425, sub: 575, lugar: 720, evento: 790, firma: 960 };
 const ISOTIPO = 48;
 
-const NODO = { x: 1640, ys: [300, 470, 640], lado: 96, iconos: ["magnifying-glass", "brain", "gears"] as NombreIcono[] };
+const NODO = { x: 1640, ys: [300, 470, 640], lado: 128, iconos: ["magnifying-glass", "brain", "gears"] as NombreIcono[] };
 const PAD = 10; // diámetro del punto donde termina cada pista
 const BORDE_X = 2010; // las pistas arrancan fuera del cuadro (con la escala 0,965 el borde sigue tapado)
 const PISTA_FINAL = 0.35; // opacidad con la que quedan las pistas (guion: el guiño al afiche)
@@ -200,15 +215,15 @@ const PISTA_ENCENDIDA = 0.85; // mientras se dibujan
 // del borde del nodo, como un pin) y cuatro terminan sueltas. Las dos últimas salen de los nodos
 // hacia la izquierda cuando los nodos ya están, para que el circuito abrace la columna.
 const PISTAS: { pts: Punto[]; t: number }[] = [
-  { t: 0.0, pts: [[BORDE_X, 196], [1846, 196], [1742, 300], [1700, 300]] },
-  { t: 0.06, pts: [[BORDE_X, 470], [1700, 470]] },
-  { t: 0.12, pts: [[BORDE_X, 752], [1854, 752], [1742, 640], [1700, 640]] },
+  { t: 0.0, pts: [[BORDE_X, 196], [1846, 196], [1742, 300], [1716, 300]] },
+  { t: 0.06, pts: [[BORDE_X, 470], [1716, 470]] },
+  { t: 0.12, pts: [[BORDE_X, 752], [1854, 752], [1742, 640], [1716, 640]] },
   { t: 0.18, pts: [[BORDE_X, 120], [1782, 120]] },
   { t: 0.24, pts: [[BORDE_X, 385], [1878, 385], [1838, 345], [1790, 345]] },
   { t: 0.3, pts: [[BORDE_X, 560], [1880, 560], [1840, 600], [1790, 600]] },
   { t: 0.36, pts: [[BORDE_X, 852], [1924, 852], [1862, 914], [1600, 914]] },
-  { t: 0.8, pts: [[NODO.x, 252], [NODO.x, 196], [1584, 140], [1470, 140]] },
-  { t: 0.95, pts: [[NODO.x, 688], [NODO.x, 756], [1576, 820], [1430, 820]] },
+  { t: 0.8, pts: [[NODO.x, 236], [NODO.x, 196], [1584, 140], [1470, 140]] },
+  { t: 0.95, pts: [[NODO.x, 704], [NODO.x, 756], [1576, 820], [1430, 820]] },
 ];
 const T_PISTA = { dura: 0.5, baja: 0.9 };
 
@@ -266,16 +281,37 @@ const FilaLogos: React.FC<{ texto: string; estilos: Estilo[] }> = ({ texto, esti
   );
 };
 const T_DATO = { retraso: 1.3, dura: 1.0 };
-const DATO = 20; // diámetro del dato
+const ESTELA_DATO = 5; // círculos de estela detrás del dato
+// Cuando el dato llega al tercer nodo: un aro azul de 4 px que sale de su borde (círculo de 128 a
+// 520 px de lado) y un fogonazo en su brillo.
+const T_ARO = { retraso: 2.25, dura: 0.5, hasta: 520, grosor: 4, fogonazo: 0.3 };
+// Una franja de luz cruza Dale superpoderes, una sola vez, cuando ya llegó todo lo demás.
+const T_BARRIDO = { retraso: 3.0, dura: 0.5 };
+// La cámara del contenido y las estrellas, que se achican mientras el contenido crece.
+const CAMARA = { desde: 0.965, dura: 3.6 };
+const ESTRELLAS = { aparece: 0.8, desde: 1.08 };
+// Las estrellas del PNG que en la portada quedan a menos de 26 px de una letra o del isotipo (medido en
+// el cuadro final): se tapan con tinta solo acá. La que queda a media altura después de Agreda se leía
+// como un punto, y las de arriba del nombre, como motas sobre las letras. [x, y, radio]
+const ESTRELLAS_TAPADAS: [number, number, number][] = [
+  [1017, 968, 8],
+  [894, 933, 11],
+  [503, 920, 11],
+  [692, 921, 8],
+  [820, 915, 8],
+  [851, 925, 8],
+  [156, 939, 8],
+  [135, 978, 8],
+];
 
 export const D01Portada: React.FC = () => {
   // ["Dale superpoderes", "a tus automatizaciones", "n8n + SerpApi + IA", "Space Talks",
   //  "Hackathon NASA Space Apps 2026, Santa Cruz", "Nicolás Emir Mejía Agreda"]
   const [titulo1, titulo2, sub, lugar, evento, nombre] = textos("D01", 1);
 
-  // El acercamiento de toda la escena.
-  const acerca = useTramo(1, 0, 3.6, CURVA.sale);
-  const camara: Estilo = { transform: `scale(${0.965 + 0.035 * acerca})` };
+  // Las estrellas: aparecen desde tinta y se achican de 1,08 a 1 mientras el contenido se acerca.
+  const opEstrellas = useTramo(1, 0, ESTRELLAS.aparece, CURVA.fundido);
+  const escEstrellas = ESTRELLAS.desde - (ESTRELLAS.desde - 1) * useTramo(1, 0, CAMARA.dura, CURVA.sale);
 
   // Las pistas: se dibujan encendidas y bajan al 35 %.
   const dibujo = PISTAS.map((q) => useTramo(1, q.t, T_PISTA.dura, CURVA.sale));
@@ -287,11 +323,9 @@ export const D01Portada: React.FC = () => {
   const conexiones = [useTramo(1, 0.85, 0.3, CURVA.suave), useTramo(1, 0.95, 0.3, CURVA.suave)];
 
   // El dato: velocidad pareja con la curva suave, y cada nodo late cuando el dato llega a su centro.
+  // Con progreso 0 o 1 el dato no se ve (al final queda debajo del tercer nodo).
   const ruta = largoDe(RUTA);
   const avance = useTramo(1, T_DATO.retraso, T_DATO.dura, CURVA.suave);
-  const [dx, dy] = puntoEn(RUTA, avance * ruta);
-  const opDato = useAparecer(1, T_DATO.retraso, 0.12).opacity as number;
-  const finDato = useTramo(1, T_DATO.retraso + T_DATO.dura - 0.05, 0.15, CURVA.lineal);
   // Cuándo pasa por el centro de cada nodo (invirtiendo la curva suave por bisección).
   const llegada = (d: number) => {
     let a = 0;
@@ -309,6 +343,8 @@ export const D01Portada: React.FC = () => {
   const llegadas = [llegada(dCentro[0]) - 0.1, llegada(dCentro[1]) - 0.1, llegada(dCentro[2]) - 0.12];
   const encendidos = llegadas.map((t) => useTramo(1, t, 0.4, CURVA.sale));
   const brillos = latidos.map((l, i) => Math.max(Math.min(1, (l - 1) / 0.06), 0.45 * encendidos[i]));
+  // El dato llega al tercer nodo: fogonazo en su brillo (el aro va en el JSX).
+  const fogonazo = useDestello(1, T_ARO.retraso, T_ARO.fogonazo);
 
   // El texto.
   const desfase = MOV.desfase.palabras;
@@ -325,7 +361,17 @@ export const D01Portada: React.FC = () => {
   const azul = (alfa: number) => conAlfa(COLOR.azul, alfa);
 
   return (
-    <Capa estilo={camara} origen={[960, 540]}>
+    <>
+      {/* Las estrellas, debajo de todo y fuera de la cámara: se achican mientras el contenido crece. */}
+      <Capa estilo={{ opacity: opEstrellas, transform: escEstrellas !== 1 ? `scale(${escEstrellas})` : undefined }} origen={[960, 540]}>
+        <FondoVivo variante="estrellas" />
+        <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0 }}>
+          {ESTRELLAS_TAPADAS.map(([x, y, r]) => (
+            <circle key={`${x}-${y}`} cx={x} cy={y} r={r} fill={COLOR.tinta} />
+          ))}
+        </svg>
+      </Capa>
+      <Camara paso={1} desde={CAMARA.desde} dura={CAMARA.dura} origen={[960, 540]}>
       {/* Las pistas de circuito, con su punto al final. */}
       <svg width={1920} height={1080} style={{ position: "absolute", left: 0, top: 0, overflow: "visible" }}>
         {PISTAS.map(({ pts }, i) => {
@@ -358,26 +404,55 @@ export const D01Portada: React.FC = () => {
             <line key={`c${i}`} x1={NODO.x} y1={y0} x2={NODO.x} y2={y0 + (y1 - y0) * conexiones[i]} stroke={COLOR.azul} strokeWidth={GROSOR.trazo_normal} />
           ) : null;
         })}
-        {/* El dato ámbar (debajo de los nodos: adentro de un nodo no se ve). */}
-        {avance > 0 && finDato < 1 && <circle cx={dx} cy={dy} r={DATO / 2} fill={COLOR.ambar} opacity={opDato * (1 - finDato)} />}
       </svg>
-
-      {NODO.ys.map((y, i) => (
-        <NodoFlujo
-          key={y}
-          cx={NODO.x}
-          cy={y}
-          lado={NODO.lado}
-          icono={NODO.iconos[i]}
-          escala={(0.6 + 0.4 * nodos[i]) * latidos[i]}
-          opacidad={Math.min(1, 1.6 * nodos[i])}
-          brillo={brillos[i]}
-        />
+      {/* La chispa en la punta de cada pista mientras se dibuja. */}
+      {PISTAS.map(({ pts }, i) => (
+        <PuntaLuz key={`p${i}`} d={caminoDe(pts)} progreso={dibujo[i]} />
       ))}
+      {/* El dato ámbar con brillo y estela (debajo de los nodos: adentro de un nodo no se ve). */}
+      <DatoViajero d={caminoDe(RUTA)} progreso={avance} estela={ESTELA_DATO} />
 
-      <Texto x={X} y={Y.titulo1} tam="titulo" color={COLOR.titulo} estiloPalabras={palabras1}>
-        {titulo1}
-      </Texto>
+      {NODO.ys.map((y, i) => {
+        const esc = (0.6 + 0.4 * nodos[i]) * latidos[i];
+        const op = Math.min(1, 1.6 * nodos[i]);
+        const k = Math.max(brillos[i], i === 2 ? fogonazo : 0);
+        return (
+          <React.Fragment key={y}>
+            {/* El brillo azul del nodo encendido, en un div con la misma forma, debajo del nodo. */}
+            <div
+              style={{
+                position: "absolute",
+                left: NODO.x - NODO.lado / 2,
+                top: y - NODO.lado / 2,
+                width: NODO.lado,
+                height: NODO.lado,
+                borderRadius: Math.round(RADIO_NODO * NODO.lado),
+                boxShadow: brillo(COLOR.azul, k * op),
+                transform: esc !== 1 ? `scale(${esc})` : undefined,
+              }}
+            />
+            <NodoFlujo cx={NODO.x} cy={y} lado={NODO.lado} icono={NODO.iconos[i]} escala={esc} opacidad={op} />
+          </React.Fragment>
+        );
+      })}
+      <Aro
+        paso={1}
+        retraso={T_ARO.retraso}
+        cx={NODO.x}
+        cy={NODO.ys[2]}
+        desde={NODO.lado}
+        hasta={T_ARO.hasta}
+        radioEsquina={0.5}
+        color={COLOR.azul}
+        grosor={T_ARO.grosor}
+        dura={T_ARO.dura}
+      />
+
+      <BarridoLuz paso={1} retraso={T_BARRIDO.retraso} dura={T_BARRIDO.dura}>
+        <Texto x={X} y={Y.titulo1} tam="titulo" color={COLOR.titulo} estiloPalabras={palabras1}>
+          {titulo1}
+        </Texto>
+      </BarridoLuz>
       <Texto x={X} y={Y.titulo2} tam="grande" color={COLOR.titulo} estiloPalabras={palabras2}>
         {titulo2}
       </Texto>
@@ -392,6 +467,7 @@ export const D01Portada: React.FC = () => {
       <Texto x={xNombre} y={Y.firma} tam="lectura" estilo={estNombre}>
         {nombre}
       </Texto>
-    </Capa>
+      </Camara>
+    </>
   );
 };

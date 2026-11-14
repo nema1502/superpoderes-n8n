@@ -35,7 +35,8 @@
   #ayuda td:first-child { white-space: nowrap; color: var(--ambar); font-weight: 700; width: 38%; }
   #ayuda p { color: var(--gris); margin: 14px 0 0; font-size: 15px; }
   kbd { font-family: inherit; }
-  #cargando { position: fixed; inset: 0; display: grid; place-items: center; color: var(--gris); font-size: 20px; z-index: 0; }
+  /* encima del escenario mientras se lee el archivo; se esconde con el primer paso */
+  #cargando { position: fixed; inset: 0; display: grid; place-items: center; color: var(--gris); font-size: 20px; z-index: 5; background: var(--tinta); }
 </style>
 </head>
 <body>
@@ -49,16 +50,17 @@
 <div id="ayuda" role="dialog" aria-label="Atajos de teclado">
   <h2>Teclas</h2>
   <table>
-    <tr><td>Flecha derecha, Espacio, Av Pág o clic</td><td>siguiente paso (lo que manda el clicker)</td></tr>
-    <tr><td>Flecha izquierda o Re Pág</td><td>paso anterior (el video arranca de cero)</td></tr>
+    <tr><td>Flecha derecha, Espacio, Av Pág, Enter o clic</td><td>siguiente paso (lo que manda el clicker)</td></tr>
+    <tr><td>Flecha izquierda, Re Pág o Retroceso</td><td>paso anterior (el video arranca de cero)</td></tr>
     <tr><td>Número y Enter</td><td>ir a ese paso, como en PowerPoint</td></tr>
     <tr><td>Inicio o Fin</td><td>primer o último paso</td></tr>
-    <tr><td>F</td><td>pantalla completa (y habilita el sonido)</td></tr>
-    <tr><td>B o punto</td><td>pantalla negra (otra vez para volver)</td></tr>
+    <tr><td>F</td><td>pantalla completa</td></tr>
+    <tr><td>B o punto</td><td>pantalla negra (la tecla siguiente la saca sin avanzar)</td></tr>
+    <tr><td>M</td><td>silenciar o volver a dar sonido</td></tr>
     <tr><td>S</td><td>vista del orador en otra ventana: notas, lo que viene, reloj y tiempo transcurrido</td></tr>
     <tr><td>? o H</td><td>esta ayuda</td></tr>
   </table>
-  <p>Cada paso es un video que arranca solo y queda quieto en su último cuadro. El siguiente ya está cargado: no hay parpadeo al cambiar. Funciona sin internet.</p>
+  <p>Cada paso es un video que arranca solo y queda quieto en su último cuadro. El siguiente ya está cargado: no hay parpadeo al cambiar. Funciona sin internet. Si se recarga la página, vuelve al mismo paso y la vista del orador se vuelve a conectar sola.</p>
 </div>
 
 <script id="datos" type="application/json">__DATOS__</script>
@@ -78,16 +80,17 @@
   #seccion.respaldo { border-color: var(--ambar); color: var(--ambar); }
   main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 34%); min-height: 0; }
   #notas { padding: 20px 26px; overflow: auto; font-size: 27px; line-height: 1.42; }
+  #notas p { margin: 0 0 .6em; }
   #notas .acot { color: var(--gris); font-size: .8em; }
   #notas .meta { color: var(--gris); font-size: 16px; line-height: 1.4; margin-top: 18px; padding-top: 10px; border-top: 1px solid var(--acero2); }
   #notas .vacia { color: var(--gris); font-style: italic; }
   aside { border-left: 2px solid var(--acero2); padding: 16px 18px; display: flex; flex-direction: column; gap: 10px; min-height: 0; overflow: auto; }
   .rotulo { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--gris); }
-  .cuadro { width: 100%; aspect-ratio: 16 / 9; background: #000; border: 2px solid var(--acero2); border-radius: 6px; display: block; object-fit: contain; }
+  .cuadro { width: 100%; aspect-ratio: 16 / 9; max-height: max(90px, calc((100vh - 360px) / 2)); background: #000; border: 2px solid var(--acero2); border-radius: 6px; display: block; object-fit: contain; }
   #sig .cuadro { border-color: var(--ambar); }
   #sig-texto { font-size: 17px; }
   #sig-texto b { color: var(--ambar); }
-  #barra { height: 8px; background: var(--acero2); border-radius: 4px; overflow: hidden; }
+  #barra { height: 8px; background: var(--acero2); border-radius: 4px; overflow: hidden; flex: none; }
   #barra div { height: 100%; width: 0; background: var(--ambar); }
   #video-t { font-size: 15px; color: var(--gris); font-variant-numeric: tabular-nums; }
   footer { display: flex; align-items: center; gap: 24px; padding: 12px 22px; border-top: 2px solid var(--acero2); background: var(--acero); }
@@ -147,10 +150,9 @@
   const MAX_URLS = 8;
   const registro = [];                 // para las pruebas: cada cambio de paso
   let actual = -1, objetivo = -1, turno = 0;
-  let negro = false, ayuda = false;
+  let negro = false, ayuda = false, silencio = false;
   let digitos = "", digitosT = 0;
-  let orador = null;
-  let inicio = null, pausado = null, acumulado = 0;   // cronómetro de la charla
+  let inicio = null, pausado = null;   // cronómetro de la charla (sobrevive a una recarga)
   let sonidoBloqueado = false;
 
   // ------------------------------------------------------------ videos
@@ -201,6 +203,7 @@
       v.addEventListener(evento, listo); v.addEventListener("error", falla);
     });
   }
+  const mudo = i => silencio || !P[i].audio;
   async function preparar(i, evitar = []) {
     let v = elementoDe(i);
     if (!v) {
@@ -210,7 +213,7 @@
       v.classList.remove("visible", "debajo");
       const u = await urlDe(i);
       if (asignado.get(v) !== i) return preparar(i, evitar);
-      v.muted = !P[i].audio;
+      v.muted = mudo(i);
       v.src = u;
       v.load();
     }
@@ -247,12 +250,12 @@
     if (visible && visible !== v) setTimeout(() => { if (elementoDe(actual) !== visible) { visible.pause(); visible.classList.remove("debajo"); } }, 400);
     if (!inicio && motivo === "siguiente" && i > 0) iniciarCronometro();
     try { history.replaceState(null, "", "#" + P[i].n); } catch (e) {}
-    actualizarOrador();
+    enviarEstado();
     if (i + 1 < N) preparar(i + 1, [v]).catch(() => {});
   }
 
   function reproducir(v, i) {
-    v.muted = !P[i].audio;
+    v.muted = mudo(i);
     const pr = v.play();
     if (pr && pr.catch) pr.catch(err => {
       if (err && err.name === "NotAllowedError" && !v.muted) {   // sonido bloqueado: que igual se vea
@@ -261,24 +264,30 @@
       }
     });
   }
+  function ponerSilencio(si) {
+    silencio = si;
+    for (const v of videos) { const j = asignado.get(v); v.muted = j === undefined ? true : mudo(j); }
+    enviarEstado();
+  }
 
   const base = () => (objetivo >= 0 ? objetivo : actual);
   const siguiente = () => { if (salirDeNegro()) return; if (base() + 1 < N) ir(base() + 1, "siguiente"); };
   const anterior = () => { if (salirDeNegro()) return; if (base() > 0) ir(base() - 1, "anterior"); };
   function salirDeNegro() { if (negro) { ponerNegro(false); return true; } return false; }
-  function ponerNegro(si) { negro = si; document.body.classList.toggle("negro", si); actualizarOrador(); }
+  function ponerNegro(si) { negro = si; document.body.classList.toggle("negro", si); enviarEstado(); }
 
   // ------------------------------------------------------------ teclas
+  // e puede venir de esta ventana o de la del orador (un objeto con key y desdeOrador)
   function tecla(e) {
     const k = e.key;
     if (e.ctrlKey || e.metaKey || e.altKey) return;
-    if (/^[0-9]$/.test(k)) { digitos = (digitos + k).slice(-3); digitosT = Date.now(); actualizarOrador(); e.preventDefault(); return; }
+    if (/^[0-9]$/.test(k)) { digitos = (digitos + k).slice(-3); digitosT = Date.now(); enviarEstado(); e.preventDefault(); return; }
     if (k === "Enter" && digitos) {
       const n = parseInt(digitos, 10); digitos = ""; e.preventDefault();
-      if (n >= 1 && n <= N) { if (negro) ponerNegro(false); ir(n - 1, "salto"); } else actualizarOrador();
+      if (n >= 1 && n <= N) { if (negro) ponerNegro(false); ir(n - 1, "salto"); } else enviarEstado();
       return;
     }
-    if (k === "Escape" && digitos) { digitos = ""; actualizarOrador(); return; }
+    if (k === "Escape" && digitos) { digitos = ""; enviarEstado(); return; }
     switch (k) {
       case "ArrowRight": case "ArrowDown": case "PageDown": case " ": case "Enter": case "n": case "N":
         e.preventDefault(); siguiente(); break;
@@ -288,10 +297,11 @@
       case "End": e.preventDefault(); ir(N - 1, "salto"); break;
       case "f": case "F": case "F5":                                    // F5: el botón de "presentar" de algunos clickers
         e.preventDefault();
-        if (e.view && e.view !== window) avisar("La pantalla completa se pide desde la ventana de la presentación: hacé clic ahí y apretá F.");
+        if (e.desdeOrador) avisar("La pantalla completa se pide desde la ventana de la presentación: hacé clic ahí y apretá F.");
         else pantallaCompleta(k === "F5");
         break;
       case "b": case "B": case ".": e.preventDefault(); ponerNegro(!negro); break;
+      case "m": case "M": e.preventDefault(); ponerSilencio(!silencio); break;
       case "s": case "S": e.preventDefault(); abrirOrador(); break;
       case "?": case "h": case "H": e.preventDefault(); ayuda = !ayuda; document.body.classList.toggle("ayuda", ayuda); break;
       case "Escape": if (ayuda) { ayuda = false; document.body.classList.remove("ayuda"); } break;
@@ -309,94 +319,174 @@
   let quieto = 0;
   document.addEventListener("mousemove", () => { document.body.classList.remove("sin-cursor"); clearTimeout(quieto); quieto = setTimeout(() => document.body.classList.add("sin-cursor"), 2000); });
   document.body.classList.add("sin-cursor");
-  for (const v of videos) v.addEventListener("ended", () => actualizarOrador());
+  for (const v of videos) v.addEventListener("ended", () => enviarEstado());
 
-  // ------------------------------------------------------------ vista del orador
-  function abrirOrador() {
-    if (orador && !orador.closed) { orador.focus(); return; }
-    const w = window.open("", "orador_charla", "width=1280,height=800");
-    if (!w) { avisar("El navegador bloqueó la ventana del orador: permití las ventanas emergentes para este archivo y apretá S de nuevo."); return; }
-    // siempre un documento nuevo: si la presentación se recargó, la ventana vieja queda con escuchas muertas
-    w.document.open();
-    w.document.write(document.getElementById("html-orador").textContent);
-    w.document.close();
-    orador = w; notasDe = -1;
-    w.addEventListener("keydown", tecla);            // el clicker manda las teclas a la ventana que tenga el foco
-    w.document.getElementById("reiniciar").onclick = () => { inicio = Date.now(); acumulado = 0; pausado = null; actualizarRelojes(); };
-    w.document.getElementById("pausar").onclick = () => {
-      if (!inicio) iniciarCronometro();
+  // ------------------------------------------------------------ cronómetro
+  const CRONO = "charla_cronometro";
+  function guardarCrono() { try { sessionStorage.setItem(CRONO, JSON.stringify({ inicio, pausado })); } catch (e) {} }
+  try { const c = JSON.parse(sessionStorage.getItem(CRONO) || "null"); if (c && c.inicio) { inicio = c.inicio; pausado = c.pausado || null; } } catch (e) {}
+  function iniciarCronometro() { inicio = Date.now(); pausado = null; guardarCrono(); }
+  function boton(cual) {
+    if (cual === "reiniciar") { inicio = Date.now(); pausado = null; }
+    else if (cual === "pausar") {
+      if (!inicio) { inicio = Date.now(); pausado = null; }
       else if (pausado) { inicio += Date.now() - pausado; pausado = null; }
       else pausado = Date.now();
-      actualizarRelojes();
-    };
-    actualizarOrador();
-  }
-  function iniciarCronometro() { inicio = Date.now(); pausado = null; }
-  function fmt(s) {
-    s = Math.max(0, Math.floor(s));
-    const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), x = s % 60;
-    return (h ? h + ":" + String(m).padStart(2, "0") : m) + ":" + String(x).padStart(2, "0");
-  }
-  function esc(t) { return t.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
-  function notasHtml(texto) {
-    if (!texto) return '<div class="vacia">Sin notas.</div>';
-    const partes = texto.split(/\n\n(?=(?:Fuente|Recortable): )/);
-    const habla = partes.shift();
-    let h = habla.split(/\n+/).map(par => "<p>" + esc(par).replace(/\[[^\]]*\]/g, m => '<span class="acot">' + m + "</span>") + "</p>").join("");
-    if (partes.length) h += '<div class="meta">' + partes.map(p => esc(p)).join("<br>") + "</div>";
-    return h;
-  }
-  let notasDe = -1;
-  function actualizarOrador() {
-    if (!orador || orador.closed) return;
-    const d = orador.document, i = Math.max(actual, 0), p = P[i];
-    if (!p || !d.getElementById("numero")) return;
-    d.getElementById("numero").textContent = p.n + " / " + N;
-    d.getElementById("etiqueta").textContent = p.etiqueta;
-    d.getElementById("titulo").textContent = p.titulo;
-    const sec = d.getElementById("seccion");
-    sec.textContent = negro ? "pantalla negra" : p.seccion;
-    sec.className = p.seccion === "respaldo" || negro ? "respaldo" : "";
-    if (notasDe !== i) { d.getElementById("notas").innerHTML = notasHtml(p.notas); d.getElementById("notas").scrollTop = 0; notasDe = i; }
-    d.getElementById("ahora").src = p.mini;
-    const s = P[i + 1];
-    d.getElementById("sig").style.visibility = s ? "visible" : "hidden";
-    if (s) d.getElementById("sig-img").src = s.mini;
-    d.getElementById("sig-texto").innerHTML = s ? "<b>" + esc(s.etiqueta) + "</b> " + esc(s.titulo) + (s.diapo !== p.diapo ? " (diapositiva nueva)" : "") : "Fin de la presentación.";
-    const salto = d.getElementById("salto");
-    salto.textContent = digitos ? "ir a " + digitos + " con Enter" : "";
-    salto.className = digitos ? "activo" : "";
-    d.getElementById("aviso").textContent = sonidoBloqueado ? "Sonido bloqueado: clic en la presentación" : (avisoTexto || "");
-    actualizarRelojes();
-  }
-  let avisoTexto = "";
-  function avisar(t) { avisoTexto = t; console.warn(t); actualizarOrador(); }
-  function actualizarRelojes() {
-    if (!orador || orador.closed) return;
-    const d = orador.document;
-    if (!d.getElementById("reloj")) return;
-    const ahora = new Date();
-    d.getElementById("reloj").textContent = String(ahora.getHours()).padStart(2, "0") + ":" + String(ahora.getMinutes()).padStart(2, "0") + ":" + String(ahora.getSeconds()).padStart(2, "0");
-    const t = inicio ? ((pausado || Date.now()) - inicio) / 1000 : 0;
-    d.getElementById("trans").textContent = fmt(t) + (pausado ? " en pausa" : "");
-    const p = P[Math.max(actual, 0)];
-    const plan = d.getElementById("plan");
-    if (p && p.plan != null) {
-      plan.textContent = "plan al llegar acá: " + fmt(p.plan);
-      plan.className = inicio && t - p.plan > 60 ? "tarde" : "";
-    } else plan.textContent = "";
-    const v = elementoDe(actual);
-    if (v && v.duration) {
-      d.querySelector("#barra div").style.width = (100 * v.currentTime / v.duration).toFixed(1) + "%";
-      d.getElementById("video-t").textContent = "video " + v.currentTime.toFixed(1).replace(".", ",") + " de " + v.duration.toFixed(1).replace(".", ",") + " s" + (v.ended ? ", terminó" : "");
     }
-    if (digitos && Date.now() - digitosT > 4000) { digitos = ""; actualizarOrador(); }
+    guardarCrono(); enviarEstado();
   }
-  setInterval(actualizarRelojes, 250);
+
+  // ------------------------------------------------------------ vista del orador
+  // La ventana del orador tiene su propio guion y se habla con esta por mensajes. Un archivo local que se
+  // recarga ya no puede tocar la ventana que abrió antes (Chrome le da otro origen), pero sí mandarle
+  // mensajes: por eso, si la presentación se recarga, la vista del orador sigue andando y su clicker también.
+  const NOMBRE_ORADOR = "orador_charla";
+  let orador = null;
+  let avisoTexto = "";
+  function avisar(t) { avisoTexto = t; console.warn(t); enviarEstado(); }
+  function aOrador(m) {
+    if (!orador || orador.closed) return false;
+    try { orador.postMessage(Object.assign({ charla: "presentacion" }, m), "*"); return true; } catch (e) { return false; }
+  }
+  function adoptar(w) {
+    orador = w;
+    const primero = {};
+    for (const p of P) if (!(p.diapo in primero)) primero[p.diapo] = p.n;
+    aOrador({ tipo: "datos", total: N, primero, pasos: P.map(p => ({ n: p.n, etiqueta: p.etiqueta, diapo: p.diapo, titulo: p.titulo,
+      seccion: p.seccion, notas: p.notas, mini: p.mini, plan: p.plan })) });
+    enviarEstado();
+  }
+  function enviarEstado() {
+    if (!orador || orador.closed) return;
+    const v = elementoDe(actual);
+    aOrador({ tipo: "estado", i: Math.max(actual, 0), negro, digitos, silencio, sonidoBloqueado, aviso: avisoTexto, inicio, pausado,
+      videoT: v ? v.currentTime : 0, videoDur: v && v.duration ? v.duration : 0, terminado: !!(v && v.ended) });
+  }
+  function abrirOrador() {
+    if (orador && !orador.closed) { try { orador.focus(); } catch (e) {} return; }
+    const w = window.open("", NOMBRE_ORADOR, "width=1280,height=800");
+    if (!w) { avisar("El navegador bloqueó la ventana del orador: permití las ventanas emergentes para este archivo y apretá S de nuevo."); return; }
+    let nueva = false;
+    try { nueva = !!w.document; } catch (e) { nueva = false; }
+    if (!nueva) { adoptar(w); try { w.focus(); } catch (e) {} return; }   // la de antes de recargar: ya tiene su guion
+    const d = w.document;
+    d.open(); d.write(document.getElementById("html-orador").textContent); d.close();
+    const guion = d.createElement("script");
+    guion.textContent = "(" + guionOrador.toString() + ")();";
+    d.body.appendChild(guion);
+    adoptar(w);
+  }
+  window.addEventListener("message", ev => {
+    const m = ev.data;
+    if (!m || m.charla !== "orador" || !ev.source) return;
+    // un saludo es la vista del orador que no tiene noticias (por ejemplo, la de antes de recargar): se la toma
+    if (m.tipo === "hola") { if (!orador || orador.closed || orador === ev.source) adoptar(ev.source); return; }
+    if (!orador || orador.closed) adoptar(ev.source);
+    if (m.tipo === "tecla") tecla({ key: m.key, desdeOrador: true, preventDefault() {} });
+    else if (m.tipo === "boton") boton(m.cual);
+  });
+  setInterval(() => {
+    if (digitos && Date.now() - digitosT > 4000) digitos = "";
+    enviarEstado();
+  }, 250);
+
+  // Corre en la ventana del orador (se inserta como su guion): pinta lo que manda la presentación
+  // y le manda las teclas del clicker.
+  function guionOrador() {
+    "use strict";
+    const $ = id => document.getElementById(id);
+    let P = [], N = 0, primero = {}, est = null, notasDe = -1, imgAhora = -1, imgSig = -1;
+    let oido = Date.now(), ultimoHola = 0;
+    const PROPIAS = new Set(["ArrowRight", "ArrowDown", "PageDown", " ", "Enter", "ArrowLeft", "ArrowUp", "PageUp", "Backspace",
+      "Home", "End", "F5", "f", "F", "b", "B", ".", "m", "M", "s", "S", "h", "H", "?", "n", "N", "p", "P", "Escape"]);
+    function decir(m) {
+      try { if (window.opener && !window.opener.closed) window.opener.postMessage(Object.assign({ charla: "orador" }, m), "*"); } catch (e) {}
+    }
+    window.addEventListener("message", ev => {
+      const m = ev.data;
+      if (!m || m.charla !== "presentacion") return;
+      oido = Date.now();
+      if (m.tipo === "datos") { P = m.pasos; N = m.total; primero = m.primero || {}; notasDe = -1; imgAhora = -1; imgSig = -1; }
+      else if (m.tipo === "estado") est = m;
+      pintar();
+    });
+    document.addEventListener("keydown", e => {
+      if (e.ctrlKey || e.metaKey || e.altKey) return;
+      if (PROPIAS.has(e.key) || /^[0-9]$/.test(e.key)) e.preventDefault();
+      decir({ tipo: "tecla", key: e.key });
+    });
+    for (const id of ["pausar", "reiniciar"]) $(id).addEventListener("click", e => { decir({ tipo: "boton", cual: id }); e.currentTarget.blur(); });
+    function esc(t) { return t.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+    // "diapositiva A1" o "Sin internet: A2" dicen además el número para saltar: A1 (32 y Enter).
+    // Si la nota ya lo trae escrito (así también lo lee el PPTX), no se repite.
+    function saltos(t) { return t.replace(/\b([AD]\d{1,2})\b(?! \(\d{1,2} y Enter\))/g, (m, id) => (primero[id] ? m + " (" + primero[id] + " y Enter)" : m)); }
+    function notasHtml(texto) {
+      if (!texto) return '<div class="vacia">Sin notas.</div>';
+      const partes = texto.split(/\n\n(?=(?:Fuente|Recortable): )/);
+      const habla = partes.shift();
+      let h = habla.split(/\n+/).map(par => "<p>" + saltos(esc(par)).replace(/\[[^\]]*\]/g, m => '<span class="acot">' + m + "</span>") + "</p>").join("");
+      if (partes.length) h += '<div class="meta">' + partes.map(p => saltos(esc(p))).join("<br>") + "</div>";
+      return h;
+    }
+    // que las notas entren sin scroll: la letra baja de 27 hasta 18 px si hace falta
+    function ajustar() {
+      const e = $("notas");
+      let t = 27;
+      e.style.fontSize = t + "px";
+      while (e.scrollHeight > e.clientHeight + 1 && t > 18) { t -= 1; e.style.fontSize = t + "px"; }
+    }
+    window.addEventListener("resize", ajustar);
+    function fmt(s) {
+      s = Math.max(0, Math.floor(s));
+      const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), x = s % 60;
+      return (h ? h + ":" + String(m).padStart(2, "0") : m) + ":" + String(x).padStart(2, "0");
+    }
+    const dos = n => String(n).padStart(2, "0");
+    function pintar() {
+      const ahora = new Date();
+      $("reloj").textContent = dos(ahora.getHours()) + ":" + dos(ahora.getMinutes()) + ":" + dos(ahora.getSeconds());
+      const conectado = Date.now() - oido < 2500;
+      if (!est || !P.length) { $("aviso").textContent = conectado ? "" : "Esperando a la presentación"; return; }
+      const i = est.i, p = P[i];
+      if (!p) return;
+      $("numero").textContent = p.n + " / " + N;
+      $("etiqueta").textContent = p.etiqueta;
+      $("titulo").textContent = p.titulo;
+      const sec = $("seccion");
+      sec.textContent = est.negro ? "pantalla negra" : p.seccion;
+      sec.className = p.seccion === "respaldo" || est.negro ? "respaldo" : "";
+      if (notasDe !== i) { $("notas").innerHTML = notasHtml(p.notas); $("notas").scrollTop = 0; notasDe = i; ajustar(); }
+      if (imgAhora !== i) { $("ahora").src = p.mini; imgAhora = i; }
+      const s = P[i + 1];
+      $("sig").style.visibility = s ? "visible" : "hidden";
+      if (s && imgSig !== i + 1) { $("sig-img").src = s.mini; imgSig = i + 1; }
+      $("sig-texto").innerHTML = s ? "<b>" + esc(s.etiqueta) + "</b> " + esc(s.titulo) + (s.diapo !== p.diapo ? " (diapositiva nueva)" : "") : "Fin de la presentación.";
+      const salto = $("salto");
+      salto.textContent = est.digitos ? "ir a " + est.digitos + " con Enter" : "";
+      salto.className = est.digitos ? "activo" : "";
+      const t = est.inicio ? ((est.pausado || Date.now()) - est.inicio) / 1000 : 0;
+      $("trans").textContent = fmt(t) + (est.pausado ? " en pausa" : "");
+      const plan = $("plan");
+      if (p.plan != null) { plan.textContent = "plan al llegar acá: " + fmt(p.plan); plan.className = est.inicio && t - p.plan > 60 ? "tarde" : ""; }
+      else plan.textContent = "";
+      if (est.videoDur) {
+        $("barra").firstElementChild.style.width = (100 * est.videoT / est.videoDur).toFixed(1) + "%";
+        $("video-t").textContent = "video " + est.videoT.toFixed(1).replace(".", ",") + " de " + est.videoDur.toFixed(1).replace(".", ",") + " s" + (est.terminado ? ", terminó" : "");
+      }
+      $("aviso").textContent = !conectado ? "Sin señal de la presentación (si se recargó, vuelve sola)"
+        : est.sonidoBloqueado ? "Sonido bloqueado: clic en la presentación"
+        : est.silencio ? "Sonido apagado (M lo devuelve)" : (est.aviso || "");
+    }
+    setInterval(() => {
+      pintar();
+      // si la presentación se recargó, no sabe de esta ventana: saludarla para que la vuelva a tomar
+      if (Date.now() - oido > 1500 && Date.now() - ultimoHola > 1000) { ultimoHola = Date.now(); decir({ tipo: "hola" }); }
+    }, 250);
+  }
 
   window.__pitch = {
     estado: () => ({
-      actual, objetivo, total: N, negro, ayuda, orador: !!(orador && !orador.closed), sonidoBloqueado,
+      actual, objetivo, total: N, negro, ayuda, silencio, orador: !!(orador && !orador.closed), sonidoBloqueado,
       videos: videos.map(v => ({ paso: asignado.has(v) ? P[asignado.get(v)].n : null, visible: v.classList.contains("visible"),
         readyState: v.readyState, t: v.currentTime, duracion: v.duration, pausado: v.paused, terminado: v.ended, muted: v.muted })),
       registro: registro.slice(-20),

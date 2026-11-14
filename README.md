@@ -137,6 +137,7 @@ Con los mismos bloques de las demos se arma mucho más. Algunas para tu proyecto
 
 Soy Nicolás Emir Mejía Agreda, en redes **@nemaxyz**. Soy embajador de la comunidad de n8n en Bolivia, en octubre de 2026 estuve en n8n In the Loop, la conferencia de n8n en Berlín, y organizo eventos de tecnología. También hice [Tinkazo](https://tinkazo.app), la herramienta del sorteo del final.
 
+- LinkedIn: https://www.linkedin.com/in/nicolas-mejia-agreda
 - GitHub: https://github.com/nema1502
 - Tinkazo: https://tinkazo.app
 

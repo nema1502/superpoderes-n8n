@@ -3,8 +3,9 @@
 Un modelo solo sabe lo que leyó: se le pregunta qué café está abierto ahora, piensa (late dos
 veces) y responde que no lo puede saber. Después la cámara se aleja un poco y aparece el agente:
 el mismo nodo con un aro de cuatro estaciones (piensa, elige, mira, responde), tres herramientas y
-la memoria unidas a trazos. Un punto ámbar da la vuelta: piensa, elige, sale hasta Mapas (que se
-enciende), vuelve, mira y responde. Al final, el agente queda atrás y al frente: Él elige cuál usar.
+la memoria unidas a trazos. Un punto ámbar da la vuelta: piensa, elige (la línea a Mapas se enciende
+en ámbar y las otras herramientas bajan), sale hasta Mapas (que se enciende con su brillo), vuelve,
+mira y responde. Al final, el agente queda atrás y al frente: Él elige cuál usar.
 
     <python del entorno> manim/render_diapo.py D08
 
@@ -24,8 +25,12 @@ Decisiones:
   chocaba con mira), unida al aro con su propia línea a trazos. Las herramientas en x 1500, con
   nodos de 120 px, para que la tarjeta de D08.3 no las corte.
 - D08.3: la tarjeta mide 900 por 260 px (tapa el nodo y la estación elige enteros, sin cortar las
-  herramientas) y va en tinta con borde en hueso al 40 %. Las estaciones guardan su fondo opaco en
-  el Foco: al 60 % se veía el aro por detrás.
+  herramientas) y va en tinta, sin borde, para que mande la frase. El aro, las estaciones y las
+  herramientas quedan detrás al 25 % (Mapas con su línea ámbar y su brillo, que siguen diciendo cuál
+  eligió). Las estaciones guardan su fondo opaco: transparente, se veía el aro por detrás.
+- D08.2 y D08.3: la frase cambia en orden (TransformarEnOrden): lo que no sigue se va antes de que
+  viaje la palabra que queda, y lo nuevo llega después. Con TransformarPorPartes se leía modelosolo
+  y, en D08.3, herramientas se montaba sobre las.
 """
 
 from __future__ import annotations
@@ -39,15 +44,15 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import numpy as np  # noqa: E402
 from charla import (  # noqa: E402
-    AMBAR, AZUL, GRIS, GROSOR, HUESO, OPACIDAD, RADIO, TINTA, TITULO, Desvanecer, DiapoCharla, Entrar, Foco,
-    Latido, Mover, Texto, TransformarPorPartes, Trazo, punto, rect_borde, textos, trazo,
+    AMBAR, AZUL, GRIS, GROSOR, HUESO, OPACIDAD, RADIO, TINTA, TITULO, Desvanecer, DiapoCharla, Entrar,
+    Latido, Mover, Texto, Trazo, punto, rect_borde, textos, trazo,
 )
 from d05_que_es_un_flujo import (  # noqa: E402
     fondo_circuito,
-    Z_NODO, Z_ROTULO, Brotar, Recorrer, a_trazos, camino, dato, icono, instante, nodo,
+    NODO_RADIO, Z_NODO, Z_ROTULO, Brotar, Recorrer, a_trazos, camino, dato, icono, instante, nodo,
 )
-from charla import Aparecer, u  # noqa: E402
-from manim import Dot, VGroup, VMobject  # noqa: E402
+from charla import CURVA, Aparecer, Tramo, _Cambio, _Fundido, linea, u  # noqa: E402
+from manim import AnimationGroup, Dot, Transform, VGroup, VMobject, rate_functions  # noqa: E402
 
 # ---- Paso 1 ----
 CEREBRO = {"cx": 160, "cy": 170, "lado": 90}
@@ -74,9 +79,80 @@ ANGULO_MEMORIA = 125                   # de dónde sale del aro la línea a la m
 PUERTO_RADIO = 8                       # px: el punto azul de donde salen las líneas a trazos, como en n8n
 PARTES_FRASE2 = ["Agente", " = ", "modelo", " + ", "herramientas", " + ", "memoria"]
 
+# La herramienta elegida: una línea ámbar sobre la de trazos y el brillo de la receta de la charla
+# (tres bordes a 4, 12 y 24 px del nodo, debajo de él). Las otras herramientas bajan a 0,4.
+ELEGIDA = {"grosor": 6, "otras": 0.4}
+BRILLO_NODO = ((4, 6, 0.45), (12, 8, 0.2), (24, 10, 0.08))   # distancia al borde, grosor y opacidad
+Z_ELEGIDA, Z_BRILLO = 0.5, 0.6                              # sobre los trazos y debajo del dato y del nodo
+# La frase cambia en tres tiempos: se va lo que no sigue, después viaja modelo, al final llega lo nuevo.
+FRASE_EN_ORDEN = {"sale": 0.35, "viaja": (0.35, 0.75), "dura": 0.7}
+
 # ---- Paso 3 ----
 PARTES_FRASE3 = ["Vos le das las ", "herramientas", "."]
 TARJETA = {"cx": 960, "cy": 600, "ancho": 900, "alto": 260}
+ATRAS = 0.25   # D08.3: el aro y las herramientas quedan detrás de la frase
+
+
+class _TransformarEnOrden(AnimationGroup):
+    """TransformarPorPartes en tres tiempos, para que nunca se lean dos frases encimadas: las partes
+    que no siguen se van (de 0 a `sale` del tramo), las que siguen viajan después (`viaja`) y las
+    nuevas llegan al final (desde 1 - `sale`). Al final queda en escena `destino`, entero."""
+
+    def __init__(self, origen: Texto, destino: Texto, sale: float, viaja: tuple[float, float], **kw):
+        curva = CURVA["suave"]
+        v0, v1 = viaja
+        self.origen, self.destino = origen, destino
+        solape = 2 * sale - 1   # _Cambio: la que se va ocupa de 0 a sale y la que llega de 1 - sale a 1
+        claves_d = list(destino.claves)
+        usadas_d: set[int] = set()
+        anims, self.copias = [], []
+        dist_o = 0.3 * getattr(origen, "tam", 60)
+        dist_d = 0.3 * getattr(destino, "tam", 60)
+        en_su_tiempo = lambda a: curva(min(1.0, max(0.0, (a - v0) / (v1 - v0))))  # noqa: E731
+        for i, k in enumerate(origen.claves):
+            j = next((j for j, kd in enumerate(claves_d) if kd == k and j not in usadas_d), None)
+            if j is not None:
+                usadas_d.add(j)
+                anims.append(Transform(origen.submobjects[i], destino.submobjects[j].copy(), rate_func=en_su_tiempo))
+            else:
+                anims.append(_Cambio(origen.submobjects[i], True, dist_o, solape=solape))
+        for j, parte_d in enumerate(destino.submobjects):
+            if j not in usadas_d:
+                copia = parte_d.copy()
+                self.copias.append(copia)
+                anims.append(_Cambio(copia, False, dist_d, solape=solape))
+        super().__init__(*anims, rate_func=rate_functions.linear, **kw)
+
+    def clean_up_from_scene(self, scene):
+        super().clean_up_from_scene(scene)
+        scene.remove(self.origen, *self.origen.submobjects, *self.copias)
+        scene.add(self.destino)
+
+
+def TransformarEnOrden(origen: Texto, destino: Texto, retraso: float, dura: float, sale: float,
+                       viaja: tuple[float, float]) -> Tramo:
+    return Tramo(_TransformarEnOrden(origen, destino, sale, viaja), retraso, dura)
+
+
+def Bajar(m, factor: float, retraso: float = 0.0, dura: float = 0.4) -> Tramo:
+    """Baja la opacidad de `m` por `factor` (relativo a la que tiene), sin sacarlo de la escena."""
+    return Tramo(_Fundido(m, 1.0, factor, CURVA["suave"]), retraso, dura)
+
+
+def brillo_nodo(n, color: str = AMBAR) -> VGroup:
+    """El brillo de un nodo encendido: tres bordes concéntricos detrás de él, cada vez más tenues."""
+    capas = []
+    for dist, grosor, alfa in BRILLO_NODO:
+        lado = n.lado + 2 * dist
+        r = rect_borde(n.cx, n.cy, lado, lado, NODO_RADIO + dist, grosor, color=color)
+        r.set_stroke(opacity=alfa)
+        r.auditor_ignorar = True
+        capas.append(r)
+    g = VGroup(*capas)
+    for m in g.get_family():
+        m.auditor_ignorar = True
+    g.set_z_index(Z_BRILLO)
+    return g
 
 
 def en_elipse(theta_grados: float) -> tuple[float, float]:
@@ -202,10 +278,11 @@ class D08Pensar(DiapoCharla):
         grupos_herr = [VGroup(h, r) for h, r in zip(herramientas, rotulos_herr)]
         grupo_mem = VGroup(memoria, rot_memoria)
 
-        # La pregunta y la respuesta se van, la frase cambia y la cámara se aleja un poco.
+        # La pregunta y la respuesta se van, la frase cambia y la cámara se aleja un poco. La frase, en
+        # orden: el resto de la primera se va antes de que modelo viaje (si no, se leía modelosolo).
         self.tocar(
             Desvanecer(VGroup(pregunta, respuesta), 0.0, 0.3),
-            TransformarPorPartes(frase1, frase2, 0.05, 0.55),
+            TransformarEnOrden(frase1, frase2, 0.0, FRASE_EN_ORDEN["dura"], FRASE_EN_ORDEN["sale"], FRASE_EN_ORDEN["viaja"]),
             Mover(modelo, modelo2, 0.0, 0.6),
         )
         # El aro se dibuja desde arriba, en el sentido de las agujas del reloj, y cada estación aparece
@@ -229,9 +306,23 @@ class D08Pensar(DiapoCharla):
         self.add(pd)
         piensa, _, mira, responde = estaciones
         mapas = herramientas[0]
-        self.tocar(Latido(piensa, 0.0, 0.3))
-        self.tocar(Recorrer(pd, arco(0, 90), 0.0, 0.5), Latido(elige, 0.35, 0.3))
         y_mapas = HERRAMIENTA["ys"][0]
+        # Cuando elige late, la línea a Mapas se enciende en ámbar y las otras herramientas bajan:
+        # desde el fondo de la sala se ve cuál eligió.
+        elegida = linea(x_elige, ELIPSE["cy"], izq_herr, y_mapas, grosor=ELEGIDA["grosor"], color=AMBAR)
+        elegida.set_z_index(Z_ELEGIDA)
+        otras = VGroup(*grupos_herr[1:], grupo_mem, *abanico[1:], a_memoria, puertos[1])
+        brillo_mapas = brillo_nodo(mapas)
+        self.tocar(Latido(piensa, 0.0, 0.3))
+        self.tocar(
+            Recorrer(pd, arco(0, 90), 0.0, 0.5),
+            Latido(elige, 0.35, 0.3),
+            Trazo(elegida, 0.35, 0.4),
+            Bajar(otras, ELEGIDA["otras"], 0.35, 0.4),
+        )
+        # La línea ámbar (6 px) tapa entera a la de trazos (5 px): la de trazos sale, así en D08.3, con
+        # todo al 25 %, no asoma rayada debajo de la ámbar.
+        self.remove(abanico[0])
         ida = camino([(ELIPSE["cx"] + ELIPSE["a"], ELIPSE["cy"]), (x_elige, ELIPSE["cy"]), (izq_herr, y_mapas),
                       (HERRAMIENTA["cx"], y_mapas)])
         vuelta = camino([(HERRAMIENTA["cx"], y_mapas), (izq_herr, y_mapas), (x_elige, ELIPSE["cy"]),
@@ -241,7 +332,7 @@ class D08Pensar(DiapoCharla):
         # poner encima del ícono y el ícono desaparece.
         mapas_ambar = mapas.copy()
         mapas_ambar.caja.set_stroke(AMBAR)
-        self.tocar(Recorrer(pd, vuelta, 0.0, 0.35), Mover(mapas, mapas_ambar, 0.0, 0.25))
+        self.tocar(Recorrer(pd, vuelta, 0.0, 0.35), Mover(mapas, mapas_ambar, 0.0, 0.25), Aparecer(brillo_mapas, 0.0, 0.3))
         self.tocar(Recorrer(pd, arco(90, 180), 0.0, 0.45), Latido(mira, 0.3, 0.3))
         self.tocar(Recorrer(pd, arco(180, 270), 0.0, 0.45), Latido(responde, 0.3, 0.3))
         self.remove(pd)
@@ -249,25 +340,25 @@ class D08Pensar(DiapoCharla):
         # ---------------- Paso 3: él elige ----------------
         self.paso(3)
         frase3 = Texto(t3[0], 960, Y_FRASE, tam="frase", alinear="centro", partes=PARTES_FRASE3)
+        # La tarjeta lleva el borde tenue de apoyo: explica por qué el aro y las líneas se cortan en su
+        # contorno. Tapa el nodo y la estación elige enteros.
         tarjeta = rect_borde(TARJETA["cx"], TARJETA["cy"], TARJETA["ancho"], TARJETA["alto"], RADIO["tarjeta"],
                              GROSOR["borde"], color=HUESO, relleno=TINTA, opacidad_relleno=1)
         tarjeta.set_stroke(opacity=OPACIDAD["borde_apoyo"])
         tarjeta.set_z_index(Z_ROTULO + 1)
         final = Texto(t3[1], TARJETA["cx"], TARJETA["cy"], tam="idea", alinear="centro", resaltar="Él elige")
         final.set_z_index(Z_ROTULO + 2)
-        # Mapas vuelve a azul y baja al 60 % como el resto (un solo tramo para el nodo entero).
-        mapas_azul = mapas.copy()
-        mapas_azul.caja.set_stroke(AZUL, opacity=OPACIDAD["foco_hueso"]).set_fill(opacity=OPACIDAD["foco_hueso"])
-        mapas_azul.icono.set_fill(opacity=OPACIDAD["foco_hueso"])
-        # Lo que la tarjeta tapa entero (el nodo, la estación elige y su puerto) no baja al 60 %: se va
-        # mientras la tarjeta crece encima. Así nada asoma por los bordes y el auditor no lo ve encimado.
+        # Lo que la tarjeta tapa entero (el nodo, la estación elige y su puerto) se va mientras la tarjeta
+        # crece encima. Así nada asoma por los bordes y el auditor no lo ve encimado.
         tapados = VGroup(modelo, elige, puertos[0])
-        atras = VGroup(aro, *[VGroup(e.borde, e.texto) for e in estaciones if e is not elige], rotulos_herr[0],
-                       *grupos_herr[1:], grupo_mem, *abanico, a_memoria, puertos[1])
+        # Todo lo demás queda detrás al 25 %: el aro, las estaciones, Mapas con su línea ámbar y su brillo
+        # (que siguen marcando cuál eligió) y las otras herramientas, que ya estaban al 40 %.
+        atras = VGroup(aro, *[VGroup(e.borde, e.texto) for e in estaciones if e is not elige], grupos_herr[0],
+                       elegida, brillo_mapas)
         self.tocar(
-            Foco(atras, 0.0),
-            Mover(mapas, mapas_azul, 0.0, 0.3),
-            TransformarPorPartes(frase2, frase3, 0.05, 0.55),
+            Bajar(atras, ATRAS, 0.0, 0.3),
+            Bajar(otras, ATRAS / ELEGIDA["otras"], 0.0, 0.3),
+            TransformarEnOrden(frase2, frase3, 0.05, FRASE_EN_ORDEN["dura"], FRASE_EN_ORDEN["sale"], FRASE_EN_ORDEN["viaja"]),
         )
         self.tocar(
             Desvanecer(tapados, 0.0, 0.2),

@@ -5,9 +5,11 @@
 //   D06.1  El flujo de D05 queda chico arriba, en el mismo lugar donde lo deja D05.3. El dato
 //          lo recorre una vez, siempre igual, y el flujo pasa a Foco. Sube Un flujo común solo
 //          hace. y, de a una, las dos cosas que no puede, cada una con su cruz roja.
-//   D06.2  Dos superpoderes. HACER aparece primero, solo y tranquilo, con la cámara cerca: es
-//          el que ya existía. La cámara se aleja y entran VER y PENSAR con un golpe. Las pistas
-//          se dibujan de puerto a puerto y el dato las recorre: cada nodo late cuando pasa.
+//   D06.2  Dos superpoderes. Se apagan las luces y HACER aparece primero, solo y tranquilo, con
+//          la cámara cerca: es el que ya existía. La cámara se aleja y entran VER y PENSAR con un
+//          golpe, un aro y un fogonazo del borde, y con ellos vuelve la luz. Las pistas se dibujan
+//          de puerto a puerto con una chispa en la punta y el dato las recorre con su estela:
+//          cada nodo late con brillo ámbar cuando pasa y queda encendido en azul.
 //   D06.3  Los logos se van, los tres nodos se achican y suben, y entra la idea clave con su
 //          barrido de luz.
 //
@@ -22,31 +24,36 @@ import React from "react";
 import { Img, staticFile } from "remotion";
 import {
   anchoIcono,
+  Aro,
   BarridoLuz,
+  brillo,
   Capa,
   COLOR,
   Cruz,
   CURVA,
+  DatoViajero,
   Foco,
+  FondoVivo,
   GROSOR,
   grosorAsta,
   Icono,
   IDEA_CLAVE,
   mezclar,
   pasosDe,
+  PuntaLuz,
   Texto,
   textos,
   TIPO,
   unir,
   useAparecer,
   useDesvanecer,
+  useDestello,
   useEntrar,
   useGolpe,
   useTramo,
   type Estilo,
   type NombreIcono,
 } from "../comun";
-import { FondoCircuito } from "./D01Portada";
 
 // Las duraciones de deck.json: 3,3 (con el fundido de 0,4 adentro), 4,5 y 3,1 s.
 export const pasos = pasosDe("D06");
@@ -88,14 +95,34 @@ export type PropsNodoFlujo = {
   encendido?: number;
   /** Entrada (opacidad y transform), con el centro del nodo como origen. */
   estilo?: Estilo;
+  /** La luz del nodo activo (brillo() de Luz): una capa o varias. Por defecto, nada. */
+  brillo?: LuzNodo | LuzNodo[];
+  /** 0 a 1: el borde va hacia el hueso (el fogonazo de cuando llega). Por defecto, 0. */
+  destello?: number;
 };
+
+/** Una capa de brillo de un nodo: el color y cuánto (0 no dibuja nada). */
+export type LuzNodo = { color: string; k: number };
+
+/** El boxShadow de una o varias capas de brillo, o undefined si ninguna se ve. */
+function sombraNodo(luz: LuzNodo | LuzNodo[] | undefined): string | undefined {
+  if (!luz) return undefined;
+  const capas = (Array.isArray(luz) ? luz : [luz]).map((l) => brillo(l.color, l.k > 0.002 ? l.k : 0)).filter((s): s is string => !!s);
+  return capas.length ? capas.join(", ") : undefined;
+}
 
 /**
  * El nodo de flujo de la charla: cuadrado redondeado relleno noche, borde azul de 5 px y el
  * ícono en hueso. Mientras el dato pasa, el borde va hacia el ámbar y vuelve.
  */
-export const NodoFlujo: React.FC<PropsNodoFlujo> = ({ cx, cy, lado, icono, iconoCaja, iconoAlto, radio = RADIO_NODO, grosor = GROSOR.trazo_normal, encendido = 0, estilo }) => {
-  const borde = encendido > 0 ? mezclar(COLOR.azul, COLOR.ambar, entre01(encendido)) : COLOR.azul;
+export const NodoFlujo: React.FC<PropsNodoFlujo> = ({ cx, cy, lado, icono, iconoCaja, iconoAlto, radio = RADIO_NODO, grosor = GROSOR.trazo_normal, encendido = 0, estilo, brillo: luz, destello = 0 }) => {
+  // El fogonazo y el latido no se pisan en D06 (el nodo llega antes de que pase el dato): gana el fogonazo.
+  const borde =
+    destello > 0
+      ? mezclar(COLOR.azul, COLOR.hueso, entre01(destello))
+      : encendido > 0
+        ? mezclar(COLOR.azul, COLOR.ambar, entre01(encendido))
+        : COLOR.azul;
   const caja = iconoCaja ?? 0.45 * lado;
   const altoIcono = iconoAlto ?? altoIconoEn(icono, caja);
   return (
@@ -111,6 +138,7 @@ export const NodoFlujo: React.FC<PropsNodoFlujo> = ({ cx, cy, lado, icono, icono
           borderRadius: radio,
           border: `${grosor}px solid ${borde}`,
           background: COLOR.noche,
+          boxShadow: sombraNodo(luz),
         }}
       />
       <Icono nombre={icono} alto={altoIcono} x={cx} y={cy} />
@@ -207,6 +235,14 @@ export type PropsPoderes = {
   latidos?: number[];
   /** Progreso del dato por el camino de VER a HACER (0 o 1: no se ve). */
   dato?: number;
+  /** La luz de cada nodo (D06.2 y el comienzo de D06.3). Por defecto, ninguna: D15.1 queda igual. */
+  brillos?: (LuzNodo | LuzNodo[] | undefined)[];
+  /** El fogonazo del borde de cada nodo (0 a 1). Por defecto, 0. */
+  destellos?: number[];
+  /** Con un número, el dato viaja con brillo y esa estela (DatoViajero). Sin él, el PuntoDato de siempre. */
+  estelaDato?: number;
+  /** La chispa en la punta de cada pista mientras se dibuja (PuntaLuz). Por defecto, no. */
+  puntaPistas?: boolean;
 };
 
 /** Centro, lado, ícono y verbo de cada nodo para un `achica` dado. */
@@ -226,7 +262,7 @@ export function geometriaPoderes(achica: number) {
   };
 }
 
-export const Poderes: React.FC<PropsPoderes> = ({ verbos, achica = 0, estilosNodo = [], estilosVerbo = [], pistas = 1, latidos = [0, 0, 0], dato = 0 }) => {
+export const Poderes: React.FC<PropsPoderes> = ({ verbos, achica = 0, estilosNodo = [], estilosVerbo = [], pistas = 1, latidos = [0, 0, 0], dato = 0, brillos = [], destellos = [], estelaDato, puntaPistas = false }) => {
   const g = geometriaPoderes(achica);
   const mitad = g.lado / 2;
   const tramos = [0, 1].map((i) => ({ x0: g.xs[i] + mitad, x1: g.xs[i + 1] - mitad }));
@@ -236,7 +272,11 @@ export const Poderes: React.FC<PropsPoderes> = ({ verbos, achica = 0, estilosNod
       {tramos.map((t, i) => (
         <PistaLinea key={`l${i}`} x0={t.x0} x1={t.x1} y={g.y} progreso={pistas} />
       ))}
-      <PuntoDato d={camino} progreso={dato} />
+      {estelaDato === undefined ? (
+        <PuntoDato d={camino} progreso={dato} />
+      ) : (
+        <DatoViajero d={camino} progreso={dato} radio={RADIO_DATO} estela={estelaDato} />
+      )}
       {g.xs.map((x, i) => (
         <NodoFlujo
           key={`n${i}`}
@@ -247,11 +287,14 @@ export const Poderes: React.FC<PropsPoderes> = ({ verbos, achica = 0, estilosNod
           icono={PODERES.iconos[i]}
           iconoAlto={g.icono}
           encendido={latidos[i]}
+          brillo={brillos[i]}
+          destello={destellos[i]}
           estilo={unir(estilosNodo[i], { transform: `scale(${1 + LATIDO_NODO * (latidos[i] ?? 0)})` })}
         />
       ))}
       {g.puerto > 0.5 &&
         tramos.map((t, i) => <PistaPuertos key={`p${i}`} x0={t.x0} x1={t.x1} y={g.y} progreso={pistas} radio={g.puerto} />)}
+      {puntaPistas && tramos.map((t, i) => <PuntaLuz key={`c${i}`} d={`M ${t.x0} ${g.y} L ${t.x1} ${g.y}`} progreso={pistas} />)}
       {g.xs.map((x, i) => (
         <Texto key={`v${i}`} x={x} y={g.verboY} tam={g.verboTam} alinear="centro" estilo={estilosVerbo[i]}>
           {verbos[i]}
@@ -333,15 +376,28 @@ const Logo: React.FC<{ src: string; proporcion: number; cx: number; cy: number; 
 // D06.1 (2,9 s propios) 0,15-0,95 el dato recorre el flujo chico (cada nodo late al pasar),
 //        1,0-1,3 el flujo pasa a Foco, 0,95 el título, 1,4 y 1,8 las dos líneas, con su cruz
 //        0,15 s después (0,3 s).
-// D06.2 (4,5 s) 0-0,3 se va lo anterior, 0,15 el título, 0,4 HACER (fundido 0,4 s) y su
-//        columna, 0,85-1,45 la cámara se aleja, 1,35 VER y 1,65 PENSAR con golpe (con la cámara
-//        ya quieta: si el golpe empezaba antes, VER caía cortado en el borde), 2,1-2,6 las
-//        pistas, 2,65-3,75 el dato (late VER, PENSAR y HACER al pasar, hasta 4,1).
-// D06.3 (3,1 s) 0-0,3 se van el título, los logos e IA, 0,1-0,7 los nodos se achican y suben,
-//        0,7 la idea, 1,3-1,8 el barrido de luz.
+// D06.2 (4,5 s) 0-0,3 se va lo anterior, 0,3-0,6 se apagan las luces del fondo, 0,15 el
+//        título, 0,4 HACER (fundido 0,4 s) y su columna, 0,85-1,45 la cámara se aleja, 1,35 VER
+//        y 1,65 PENSAR con golpe, aro y fogonazo del borde (con la cámara ya quieta: si el golpe
+//        empezaba antes, VER caía cortado en el borde), 1,3-2,1 vuelven las luces, 2,1-2,6 las
+//        pistas con su chispa, 2,65-3,75 el dato con estela (late VER, PENSAR y HACER al pasar,
+//        con brillo ámbar, hasta 4,0, y les queda el brillo azul de lo activo).
+// D06.3 (3,1 s) 0-0,3 se van el título, los logos, IA y el brillo de los nodos, 0,1-0,7 los
+//        nodos se achican y suben, 0,7 la idea, 1,3-1,8 el barrido de luz.
 const T1 = { dato: 0.15, datoDura: 0.8, foco: 1.0, titulo: 0.95, lineas: [1.4, 1.8], cruzDesfase: 0.15, cruzDura: 0.3 } as const;
 const T2 = { titulo: 0.15, hacer: 0.4, camara: 0.85, camaraDura: 0.6, ver: 1.35, pensar: 1.65, textosDesfase: 0.15, pistas: 2.1, pistasDura: 0.5, dato: 2.65, datoDura: 1.1 } as const;
 const T3 = { achica: 0.1, achicaDura: 0.6, idea: 0.7, barrido: 1.3 } as const;
+
+/**
+ * La luz de D06.2. Las luces del fondo bajan a 0,35 mientras HACER está solo y vuelven cuando
+ * llegan VER y PENSAR: los superpoderes traen la luz. Cada latido empieza 0,1 s antes de que el
+ * dato llegue al centro del nodo, así el último termina a los 4,0 s y quedan 0,5 s quietos.
+ */
+const LUZ2 = {
+  apaga: 0.3, apagaDura: 0.3, vuelve: 1.3, vuelveDura: 0.8, baja: 0.65,
+  aro: { desde: 280, hasta: 420, radioEsquina: 0.114, grosor: 5, dura: 0.5 },
+  destelloDura: 0.1, latidoAdelanto: 0.1, azulActivo: 0.45, estela: 6,
+} as const;
 
 export const D06DosSuperpoderes: React.FC = () => {
   const t1 = textos("D06", 1); // ["Un flujo común solo hace.", "No ve lo que pasa en internet.", "No piensa."]
@@ -370,8 +426,22 @@ export const D06DosSuperpoderes: React.FC = () => {
   const textosPensar = useEntrar(2, T2.pensar + T2.textosDesfase);
   const pistas = useTramo(2, T2.pistas, T2.pistasDura, CURVA.suave);
   const dato = useTramo(2, T2.dato, T2.datoDura, CURVA.lineal);
-  const latidos = [0, 1, 2].map((i) => useLatido(2, T2.dato + (T2.datoDura * i) / 2));
+  const inicioLatidos = [0, 1, 2].map((i) => T2.dato - LUZ2.latidoAdelanto + (T2.datoDura * i) / 2);
+  const latidos = inicioLatidos.map((t) => useLatido(2, t));
   const salenLogos = useDesvanecer(3, 0, 0.3);
+
+  // ---- La luz de D06.2 ----
+  const apaga = useTramo(2, LUZ2.apaga, LUZ2.apagaDura);
+  const vuelve = useTramo(2, LUZ2.vuelve, LUZ2.vuelveDura);
+  const luz = 1 - LUZ2.baja * apaga + LUZ2.baja * vuelve; // 1 en D06.1 y en D06.3
+  const destellos = [useDestello(2, T2.ver, LUZ2.destelloDura), useDestello(2, T2.pensar, LUZ2.destelloDura), 0];
+  // Del pico del latido al final, a cada nodo le queda el brillo azul de lo activo, que se apaga con los logos en D06.3.
+  const quedaAzul = inicioLatidos.map((t) => useTramo(2, t + LATIDO_DURA / 2, LATIDO_DURA / 2, CURVA.suave));
+  const apagaAzul = useTramo(3, 0, 0.3, CURVA.fundido);
+  const brillos: LuzNodo[][] = [0, 1, 2].map((i) => [
+    { color: COLOR.ambar, k: latidos[i] },
+    { color: COLOR.azul, k: LUZ2.azulActivo * quedaAzul[i] * (1 - apagaAzul) },
+  ]);
 
   // ---- Paso 3 ----
   const achica = useTramo(3, T3.achica, T3.achicaDura, CURVA.suave);
@@ -381,11 +451,13 @@ export const D06DosSuperpoderes: React.FC = () => {
   const estilosVerbo = [textosVer, textosPensar, hacerTextos];
   const logos = PODERES.logos;
   const xs = PODERES.grande.xs;
+  const g2 = PODERES.grande;
+  const aro = LUZ2.aro;
 
   return (
     <>
-      {/* Debajo de todo, quieto aunque la cámara se mueva: el fondo de circuito de la charla. */}
-      <FondoCircuito />
+      {/* Debajo de todo, quieto aunque la cámara se mueva: el fondo de la charla, que se apaga en D06.2. */}
+      <FondoVivo pulsos={[1]} luz={luz} />
 
       {/* D06.1 */}
       <Capa estilo={sale1}>
@@ -426,7 +498,22 @@ export const D06DosSuperpoderes: React.FC = () => {
         {t2[0]}
       </Texto>
       <Capa estilo={transformCamara(camara)}>
-        <Poderes verbos={verbos} achica={achica} estilosNodo={estilosNodo} estilosVerbo={estilosVerbo} pistas={pistas} latidos={latidos} dato={dato} />
+        <Poderes
+          verbos={verbos}
+          achica={achica}
+          estilosNodo={estilosNodo}
+          estilosVerbo={estilosVerbo}
+          pistas={pistas}
+          latidos={latidos}
+          dato={dato}
+          brillos={brillos}
+          destellos={destellos}
+          estelaDato={LUZ2.estela}
+          puntaPistas
+        />
+        {[T2.ver, T2.pensar].map((t, i) => (
+          <Aro key={`aro${i}`} paso={2} retraso={t} cx={xs[i]} cy={g2.y} desde={aro.desde} hasta={aro.hasta} radioEsquina={aro.radioEsquina} color={COLOR.azul} grosor={aro.grosor} dura={aro.dura} />
+        ))}
         <Logo {...LOGO_SERPAPI} cx={xs[0]} cy={logos.y} alto={logos.alto} estilo={unir(textosVer, salenLogos)} />
         <Texto x={xs[1]} y={logos.y} tam="frase" alinear="centro" estilo={unir(textosPensar, salenLogos)}>
           {t2[4]}

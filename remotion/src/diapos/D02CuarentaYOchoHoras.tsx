@@ -11,7 +11,7 @@
 // D02.2 (3,7 s). La frase se va, el visor se achica a 90 px y sube a y 150, aparece la grilla de 32
 //   horas (8 por 4, cuadrados de 110 px con 16 de aire, de a uno con desfase de 0,02 s), sube la
 //   pregunta en hueso a 72 px en y 300 y caen seis pastillas, de a una con un golpe chico. Las horas
-//   que tapa cada pastilla pasan a gris al 30 %: cerca de la mitad. Dónde cae cada pastilla sale de una
+//   que tapa cada pastilla pasan a hueso al 30 %: cerca de la mitad. Dónde cae cada pastilla sale de una
 //   semilla fija (ubicarPastillas).
 // D02.3 (3,5 s). La pregunta se va, las pastillas viajan a una fila en y 560 y se vuelven nodos de
 //   120 px (la palabra se apaga al despegar y sube debajo del nodo, a 49 px, cuando llega), se dibujan las conexiones y un dato ámbar recorre la fila:
@@ -20,7 +20,8 @@
 //   Eso lo puede hacer un flujo. en hueso a 88 px en y 790, con un flujo en ámbar.
 //   El visor chico se queda arriba: el flujo le devuelve las horas al reloj.
 //
-// Debajo de todo, el fondo de circuito de la charla (FondoCircuito de D01).
+// Debajo de todo, el fondo de la charla con dos destellos por las pistas en D02.1 y D02.3
+// (FondoVivo). D02.2 va sin destellos: ya está cargada.
 //
 // Íconos de los nodos: magnifying-glass (buscar), copy (copiar), list-check (resumir) y comments
 // (avisar) de manim/comun/iconos. Pegar (un portapapeles) y otra vez (una flecha en círculo) no están
@@ -31,6 +32,7 @@ import {
   COLOR,
   conAlfa,
   CURVA,
+  FondoVivo,
   GROSOR,
   Icono,
   medidasPastilla,
@@ -49,7 +51,7 @@ import {
   Visor7,
   type NombreIcono,
 } from "../comun";
-import { FondoCircuito, ICONO_NODO, RADIO_NODO, useLatido } from "./D01Portada";
+import { ICONO_NODO, RADIO_NODO, useLatido } from "./D01Portada";
 
 export const pasos = pasosDe("D02");
 
@@ -78,10 +80,13 @@ function aHex(c: string): string {
 }
 const mezcla = (a: string, b: string, k: number): string => aHex(mezclar(a, b, k));
 
-// Colores de una hora: encendida (noche con borde azul al 40 %) y perdida (gris al 30 % sobre tinta).
+// Colores de una hora: encendida (noche con borde azul al 70 %) y perdida (hueso al 30 % sobre tinta).
+// Con borde azul al 40 % y gris al 30 %, desde el fondo de la sala las horas perdidas no se
+// distinguían de las otras (hoja_contactos.py D02 --sala): ahora las perdidas son claras y las que
+// quedan, azules.
 const HORA_RELLENO = COLOR.noche;
-const HORA_BORDE = mezcla(COLOR.tinta, COLOR.azul, 0.4);
-const HORA_GRIS = mezcla(COLOR.tinta, COLOR.gris, 0.3);
+const HORA_BORDE = mezcla(COLOR.tinta, COLOR.azul, 0.7);
+const HORA_GRIS = mezcla(COLOR.tinta, COLOR.hueso, 0.3);
 const BORDE_PASTILLA = mezcla(COLOR.tinta, COLOR.hueso, 0.4);
 
 const PASTILLA = { tam: 60, alto: 90 };
@@ -338,7 +343,7 @@ export const D02CuarentaYOchoHoras: React.FC = () => {
 
   return (
     <>
-      <FondoCircuito />
+      <FondoVivo pulsos={[1, 3]} />
 
       {/* La grilla de las 32 horas. */}
       <div style={{ position: "absolute", left: 0, top: 0, width: 1920, height: 1080, opacity: opGrilla }}>

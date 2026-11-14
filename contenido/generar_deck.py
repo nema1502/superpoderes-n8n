@@ -14,7 +14,7 @@ RAIZ = Path(__file__).resolve().parents[1]
 PPM = 140  # palabras por minuto al hablar
 
 REPO = "github.com/nema1502/superpoderes-n8n"
-LINKEDIN = ""  # la dirección del perfil de LinkedIn (https://www.linkedin.com/in/...)
+LINKEDIN = "https://www.linkedin.com/in/nicolas-mejia-agreda"  # la dirección del perfil de LinkedIn (https://www.linkedin.com/in/...)
 FORMULARIO = ""  # la dirección del formulario del flujo 4 publicado en n8n Cloud
 
 
@@ -89,7 +89,8 @@ diapo("D01", "Portada", "Portada", "remotion", {"tipo": "corte", "duracion_s": 0
           "logos de NASA Space Apps Santa Cruz y de la UCB van solo si están los archivos del afiche, "
           "como aparecen en el afiche, abajo a la derecha (x 1450 a 1850, y 930 a 1010). Sin marca de agua.",
           "[Quieta mientras entra la gente. No se dice nada. Probar el clicker y el micrófono. En otra ventana, "
-          "abiertos y con la sesión iniciada: la cuenta de n8n Cloud con los cuatro flujos publicados, la "
+          "abiertos y con la sesión iniciada: la cuenta de n8n Cloud con los flujos 1, 3 y 4 publicados y el 2 "
+          "abierto en el editor (se usa con Open chat), el reto de ejemplo copiado en la pestaña del flujo 3, la "
           "ejecución de ensayo de cada uno y tinkazo.app en modo Prueba con la Cuenta de prueba. El celular con "
           "datos, por si se cae la red. Cuando la sala esté lista: CLIC y empezar.]",
           4.0)])
@@ -200,8 +201,8 @@ diapo("D04", "AnotateAlSorteo", "Anotate al sorteo", "remotion", FUNDIDO("D03"),
            "eso que están llenando ya es una automatización." if CON_FORMULARIO else
            "Y ya que hablamos de sorteos: al final de la charla vamos a sortear [DECIR EL PREMIO] entre los que "
            "estén acá. Participar es gratis y no tienen que crear ninguna cuenta. Guarden la palabra de la charla, "
-           "que es llama. [Señalar la palabra. Si el flujo 4 está publicado, mostrar el QR de su formulario desde "
-           "Chrome (plan B del QR en presentacion/LEEME.md) y pedir nombre y apellido, o un apodo que nadie más "
+           "que es llama. [Señalar la palabra. Si el flujo 4 está publicado, mostrar en la otra pestaña, a pantalla "
+           "completa, el PNG del QR de su formulario que se bajó de Chrome en la mañana, y pedir nombre y apellido, o un apodo que nadie más "
            "use, y la palabra. Dejarlo unos 40 segundos. Si no está publicado, al final se anotan levantando la "
            "mano.] Y les cuento un secreto: anotarse a un sorteo así ya es una automatización."),
           4.0, espera=40,
@@ -416,20 +417,22 @@ diapo("D09", "DemoNombre", "Demo 1: ¿Ya existe tu nombre?", "remotion", FUNDIDO
       "un veredicto con pruebas). Enseña el orden fijo, que contrasta con el agente de la demo 2.",
       [paso(
           ["Demo 1", "¿Ya existe tu nombre?", "Decí el nombre de tu proyecto.", "Formulario", "Google", "Modelo",
-           "Veredicto"],
+           "Veredicto", "Satelitazo", "LIBRE", "PasaSat / SatAviso / OrbitaYa"],
           "Entra con un fundido de 0,4 s desde D08. " + DEMO_VISUAL + ESTILO_NODO + " Animación (3,0 s): la "
           "pastilla y el título entran (useEntrar, desfase 0,15 s), después la frase. Los cuatro nodos entran de a "
           "uno (desfase 0,15 s) con sus íconos: mobile-screen-button, magnifying-glass, brain y circle-check. Las "
           "conexiones se dibujan y el punto ámbar los recorre una vez (1,0 s). Cuadro final: el diseño de arriba "
           "con los cuatro nodos centrados en x 360, 800, 1240 y 1680. Marca de agua.",
           "Primera demo, y necesito un equipo valiente. ¿Cómo se llama su proyecto? [ELEGIR un nombre que diga la "
-          "sala. Si nadie se anima, usar el de respaldo de workflows/ESPEC.md.] Vamos a ver si ese nombre ya "
+          "sala. Si nadie se anima, usar Starlink, que sale OCUPADO y con sus enlaces. Abajo ya se ve cómo es "
+          "un veredicto: Satelitazo salió LIBRE en el ensayo.] Vamos a ver si ese nombre ya "
           "existe. El flujo va en línea recta: busca el nombre en Google con SerpApi, le pasa lo que encontró al "
           "modelo y el modelo da su veredicto, con pruebas. [IR A n8n: abrir el formulario del flujo 1 y "
           "escribir el nombre. DEMO EN VIVO, unos 2 minutos. Mostrar el veredicto y abrir uno de los enlaces que "
-          "encontró. Si falla: abrir la ejecución del ensayo en Executions. Sin internet: diapositiva A1.]",
+          "encontró. Si falla: abrir la ejecución del ensayo en Executions. Sin internet: A1 (32 y Enter).]",
           3.4, espera=120,
-          fuente="El flujo: workflows/ESPEC.md, workflow 1."),
+          fuente="El flujo: workflows/ESPEC.md, workflow 1. Satelitazo, LIBRE y los otros nombres: la salida del "
+                 "ensayo, workflows/muestras/flujo1-satelitazo.json."),
        paso(
           ["Línea recta:", "primero ve, después piensa."],
           "Animación (2,2 s): la frase de arriba se desvanece y el flujo baja al 60 % (Foco, 0,3 s). En el centro "
@@ -445,7 +448,7 @@ diapo("D10", "DemoCompanero", "Demo 2: El compañero de la madrugada", "remotion
       "YouTube) y memoria. La sorpresa es ver en el registro que eligió solo la herramienta para cada pregunta.",
       [paso(
           ["Demo 2", "El compañero de la madrugada", "Preguntale como a un amigo.", "Chat", "Agente", "Mapas",
-           "Noticias", "YouTube"],
+           "Noticias", "YouTube", "Podemos ir a Santuario Caffé Art"],
           "Entra con un fundido de 0,4 s desde D09. " + DEMO_VISUAL + ESTILO_NODO + " Acá la fila tiene dos "
           "nodos, Chat (comments) en x 360 y Agente (robot) en x 860, y a la derecha las tres herramientas en "
           "columna (nodos de 120 px en x 1380, y 500, 640 y 780: map-location-dot, globe y film), con sus rótulos "
@@ -459,9 +462,11 @@ diapo("D10", "DemoCompanero", "Demo 2: El compañero de la madrugada", "remotion
           "n8n: abrir el chat del flujo 2. Preguntar dónde hay un café abierto cerca del centro. Después: ¿Qué noticias "
           "hay de la NASA esta semana? Decime la fecha de cada una. Después, un video corto para aprender n8n. Al final, una pregunta de seguimiento: "
           "cuál de los cafés tiene mejor puntaje. Abrir Logs y mostrar qué herramienta usó en cada una (la de YouTube se llama Videos). Si alguna noticia es vieja, decirlo: Google a veces devuelve notas de otros días, y por eso se le pide la fecha. "
-          "DEMO EN VIVO, unos 2 minutos y medio. Si falla: la ejecución del ensayo. Sin internet: A2.]",
+          "DEMO EN VIVO, unos 2 minutos y medio. Si falla: la ejecución del ensayo. Sin internet: A2 (33 y Enter).]",
           3.4, espera=150,
-          fuente="El flujo: workflows/ESPEC.md, workflow 2."),
+          fuente="El flujo: workflows/ESPEC.md, workflow 2. Podemos ir a Santuario Caffé Art: el comienzo, tal cual, "
+                 "de la primera respuesta del agente en la ejecución de ensayo del flujo 2, que salió "
+                 "de Google Maps por SerpApi. Es lo que devolvió la búsqueda, no un dato de investigacion.md."),
        paso(
           ["Nadie le dijo qué usar.", "Eligió solo."],
           "Animación (2,2 s): la frase de arriba se desvanece y el flujo baja al 60 % (Foco, 0,3 s). Sube la "
@@ -488,9 +493,9 @@ diapo("D11", "DemoScout", "Demo 3: El scout del reto", "remotion", FUNDIDO("D10"
           "Tercera demo, y esta es para su reto. El scout del reto: pegan el reto que eligieron y el agente "
           "investiga por ustedes. Busca qué existe, artículos para leer y videos para aprender, y propone tres "
           "ideas que se pueden armar en un fin de semana. [IR A n8n: abrir el formulario del flujo 3 y pegar el "
-          "reto de un equipo de la sala o el de ejemplo de workflows/ESPEC.md. Mientras piensa, abrir la "
+          "reto de un equipo de la sala o el de ejemplo, que ya está copiado en la pestaña del flujo 3. Mientras piensa, abrir la "
           "ejecución y mostrar las herramientas que va usando. DEMO EN VIVO, unos 2 minutos. Si falla: la "
-          "ejecución del ensayo. Sin internet: A3.]",
+          "ejecución del ensayo. Sin internet: A3 (34 y Enter).]",
           3.6, espera=120,
           fuente="El flujo: workflows/ESPEC.md, workflow 3.",
           recortable="si va tarde, saltar la demo en vivo y mostrar A3 (menos 1:40)"),
@@ -517,7 +522,7 @@ diapo("D12", "IdeasParaTuReto", "Ideas para tu reto", "remotion", FUNDIDO("D11")
           "en hueso de 56 px arriba a la izquierda (gears, comments, clock y table), el nombre en hueso a 60 px y "
           "debajo la receta en gris a 49 px. Ningún texto en ámbar salvo el ícono de la primera tarjeta. Marca de "
           "agua.",
-          "¿Y en su reto? Cuatro ideas. Uno: n8n puede ser el backend de su prototipo, con un webhook, que es una dirección web que recibe "
+          "¿Y en su reto? Cuatro ideas. Uno: n8n puede ser el backend de su prototipo. Un webhook, que es una dirección web, recibe los "
           "datos, los piensa con IA y responde. Dos: un asistente que sabe de su tema y busca en internet. Tres: "
           "avisos automáticos, por ejemplo cada hora busca noticias de su tema y les manda solo lo importante. "
           "Cuatro: un formulario que ordena lo que llega y lo guarda en una tabla. Todo eso se arma con los mismos "
@@ -545,9 +550,9 @@ diapo("D13", "EmpezaGratis", "Empezá gratis hoy", "remotion", FUNDIDO("D12"),
           "¿Cómo empiezan hoy, sin gastar nada? Uno: la prueba gratis de n8n Cloud, catorce días, sin tarjeta. "
           "Dos: una cuenta gratis de SerpApi, con doscientas cincuenta búsquedas por mes. Tres: el modelo. En la "
           "prueba de n8n Cloud, en el nodo del modelo eligen Use Gateway credits y no necesitan ninguna llave. Si "
-          "se les acaban, una llave gratis de Google AI Studio, sabiendo que en la capa gratis lo que mandan se "
-          "usa para mejorar los productos de Google: nada de datos personales. Y en este repositorio están los "
-          "cuatro flujos de hoy, listos para importar, y el enlace para registrarse en n8n. Este código lleva al repositorio. [Dejar el QR unos 20 segundos. Si en el ensayo de la mañana Use Gateway credits no apareció en el nodo del modelo o no alcanzó, saltar esa frase y decir solo lo de Google AI Studio.]",
+          "se les acaban, usen una llave gratis de Google AI Studio. Ojo: en la capa gratis, lo que mandan se "
+          "usa para mejorar los productos de Google. Nada de datos personales. Y en este repositorio están los "
+          "cuatro flujos de hoy, listos para importar, y el enlace para registrarse en n8n. Este código lleva al repositorio. [Dejar el QR unos 20 segundos. Si en el ensayo de la mañana Use Gateway credits no apareció en el nodo del modelo o no alcanzó, la pantalla igual lo dice: agregar que, si no les aparece, usen directamente la llave de Google AI Studio.]",
           3.4, espera=20,
           fuente="Prueba de n8n Cloud, 14 días, sin tarjeta, 1.000 ejecuciones: https://n8n.io/pricing/ y https://docs.n8n.io/deploy/use-n8n-cloud/start-your-free-trial. Gateway credits: https://docs.n8n.io/deploy/use-n8n-cloud/gateway-credits. SerpApi gratis, 250 por mes: https://serpapi.com/pricing. Google AI Studio y su capa gratis: https://aistudio.google.com/docs/pricing. Investigación, puntos 1, 3 y 6.")])
 
@@ -668,16 +673,18 @@ def respaldo_demo(id_, n, nombre_flujo, desde, nota):
 
 respaldo_demo("A1", 1, "¿Ya existe tu nombre?", "D09",
               "[Solo si la demo 1 falla y no hay internet.] Se nos cayó internet, así que les muestro lo que salió "
-              "en el ensayo con este mismo flujo. Acá está el nombre que probamos, lo que encontró Google y el "
-              "veredicto del modelo, con sus enlaces.")
+              "en el ensayo con este mismo flujo. Probamos Satelitazo y Google no encontró nada con ese nombre: "
+              "está libre. Y el modelo propuso otros tres nombres, por si acaso.")
 respaldo_demo("A2", 2, "El compañero de la madrugada", "D10",
-              "[Solo si la demo 2 falla y no hay internet.] Esto es lo que respondió el agente en el ensayo. Miren "
-              "al costado de cada respuesta qué herramienta eligió: mapas para el café, noticias para la NASA y "
-              "Videos, que busca en YouTube, para el tutorial. [Si la captura todavía muestra la respuesta vieja de la NASA, decir: esas noticias eran de otros días, y por eso ahora al agente se le pide la fecha de cada una.]")
+              "[Solo si la demo 2 falla y no hay internet.] Estas son las preguntas que le hicimos al agente en el "
+              "ensayo. Miren al costado de cada pregunta qué herramienta eligió: mapas para el café, noticias para "
+              "la NASA y Videos, que busca en YouTube, para el tutorial. Y en la última usó la memoria: se acordó de "
+              "los cafés. [La pregunta de la NASA es la del ensayo. En vivo se le pide también la fecha de cada "
+              "noticia, porque Google a veces devuelve notas de otros días.]")
 respaldo_demo("A3", 3, "El scout del reto", "D11",
-              "[Solo si la demo 3 falla, no hay internet o va tarde.] Esta es la página que armó el scout en el "
-              "ensayo con el reto de ejemplo: lo que ya existe, qué leer, qué ver y tres ideas para un fin de "
-              "semana.")
+              "[Solo si la demo 3 falla, no hay internet o va tarde.] Arriba está el reto de ejemplo que le pasamos al "
+              "scout en el ensayo. Y abajo, las tres ideas que propuso para armar en un fin de semana. La página "
+              "completa trae también lo que ya existe, qué leer y qué ver.")
 
 diapo("A4", "DespuesDeLaPrueba", "Después de los 14 días", "remotion", FUNDIDO("D15"),
       "Para las preguntas: qué pasa cuando termina la prueba de n8n Cloud y cómo seguir en la compu propia.",

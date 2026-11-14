@@ -15,7 +15,8 @@
 //   0,05-0,60  la idea sube a y 150 y pasa a 64 px (texto nativo en cada cuadro, no una imagen escalada).
 //   0,45-1,50  la tarjeta del QR sube y el QR se arma (el mismo de D13).
 //   0,55-1,35  el repositorio, el LinkedIn y "Gracias" suben de a uno.
-//   0,90-3,55  la firma: el hilo ámbar dibuja la N, la N pasa a lima, aparece nemaxyz y @nemaxyz.
+//   0,75-3,40  la firma: el hilo ámbar dibuja la N, la N pasa a lima, aparece nemaxyz y @nemaxyz.
+//              Quieto desde 3,4 (ver FIRMA: la columna entera alineada a la izquierda).
 //
 // Los nodos, las pistas, el dato y la idea son las piezas de D06DosSuperpoderes.tsx con su geometría
 // chica (PoderesChicos e IDEA_PODERES): el cuadro final de D15.1 es el de D06.3 con la segunda frase
@@ -30,19 +31,20 @@
 // El renglón del LinkedIn sale del deck tal cual: mientras el deck no tenga el LinkedIn, dice tinkazo.app.
 // armar/poner_datos.py lo pone y vuelve a renderizar esta diapositiva. Las decisiones propias van con "Ajuste:".
 //
-// Pulido: debajo de todo, el fondo de circuito de la charla (FondoCircuito de D01Portada.tsx), el mismo
-// de D06.3, así D15.1 sigue siendo D06.3. En D15.2 vuelve chico el personaje de Nicolás que se vio en
+// Pulido: debajo de todo, el fondo de la charla (FondoVivo, con dos destellos por las pistas en el
+// paso 1), el mismo de D06.3, así D15.1 sigue siendo D06.3. En D15.2 vuelve chico el personaje de Nicolás que se vio en
 // D03 (nota de dirección 2), en el mismo nodo de borde azul, debajo del QR: llena la esquina de abajo a
 // la izquierda, que quedaba vacía, y la charla cierra con su cara al lado de Gracias.
 import React from "react";
 import { Img, staticFile } from "remotion";
-import { FondoCircuito } from "./D01Portada";
 import {
+  anchoLogotipo,
   Capa,
   COLOR,
   conAlfa,
   CURVA,
   Firma,
+  FondoVivo,
   GROSOR,
   IDEA_CLAVE,
   medirTexto,
@@ -113,7 +115,18 @@ const IDEA = { arriba: { y: 150, tam: TIPO.escala.idea_arriba }, ySegunda: 720 }
 // x 1789 y no en 1802: la pista vertical del fondo de circuito (x 1825) ya no queda pegada a la n final.
 const QR = { y0: 270, lado: 410, ladoMinimo: 360, aire: 64 } as const;
 const COLUMNA = { yRepo: 360, yLinkedin: 460, yGracias: 620 } as const;
-const FIRMA = { cy: 830, alto: 96, arrobaY: 950 } as const;
+/**
+ * Cambio del 14-nov: la columna de la derecha entera alineada a la izquierda, en el mismo x que el
+ * repositorio: el repositorio, el LinkedIn, Gracias, la firma (la N y nemaxyz) en y 860 y @nemaxyz
+ * debajo. Antes la firma iba centrada en la columna (x 1210).
+ * Ajuste: el plan pedía la columna en x 680, pero la dirección del repositorio a 60 px mide unos
+ * 1183 px y desde 680 se pasa de la zona segura (x 1853). La columna sigue en el x de siempre (el
+ * bloque QR más columna centrado, x 606 con la dirección de hoy) y todo se alinea ahí.
+ * El hilo de la firma sale de abajo a la derecha del personaje (40 px de aire): antes salía de
+ * x 375 y cruzaba la esquina del personaje entre 1,3 y 1,8 s.
+ * @nemaxyz va a 105 px de la línea de la firma (antes 120) para no bajar de y 965.
+ */
+const FIRMA = { cy: 860, alto: 96, arrobaY: 965, airePersonaje: 40, colaY: 1130 } as const;
 
 /**
  * El personaje de Nicolás (diseno/medios/D03/nicolas_personaje.png, tal cual, el de D03): un nodo de
@@ -124,7 +137,9 @@ const RETRATO = { lado: 230, aire: 50, radio: 0.16, src: "medios/D03/nicolas_per
 
 // La tarjeta del QR espera a que la idea termine de pasar por encima de su lugar (a los 0,45 s la idea
 // ya está arriba de y 230 y la tarjeta empieza en y 291 por la escala de 0,9).
-const T2 = { sale: 0, subir: { retraso: 0.05, dura: 0.55 }, qr: 0.45, repo: 0.55, linkedin: 0.7, gracias: 0.85, firma: 0.9, retrato: 1.1, retratoDura: 0.8 } as const;
+// Cambio del 14-nov: la firma arranca a los 0,75 y no a los 0,9: @nemaxyz termina a los 3,4 s y quedan
+// 0,5 s quietos (antes 0,43).
+const T2 = { sale: 0, subir: { retraso: 0.05, dura: 0.55 }, qr: 0.45, repo: 0.55, linkedin: 0.7, gracias: 0.85, firma: 0.75, retrato: 1.1, retratoDura: 0.8 } as const;
 
 export const D15Cierre: React.FC = () => {
   const t1 = textos("D15", 1); // [idea, segunda frase]
@@ -169,18 +184,23 @@ export const D15Cierre: React.FC = () => {
   const ladoQR = Math.max(QR.ladoMinimo, Math.min(QR.lado, Math.floor(zona - QR.aire - anchoColumna)));
   const x0QR = Math.max(ZONA.x0, Math.round((1920 - (ladoQR + QR.aire + anchoColumna)) / 2));
   const xColumna = x0QR + ladoQR + QR.aire;
-  const cxFirma = Math.round(xColumna + Math.min(anchoColumna, ZONA.x1 - xColumna) / 2);
+  // La firma (la N y nemaxyz) empieza en el x de la columna.
+  const cxFirma = xColumna + anchoLogotipo(FIRMA.alto) / 2;
 
   const retratoX0 = Math.round(x0QR + (ladoQR - RETRATO.lado) / 2);
   const retratoY0 = QR.y0 + ladoQR + RETRATO.aire;
   const radioRetrato = Math.round(RETRATO.radio * RETRATO.lado);
+  // El hilo sale de abajo del cuadro, a la derecha del personaje, y llega en horizontal al pie de la N.
+  const pieN: [number, number] = [xColumna, FIRMA.cy + FIRMA.alto / 2];
+  const colaFirma: [number, number] = [retratoX0 + RETRATO.lado + FIRMA.airePersonaje - pieN[0], FIRMA.colaY - pieN[1]];
+  if (colaFirma[0] >= 0) throw new Error("D15.2: el hilo de la firma tiene que salir a la izquierda de la N.");
 
   const tamIdea = lerp(IDEA_PODERES.tam, IDEA.arriba.tam, subir);
   const yIdea = lerp(IDEA_PODERES.y, IDEA.arriba.y, subir);
 
   return (
     <>
-      <FondoCircuito />
+      <FondoVivo pulsos={[1]} />
       <Capa estilo={sale}>
         <PoderesChicos verbos={verbos} estilosNodo={estilosNodo} estilosVerbo={estilosVerbo} pistas={pistas} latidos={latidos} dato={dato} />
         <Texto x={IDEA_PODERES.x} y={IDEA.ySegunda} tam="lectura" alinear="centro" estilo={segunda}>
@@ -203,7 +223,13 @@ export const D15Cierre: React.FC = () => {
       <Texto x={xColumna} y={COLUMNA.yGracias} tam="grande" color={COLOR.titulo} estilo={gracias}>
         {t2[3]}
       </Texto>
-      <Firma estado={firma} cx={cxFirma} cy={FIRMA.cy} alto={FIRMA.alto} arroba={t2[5]} arrobaY={FIRMA.arrobaY} />
+      <Firma estado={firma} cx={cxFirma} cy={FIRMA.cy} alto={FIRMA.alto} arroba={null} cola={colaFirma} />
+      {/* @nemaxyz alineado a la izquierda con la columna, en lima, con el mismo fundido que en Firma. */}
+      {firma.arroba > 0 && (
+        <Texto x={xColumna} y={FIRMA.arrobaY} tam="lectura" color={COLOR.marca} estilo={{ opacity: firma.arroba }}>
+          {t2[5]}
+        </Texto>
+      )}
       {pRetrato > 0 && (
         <div
           style={{

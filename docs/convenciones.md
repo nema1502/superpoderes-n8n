@@ -250,6 +250,7 @@ vuelve) · latido 1,03 · entrada de tarjeta 0,9.
 **Brillos permitidos** (y ningún otro): segmento encendido del visor, luces de la cuenta previa, junta de
 las puertas, el ▲ que brilla una vez, y la luz de la cabina abierta (un degradé, no un resplandor). Nada de
 estrellas, destellos, confeti ni resplandores de fondo.
+Excepción de esta charla (14 de noviembre): las estrellas del fondo, los destellos que recorren las pistas, el brillo del nodo activo (`brillo()` y `filtroBrillo()` de `remotion/src/comun/Luz.tsx`) y, solo en D14.1, una lluvia de cuadrados de la marca sin magenta. Cómo se usan: la cabecera de `remotion/src/comun/Luz.tsx`.
 
 ## 6. Componentes
 
@@ -528,6 +529,7 @@ Ver la sección 3. `<Anterior sale={{ retraso, dura }} opacidad estilo huecos />
   lo nuevo del paso (la respuesta de D06.1 cuando entra la idea en D06.2; los globos de D20.2, si quedan
   en el mismo paso que la tarea); la idea clave, el chip y la marca de agua nunca.
 - **Rebote** solo para el «?» (0,4 → 1 desde la punta de su cola). **Golpe** sin giro ni rebote. Sin confeti.
+  Excepción de esta charla (14 de noviembre): las estrellas del fondo, los destellos que recorren las pistas, el brillo del nodo activo (`brillo()` y `filtroBrillo()` de `remotion/src/comun/Luz.tsx`) y, solo en D14.1, una lluvia de cuadrados de la marca sin magenta. Cómo se usan: la cabecera de `remotion/src/comun/Luz.tsx`.
 - **Cada animación** ≤ 6 s (salvo cronómetros); cada paso termina con 0,3 s quietos; nada ambiente al
   corte.
 - **Determinismo**: nada de `Math.random()` ni estado; `random("semilla")` de Remotion.
@@ -593,6 +595,7 @@ Desde la raíz del proyecto (los scripts trabajan desde `remotion/` solos):
 - Atenuar una luz bajando su ámbar (sale marrón), usar hueso al 60 % como gris, o dar borde ámbar a algo
   que acompaña (una pastilla, una burbuja que no es la respuesta, un número que no es un piso).
 - Agregar brillos, destellos, sombras de texto, degradés de fondo o confeti.
+  Excepción de esta charla (14 de noviembre): las estrellas del fondo, los destellos que recorren las pistas, el brillo del nodo activo (`brillo()` y `filtroBrillo()` de `remotion/src/comun/Luz.tsx`) y, solo en D14.1, una lluvia de cuadrados de la marca sin magenta. Cómo se usan: la cabecera de `remotion/src/comun/Luz.tsx`.
 - Renderizar desde la raíz con `npx remotion …` (bajaría otro Chrome): usar los scripts.
 - Tocar `index.ts` o `entradas/` a mano (se regeneran), o deck.json (es de quien escribe el guion).
 

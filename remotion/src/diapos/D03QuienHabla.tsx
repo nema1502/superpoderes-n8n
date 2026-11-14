@@ -35,6 +35,7 @@ import {
   COLOR,
   conAlfa,
   CURVA,
+  FondoVivo,
   GROSOR,
   Isotipo,
   medirTexto,
@@ -49,7 +50,7 @@ import {
   useTramo,
   type Estilo,
 } from "../comun";
-import { FondoCircuito, RADIO_NODO } from "./D01Portada";
+import { RADIO_NODO } from "./D01Portada";
 
 export const pasos = pasosDe("D03");
 
@@ -196,7 +197,7 @@ export const D03QuienHabla: React.FC = () => {
 
   return (
     <>
-      <FondoCircuito />
+      <FondoVivo pulsos />
 
       {/* El retrato, en un nodo grande. */}
       <div
